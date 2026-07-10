@@ -56,21 +56,16 @@
             },
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Atendimentos"
-                        }
-                      },
-                      "Property": "Data de Criação"
+                    "SourceRef": {
+                      "Entity": "Medidas"
                     }
                   },
-                  "Function": 3
+                  "Property": "UltimaDataHoraCriacaoProprietario"
                 }
               },
-              "queryRef": "Min(Atendimentos.Data de Criação)",
+              "queryRef": "Medidas.UltimaDataCriacaoProprietario",
               "nativeQueryRef": "Data de Atendimento (Proprietário)",
               "displayName": "Data de Atendimento (Proprietário)"
             },
@@ -152,13 +147,13 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "143.24585940375414D"
+                  "Value": "141.09280082702645D"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "Min(Atendimentos.Data de Criação)"
+            "metadata": "Medidas.UltimaDataCriacaoProprietario"
           }
         }
       ],

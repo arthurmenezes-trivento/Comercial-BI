@@ -32,16 +32,57 @@ table Medidas
 			        'Atendimentos',
 			        'Atendimentos'[Assunto] <> "Alteração em Massa" &&
 			        NOT ISBLANK('Atendimentos'[Assunto])
-			        
 			    )
 			RETURN
 			    CALCULATE(
-			        MAX('Atendimentos'[Data de Criação]),
+			        -- Isola a linha com a data mais recente e concatena como texto
+			        CONCATENATEX(
+			            TOPN(
+			                1,
+			                'Atendimentos',
+			                'Atendimentos'[Data de Criação], DESC,
+			                'Atendimentos'[hora de Criação], DESC),
+			            FORMAT('Atendimentos'[Data de Criação], "dd/mm/yyyy") & " " & FORMAT('Atendimentos'[Hora de Criação], "hh:mm"),
+			            " "
+			        ),
 			        TabelaFiltrada
 			    )
 			
 			```
 		lineageTag: 1f666bc8-5ee7-4469-85d1-44c98ed78c45
+
+	measure UltimaDataHoraCriacaoProprietario = ```
+			
+			-- Step 1: Clean and standardize the full name
+			VAR NomeCompleto = TRIM(LOWER(COALESCE(SELECTEDVALUE(Leads[Proprietário Lead]), "")))
+			
+			-- Step 2: Find the first space to extract only the first name
+			VAR PosicaoEspaco = SEARCH(" ", NomeCompleto, 1, 0)
+			VAR NomeProprietario = 
+			    IF(
+			        PosicaoEspaco > 0,
+			        LEFT(NomeCompleto, PosicaoEspaco - 1),
+			        NomeCompleto
+			    )
+			
+			RETURN
+			    IF(
+			        NomeProprietario = "",
+			        BLANK(),
+			        CALCULATE(
+			            -- Concatenamos a Data e a Hora da linha mais recente em formato de texto
+			            CONCATENATEX(
+			                TOPN(1, Atendimentos, Atendimentos[Data de Criação], DESC),
+			                FORMAT(Atendimentos[Data de Criação], "dd/mm/yyyy") & " " & FORMAT(Atendimentos[Hora de Criação], "hh:mm"),
+			                " "
+			            ),
+			            -- Mantemos o seu filtro de busca por nome
+			            SEARCH(NomeProprietario, TRIM(LOWER(Atendimentos[Criado por])), 1, 0) > 0
+			        )
+			    )
+			
+			```
+		lineageTag: 694999aa-e88d-4256-bce6-46893fa0a8d7
 
 	column 'Coluna 1'
 		dataType: string
