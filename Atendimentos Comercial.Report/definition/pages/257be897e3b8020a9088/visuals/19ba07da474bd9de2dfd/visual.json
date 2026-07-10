@@ -3,9 +3,9 @@
   "name": "19ba07da474bd9de2dfd",
   "position": {
     "x": 11.627939986657392,
-    "y": 109.30263587457949,
+    "y": 211.62850775716456,
     "z": 3001,
-    "height": 598.83890931285566,
+    "height": 496.51303743027069,
     "width": 1268.6082525443214,
     "tabOrder": 3001
   },
@@ -99,6 +99,20 @@
             },
             {
               "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Dias Sem Atendimento"
+                }
+              },
+              "queryRef": "Medidas.Dias Sem Atendimento",
+              "nativeQueryRef": "Dias Sem Atendimento"
+            },
+            {
+              "field": {
                 "Aggregation": {
                   "Expression": {
                     "Column": {
@@ -119,6 +133,23 @@
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Medidas"
+                  }
+                },
+                "Property": "Dias Sem Atendimento"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
       }
     },
     "objects": {
@@ -133,7 +164,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "228.32544666766222D"
+                  "Value": "105.17322350500572D"
                 }
               }
             }
@@ -147,13 +178,83 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "141.09280082702645D"
+                  "Value": "102.67424367821592D"
                 }
               }
             }
           },
           "selector": {
             "metadata": "Medidas.UltimaDataCriacaoProprietario"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "116.75818917924181D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Min(Leads.Proprietário Lead)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "112.92896577107103D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.UltimoAtendente"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "111.25102103077468D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.data Ultimo Atendimento"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "131.1604671868999D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Min(Leads.Última Tabulação)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "101.91873418301714D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.Dias Sem Atendimento"
           }
         }
       ],

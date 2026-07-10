@@ -84,6 +84,42 @@ table Medidas
 			```
 		lineageTag: 694999aa-e88d-4256-bce6-46893fa0a8d7
 
+	measure 'Dias Sem Atendimento' = ```
+			
+			VAR TabelaFiltrada = 
+			    FILTER(
+			        'Atendimentos',
+			        'Atendimentos'[Assunto] <> "Alteração em Massa" && 
+			        NOT ISBLANK('Atendimentos'[Assunto])
+			    )
+			
+			-- 1. Encontra a data e hora do último atendimento combinado
+			VAR UltimoAtendimentoDT = 
+			    CALCULATE(
+			        MAXX(
+			            TOPN(1, 'Atendimentos', 'Atendimentos'[Data de Criação], DESC, 'Atendimentos'[hora de Criação], DESC),
+			            'Atendimentos'[Data de Criação] + 'Atendimentos'[Hora de Criação]
+			        ),
+			        TabelaFiltrada
+			    )
+			
+			-- 2. Define o momento atual (pode usar UTCNOW() se seus dados forem em UTC)
+			VAR DataAtual = NOW()
+			
+			-- 3. Calcula a diferença em dias (com casas decimais para precisão)
+			VAR DiferencaDias = 
+			    IF(
+			        NOT ISBLANK(UltimoAtendimentoDT),
+			        DATEDIFF(UltimoAtendimentoDT, DataAtual, DAY)
+			    )
+			
+			RETURN
+			    DiferencaDias
+			
+			```
+		formatString: 0
+		lineageTag: cfaacc72-d562-4ae0-99f6-f065b7b88504
+
 	column 'Coluna 1'
 		dataType: string
 		lineageTag: 686dcc5d-ee01-4a81-ac33-f88f665891bc
