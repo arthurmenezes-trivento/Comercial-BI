@@ -4,8 +4,8 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 60.246912638346352,
-        "y": 0
+        "x": 0,
+        "y": 246.91358024691357
       },
       "nodes": [
         {
@@ -49,8 +49,8 @@
         },
         {
           "location": {
-            "x": 283.71399034366641,
-            "y": 369.67880594774
+            "x": 696.059669356012,
+            "y": 393.1355960711968
           },
           "nodeIndex": "Leads",
           "nodeLineageTag": "5d5c91c8-075a-48fa-9e31-f3a2365489f1",
@@ -82,6 +82,19 @@
           "nodeLineageTag": "4419056a-db71-48c1-bdbb-d01910b4e999",
           "size": {
             "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 341.97530864197529,
+            "y": 398.35999046869358
+          },
+          "nodeIndex": "Atendimentos",
+          "nodeLineageTag": "48aff271-58b6-4af5-97f5-c49aed976afd",
+          "size": {
+            "height": 300,
             "width": 234
           },
           "zIndex": 0

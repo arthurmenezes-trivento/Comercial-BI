@@ -1,6 +1,48 @@
 table Medidas
 	lineageTag: 4419056a-db71-48c1-bdbb-d01910b4e999
 
+	measure UltimoAtendente = ```
+			
+			VAR TabelaFiltrada = 
+			    FILTER(
+			        'Atendimentos',
+			        'Atendimentos'[Assunto] <> "Alteração em Massa" &&
+			        NOT(ISBLANK('Atendimentos'[Assunto]))
+			        
+			    )
+			VAR DataMaisRecente = 
+			    CALCULATE(
+			        MAX('Atendimentos'[Data de Criação]),
+			        TabelaFiltrada
+			    )
+			RETURN
+			CALCULATE(
+			    MAX('Atendimentos'[Criado por]),
+			    TabelaFiltrada,
+			    'Atendimentos'[Data de Criação] = DataMaisRecente
+			)
+			
+			```
+		lineageTag: c2990e0a-0c93-4df1-848b-3acbcbe83565
+
+	measure 'data Ultimo Atendimento' = ```
+			
+			VAR TabelaFiltrada = 
+			    FILTER(
+			        'Atendimentos',
+			        'Atendimentos'[Assunto] <> "Alteração em Massa" &&
+			        NOT ISBLANK('Atendimentos'[Assunto])
+			        
+			    )
+			RETURN
+			    CALCULATE(
+			        MAX('Atendimentos'[Data de Criação]),
+			        TabelaFiltrada
+			    )
+			
+			```
+		lineageTag: 1f666bc8-5ee7-4469-85d1-44c98ed78c45
+
 	column 'Coluna 1'
 		dataType: string
 		lineageTag: 686dcc5d-ee01-4a81-ac33-f88f665891bc

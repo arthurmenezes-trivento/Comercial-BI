@@ -29,6 +29,7 @@ ref table LocalDateTable_6209402d-885f-444f-b7f6-b9e38b768c04
 ref table LocalDateTable_a805f813-464e-407c-b1f9-b2f9e577ec46
 ref table LocalDateTable_87e26fc0-fd37-4960-be28-b682fd6fb781
 ref table Medidas
+ref table Atendimentos
 
 ref cultureInfo pt-BR
 

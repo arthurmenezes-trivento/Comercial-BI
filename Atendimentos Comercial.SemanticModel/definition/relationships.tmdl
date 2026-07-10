@@ -27,3 +27,7 @@ relationship 00d93253-daf3-4df9-888b-a6d1f285003d
 	fromColumn: Leads.'Data Criacao'
 	toColumn: LocalDateTable_87e26fc0-fd37-4960-be28-b682fd6fb781.Date
 
+relationship c7509551-e995-b47f-f085-0c0d5ad08369
+	fromColumn: Atendimentos.'Id Lead'
+	toColumn: Leads.'ID Lead'
+

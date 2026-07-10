@@ -1,0 +1,277 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "19ba07da474bd9de2dfd",
+  "position": {
+    "x": 11.627939986657392,
+    "y": 109.30263587457949,
+    "z": 3001,
+    "height": 598.83890931285566,
+    "width": 1268.6082525443214,
+    "tabOrder": 3001
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Leads"
+                    }
+                  },
+                  "Property": "Nome Completo"
+                }
+              },
+              "queryRef": "Leads.Nome Completo",
+              "nativeQueryRef": "Nome Completo",
+              "active": true
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Leads"
+                        }
+                      },
+                      "Property": "Proprietário Lead"
+                    }
+                  },
+                  "Function": 3
+                }
+              },
+              "queryRef": "Min(Leads.Proprietário Lead)",
+              "nativeQueryRef": "Proprietário Lead",
+              "displayName": "Proprietário Lead"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Atendimentos"
+                        }
+                      },
+                      "Property": "Data de Criação"
+                    }
+                  },
+                  "Function": 3
+                }
+              },
+              "queryRef": "Min(Atendimentos.Data de Criação)",
+              "nativeQueryRef": "Data de Atendimento (Proprietário)",
+              "displayName": "Data de Atendimento (Proprietário)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "UltimoAtendente"
+                }
+              },
+              "queryRef": "Medidas.UltimoAtendente",
+              "nativeQueryRef": "UltimoAtendente1"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "data Ultimo Atendimento"
+                }
+              },
+              "queryRef": "Medidas.data Ultimo Atendimento",
+              "nativeQueryRef": "data Ultimo Atendimento1"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Leads"
+                        }
+                      },
+                      "Property": "Última Tabulação"
+                    }
+                  },
+                  "Function": 3
+                }
+              },
+              "queryRef": "Min(Leads.Última Tabulação)",
+              "nativeQueryRef": "Última Tabulação",
+              "displayName": "Última Tabulação"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {}
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "228.32544666766222D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Leads.Nome Completo"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "143.24585940375414D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Min(Atendimentos.Data de Criação)"
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTotals": [
+        {
+          "properties": {
+            "columnSubtotals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "rowSubtotals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "c6a6e327a7903772e87d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Leads"
+              }
+            },
+            "Property": "Nome Completo"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "l",
+              "Entity": "Leads",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "l"
+                              }
+                            },
+                            "Property": "Nome Completo"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "null"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

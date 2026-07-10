@@ -533,9 +533,11 @@ table Leads
 				    #"Colocar Cada Palavra Em Maiúscula" = Table.TransformColumns(#"Tipo Alterado3",{{"result.crmeduc_unidadeform", Text.Proper, type text}}),
 				    #"Valor Substituído" = Table.ReplaceValue(#"Colocar Cada Palavra Em Maiúscula","Canaa","Canaã",Replacer.ReplaceText,{"result.crmeduc_unidadeform"}),
 				    #"Linhas Filtradas" = Table.SelectRows(#"Valor Substituído", each true),
-				    #"Tipo Alterado6" = Table.TransformColumnTypes(#"Linhas Filtradas",{{"Data Criacao", type date}})
+				    #"Tipo Alterado6" = Table.TransformColumnTypes(#"Linhas Filtradas",{{"Data Criacao", type date}}),
+				    #"Linhas em Branco Removidas" = Table.SelectRows(#"Tipo Alterado6", each not List.IsEmpty(List.RemoveMatchingItems(Record.FieldValues(_), {"", null}))),
+				    #"Duplicatas Removidas" = Table.Distinct(#"Linhas em Branco Removidas", {"ID Lead"})
 				in
-				    #"Tipo Alterado6"
+				    #"Duplicatas Removidas"
 
 	annotation PBI_NavigationStepName = Navegação
 
