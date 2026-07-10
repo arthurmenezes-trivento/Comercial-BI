@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Atendimentos Comercial"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "da9966aa-d1a8-440e-9c89-f73751abf5ac"
+  }
+}

@@ -1,0 +1,33 @@
+table dCanal
+	lineageTag: eb03aa22-dd47-40b0-b3c8-f3c2c5f46738
+
+	column ID
+		dataType: int64
+		formatString: 0
+		lineageTag: bd17d739-214d-4bef-ba27-55e90ac0205f
+		summarizeBy: count
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Canal
+		dataType: string
+		lineageTag: 0d5fb668-0181-4758-a944-24ad2dcf10cf
+		summarizeBy: none
+		sourceColumn: Canal
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dCanal = m
+		mode: import
+		source =
+				let
+				    Fonte = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WMlTSUXLNLShKLU4sVorViVYyAgp45qVkJiceXn54cT5YzBgo5l+UfnhRXmYyRMQEKBJSlJiSqpCq4FqWmleSD9FtChY/vDAtNT1fISAxHag6FgA=", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [ID = _t, Canal = _t]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"ID", Int64.Type}, {"Canal", type text}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

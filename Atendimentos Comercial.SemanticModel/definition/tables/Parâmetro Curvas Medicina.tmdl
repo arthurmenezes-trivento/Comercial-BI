@@ -1,0 +1,76 @@
+table 'Parâmetro Curvas Medicina'
+	lineageTag: 8a45c2d3-fe6b-4bcb-9b1c-165d3ca938c4
+
+	column 'Parâmetro Curvas Medicina'
+		lineageTag: 4c88afa6-da76-4cb4-8af3-2e6b371651bb
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Parâmetro Curvas Medicina Pedido'
+
+		relatedColumnDetails
+			groupByColumn: 'Parâmetro Curvas Medicina Campos'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Parâmetro Curvas Medicina Campos'
+		isHidden
+		lineageTag: f2b247b4-b447-440e-ae5f-4bc15a40f154
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Parâmetro Curvas Medicina Pedido'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Parâmetro Curvas Medicina Pedido'
+		isHidden
+		formatString: 0
+		lineageTag: 1ac96a05-a888-46a0-93c7-6b64acc5ba7c
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Etapa = ```
+			
+			    SWITCH(
+			        TRUE(),
+			        CONTAINSSTRING('Parâmetro Curvas Medicina'[Parâmetro Curvas Medicina], "Insc") , "Inscritos" ,
+			        CONTAINSSTRING('Parâmetro Curvas Medicina'[Parâmetro Curvas Medicina] , "Matr") , "Matrículas" ,
+			        BLANK()
+			    )
+			```
+		lineageTag: eb20ef8f-ff1b-4890-af17-21950c3972e6
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Parâmetro Curvas Medicina' = calculated
+		mode: import
+		source =
+				{
+				    ("Matr 25-2 Acumulado", NAMEOF('Medidas'[MED Matr 25-2 Acumulado]), 0),
+				    ("Matr Meta Acumulada", NAMEOF('Medidas'[MED Matr Meta Acumulada]), 1),
+				    ("Matr 26-2 Acumulado", NAMEOF('Medidas'[MED Matr 26-2 Acumulado]), 2),
+				    ("GAP Matr Acumulada", NAMEOF('Medidas'[MED Matr GAP]), 3),
+				    ("% Matr Meta Acumulado", NAMEOF('Medidas'[MED % Matr Meta Acumulado]), 4),
+				    ("Matr 25-2", NAMEOF('Medidas'[MED 2 Matr 25-2]), 5),
+				    ("Matr Meta", NAMEOF('Medidas'[MED Matr Meta]), 6),
+				    ("Matr 26-2", NAMEOF('Medidas'[MED 2 Matr 26-2]), 7),
+				    ("Insc 25-2 Acumulado", NAMEOF('Medidas'[MED Insc 25-2 Acumulado]), 8),
+				    ("Insc Meta Acumulada", NAMEOF('Medidas'[MED Insc Meta Acumulada]), 9),
+				    ("Insc 26-2 Acumulado", NAMEOF('Medidas'[Insc 26-2 Acumulado]), 10),
+				    ("GAP Insc Acumulada", NAMEOF('Medidas'[MED Insc GAP]), 11),
+				    ("% Insc Meta Acumulado", NAMEOF('Medidas'[MED % Insc Meta Acumulado]), 12),
+				    ("Insc 25-2", NAMEOF('Medidas'[MED 2 Insc 25-2]), 13),
+				    ("Insc Meta", NAMEOF('Medidas'[MED Insc Meta]), 14),
+				    ("Insc 26-2", NAMEOF('Medidas'[MED Insc 26-2]), 15)
+				}
+
+	annotation PBI_Id = 1b7fba0cb4dc4409850602c72da0a284
+

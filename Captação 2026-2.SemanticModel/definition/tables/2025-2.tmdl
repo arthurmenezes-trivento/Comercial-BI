@@ -1,0 +1,1511 @@
+table 2025-2
+	excludeFromModelRefresh
+	lineageTag: 6e16546a-66e9-4836-bf94-64d18b57458a
+
+	column nome
+		dataType: string
+		lineageTag: 4f4f2747-3c75-4537-8cab-72ca647211d3
+		summarizeBy: none
+		sourceColumn: nome
+
+		annotation SummarizationSetBy = Automatic
+
+	column codigo
+		dataType: string
+		lineageTag: 18667279-6a8e-4d02-abdb-638d736ef58d
+		summarizeBy: none
+		sourceColumn: codigo
+
+		annotation SummarizationSetBy = Automatic
+
+	column email
+		dataType: string
+		lineageTag: 1df2eb00-8eca-4829-af1e-0dd0d031e9c1
+		summarizeBy: none
+		sourceColumn: email
+
+		annotation SummarizationSetBy = Automatic
+
+	column celular
+		dataType: string
+		lineageTag: c82a69ac-d448-4a8d-9d4c-ef099eedf8a7
+		summarizeBy: none
+		sourceColumn: celular
+
+		annotation SummarizationSetBy = Automatic
+
+	column telefone
+		dataType: string
+		lineageTag: be1cf186-3b03-467c-9d9c-14e7c55d5372
+		summarizeBy: none
+		sourceColumn: telefone
+
+		annotation SummarizationSetBy = Automatic
+
+	column cpf
+		dataType: string
+		lineageTag: 647c9e41-c870-41e2-8f25-2808d3b846e1
+		summarizeBy: none
+		sourceColumn: cpf
+
+		annotation SummarizationSetBy = Automatic
+
+	column nota
+		dataType: double
+		lineageTag: cd1d82c2-342e-497d-8537-f64693f57660
+		summarizeBy: sum
+		sourceColumn: nota
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column nota_enem
+		dataType: double
+		lineageTag: bc054e34-604c-4c5f-bfc4-db0bdfcec131
+		summarizeBy: sum
+		sourceColumn: nota_enem
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column data_aprovacao
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 191de1f1-9a37-4bd1-8f9c-541253826baf
+		summarizeBy: none
+		sourceColumn: data_aprovacao
+
+		variation Variation
+			isDefault
+			relationship: bb177f48-1bcb-4e5a-a269-051b30c224e8
+			defaultHierarchy: LocalDateTable_fba54961-8176-4f27-b7c4-cd8662b5fdeb.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column data_venc_matricula
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 98ef0fc1-def0-4c90-9033-591c7465d54a
+		summarizeBy: none
+		sourceColumn: data_venc_matricula
+
+		variation Variation
+			isDefault
+			relationship: cf7ec970-8e7a-439f-a51e-b12821b1fb03
+			defaultHierarchy: LocalDateTable_33bec466-9c38-4df9-9798-c8ecaf5bc244.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column data_pgto_matricula
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: f9724b9c-cae9-4e39-8e75-c4d08e069e64
+		summarizeBy: none
+		sourceColumn: data_pgto_matricula
+
+		variation Variation
+			isDefault
+			relationship: 3af251e5-02e6-4bbf-bfba-b70b5f94ff33
+			defaultHierarchy: LocalDateTable_643691f8-c4a4-4a1f-aa7d-84c2ccad78ff.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column data_criacao
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 4e016551-243a-491b-97cd-3caada52284b
+		summarizeBy: none
+		sourceColumn: data_criacao
+
+		variation Variation
+			isDefault
+			relationship: 629e4359-2ba6-47a3-8d8c-f8a800319dd7
+			defaultHierarchy: LocalDateTable_005cce95-6bd5-4f92-b6a5-6a01c9ad5dbe.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column data_atualizacao
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 7e08cbe1-b464-45e0-8fc6-ca7868d9f6fd
+		summarizeBy: none
+		sourceColumn: data_atualizacao
+
+		variation Variation
+			isDefault
+			relationship: b393cce9-097d-4608-956c-223906e00caa
+			defaultHierarchy: LocalDateTable_64eb5f4d-2727-4173-a3e8-a5023ef2ac64.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column termos_privacidade
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 755019e8-af37-4130-94c3-a236131708f9
+		summarizeBy: none
+		sourceColumn: termos_privacidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column membro_do_programa
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 42f1a4c0-701a-47df-8ff5-ea95a31d5957
+		summarizeBy: none
+		sourceColumn: membro_do_programa
+
+		annotation SummarizationSetBy = Automatic
+
+	column agendamento_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 4c49e905-d3df-4368-9489-d431ad49c0e9
+		summarizeBy: sum
+		sourceColumn: agendamento_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column concurso_id
+		dataType: string
+		lineageTag: ac0e58a9-b80d-4b17-9016-d84cbccadfbe
+		summarizeBy: none
+		sourceColumn: concurso_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column contato_id
+		dataType: int64
+		formatString: 0
+		lineageTag: c0c60a7f-15af-49d0-8076-37e0028628d8
+		summarizeBy: sum
+		sourceColumn: contato_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column curso_id
+		dataType: string
+		lineageTag: 05aca733-cd00-4188-aa4e-06c3eb74efe1
+		summarizeBy: none
+		sourceColumn: curso_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column etapa_id
+		dataType: string
+		lineageTag: 3c3b131e-0bc2-4f8f-a10e-3bf4b6ec080e
+		summarizeBy: none
+		sourceColumn: etapa_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column modalidade_id
+		dataType: string
+		lineageTag: ab8e939a-4e56-44ba-bf9a-55e25cb73551
+		summarizeBy: none
+		sourceColumn: modalidade_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column necessidade_especial_id
+		dataType: string
+		lineageTag: 6fbf98ee-a6c4-472a-bda5-5e4f609e446f
+		summarizeBy: none
+		sourceColumn: necessidade_especial_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column opcao_de_ingresso_id
+		dataType: string
+		lineageTag: 78cd1dc3-5464-49c6-8558-53761b7631ce
+		summarizeBy: none
+		sourceColumn: opcao_de_ingresso_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column situacao_id
+		dataType: string
+		lineageTag: b3f8306e-e669-45e0-9827-9050eb95ef02
+		summarizeBy: none
+		sourceColumn: situacao_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo_id
+		dataType: string
+		lineageTag: 4327f516-28c0-44e0-8259-81ac13150c4c
+		summarizeBy: none
+		sourceColumn: tipo_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column turno_id
+		dataType: string
+		lineageTag: e5ade53d-b01c-490a-8e67-19b2ca32b826
+		summarizeBy: none
+		sourceColumn: turno_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column unidade_id
+		dataType: string
+		lineageTag: 4a029fdd-e97e-4cc2-bc75-d35cfa31b062
+		summarizeBy: none
+		sourceColumn: unidade_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column operador_matricula_id
+		dataType: int64
+		formatString: 0
+		lineageTag: a7549650-29a3-46b4-991c-b4df83f29a4a
+		summarizeBy: sum
+		sourceColumn: operador_matricula_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column operador_original_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 2adc7681-32f3-403b-ba8f-185636329d83
+		summarizeBy: sum
+		sourceColumn: operador_original_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column ultimo_operador_id
+		dataType: int64
+		formatString: 0
+		lineageTag: b8f6aa00-9639-4129-9180-a9e77d41ddb4
+		summarizeBy: sum
+		sourceColumn: ultimo_operador_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_cancel_matricula
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 53b417d9-cc23-42fd-85b0-b51f59e93632
+		summarizeBy: none
+		sourceColumn: data_cancel_matricula
+
+		variation Variation
+			isDefault
+			relationship: ac5256bb-2dec-42da-bea9-483c32e4a9a4
+			defaultHierarchy: LocalDateTable_302094e7-7e24-458d-bcea-d30c352cd3f0.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column polo_id
+		dataType: string
+		lineageTag: ff04b8de-0ce1-4305-af6c-8e73c6cf7bf2
+		summarizeBy: none
+		sourceColumn: polo_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column bairro
+		dataType: string
+		lineageTag: d7c7b0f9-4647-4a7b-baf5-7f16b271f66e
+		summarizeBy: none
+		sourceColumn: bairro
+
+		annotation SummarizationSetBy = Automatic
+
+	column cep
+		dataType: string
+		lineageTag: f2b84c29-516e-4271-9969-350ffd1130aa
+		summarizeBy: none
+		sourceColumn: cep
+
+		annotation SummarizationSetBy = Automatic
+
+	column cidade
+		dataType: string
+		lineageTag: f1abab2a-49ed-40b1-9a66-6665ab47409c
+		summarizeBy: none
+		sourceColumn: cidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column endereco
+		dataType: string
+		lineageTag: 320e67e9-8db8-48d7-ba09-e16fbd4945bc
+		summarizeBy: none
+		sourceColumn: endereco
+
+		annotation SummarizationSetBy = Automatic
+
+	column estado
+		dataType: string
+		lineageTag: 8e030803-ec53-4f9a-83a4-740b63dd7c25
+		summarizeBy: none
+		sourceColumn: estado
+
+		annotation SummarizationSetBy = Automatic
+
+	column numero
+		dataType: int64
+		formatString: 0
+		lineageTag: b8ec3920-94e4-45ce-85e0-dc70f35186eb
+		summarizeBy: sum
+		sourceColumn: numero
+
+		annotation SummarizationSetBy = Automatic
+
+	column dados_financeiros
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 71016a9b-90be-4bca-b7e6-2a36b821efaa
+		summarizeBy: none
+		sourceColumn: dados_financeiros
+
+		annotation SummarizationSetBy = Automatic
+
+	column mensalidade
+		dataType: double
+		lineageTag: 12ec812f-b8de-4247-819f-848f874b345b
+		summarizeBy: sum
+		sourceColumn: mensalidade
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column data_integracao
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: b0e866d2-32d7-4ef4-8529-3b71e92e93ac
+		summarizeBy: none
+		sourceColumn: data_integracao
+
+		variation Variation
+			isDefault
+			relationship: 9c556c0d-e178-4eb4-a009-dff3fd7e0f1f
+			defaultHierarchy: LocalDateTable_0cefc1a7-7ad2-4b9f-9306-0ba5824f4fe0.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column ano_enem
+		dataType: int64
+		formatString: 0
+		lineageTag: a7d01cbb-db1f-4c0b-9f52-664cceacef75
+		summarizeBy: sum
+		sourceColumn: ano_enem
+
+		annotation SummarizationSetBy = Automatic
+
+	column codigo_anterior
+		dataType: string
+		lineageTag: b3dba770-5045-473e-a283-87de09d7b402
+		summarizeBy: none
+		sourceColumn: codigo_anterior
+
+		annotation SummarizationSetBy = Automatic
+
+	column curso_anterior
+		dataType: string
+		lineageTag: 98437991-2e43-4021-ab7c-62b051ac75fe
+		summarizeBy: none
+		sourceColumn: curso_anterior
+
+		annotation SummarizationSetBy = Automatic
+
+	column instituicao_anterior
+		dataType: string
+		lineageTag: c44237e4-685e-4350-8dbf-b766f78f866f
+		summarizeBy: none
+		sourceColumn: instituicao_anterior
+
+		annotation SummarizationSetBy = Automatic
+
+	column modificado
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: a99de316-8aed-4981-9bcd-8fb0ddc5df0e
+		summarizeBy: none
+		sourceColumn: modificado
+
+		annotation SummarizationSetBy = Automatic
+
+	column documentacao
+		dataType: string
+		lineageTag: 608ffdb3-a407-4a5f-964d-1264b64c321e
+		summarizeBy: none
+		sourceColumn: documentacao
+
+		annotation SummarizationSetBy = Automatic
+
+	column matricula_academica
+		dataType: string
+		lineageTag: 00866c46-4bec-43a1-966d-9dab530071de
+		summarizeBy: none
+		sourceColumn: matricula_academica
+
+		annotation SummarizationSetBy = Automatic
+
+	column valor_pago_matricula
+		dataType: double
+		lineageTag: 5c64725a-3676-4b56-9b91-fb839bd616c2
+		summarizeBy: sum
+		sourceColumn: valor_pago_matricula
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column data_nascimento
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 4a59ed82-cf26-48f0-bbd0-fa82ea8ddf5d
+		summarizeBy: none
+		sourceColumn: data_nascimento
+
+		variation Variation
+			isDefault
+			relationship: 880cfe1c-6dd6-414c-82dd-641784fa3577
+			defaultHierarchy: LocalDateTable_c5b1b3f0-e268-444b-9b69-2cc6e942212d.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column estado_civil
+		dataType: string
+		lineageTag: c7dfb456-61c7-4060-ab46-2e44926afdd3
+		summarizeBy: none
+		sourceColumn: estado_civil
+
+		annotation SummarizationSetBy = Automatic
+
+	column sexo
+		dataType: string
+		lineageTag: bc184c07-7851-4a9f-aff7-656bd749d201
+		summarizeBy: none
+		sourceColumn: sexo
+
+		annotation SummarizationSetBy = Automatic
+
+	column codigo_ibge_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 2cd4d41e-9156-4cc2-aafb-371e1f198059
+		summarizeBy: sum
+		sourceColumn: codigo_ibge_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column valor_orig_matricula
+		dataType: int64
+		formatString: 0
+		lineageTag: 20953866-5dcf-4de9-a87d-bd1da4e0ab8b
+		summarizeBy: sum
+		sourceColumn: valor_orig_matricula
+
+		annotation SummarizationSetBy = Automatic
+
+	column opcao_de_curso_id
+		dataType: int64
+		formatString: 0
+		lineageTag: f5195756-6a18-4abf-b240-90ce09a56490
+		summarizeBy: sum
+		sourceColumn: opcao_de_curso_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column rg_data_expedicao
+		dataType: string
+		lineageTag: bcd76535-3e5e-46d3-aa66-79d8f241eeb5
+		summarizeBy: none
+		sourceColumn: rg_data_expedicao
+
+		annotation SummarizationSetBy = Automatic
+
+	column rg_uf
+		dataType: string
+		lineageTag: 77cd1f81-d9bc-4a84-91d1-e9ed34c64371
+		summarizeBy: none
+		sourceColumn: rg_uf
+
+		annotation SummarizationSetBy = Automatic
+
+	column url_portal
+		dataType: string
+		lineageTag: 3a731dbe-bc50-451e-815a-1ef121ea4e08
+		summarizeBy: none
+		sourceColumn: url_portal
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo_produto_id
+		dataType: string
+		lineageTag: 0957a2ba-a2df-4b90-a231-8bcbd7076f70
+		summarizeBy: none
+		sourceColumn: tipo_produto_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column pontuacao_anterior
+		dataType: int64
+		formatString: 0
+		lineageTag: 7853b91d-eb31-4504-bfac-3f2e65095701
+		summarizeBy: sum
+		sourceColumn: pontuacao_anterior
+
+		annotation SummarizationSetBy = Automatic
+
+	column pontuacao_diaria
+		dataType: int64
+		formatString: 0
+		lineageTag: 929782fb-5996-461b-aebf-1f6efe5e9f1e
+		summarizeBy: sum
+		sourceColumn: pontuacao_diaria
+
+		annotation SummarizationSetBy = Automatic
+
+	column pontuacao_fim_semana
+		dataType: int64
+		formatString: 0
+		lineageTag: 913321eb-99bc-4d56-929d-7730499849be
+		summarizeBy: sum
+		sourceColumn: pontuacao_fim_semana
+
+		annotation SummarizationSetBy = Automatic
+
+	column pontuacao_inicial
+		dataType: int64
+		formatString: 0
+		lineageTag: 993e9915-6c78-495a-b7bf-9724a74ad613
+		summarizeBy: sum
+		sourceColumn: pontuacao_inicial
+
+		annotation SummarizationSetBy = Automatic
+
+	column pontuacao_inicio_semana
+		dataType: int64
+		formatString: 0
+		lineageTag: a5ab85e6-43c6-4de2-b5a1-e38bb5ba096b
+		summarizeBy: sum
+		sourceColumn: pontuacao_inicio_semana
+
+		annotation SummarizationSetBy = Automatic
+
+	column responsavel_bairro
+		dataType: string
+		lineageTag: de2e968a-3a80-4ffe-a684-00676b614898
+		summarizeBy: none
+		sourceColumn: responsavel_bairro
+
+		annotation SummarizationSetBy = Automatic
+
+	column responsavel_celular
+		dataType: int64
+		formatString: 0
+		lineageTag: d292d161-0f4d-4518-8a8c-d2a0b6371b40
+		summarizeBy: sum
+		sourceColumn: responsavel_celular
+
+		annotation SummarizationSetBy = Automatic
+
+	column responsavel_cep
+		dataType: string
+		lineageTag: 6733777a-d189-44b2-aef3-d6a8db95b8b3
+		summarizeBy: none
+		sourceColumn: responsavel_cep
+
+		annotation SummarizationSetBy = Automatic
+
+	column responsavel_cidade
+		dataType: string
+		lineageTag: a63479b9-e767-46e6-b96f-b01728563b96
+		summarizeBy: none
+		sourceColumn: responsavel_cidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column responsavel_complemento
+		dataType: string
+		lineageTag: 5321ed88-3690-41c6-a95e-7a43914e508e
+		summarizeBy: none
+		sourceColumn: responsavel_complemento
+
+		annotation SummarizationSetBy = Automatic
+
+	column responsavel_documento
+		dataType: string
+		lineageTag: cbc6441b-b154-47b6-990c-efacabfcc59b
+		summarizeBy: none
+		sourceColumn: responsavel_documento
+
+		annotation SummarizationSetBy = Automatic
+
+	column responsavel_email
+		dataType: string
+		lineageTag: 51dac806-628f-43d6-84df-6c3f6079db47
+		summarizeBy: none
+		sourceColumn: responsavel_email
+
+		annotation SummarizationSetBy = Automatic
+
+	column responsavel_estado
+		dataType: string
+		lineageTag: eca6156d-69aa-4278-a0e8-c4d038130879
+		summarizeBy: none
+		sourceColumn: responsavel_estado
+
+		annotation SummarizationSetBy = Automatic
+
+	column responsavel_nome
+		dataType: string
+		lineageTag: 3636ee89-da10-4c6d-96cc-98b5ae58ade1
+		summarizeBy: none
+		sourceColumn: responsavel_nome
+
+		annotation SummarizationSetBy = Automatic
+
+	column responsavel_numero
+		dataType: int64
+		formatString: 0
+		lineageTag: dc4ffe74-5d90-4721-89dc-4c325e1487cd
+		summarizeBy: sum
+		sourceColumn: responsavel_numero
+
+		annotation SummarizationSetBy = Automatic
+
+	column responsavel_pais
+		dataType: string
+		lineageTag: 3b758e74-21a3-4e25-9ee5-be19ed25863e
+		summarizeBy: none
+		sourceColumn: responsavel_pais
+
+		annotation SummarizationSetBy = Automatic
+
+	column responsavel_rua
+		dataType: string
+		lineageTag: b5fd8be1-61d1-4814-95fb-edbf8060d995
+		summarizeBy: none
+		sourceColumn: responsavel_rua
+
+		annotation SummarizationSetBy = Automatic
+
+	column responsavel_tipo_documento
+		dataType: string
+		lineageTag: a797beaa-3c58-4ac8-b130-604fe0fb8ac4
+		summarizeBy: none
+		sourceColumn: responsavel_tipo_documento
+
+		annotation SummarizationSetBy = Automatic
+
+	column treineiro
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 9a00e62d-78c2-476c-a616-09c6a0700d36
+		summarizeBy: none
+		sourceColumn: treineiro
+
+		annotation SummarizationSetBy = Automatic
+
+	column etapa_integracao
+		dataType: string
+		lineageTag: 5a305b97-a18b-476b-8750-798221dac737
+		summarizeBy: none
+		sourceColumn: etapa_integracao
+
+		annotation SummarizationSetBy = Automatic
+
+	column integracao_finalizada
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 58785cd6-9615-4d79-b697-14818cbcb9f2
+		summarizeBy: none
+		sourceColumn: integracao_finalizada
+
+		annotation SummarizationSetBy = Automatic
+
+	column segunda_opcao_id
+		dataType: string
+		lineageTag: 94e9c287-efd8-4dba-938c-bbbe5dc5a248
+		summarizeBy: none
+		sourceColumn: segunda_opcao_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column turno_segunda_opcao_id
+		dataType: string
+		lineageTag: 4be266fe-d9d6-4169-bd47-567772fe4209
+		summarizeBy: none
+		sourceColumn: turno_segunda_opcao_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_etapa_aprovado
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 5b331adf-6e0d-49be-be73-7b36745700f9
+		summarizeBy: none
+		sourceColumn: data_etapa_aprovado
+
+		variation Variation
+			isDefault
+			relationship: 36e27920-05c1-4f89-a60a-f0278581bc19
+			defaultHierarchy: LocalDateTable_a8734288-a04a-497b-9c19-09118c50ffcd.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column complemento
+		dataType: string
+		lineageTag: 30a1dbf8-dcba-4d33-b6cc-7ab24f525010
+		summarizeBy: none
+		sourceColumn: complemento
+
+		annotation SummarizationSetBy = Automatic
+
+	column observacoes
+		dataType: string
+		lineageTag: 737bf9fd-29ee-4f67-a4e4-c50fbf5f7811
+		summarizeBy: none
+		sourceColumn: observacoes
+
+		annotation SummarizationSetBy = Automatic
+
+	column eh_medico
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: dfca3d85-2285-4bf1-8711-67cb2f642d49
+		summarizeBy: none
+		sourceColumn: eh_medico
+
+		annotation SummarizationSetBy = Automatic
+
+	column etapa_carreira_medica
+		dataType: string
+		lineageTag: d916ed4a-a2ee-4f03-a4b4-6cbc3f98db36
+		summarizeBy: none
+		sourceColumn: etapa_carreira_medica
+
+		annotation SummarizationSetBy = Automatic
+
+	column curso_destino_id
+		dataType: string
+		lineageTag: d97f54c9-3238-42e6-b19a-b8b56e274ce6
+		summarizeBy: none
+		sourceColumn: curso_destino_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column curso_origem
+		dataType: string
+		lineageTag: dd2d3856-a9aa-4586-abed-2c8992114fb1
+		summarizeBy: none
+		sourceColumn: curso_origem
+
+		annotation SummarizationSetBy = Automatic
+
+	column periodo_destino
+		dataType: int64
+		formatString: 0
+		lineageTag: 0ad9f5a9-ef4d-4ab8-8232-b654dfc83b58
+		summarizeBy: sum
+		sourceColumn: periodo_destino
+
+		annotation SummarizationSetBy = Automatic
+
+	column ano_ensino_medio
+		dataType: string
+		lineageTag: 9ea0e62b-1576-48b6-8c2d-8fc4cc206f9f
+		summarizeBy: none
+		sourceColumn: ano_ensino_medio
+
+		annotation SummarizationSetBy = Automatic
+
+	column instituicao_ensino_medio_id
+		dataType: string
+		lineageTag: bdc76630-ebd7-41f0-aec6-5725f8658df0
+		summarizeBy: none
+		sourceColumn: instituicao_ensino_medio_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column nome_mae
+		dataType: string
+		lineageTag: b4cb7a95-e9dc-432d-8117-582d03466a8b
+		summarizeBy: none
+		sourceColumn: nome_mae
+
+		annotation SummarizationSetBy = Automatic
+
+	column nome_pai
+		dataType: string
+		lineageTag: a8fa445d-2175-42e7-ad0e-174b8abfc9af
+		summarizeBy: none
+		sourceColumn: nome_pai
+
+		annotation SummarizationSetBy = Automatic
+
+	column cor_raca_id
+		dataType: string
+		lineageTag: 32d59ee9-7046-476f-a423-b8ab89abbe3d
+		summarizeBy: none
+		sourceColumn: cor_raca_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column numero_inscricao_enem
+		dataType: string
+		lineageTag: 4a0b3433-6fc6-4f87-868e-5ea39e9943a5
+		summarizeBy: none
+		sourceColumn: numero_inscricao_enem
+
+		annotation SummarizationSetBy = Automatic
+
+	column uuid
+		dataType: string
+		lineageTag: 26116f21-f8c4-4756-880a-beee824fb2df
+		summarizeBy: none
+		sourceColumn: uuid
+
+		annotation SummarizationSetBy = Automatic
+
+	column scoring
+		dataType: int64
+		formatString: 0
+		lineageTag: c565a35e-3fd1-4ed8-b5c5-9e7b43131916
+		summarizeBy: sum
+		sourceColumn: scoring
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_pgto_inscricao
+		dataType: string
+		lineageTag: 9a59e34a-15cd-4462-8fca-8c4b55d2c63e
+		summarizeBy: none
+		sourceColumn: data_pgto_inscricao
+
+		annotation SummarizationSetBy = Automatic
+
+	column ne_acompanhamento
+		dataType: string
+		lineageTag: b5748999-821f-454a-ac05-ad8956425081
+		summarizeBy: none
+		sourceColumn: ne_acompanhamento
+
+		annotation SummarizationSetBy = Automatic
+
+	column ne_codigo_cid
+		dataType: string
+		lineageTag: 92343f8f-eded-41a3-aa13-7333a5448ea8
+		summarizeBy: none
+		sourceColumn: ne_codigo_cid
+
+		annotation SummarizationSetBy = Automatic
+
+	column ne_medicos
+		dataType: string
+		lineageTag: 1deaf839-36a0-40c5-afb4-a79b67d275dc
+		summarizeBy: none
+		sourceColumn: ne_medicos
+
+		annotation SummarizationSetBy = Automatic
+
+	column ne_obs
+		dataType: string
+		lineageTag: c87b25b3-755e-4b3e-8e8c-07c6766a0158
+		summarizeBy: none
+		sourceColumn: ne_obs
+
+		annotation SummarizationSetBy = Automatic
+
+	column inscrito_avaliado_id
+		dataType: string
+		lineageTag: c338aab7-766c-46b7-96f6-dcb61f85f812
+		summarizeBy: none
+		sourceColumn: inscrito_avaliado_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column nota_reaproveitada
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: cfda46d1-08bd-43a3-a999-a8f593a1ce5a
+		summarizeBy: none
+		sourceColumn: nota_reaproveitada
+
+		annotation SummarizationSetBy = Automatic
+
+	column contato_interno
+		dataType: string
+		lineageTag: 919a8c09-5a69-4c5c-954f-68bcd1e74608
+		summarizeBy: none
+		sourceColumn: contato_interno
+
+		annotation SummarizationSetBy = Automatic
+
+	column inscrito_interno
+		dataType: string
+		lineageTag: de57db3c-d247-46a4-b9a3-ff16f09e5117
+		summarizeBy: none
+		sourceColumn: inscrito_interno
+
+		annotation SummarizationSetBy = Automatic
+
+	column duracao
+		dataType: string
+		lineageTag: 1ebd0363-85b4-41ea-916c-ff253cbb04d7
+		summarizeBy: none
+		sourceColumn: duracao
+
+		annotation SummarizationSetBy = Automatic
+
+	column duplicada
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 331a08e8-4a46-4eaf-b0f1-6c9dae517540
+		summarizeBy: none
+		sourceColumn: duplicada
+
+		annotation SummarizationSetBy = Automatic
+
+	column contrato_interno
+		dataType: string
+		lineageTag: fd73d0bc-9cf6-42c4-bc1a-a055566e7761
+		summarizeBy: none
+		sourceColumn: contrato_interno
+
+		annotation SummarizationSetBy = Automatic
+
+	column aprovacao_automatica
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: acd709da-510c-4fc2-a490-d994d39e9298
+		summarizeBy: none
+		sourceColumn: aprovacao_automatica
+
+		annotation SummarizationSetBy = Automatic
+
+	column legenda_scoring
+		dataType: string
+		lineageTag: e4778e20-5eaf-476f-a7e5-ba0a2ccf2454
+		summarizeBy: none
+		sourceColumn: legenda_scoring
+
+		annotation SummarizationSetBy = Automatic
+
+	column nacionalidade_id
+		dataType: string
+		lineageTag: 13526a69-50a5-452f-9512-f40c3fd8d956
+		summarizeBy: none
+		sourceColumn: nacionalidade_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column responsavel_nacionalidade_id
+		dataType: string
+		lineageTag: 9e1e6486-f823-423b-90d8-17ee069abb5a
+		summarizeBy: none
+		sourceColumn: responsavel_nacionalidade_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column vinculo_id
+		dataType: string
+		lineageTag: 678c92b9-5ff4-4b77-9784-c9b431e538dd
+		summarizeBy: none
+		sourceColumn: vinculo_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_venc_inscricao
+		dataType: string
+		lineageTag: 370ba696-b58b-4858-b7fd-e52cebcf6bfc
+		summarizeBy: none
+		sourceColumn: data_venc_inscricao
+
+		annotation SummarizationSetBy = Automatic
+
+	column referer
+		dataType: string
+		lineageTag: 420f7809-b8bf-4089-a13f-40f492fc21e0
+		summarizeBy: none
+		sourceColumn: referer
+
+		annotation SummarizationSetBy = Automatic
+
+	column user_agent
+		dataType: string
+		lineageTag: 8bc3b563-1dfe-44e6-a939-c1fc5d5be29d
+		summarizeBy: none
+		sourceColumn: user_agent
+
+		annotation SummarizationSetBy = Automatic
+
+	column valor_orig_inscricao
+		dataType: string
+		lineageTag: 47133e0e-83c9-4031-8645-8824395a12de
+		summarizeBy: none
+		sourceColumn: valor_orig_inscricao
+
+		annotation SummarizationSetBy = Automatic
+
+	column valor_pago_inscricao
+		dataType: string
+		lineageTag: ab767948-b427-42a7-b977-5d69734aa867
+		summarizeBy: none
+		sourceColumn: valor_pago_inscricao
+
+		annotation SummarizationSetBy = Automatic
+
+	column responsavel_cor_raca_id
+		dataType: string
+		lineageTag: 1553d15e-d49a-4d3a-8756-0f67b3bbd8fc
+		summarizeBy: none
+		sourceColumn: responsavel_cor_raca_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column responsavel_dt_nasc
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: fe26ca0d-2f2b-423b-935e-d03423641e06
+		summarizeBy: none
+		sourceColumn: responsavel_dt_nasc
+
+		variation Variation
+			isDefault
+			relationship: bc61c04f-5999-4195-ac42-c3944213426e
+			defaultHierarchy: LocalDateTable_1b2344fb-fe09-49af-8beb-180223298bdc.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column responsavel_est_civil
+		dataType: string
+		lineageTag: ee8c8118-621e-4428-b335-6c220a64eeda
+		summarizeBy: none
+		sourceColumn: responsavel_est_civil
+
+		annotation SummarizationSetBy = Automatic
+
+	column responsavel_sexo
+		dataType: string
+		lineageTag: 96705f2d-586b-40ee-a012-8c29d9313c65
+		summarizeBy: none
+		sourceColumn: responsavel_sexo
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_efetiv_matricula
+		dataType: string
+		lineageTag: 2e108ae5-d282-4faa-adf8-ca041cb6b727
+		summarizeBy: none
+		sourceColumn: data_efetiv_matricula
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_aceite
+		dataType: string
+		lineageTag: 759b811d-48a2-4334-8a5b-cdbda3dcdaf9
+		summarizeBy: none
+		sourceColumn: data_aceite
+
+		annotation SummarizationSetBy = Automatic
+
+	column empresa
+		dataType: string
+		lineageTag: 463c98db-6b84-4d78-9a97-b80a7f687036
+		summarizeBy: none
+		sourceColumn: empresa
+
+		annotation SummarizationSetBy = Automatic
+
+	column esta_empregado
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: d3b72ed3-1f2d-4ae1-b91c-09dd03d65130
+		summarizeBy: none
+		sourceColumn: esta_empregado
+
+		annotation SummarizationSetBy = Automatic
+
+	column rg_orgao_emissor_id
+		dataType: string
+		lineageTag: 05588a54-5861-4a29-9a49-a4650e5189e3
+		summarizeBy: none
+		sourceColumn: rg_orgao_emissor_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column ultimo_acesso_link
+		dataType: string
+		lineageTag: 3adcf774-cb1f-4371-9904-2a0bbe830bba
+		summarizeBy: none
+		sourceColumn: ultimo_acesso_link
+
+		annotation SummarizationSetBy = Automatic
+
+	column cupom
+		dataType: string
+		lineageTag: 3078687b-a13c-45d2-89ba-0369181855c4
+		summarizeBy: none
+		sourceColumn: cupom
+
+		annotation SummarizationSetBy = Automatic
+
+	column plano_pagamento_id
+		dataType: string
+		lineageTag: eeeaf1ff-44a0-4f8e-b75f-9ca70cf545c8
+		summarizeBy: none
+		sourceColumn: plano_pagamento_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_conversao_facebook
+		dataType: string
+		lineageTag: e988db07-656b-40fb-a9c7-344af7d7e4fd
+		summarizeBy: none
+		sourceColumn: data_conversao_facebook
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_conversao_google
+		dataType: string
+		lineageTag: 7fb3bf41-b61e-4083-a728-02fc223560fe
+		summarizeBy: none
+		sourceColumn: data_conversao_google
+
+		annotation SummarizationSetBy = Automatic
+
+	column fbc
+		dataType: string
+		lineageTag: 8b2fdee8-d510-471a-bfd4-6f29f1c9095b
+		summarizeBy: none
+		sourceColumn: fbc
+
+		annotation SummarizationSetBy = Automatic
+
+	column fbclid
+		dataType: string
+		lineageTag: f78524dd-cc1c-42fd-8b1c-8496c7540e9b
+		summarizeBy: none
+		sourceColumn: fbclid
+
+		annotation SummarizationSetBy = Automatic
+
+	column fbp
+		dataType: string
+		lineageTag: 2aa13f0f-3d40-42c7-984d-f444072bf690
+		summarizeBy: none
+		sourceColumn: fbp
+
+		annotation SummarizationSetBy = Automatic
+
+	column gclid
+		dataType: string
+		lineageTag: da30c723-cb96-4283-b80a-de5d59df8f02
+		summarizeBy: none
+		sourceColumn: gclid
+
+		annotation SummarizationSetBy = Automatic
+
+	column ip
+		dataType: string
+		lineageTag: 613e11b4-e48b-4194-b54f-ec50c7b51ad3
+		summarizeBy: none
+		sourceColumn: ip
+
+		annotation SummarizationSetBy = Automatic
+
+	column rn
+		dataType: int64
+		formatString: 0
+		lineageTag: 0b3dd5fd-9469-417f-99b1-abac9842773b
+		summarizeBy: sum
+		sourceColumn: rn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Curso
+		dataType: string
+		lineageTag: 4569d5b9-4992-4f53-adce-8af3378956b8
+		summarizeBy: none
+		sourceColumn: Curso
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Curso Unidade'
+		dataType: string
+		lineageTag: d778f1be-e277-4d80-8c7e-d3efbe18f891
+		summarizeBy: none
+		sourceColumn: Curso Unidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Data Criacao Presente'
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: c530172d-83f8-4831-afce-188045f013d8
+		summarizeBy: none
+		sourceColumn: Data Criacao Presente
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Data Aprovação Presente'
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 4f8cf63e-225a-4690-b835-6014bb7623c6
+		summarizeBy: none
+		sourceColumn: Data Aprovação Presente
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Data Pgto Matricula Presente'
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: ea7df772-4aba-425d-9861-02e9af431634
+		summarizeBy: none
+		sourceColumn: Data Pgto Matricula Presente
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition 2025-2 = m
+		mode: import
+		source = ```
+				let
+				    FonteSharePoint = SharePoint.Files(
+				        "https://grupoeducacionalsantoant.sharepoint.com/sites/TriventoEducaco",
+				        [ApiVersion = 15]
+				    ),
+				
+				    Arquivo = FonteSharePoint{[Name="BI - Ingresso Inscrito 2025.2.xlsx"]}[Content],
+				
+				    Fonte = Excel.Workbook(Arquivo, null, true),
+				
+				    #"Resultado da consulta1" = Fonte{[Name="Resultado da consulta"]}[Data],
+				    
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(#"Resultado da consulta1", [PromoteAllScalars=true]),
+				
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{
+				        {"nome", type text}, {"codigo", type text}, {"email", type text}, {"celular", type text},
+				        {"telefone", type text}, {"rg", Int64.Type}, {"cpf", type text},
+				        {"nota", type number}, {"nota_enem", type number},
+				        {"data_aprovacao", type datetime},
+				        {"data_venc_matricula", type date},
+				        {"data_pgto_matricula", type date},
+				        {"data_criacao", type datetime},
+				        {"data_atualizacao", type datetime},
+				        {"termos_privacidade", type logical},
+				        {"membro_do_programa", type logical},
+				        {"agendamento_id", Int64.Type},
+				        {"concurso_id", Int64.Type},
+				        {"contato_id", Int64.Type},
+				        {"curso_id", type text},
+				        {"etapa_id", type text},
+				        {"modalidade_id", type text},
+				        {"necessidade_especial_id", type text},
+				        {"opcao_de_ingresso_id", type text},
+				        {"situacao_id", type text},
+				        {"tipo_id", type text},
+				        {"turno_id", type text},
+				        {"unidade_id", type text},
+				        {"operador_matricula_id", Int64.Type},
+				        {"operador_original_id", Int64.Type},
+				        {"ultimo_operador_id", Int64.Type},
+				        {"data_cancel_matricula", type date},
+				        {"polo_id", type text},
+				        {"bairro", type text},
+				        {"cep", type text},
+				        {"cidade", type text},
+				        {"endereco", type text},
+				        {"estado", type text},
+				        {"numero", Int64.Type},
+				        {"dados_financeiros", type logical},
+				        {"mensalidade", type number},
+				        {"data_integracao", type datetime},
+				        {"ano_enem", Int64.Type},
+				        {"codigo_anterior", type text},
+				        {"codigo_interno", Int64.Type},
+				        {"curso_anterior", type text},
+				        {"instituicao_anterior", type text},
+				        {"modificado", type logical},
+				        {"documentacao", type text},
+				        {"matricula_academica", type text},
+				        {"valor_pago_matricula", type number},
+				        {"data_nascimento", type date},
+				        {"estado_civil", type text},
+				        {"sexo", type text},
+				        {"codigo_ibge_id", Int64.Type},
+				        {"valor_orig_matricula", Int64.Type},
+				        {"opcao_de_curso_id", Int64.Type},
+				        {"rg_data_expedicao", type text},
+				        {"rg_emissor", type date},
+				        {"rg_uf", type text},
+				        {"url_portal", type text},
+				        {"tipo_produto_id", type text},
+				        {"pontuacao_anterior", Int64.Type},
+				        {"pontuacao_diaria", Int64.Type},
+				        {"pontuacao_fim_semana", Int64.Type},
+				        {"pontuacao_inicial", Int64.Type},
+				        {"pontuacao_inicio_semana", Int64.Type},
+				        {"responsavel_bairro", type text},
+				        {"responsavel_celular", Int64.Type},
+				        {"responsavel_cep", type text},
+				        {"responsavel_cidade", type text},
+				        {"responsavel_complemento", type text},
+				        {"responsavel_documento", type text},
+				        {"responsavel_email", type text},
+				        {"responsavel_estado", type text},
+				        {"responsavel_nome", type text},
+				        {"responsavel_numero", Int64.Type},
+				        {"responsavel_pais", type text},
+				        {"responsavel_rua", type text},
+				        {"responsavel_tipo_documento", type text},
+				        {"treineiro", type logical},
+				        {"etapa_integracao", type text},
+				        {"integracao_finalizada", type logical},
+				        {"segunda_opcao_id", type text},
+				        {"turno_segunda_opcao_id", type text},
+				        {"data_etapa_aprovado", type datetime},
+				        {"complemento", type text},
+				        {"observacoes", type text},
+				        {"eh_medico", type logical},
+				        {"etapa_carreira_medica", type text},
+				        {"curso_destino_id", type text},
+				        {"curso_origem", type text},
+				        {"periodo_destino", Int64.Type},
+				        {"ano_ensino_medio", type text},
+				        {"instituicao_ensino_medio_id", type text},
+				        {"nome_mae", type text},
+				        {"nome_pai", type text},
+				        {"cor_raca_id", type text},
+				        {"numero_inscricao_enem", type text},
+				        {"uuid", type text},
+				        {"scoring", Int64.Type},
+				        {"data_pgto_inscricao", type text},
+				        {"ne_acompanhamento", type text},
+				        {"ne_codigo_cid", type text},
+				        {"ne_medicos", type text},
+				        {"ne_obs", type text},
+				        {"inscrito_avaliado_id", type text},
+				        {"nota_reaproveitada", type logical},
+				        {"contato_interno", type text},
+				        {"inscrito_interno", type text},
+				        {"duracao", type text},
+				        {"duplicada", type logical},
+				        {"contrato_interno", type text},
+				        {"aprovacao_automatica", type logical},
+				        {"legenda_scoring", type text},
+				        {"nacionalidade_id", type text},
+				        {"responsavel_nacionalidade_id", type text},
+				        {"vinculo_id", type text},
+				        {"data_venc_inscricao", type text},
+				        {"referer", type text},
+				        {"user_agent", type text},
+				        {"valor_orig_inscricao", type text},
+				        {"valor_pago_inscricao", type text},
+				        {"responsavel_cor_raca_id", type text},
+				        {"responsavel_dt_nasc", type date},
+				        {"responsavel_est_civil", type text},
+				        {"responsavel_sexo", type text},
+				        {"data_efetiv_matricula", type text},
+				        {"data_aceite", type text},
+				        {"empresa", type text},
+				        {"esta_empregado", type logical},
+				        {"rg_orgao_emissor_id", type text},
+				        {"ultimo_acesso_link", type text},
+				        {"cupom", type text},
+				        {"plano_pagamento_id", type text},
+				        {"data_conversao_facebook", type text},
+				        {"data_conversao_google", type text},
+				        {"fbc", type text},
+				        {"fbclid", type text},
+				        {"fbp", type text},
+				        {"gclid", type text},
+				        {"ip", type text},
+				        {"rn", Int64.Type}
+				    }),
+				
+				    #"Duplicatas Removidas" = Table.Distinct(#"Tipo Alterado", {"celular"}),
+				
+				    #"Data Extraída" = Table.TransformColumns(#"Duplicatas Removidas",{
+				        {"data_criacao", DateTime.Date, type date},
+				        {"data_aprovacao", DateTime.Date, type date},
+				        {"data_atualizacao", DateTime.Date, type date}
+				    }),
+				
+				    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Data Extraída",{{"concurso_id", type text}}),
+				
+				    #"Personalização Adicionada" = Table.AddColumn(#"Tipo Alterado1", "Data Criacao Presente", each Date.AddYears([data_criacao],1)),
+				    #"Personalização Adicionada2" = Table.AddColumn(#"Personalização Adicionada", "Data Aprovação Presente", each Date.AddYears([data_aprovacao],1)),
+				
+				    #"Personalização Adicionada1" = Table.AddColumn(#"Personalização Adicionada2", "Data Pgto Matricula Presente", each Date.AddYears([data_pgto_matricula],1)),
+				
+				    #"Tipo Alterado2" = Table.TransformColumnTypes(
+				        #"Personalização Adicionada1",
+				        {
+				            {"Data Criacao Presente", type date},
+				            {"cpf", type text},
+				            {"Data Aprovação Presente", type date},
+				            {"Data Pgto Matricula Presente", type date}
+				        }
+				    ),
+				
+				    #"Colunas Removidas" = Table.RemoveColumns(
+				        #"Tipo Alterado2",
+				        {"rg","rg_emissor","codigo_interno"}
+				    ),
+				
+				    #"Consultas Mescladas" = Table.NestedJoin(
+				        #"Colunas Removidas",
+				        {"curso_id"},
+				        DeparaCursos,
+				        {"curso_id"},
+				        "DeparaCursos",
+				        JoinKind.LeftOuter
+				    ),
+				
+				    #"DeparaCursos Expandido" = Table.ExpandTableColumn(
+				        #"Consultas Mescladas",
+				        "DeparaCursos",
+				        {"Curso"},
+				        {"Curso"}
+				    ),
+				
+				    #"Unidade Corrigida" = Table.TransformColumns(
+				        #"DeparaCursos Expandido",
+				        {{"unidade_id", each Text.Proper(_), type text}}
+				    ),
+				
+				    #"Curso Unidade Adicionado" = Table.AddColumn(
+				        #"Unidade Corrigida",
+				        "Curso Unidade",
+				        each [unidade_id] & "-" & [Curso],
+				        type text
+				    )
+				
+				in
+				    #"Curso Unidade Adicionado"
+				```
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

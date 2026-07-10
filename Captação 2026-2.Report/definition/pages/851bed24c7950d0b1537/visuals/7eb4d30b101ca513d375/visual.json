@@ -1,0 +1,232 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "name": "7eb4d30b101ca513d375",
+  "position": {
+    "x": 182.85714285714283,
+    "y": 161.34453781512605,
+    "z": 4000,
+    "height": 539.6078431372548,
+    "width": 1088.1792717086835,
+    "tabOrder": 4000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "2026-2"
+                    }
+                  },
+                  "Property": "Nome Completo"
+                }
+              },
+              "queryRef": "2026-2.Nome Completo",
+              "nativeQueryRef": "Nome Completo"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "2026-2"
+                    }
+                  },
+                  "Property": "Nome"
+                }
+              },
+              "queryRef": "2026-2.Nome",
+              "nativeQueryRef": "Nome"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "2026-2"
+                    }
+                  },
+                  "Property": "Sobrenome"
+                }
+              },
+              "queryRef": "2026-2.Sobrenome",
+              "nativeQueryRef": "Sobrenome"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "2026-2"
+                    }
+                  },
+                  "Property": "email"
+                }
+              },
+              "queryRef": "2026-2.email",
+              "nativeQueryRef": "email"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "2026-2"
+                    }
+                  },
+                  "Property": "Celular"
+                }
+              },
+              "queryRef": "2026-2.Celular",
+              "nativeQueryRef": "Celular"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "2026-2"
+                    }
+                  },
+                  "Property": "Curso ID"
+                }
+              },
+              "queryRef": "2026-2.Curso ID",
+              "nativeQueryRef": "Curso",
+              "displayName": "Curso"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "2026-2"
+                    }
+                  },
+                  "Property": "Situação Inscrição"
+                }
+              },
+              "queryRef": "2026-2.Situação Inscrição",
+              "nativeQueryRef": "Situação Inscrição"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "2026-2"
+                    }
+                  },
+                  "Property": "Unidade Inscrito"
+                }
+              },
+              "queryRef": "2026-2.Unidade Inscrito",
+              "nativeQueryRef": "Unidade Inscrito"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "2026-2"
+                    }
+                  },
+                  "Property": "Forma de Ingresso"
+                }
+              },
+              "queryRef": "2026-2.Forma de Ingresso",
+              "nativeQueryRef": "Forma de Ingresso1"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "2026-2"
+                    }
+                  },
+                  "Property": "Situação de Avaliação"
+                }
+              },
+              "queryRef": "2026-2.Situação de Avaliação",
+              "nativeQueryRef": "Situação de Avaliação"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "2026-2"
+                    }
+                  },
+                  "Property": "Situação Pagamento"
+                }
+              },
+              "queryRef": "2026-2.Situação Pagamento",
+              "nativeQueryRef": "Situação Pagamento"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "grid": [
+        {
+          "properties": {
+            "outlineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.6
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "wordWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Minimal'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

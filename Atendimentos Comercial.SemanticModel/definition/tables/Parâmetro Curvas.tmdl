@@ -1,0 +1,90 @@
+table 'Parâmetro Curvas'
+	lineageTag: be8cbc88-b2b1-4b4d-bac2-7dc943415f86
+
+	column Parâmetro
+		lineageTag: 70475aa5-e4a8-4dec-bc77-e4f53207de37
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Parâmetro Pedido'
+
+		relatedColumnDetails
+			groupByColumn: 'Parâmetro Campos'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Parâmetro Campos'
+		isHidden
+		lineageTag: b4df3b33-8693-41b2-9a88-73882f5d4d21
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Parâmetro Pedido'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Parâmetro Pedido'
+		isHidden
+		formatString: 0
+		lineageTag: f94798b4-8006-4f94-ac49-a5a59e5cba31
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Etapa = ```
+			
+			    SWITCH(
+			        TRUE(),
+			        CONTAINSSTRING('Parâmetro Curvas'[Parâmetro] , "Insc") , "Inscritos" ,
+			        CONTAINSSTRING('Parâmetro Curvas'[Parâmetro] , "Matr") , "Matrículas" ,
+			        BLANK()
+			    )
+			```
+		lineageTag: 011cfa1f-a700-4f0b-bc6a-c479b01c7d23
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tipo = ```
+			
+			    SWITCH(
+			        TRUE(),
+			        CONTAINSSTRING('Parâmetro Curvas'[Parâmetro] , "%") , "%" ,
+			        CONTAINSSTRING('Parâmetro Curvas'[Parâmetro] , "Acumulad") , "Acumulado" ,
+			        "Absoluto"
+			    )
+			```
+		lineageTag: ef3c58b8-a80a-44b8-8d47-60348309b2b5
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Parâmetro Curvas' = calculated
+		mode: import
+		source =
+				{
+				    ("Insc 25-2 Acumulado", NAMEOF('Medidas'[Insc 25-2 Acumulado]), 0),
+				    ("Insc Meta Acumulada", NAMEOF('Medidas'[Insc Meta Acumulada]), 1),
+				    ("Insc 26-2 Acumulado", NAMEOF('Medidas'[Insc 26-2 Acumulado]), 2),
+				    ("GAP Insc Acumulada", NAMEOF('Medidas'[Insc GAP]), 3),
+				    ("% Insc Meta Acumulado", NAMEOF('Medidas'[% Insc Meta Acumulado]), 4),
+				    ("Insc 25-2", NAMEOF('Medidas'[Insc 25-2]), 4),
+				    ("Insc Meta", NAMEOF('Medidas'[Insc Meta]), 5),
+				    ("Insc 26-2", NAMEOF('Medidas'[Funil - Insc 26-2]), 7),
+				    ("Matr 25-2 Acumulado", NAMEOF('Medidas'[Matr 25-2 Acumulado]), 8),
+				    ("Matr Meta Acumulada", NAMEOF('Medidas'[Matr Meta Acumulada]), 9),
+				    ("Matr 26-2 Acumulado", NAMEOF('Medidas'[Matr 26-2 Acumulado]), 10),
+				    ("GAP Matr Acumulada", NAMEOF('Medidas'[Matr GAP]), 11),
+				    ("% Matr Meta Acumulado", NAMEOF('Medidas'[% Matr Meta Acumulado]), 12),
+				    ("Matr 25-2", NAMEOF('Medidas'[Matr 25-2]), 13),
+				    ("Matr Meta", NAMEOF('Medidas'[Matr Meta]), 14),
+				    ("Matr 26-2", NAMEOF('Medidas'[MED 2 Matr 26-2]), 15)
+				}
+
+	annotation PBI_Id = e714f245e347497c854469a80a11e97a
+

@@ -1,0 +1,198 @@
+table dCalendario
+	lineageTag: 56fddc2c-58c7-4abb-b7fb-6286534cc079
+
+	column Date
+		formatString: Short Date
+		lineageTag: c87feed7-1ab5-4bec-a192-1f3ffc27b75a
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		variation Variation
+			isDefault
+			relationship: a8dd076f-7d3f-45e4-a341-c4989d7fda92
+			defaultHierarchy: LocalDateTable_a805f813-464e-407c-b1f9-b2f9e577ec46.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Ano
+		formatString: 0
+		lineageTag: 5cc43bd9-82fa-4d75-9e4c-58b091d56d2d
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Ano]
+
+		annotation SummarizationSetBy = Automatic
+
+	column MesNumero
+		formatString: 0
+		lineageTag: 83c63451-f384-4dbb-acac-fb34896aa2d1
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [MesNumero]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mes
+		lineageTag: 3f1555fe-2cc2-48fe-964b-cf00b257559d
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Mes]
+
+		annotation SummarizationSetBy = Automatic
+
+	column MesAno
+		lineageTag: 77a2d525-0eec-4ad2-ab60-544e5f1bcc0d
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [MesAno]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Dia
+		formatString: 0
+		lineageTag: 85eaace5-e29a-4490-815f-2e9088ca6f31
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Dia]
+
+		annotation SummarizationSetBy = Automatic
+
+	column DiaSemanaNumero
+		formatString: 0
+		lineageTag: af550ebb-4bd7-478a-b739-d7ab16704389
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [DiaSemanaNumero]
+
+		annotation SummarizationSetBy = Automatic
+
+	column DiaSemana
+		lineageTag: cd6f9177-ef08-451b-ae94-ca145e3798e7
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [DiaSemana]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Semana
+		lineageTag: 0c2059cd-fe92-4b48-a304-1fa4626b590f
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Semana]
+
+		annotation SummarizationSetBy = Automatic
+
+	column MesFormatado
+		lineageTag: f6d7fadd-7bde-4595-895d-2ac30da7df0e
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [MesFormatado]
+
+		annotation SummarizationSetBy = Automatic
+
+	column PrimeiroDiaSemana
+		lineageTag: 2d24ff7e-44c6-4437-990f-c7d43949f51c
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [PrimeiroDiaSemana]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column InicioFimSemana
+		lineageTag: 2be4d27e-e862-482f-bf5f-6e6bcbc045fd
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [InicioFimSemana]
+
+		annotation SummarizationSetBy = Automatic
+
+	column DiaSemanaAbrev
+		lineageTag: 9e86135b-bedb-4d69-9781-d66aa185c1e9
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [DiaSemanaAbrev]
+		sortByColumn: DiaSemanaNumero
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dCalendario = calculated
+		mode: import
+		source =
+				
+				VAR DataInicial = DATE(2026,4,7)
+				VAR DataFinal = DATE(2026,12,31)
+				
+				RETURN
+				ADDCOLUMNS(
+				    CALENDAR(DataInicial, DataFinal),
+				
+				    "Ano", YEAR([Date]),
+				    "MesNumero", MONTH([Date]),
+				    "Mes", FORMAT([Date], "MMMM"),
+				    "MesAno", FORMAT([Date], "MMM/YYYY"),
+				    "Dia", DAY([Date]),
+				    "DiaSemanaNumero", WEEKDAY([Date],2),
+				    "DiaSemana", FORMAT([Date], "dddd"),
+				    "DiaSemanaAbrev", FORMAT([Date], "ddd"),
+				
+				    "Semana",
+				    VAR DataBase = DATE(2026,4,7)
+				    VAR PrimeiraSegunda = DATE(2026,4,13)
+				
+				    VAR NumeroSemana =
+				        IF(
+				            [Date] < PrimeiraSegunda,
+				            1,
+				            INT(DATEDIFF(PrimeiraSegunda,[Date],DAY)/7) + 2
+				        )
+				
+				    RETURN
+				        "s" & FORMAT(NumeroSemana,"00"),
+				
+				    "PrimeiroDiaSemana",
+				    VAR PrimeiraSegunda1 = DATE(2026,4,13)
+				
+				    VAR DataSemana =
+				        IF(
+				            [Date] < PrimeiraSegunda1,
+				            DATE(2026,4,7),
+				            [Date] - WEEKDAY([Date],2) + 1
+				        )
+				
+				    RETURN
+				        FORMAT(DataSemana,"dd/MM"),
+				
+				    "InicioFimSemana",
+				    VAR PrimeiraSegunda2 = DATE(2026,4,13)
+				
+				    VAR InicioSemana =
+				        IF(
+				            [Date] < PrimeiraSegunda2,
+				            DATE(2026,4,7),
+				            [Date] - WEEKDAY([Date],2) + 1
+				        )
+				
+				    VAR FimSemana =
+				        IF(
+				            [Date] < PrimeiraSegunda2,
+				            DATE(2026,4,12),
+				            InicioSemana + 6
+				        )
+				
+				    RETURN
+				        FORMAT(InicioSemana,"dd/MM/yy")
+				        & " - " &
+				        FORMAT(FimSemana,"dd/MM/yy"),
+				
+				    "MesFormatado",
+				        FORMAT([Date],"MM") & "-" &
+				        UPPER(LEFT(FORMAT([Date],"MMM"),3))
+				)
+
+	annotation PBI_Id = ac71d6a0a8154dea9cbf55558f90df05
+

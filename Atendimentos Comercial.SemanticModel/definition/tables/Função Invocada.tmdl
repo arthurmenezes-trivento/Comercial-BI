@@ -1,0 +1,24 @@
+table 'Função Invocada'
+	lineageTag: acd62b7c-e52f-4fef-a5ec-a9bc7f0864f4
+
+	column 'Função Invocada'
+		dataType: string
+		lineageTag: fa8ecfae-ce6c-4530-a951-07ee32406c17
+		summarizeBy: none
+		sourceColumn: Função Invocada
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Função Invocada' = m
+		mode: import
+		queryGroup: 'Consultas - Token'
+		source =
+				let
+				    Fonte = #"Token de acesso"()
+				in
+				    Fonte
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Text
+

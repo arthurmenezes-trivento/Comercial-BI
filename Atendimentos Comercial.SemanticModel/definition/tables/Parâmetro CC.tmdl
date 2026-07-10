@@ -1,0 +1,93 @@
+table 'Parâmetro CC'
+	lineageTag: 1d23fa5f-d3c0-4b8b-babb-ceda8250003e
+
+	column Parâmetro
+		lineageTag: ff5e0d94-e364-462b-b271-c549235352ce
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Parâmetro Pedido'
+
+		relatedColumnDetails
+			groupByColumn: 'Parâmetro Campos'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Parâmetro Campos'
+		isHidden
+		lineageTag: 06bcabb2-4bc0-4395-a251-96bdd7909adb
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Parâmetro Pedido'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Parâmetro Pedido'
+		isHidden
+		formatString: 0
+		lineageTag: 4fff5f2c-4464-4bf8-9e68-411da032458a
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Etapa = ```
+			
+			    SWITCH(
+			        TRUE(),
+			        CONTAINSSTRING('Parâmetro CC'[Parâmetro] , "Insc") , "Inscritos" ,
+			        CONTAINSSTRING('Parâmetro CC'[Parâmetro] , "Matr") , "Matrículados" ,
+			        CONTAINSSTRING('Parâmetro CC'[Parâmetro] , "Aprov") , "Aprovados",
+			        BLANK()
+			    )
+			```
+		lineageTag: 9092f0df-cffe-4a74-bf6c-64a8b4b52f2c
+		summarizeBy: none
+		sortByColumn: Ordem
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ordem = ```
+			
+			    SWITCH(
+			        TRUE(),
+			        CONTAINSSTRING('Parâmetro CC'[Parâmetro] , "Insc") , 1 ,
+			        CONTAINSSTRING('Parâmetro CC'[Parâmetro] , "Matr") , 3 ,
+			        CONTAINSSTRING('Parâmetro CC'[Parâmetro] , "Aprov") , 2,
+			        BLANK()
+			    )
+			```
+		formatString: 0
+		lineageTag: 1bc0c7db-5e2e-4967-8ab0-a0722a49990a
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Parâmetro CC' = calculated
+		mode: import
+		source =
+				{
+				    ("Insc 25-2 (Total)", NAMEOF('Medidas'[Insc 25-2]), 0),
+				    ("Insc 25-2 (Período Atual)", NAMEOF('Medidas'[Cartão Insc 25-2]), 1),
+				    ("Insc 26-2", NAMEOF('Medidas'[Funil - Insc 26-2]), 2),
+				    ("Comparativo Insc. YoY (%)", NAMEOF('Medidas'[CC % Insc 25-2]), 3),
+				    ("Aprov 25-2 (Total)", NAMEOF('Medidas'[Aprov 25-2]), 4),
+				    ("Aprov 25-2 (Período Atual)", NAMEOF('Medidas'[Cartão Aprov 25-2]), 5),
+				    ("Aprov 26-2", NAMEOF('Medidas'[Funil - Aprov 26-2]), 6),
+				    ("Comparativo Aprov. YoY (%)", NAMEOF('Medidas'[CC % Aprov 25-2]), 7),
+				    ("Matr 25-2 (Total)", NAMEOF('Medidas'[Matr 25-2]), 8),
+				    ("Matr 25-2 (Período Atual) ", NAMEOF('Medidas'[Cartão Matr 25-2]), 9),
+				    ("Matr 26-2", NAMEOF('Medidas'[MED 2 Matr 26-2]), 10),
+				    ("Comparativo Matr. YoY (%)", NAMEOF('Medidas'[CC % Matr 25-2]), 11),
+				    ("Matr Meta", NAMEOF([Meta Curso]), 12),
+				    ("Convers Insc > Matr", NAMEOF([CC Convers Insc > Matr 26-2]), 13),
+				    ("GAP Matr YoY", NAMEOF([CC GAP Matr YoY]), 14)
+				}
+
+	annotation PBI_Id = 0c1f4b6036604c27bb750eea65597624
+

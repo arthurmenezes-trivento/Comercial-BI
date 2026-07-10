@@ -1,0 +1,310 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 128.43733034962005,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 2244.5629430275253,
+            "y": 528.02013588177135
+          },
+          "nodeIndex": "Medidas",
+          "nodeLineageTag": "143981bb-0788-4e2b-982a-f9adf2b40027",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 11
+        },
+        {
+          "location": {
+            "x": 307.10269253379374,
+            "y": 0
+          },
+          "nodeIndex": "dUnidade",
+          "nodeLineageTag": "f42ed6c3-0d2f-4805-900d-f3f333549678",
+          "size": {
+            "height": 183.29940612275306,
+            "width": 234
+          },
+          "zIndex": 17
+        },
+        {
+          "location": {
+            "x": 867.97672070388717,
+            "y": 482.32091261660685
+          },
+          "nodeIndex": "2026-2",
+          "nodeLineageTag": "7627338a-87e4-413f-a001-aade7071e225",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 13
+        },
+        {
+          "location": {
+            "x": 964.459947382397,
+            "y": 0
+          },
+          "nodeIndex": "dCalendario",
+          "nodeLineageTag": "56fddc2c-58c7-4abb-b7fb-6286534cc079",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 12
+        },
+        {
+          "location": {
+            "x": 125.4364561185514,
+            "y": 477.36670283801715
+          },
+          "nodeIndex": "2025-2",
+          "nodeLineageTag": "6e16546a-66e9-4836-bf94-64d18b57458a",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 10
+        },
+        {
+          "location": {
+            "x": 2238.33463944941,
+            "y": 773.0788409355913
+          },
+          "nodeIndex": "Ultima Atualizacao",
+          "nodeLineageTag": "73d85487-de7a-4e99-a734-e46d1efc5d4e",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 979.4161964041084,
+            "y": 951.57127126733337
+          },
+          "nodeIndex": "Leads",
+          "nodeLineageTag": "f1974ad3-81f0-4513-94cc-be42301023d2",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 9
+        },
+        {
+          "location": {
+            "x": 1335.0075618184105,
+            "y": 0
+          },
+          "nodeIndex": "dCurso",
+          "nodeLineageTag": "8785b4b3-24ce-43aa-a4cf-56ecbcf47f63",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 15
+        },
+        {
+          "location": {
+            "x": 2241.1726886874612,
+            "y": 11.872315354079092
+          },
+          "nodeIndex": "Função Invocada",
+          "nodeLineageTag": "acd62b7c-e52f-4fef-a5ec-a9bc7f0864f4",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 459.53007308780093,
+            "y": 474.946327889645
+          },
+          "nodeIndex": "2025-2 MED",
+          "nodeLineageTag": "c305dd34-7ceb-47b5-8627-616b5677c19e",
+          "size": {
+            "height": 382,
+            "width": 234
+          },
+          "zIndex": 14
+        },
+        {
+          "location": {
+            "x": 2241.6580147938835,
+            "y": 330.61970125204186
+          },
+          "nodeIndex": "Parâmetro Curvas",
+          "nodeLineageTag": "be8cbc88-b2b1-4b4d-bac2-7dc943415f86",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 16
+        },
+        {
+          "location": {
+            "x": 2245.8430719371968,
+            "y": 160.90594096398388
+          },
+          "nodeIndex": "Parâmetro CC",
+          "nodeLineageTag": "1d23fa5f-d3c0-4b8b-babb-ceda8250003e",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 1247.2568820298698,
+            "y": 476.89454525386606
+          },
+          "nodeIndex": "Metas",
+          "nodeLineageTag": "095ab7da-3ca9-4c3d-96e9-a2d7474ae079",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 1686.5371975289056,
+            "y": 0
+          },
+          "nodeIndex": "dCanal",
+          "nodeLineageTag": "eb03aa22-dd47-40b0-b3c8-f3c2c5f46738",
+          "size": {
+            "height": 192.21866517481004,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 1580.1569264943782,
+            "y": 477.70350411557536
+          },
+          "nodeIndex": "Metas - Medicina",
+          "nodeLineageTag": "6704e7fb-7d7b-45fd-b078-e3ebff4f83b8",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 1912.4829694563739,
+            "y": 480.7881148300936
+          },
+          "nodeIndex": "Metas Curso",
+          "nodeLineageTag": "6b14124a-4458-4130-aa8d-7112d0e84aa2",
+          "size": {
+            "height": 206.32870877232335,
+            "width": 234
+          },
+          "zIndex": 18
+        },
+        {
+          "location": {
+            "x": 2534.4622620589548,
+            "y": 17.252343081032905
+          },
+          "nodeIndex": "Parâmetro Canal",
+          "nodeLineageTag": "e3212bd1-5075-4410-9a6d-1dadbe834d78",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 2531.577417504157,
+            "y": 199.19248766320482
+          },
+          "nodeIndex": "Parâmetro Curvas Medicina",
+          "nodeLineageTag": "8a45c2d3-fe6b-4bcb-9b1c-165d3ca938c4",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 2
+        }
+      ],
+      "name": "Todas as tabelas",
+      "zoomValue": 56.058468207030124,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    },
+    {
+      "ordinal": 1,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 294,
+            "y": 310
+          },
+          "nodeIndex": "Metas",
+          "nodeLineageTag": "095ab7da-3ca9-4c3d-96e9-a2d7474ae079",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 785,
+            "y": 291
+          },
+          "nodeIndex": "dCalendario",
+          "nodeLineageTag": "56fddc2c-58c7-4abb-b7fb-6286534cc079",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 396,
+            "y": 6
+          },
+          "nodeIndex": "Metas - Medicina",
+          "nodeLineageTag": "6704e7fb-7d7b-45fd-b078-e3ebff4f83b8",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Layout 1",
+      "zoomValue": 79.553182037699813,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas as tabelas",
+  "defaultDiagram": "Todas as tabelas"
+}

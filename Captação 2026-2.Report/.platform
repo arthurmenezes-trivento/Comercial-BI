@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Captação 2026-2"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "d8881713-e66f-4e82-8419-057184f601d7"
+  }
+}

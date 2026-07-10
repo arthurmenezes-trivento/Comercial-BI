@@ -1,0 +1,86 @@
+table 'Parâmetro Canal'
+	lineageTag: e3212bd1-5075-4410-9a6d-1dadbe834d78
+
+	column 'Parâmetro Canal'
+		lineageTag: 2c7035f6-e381-4a2c-9d1e-756071b83985
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Parâmetro Canal Pedido'
+
+		relatedColumnDetails
+			groupByColumn: 'Parâmetro Canal Campos'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Parâmetro Canal Campos'
+		isHidden
+		lineageTag: 9f76fa11-c400-4f32-82c8-e418bcfcc390
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Parâmetro Canal Pedido'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Parâmetro Canal Pedido'
+		isHidden
+		formatString: 0
+		lineageTag: cd6237b8-b913-46da-8c2e-93f468d5b49b
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Etapa = ```
+			
+			    SWITCH(
+			        TRUE(),
+			        CONTAINSSTRING('Parâmetro Canal'[Parâmetro Canal] , "Insc") , "Inscritos" ,
+			        CONTAINSSTRING('Parâmetro Canal'[Parâmetro Canal] , "Matr") , "Matrículas" ,
+			        BLANK()
+			    )
+			```
+		lineageTag: 9cd9a34a-e617-4d9f-b6ef-510148816403
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tipo = ```
+			
+			    SWITCH(
+			        TRUE(),
+			        CONTAINSSTRING('Parâmetro Canal'[Parâmetro Canal] , "%") , "%" ,
+			        CONTAINSSTRING('Parâmetro Canal'[Parâmetro Canal] , "Acumulad") , "Acumulado" ,
+			        "Absoluto"
+			    )
+			```
+		lineageTag: b7a2b396-9490-43b7-a802-3a5a592fac16
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Parâmetro Canal' = calculated
+		mode: import
+		source =
+				{
+				    ("Insc Meta Acumulada", NAMEOF('Medidas'[Insc Meta Acumulada]), 0),
+				    ("Insc Acumulado", NAMEOF('Medidas'[Insc Canal 26-2 Acumulado]), 1),
+				    ("Insc GAP Acumulado", NAMEOF('Medidas'[Insc Canal GAP Acumulado]), 2),
+				    ("Insc Meta", NAMEOF('Medidas'[Insc Meta]), 3),
+				    ("Insc", NAMEOF('Medidas'[Insc Canal 26-2]), 4),
+				    ("Insc GAP", NAMEOF('Medidas'[Insc Canal GAP]), 5),
+				    ("Matr Meta Acumulada", NAMEOF('Medidas'[Matr Meta Acumulada]), 6),
+				    ("Matr Acumulado", NAMEOF('Medidas'[Matr Canal 26-2 Acumulado]), 7),
+				    ("Matr GAP Acumulado", NAMEOF('Medidas'[Matr Canal GAP Acumulado]), 8),
+				    ("Matr Meta", NAMEOF('Medidas'[Matr Meta]), 9),
+				    ("Matr", NAMEOF('Medidas'[Matr Canal 26-2]), 10),
+				    ("Matr GAP", NAMEOF('Medidas'[Matr Canal GAP]), 11)
+				}
+
+	annotation PBI_Id = e27899dee219448c984a53d0a2a92611
+

@@ -1,0 +1,45 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "b36e49e784be35cfae99",
+  "displayName": "Análises",
+  "displayOption": "FitToWidth",
+  "height": 1480,
+  "width": 1480,
+  "visualInteractions": [
+    {
+      "source": "045e77cb3423a98190e7",
+      "target": "573c6481352df48986b6",
+      "type": "DataFilter"
+    },
+    {
+      "source": "045e77cb3423a98190e7",
+      "target": "96039112d39609b6f920",
+      "type": "DataFilter"
+    },
+    {
+      "source": "045e77cb3423a98190e7",
+      "target": "9598b648529017800295",
+      "type": "DataFilter"
+    },
+    {
+      "source": "3200e5c0669eb40f7ee2",
+      "target": "0f4fdbab0291168d2933",
+      "type": "NoFilter"
+    },
+    {
+      "source": "223afa40dbee2102ed05",
+      "target": "0f4fdbab0291168d2933",
+      "type": "NoFilter"
+    },
+    {
+      "source": "045e77cb3423a98190e7",
+      "target": "0f4fdbab0291168d2933",
+      "type": "NoFilter"
+    },
+    {
+      "source": "1361cc173067f32e7798",
+      "target": "0f4fdbab0291168d2933",
+      "type": "NoFilter"
+    }
+  ]
+}

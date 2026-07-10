@@ -1,0 +1,68 @@
+model Model
+	culture: pt-BR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: pt-BR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+queryGroup 'Consultas - Token'
+
+	annotation PBI_QueryGroupOrder = 0
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["Token de acesso","Função Invocada","Leads","2026-2","Inscricoes","Pagamentos","Consulta1","2025-2","dUnidade","Metas","Metas Curso","DeparaCursos","2025-2 MED","dCanal","Metas - Medicina","dCurso"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table 2026-2
+ref table Medidas
+ref table dUnidade
+ref table DateTableTemplate_0222e32a-6655-40a5-81e5-c3330bbcd9fd
+ref table dCalendario
+ref table 2025-2
+ref table LocalDateTable_33bec466-9c38-4df9-9798-c8ecaf5bc244
+ref table LocalDateTable_643691f8-c4a4-4a1f-aa7d-84c2ccad78ff
+ref table LocalDateTable_005cce95-6bd5-4f92-b6a5-6a01c9ad5dbe
+ref table LocalDateTable_64eb5f4d-2727-4173-a3e8-a5023ef2ac64
+ref table LocalDateTable_302094e7-7e24-458d-bcea-d30c352cd3f0
+ref table LocalDateTable_0cefc1a7-7ad2-4b9f-9306-0ba5824f4fe0
+ref table LocalDateTable_c5b1b3f0-e268-444b-9b69-2cc6e942212d
+ref table LocalDateTable_a8734288-a04a-497b-9c19-09118c50ffcd
+ref table LocalDateTable_1b2344fb-fe09-49af-8beb-180223298bdc
+ref table 'Ultima Atualizacao'
+ref table LocalDateTable_dbc3bbb7-e54f-4a4e-8265-240590589075
+ref table Metas
+ref table LocalDateTable_c9677879-e2e5-4e7e-b6a4-9df7c68af34f
+ref table LocalDateTable_da4f0d9b-3d82-4f38-855c-fa47d98a0950
+ref table 'Parâmetro Curvas'
+ref table LocalDateTable_fba54961-8176-4f27-b7c4-cd8662b5fdeb
+ref table 'Função Invocada'
+ref table '2025-2 MED'
+ref table LocalDateTable_f3033ccc-0e18-4223-9c4b-f6f275aa21cd
+ref table LocalDateTable_2f9af5b1-f4ab-4be5-b265-aecb8e987c34
+ref table LocalDateTable_6d82a70a-7540-4cc5-95b6-b238837c3c8c
+ref table LocalDateTable_d17f78b0-8aaa-41e9-818f-63f8d2c6077d
+ref table LocalDateTable_a2022c07-6fc4-4b18-8e34-a06c2bf30c75
+ref table LocalDateTable_c2852a58-0615-4708-8686-72fc571b3767
+ref table LocalDateTable_00294117-a5bd-4aa2-add5-299c708d964e
+ref table LocalDateTable_b2bcd7ff-95af-42fa-846b-58e0d7de4db6
+ref table LocalDateTable_f10a0b2c-95c6-4e3f-bc14-b9d14ee96d76
+ref table LocalDateTable_5a126e76-0c7f-4ef8-b66b-4a45484936b3
+ref table LocalDateTable_ea155b8b-9c16-4a5e-8a07-8aac2881b8df
+ref table 'Parâmetro CC'
+ref table dCanal
+ref table 'Metas - Medicina'
+ref table 'Metas Curso'
+ref table 'Parâmetro Canal'
+ref table 'Parâmetro Curvas Medicina'
+ref table Leads
+ref table LocalDateTable_13d55816-b77b-4b20-92a9-0ed12f17be0a
+ref table LocalDateTable_6209402d-885f-444f-b7f6-b9e38b768c04
+ref table dCurso
+ref table LocalDateTable_a805f813-464e-407c-b1f9-b2f9e577ec46
+ref table LocalDateTable_87e26fc0-fd37-4960-be28-b682fd6fb781
+
+ref cultureInfo pt-BR
+

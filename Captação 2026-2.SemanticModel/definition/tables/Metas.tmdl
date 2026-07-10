@@ -1,0 +1,84 @@
+table Metas
+	lineageTag: 095ab7da-3ca9-4c3d-96e9-a2d7474ae079
+
+	column Unidade
+		dataType: string
+		lineageTag: e61fc3c4-166c-4973-b4a1-af0849b8c90a
+		summarizeBy: none
+		sourceColumn: Unidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column Canal
+		dataType: string
+		lineageTag: 907126f0-6bc7-4c74-87d1-8e5ea028c282
+		summarizeBy: none
+		sourceColumn: Canal
+
+		annotation SummarizationSetBy = Automatic
+
+	column Etapa
+		dataType: string
+		lineageTag: af38d74f-cad2-4260-adad-299d1c667c3c
+		summarizeBy: none
+		sourceColumn: Etapa
+
+		annotation SummarizationSetBy = Automatic
+
+	column Data
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 53e09b9a-f2ce-458d-9702-d9b34aabd5b5
+		summarizeBy: none
+		sourceColumn: Data
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Meta
+		dataType: int64
+		formatString: 0
+		lineageTag: 7b5a8d6b-b6a6-43be-8c30-ee1b260bd18e
+		summarizeBy: sum
+		sourceColumn: Meta
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Metas = m
+		mode: import
+		source =
+				let
+				    Fonte = SharePoint.Files(
+				        "https://grupoeducacionalsantoant.sharepoint.com/sites/TriventoEducaco",
+				        [ApiVersion = 15]
+				    ),
+				
+				    Arquivo = Fonte{[Name="Meta 2026.2.xlsx"]}[Content],
+				
+				    ExcelOrigem = Excel.Workbook(Arquivo, null, true),
+				
+				    #"Nova Meta_Sheet" = ExcelOrigem{[Item="Nova Meta",Kind="Sheet"]}[Data],
+				
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(
+				        #"Nova Meta_Sheet",
+				        [PromoteAllScalars=true]
+				    ),
+				
+				    #"Tipo Alterado" = Table.TransformColumnTypes(
+				        #"Cabeçalhos Promovidos",
+				        {
+				            {"Unidade", type text},
+				            {"Canal", type text},
+				            {"Etapa", type text},
+				            {"Data", type date},
+				            {"Meta", Int64.Type}
+				        }
+				    )
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

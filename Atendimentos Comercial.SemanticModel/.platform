@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Atendimentos Comercial"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "c3dce682-2632-4af8-b4d4-d60df4a67c90"
+  }
+}
