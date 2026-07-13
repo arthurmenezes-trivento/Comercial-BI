@@ -1,131 +1,180 @@
 table ALTAMIRA
+	isHidden
 	lineageTag: ed7abdbf-e999-4dcb-ac06-379278ca9257
 
 	column 'CONSULTOR (a)'
 		dataType: string
+		isHidden
 		lineageTag: a2b37d41-72cd-4dfb-8a7f-7d130ca0cd97
 		summarizeBy: none
 		sourceColumn: CONSULTOR (a)
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
 	column DATA
 		dataType: string
+		isHidden
 		lineageTag: 5dc19c68-98b8-4d28-9ecc-16e689b020c6
 		summarizeBy: none
 		sourceColumn: DATA
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
 	column NOME
 		dataType: string
+		isHidden
 		lineageTag: 2c796490-f141-4f4e-b0ed-7d9e31f134bd
 		summarizeBy: none
 		sourceColumn: NOME
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
 	column CELULAR
 		dataType: string
+		isHidden
 		lineageTag: ad78598e-854f-4cab-9fa9-bd1f4643d3da
 		summarizeBy: none
 		sourceColumn: CELULAR
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
 	column 'CPF (preencher apenas com números)'
 		dataType: string
+		isHidden
 		lineageTag: 2b1124a7-891e-4eb8-9217-753dc7e67c2b
 		summarizeBy: none
 		sourceColumn: CPF (preencher apenas com números)
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
 	column CURSO
 		dataType: string
+		isHidden
 		lineageTag: 22ab83b4-6a06-4a16-bea2-be32c5c4177d
 		summarizeBy: none
 		sourceColumn: CURSO
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
 	column 'FORMA DE INGRESSO'
 		dataType: string
+		isHidden
 		lineageTag: acdb6634-510c-4b3b-b8ac-7e06e663a0cf
 		summarizeBy: none
 		sourceColumn: FORMA DE INGRESSO
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
 	column '% BOLSA CONCEDIDA'
 		dataType: string
+		isHidden
 		lineageTag: afac6f7a-89b5-4a1c-818e-8904bd5cb163
 		summarizeBy: none
 		sourceColumn: % BOLSA CONCEDIDA
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
 	column CONDIÇÃO
 		dataType: string
+		isHidden
 		lineageTag: 2245375b-a185-46e9-9273-eb08d9716650
 		summarizeBy: none
 		sourceColumn: CONDIÇÃO
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
 	column 'VALOR PG MATRÍCULA'
 		dataType: string
+		isHidden
 		lineageTag: 147c0a2d-8936-4205-9722-dc9cf4502e98
 		summarizeBy: none
 		sourceColumn: VALOR PG MATRÍCULA
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
 	column 'NOME DO PAGADOR '
 		dataType: string
+		isHidden
 		lineageTag: 7a13c091-d589-4e0b-8a69-c6d8c45ecff6
 		summarizeBy: none
 		sourceColumn: "NOME DO PAGADOR "
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
 	column 'FORMA DE PAGAMNTO'
 		dataType: string
+		isHidden
 		lineageTag: 6e87452c-9572-4a29-8050-46c914542f36
 		summarizeBy: none
 		sourceColumn: FORMA DE PAGAMNTO
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
 	column 'QUANTIDADE DE PARCELAS'
 		dataType: string
+		isHidden
 		lineageTag: 4d71d270-2146-434c-aa55-88d2aea4fcb2
 		summarizeBy: none
 		sourceColumn: QUANTIDADE DE PARCELAS
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
 	column OBSERVAÇÃO
 		dataType: string
+		isHidden
 		lineageTag: fb8ffb8f-ce73-4e8e-b2ce-d9f8bf300aa6
 		summarizeBy: none
 		sourceColumn: OBSERVAÇÃO
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
 	column Unidade
 		dataType: string
+		isHidden
 		lineageTag: 0a0bc830-2b31-41a7-ab82-9b190dfd5962
 		summarizeBy: none
 		sourceColumn: Unidade
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
 	column 'Data e Hora'
 		dataType: string
+		isHidden
 		lineageTag: cc873cbe-6ca7-483e-aa06-c188de7ca54c
 		summarizeBy: none
 		sourceColumn: Data e Hora
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -140,6 +189,8 @@ table ALTAMIRA
 				    #"Linhas em Branco Removidas" = Table.SelectRows(#"Cabeçalhos Promovidos", each not List.IsEmpty(List.RemoveMatchingItems(Record.FieldValues(_), {"", null})))
 				in
 				    #"Linhas em Branco Removidas"
+
+	changedProperty = IsHidden
 
 	annotation PBI_NavigationStepName = Navegação
 

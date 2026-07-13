@@ -1,67 +1,92 @@
 table ITABIRITO
+	isHidden
 	lineageTag: ebd3b7ca-3985-447d-bc7b-5acdcfbbfd52
 
 	column 'CONSULTOR (a)'
 		dataType: string
+		isHidden
 		lineageTag: 8e1cc935-f360-48be-970c-1c905e989328
 		summarizeBy: none
 		sourceColumn: CONSULTOR (a)
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
 	column DATA
 		dataType: string
+		isHidden
 		lineageTag: a14169f6-5fcc-4b23-8506-73e268b0362b
 		summarizeBy: none
 		sourceColumn: DATA
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
 	column NOME
 		dataType: string
+		isHidden
 		lineageTag: ccfe778c-be3a-4d97-849c-1967958cff63
 		summarizeBy: none
 		sourceColumn: NOME
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
 	column CELULAR
 		dataType: string
+		isHidden
 		lineageTag: cc3fe283-25bb-471f-856b-4e7f6529a4ef
 		summarizeBy: none
 		sourceColumn: CELULAR
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
 	column 'CPF (preencher apenas com números)'
 		dataType: string
+		isHidden
 		lineageTag: 4d35e57e-9580-4592-9adc-d74d7587936f
 		summarizeBy: none
 		sourceColumn: CPF (preencher apenas com números)
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
 	column CURSO
 		dataType: string
+		isHidden
 		lineageTag: d145536d-daf2-45ff-b279-832af8140865
 		summarizeBy: none
 		sourceColumn: CURSO
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
 	column 'FORMA DE INGRESSO'
 		dataType: string
+		isHidden
 		lineageTag: 9dc0c3ac-5e7c-4b9e-a3ce-fb5e9de3fa31
 		summarizeBy: none
 		sourceColumn: FORMA DE INGRESSO
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
 	column '% BOLSA CONCEDIDA'
 		dataType: double
+		isHidden
 		lineageTag: 0a875d16-620f-4068-a7bc-e57c144ef72d
 		summarizeBy: sum
 		sourceColumn: % BOLSA CONCEDIDA
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -69,17 +94,23 @@ table ITABIRITO
 
 	column CONDIÇÃO
 		dataType: string
+		isHidden
 		lineageTag: 04dc0b53-c829-4f26-b779-730f1c33839a
 		summarizeBy: none
 		sourceColumn: CONDIÇÃO
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
 	column 'VALOR PG MATRÍCULA'
 		dataType: double
+		isHidden
 		lineageTag: dcb7ac00-f354-4b7e-9070-389341087198
 		summarizeBy: sum
 		sourceColumn: VALOR PG MATRÍCULA
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -87,46 +118,62 @@ table ITABIRITO
 
 	column 'NOME DO PAGADOR '
 		dataType: string
+		isHidden
 		lineageTag: 71d7783a-ee48-41c8-b964-b6941c178e28
 		summarizeBy: none
 		sourceColumn: "NOME DO PAGADOR "
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
 	column 'FORMA DE PAGAMNTO'
 		dataType: string
+		isHidden
 		lineageTag: d3dcccae-93a7-45ef-9077-11cbbc3f62e5
 		summarizeBy: none
 		sourceColumn: FORMA DE PAGAMNTO
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
 	column 'QUANTIDADE DE PARCELAS'
 		dataType: string
+		isHidden
 		lineageTag: 3ec2e5f2-f05b-41bb-8ff4-ce117fd91468
 		summarizeBy: none
 		sourceColumn: QUANTIDADE DE PARCELAS
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
 	column OBSERVAÇÃO
 		dataType: string
+		isHidden
 		lineageTag: b1af1ef4-9f7d-467c-80ec-e9217f8e4ade
 		summarizeBy: none
 		sourceColumn: OBSERVAÇÃO
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
 	column Unidade
 		dataType: string
+		isHidden
 		lineageTag: c5a450f7-282a-4ca0-9da8-2c759da2a99e
 		summarizeBy: none
 		sourceColumn: Unidade
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
 	column 'Data e Hora'
 		dataType: dateTime
+		isHidden
 		formatString: Long Date
 		lineageTag: ec94dfe9-15d0-4269-a77f-6b47a6eb0c6f
 		summarizeBy: none
@@ -137,15 +184,20 @@ table ITABIRITO
 			relationship: 5a2d939b-6e20-4a42-acf0-fbf93c9b29a8
 			defaultHierarchy: LocalDateTable_e314503a-e405-44ff-9d42-cb9fb75678ba.'Hierarquia de datas'
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date
 
 	column Column1
 		dataType: string
+		isHidden
 		lineageTag: abe6845c-6627-4f00-8a03-7d0811746a96
 		summarizeBy: none
 		sourceColumn: Column1
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -161,6 +213,8 @@ table ITABIRITO
 				    #"Linhas em Branco Removidas" = Table.SelectRows(#"Tipo Alterado", each not List.IsEmpty(List.RemoveMatchingItems(Record.FieldValues(_), {"", null})))
 				in
 				    #"Linhas em Branco Removidas"
+
+	changedProperty = IsHidden
 
 	annotation PBI_NavigationStepName = Navegação
 

@@ -72,21 +72,3 @@ relationship 5a2d939b-6e20-4a42-acf0-fbf93c9b29a8
 	fromColumn: ITABIRITO.'Data e Hora'
 	toColumn: LocalDateTable_e314503a-e405-44ff-9d42-cb9fb75678ba.Date
 
-relationship AutoDetected_8f3b8692-f3a5-4965-b298-61475a32b1d3
-	crossFilteringBehavior: bothDirections
-	fromCardinality: one
-	fromColumn: ALTAMIRA.NOME
-	toColumn: 'Matrículas GD'.NOME
-
-relationship AutoDetected_77c62134-e459-4d34-b522-43ab1d5bca7e
-	crossFilteringBehavior: bothDirections
-	fromCardinality: one
-	fromColumn: LORENA.NOME
-	toColumn: 'Matrículas GD'.NOME
-
-relationship AutoDetected_088557dc-daf3-4846-9972-c71fd0048dca
-	crossFilteringBehavior: bothDirections
-	fromCardinality: one
-	fromColumn: ITABIRITO.NOME
-	toColumn: 'Matrículas GD'.NOME
-
