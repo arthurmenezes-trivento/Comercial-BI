@@ -58,12 +58,15 @@ table Atendimentos
 		annotation SummarizationSetBy = Automatic
 
 	column 'Data de Criação'
-		dataType: string
+		dataType: dateTime
+		formatString: Long Date
 		lineageTag: 0c6dbe58-0358-4c36-b15e-92de3feef206
 		summarizeBy: none
 		sourceColumn: Data de Criação
 
 		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
 
 	column 'hora de Criação'
 		dataType: string
@@ -193,9 +196,10 @@ table Atendimentos
 				    #"Modificado por" = Table.ExpandTableColumn(#"Colunas Renomeadas", "result.modifiedby", {"Attribute:name"}, {"Modificado por"}),
 				    #"Data e hora de Modificação" = Table.ExpandTableColumn(#"Modificado por", "result.modifiedon", {"Attribute:date", "Attribute:time"}, {"Data Modificação", "Hora da Modificação"}),
 				    #"renomeado para assunto" = Table.RenameColumns(#"Data e hora de Modificação",{{"result.subject", "Assunto"}, {"result.cad_detalhesdocontato", "detalhes do contato"}}),
-				    #"id e nome do lead" = Table.ExpandTableColumn(#"renomeado para assunto", "result.regardingobjectid", {"Element:Text", "Attribute:name"}, {"Id Lead", "Nome do Lead"})
+				    #"id e nome do lead" = Table.ExpandTableColumn(#"renomeado para assunto", "result.regardingobjectid", {"Element:Text", "Attribute:name"}, {"Id Lead", "Nome do Lead"}),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"id e nome do lead",{{"Data de Criação", type date}})
 				in
-				    #"id e nome do lead"
+				    #"Tipo Alterado"
 
 	annotation PBI_NavigationStepName = Navegação
 

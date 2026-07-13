@@ -1,0 +1,153 @@
+table 'Matrículas GD'
+	lineageTag: c10afa86-c668-40f2-8e0d-9dfec2027a69
+
+	column 'CONSULTOR (a)'
+		dataType: string
+		lineageTag: 7a716f70-255c-4235-a4f6-92d90828201c
+		summarizeBy: none
+		sourceColumn: CONSULTOR (a)
+
+		annotation SummarizationSetBy = Automatic
+
+	column DATA
+		dataType: string
+		lineageTag: b414d5ee-0ec1-451b-b250-879da575736b
+		summarizeBy: none
+		sourceColumn: DATA
+
+		annotation SummarizationSetBy = Automatic
+
+	column NOME
+		dataType: string
+		lineageTag: 7c1a3f77-b76c-408d-8b15-e28dfb4715db
+		summarizeBy: none
+		sourceColumn: NOME
+
+		annotation SummarizationSetBy = Automatic
+
+	column CELULAR
+		dataType: string
+		lineageTag: 515a531e-8516-4e3d-bf16-70ec4286e04c
+		summarizeBy: none
+		sourceColumn: CELULAR
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'CPF (preencher apenas com números)'
+		dataType: string
+		lineageTag: 9636e07f-9d95-47ef-8e92-d49d0eff6276
+		summarizeBy: none
+		sourceColumn: CPF (preencher apenas com números)
+
+		annotation SummarizationSetBy = Automatic
+
+	column CURSO
+		dataType: string
+		lineageTag: 2fdd2227-c363-42da-bbf9-b15154048a99
+		summarizeBy: none
+		sourceColumn: CURSO
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'FORMA DE INGRESSO'
+		dataType: string
+		lineageTag: 518fbd40-969a-4ee4-906d-11c15978b129
+		summarizeBy: none
+		sourceColumn: FORMA DE INGRESSO
+
+		annotation SummarizationSetBy = Automatic
+
+	column '% BOLSA CONCEDIDA'
+		dataType: string
+		lineageTag: 81221ae3-7529-49a2-b166-3ff16d179ccc
+		summarizeBy: none
+		sourceColumn: % BOLSA CONCEDIDA
+
+		annotation SummarizationSetBy = Automatic
+
+	column CONDIÇÃO
+		dataType: string
+		lineageTag: 8dedc6a0-c6a6-419d-9e57-18b75c480694
+		summarizeBy: none
+		sourceColumn: CONDIÇÃO
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'VALOR PG MATRÍCULA'
+		dataType: string
+		lineageTag: 207d0317-916e-4506-ad68-2eb719523d21
+		summarizeBy: none
+		sourceColumn: VALOR PG MATRÍCULA
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'NOME DO PAGADOR '
+		dataType: string
+		lineageTag: d35c6e26-d773-4745-ac19-86fea550deb4
+		summarizeBy: none
+		sourceColumn: "NOME DO PAGADOR "
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'FORMA DE PAGAMNTO'
+		dataType: string
+		lineageTag: a8824212-8bbe-448d-b693-4a24eead0d21
+		summarizeBy: none
+		sourceColumn: FORMA DE PAGAMNTO
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'QUANTIDADE DE PARCELAS'
+		dataType: string
+		lineageTag: 7291a99b-7c59-4702-8281-272f3d0f55ac
+		summarizeBy: none
+		sourceColumn: QUANTIDADE DE PARCELAS
+
+		annotation SummarizationSetBy = Automatic
+
+	column OBSERVAÇÃO
+		dataType: string
+		lineageTag: 491ab581-9e86-4ec9-a121-9b5f971cb4d2
+		summarizeBy: none
+		sourceColumn: OBSERVAÇÃO
+
+		annotation SummarizationSetBy = Automatic
+
+	column Unidade
+		dataType: string
+		lineageTag: debbcd06-2e90-4a6b-8214-837459f48ad3
+		summarizeBy: none
+		sourceColumn: Unidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Data e Hora'
+		dataType: string
+		lineageTag: fee33c99-9044-47a7-9edb-a3b8816b5a92
+		summarizeBy: none
+		sourceColumn: Data e Hora
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column1
+		dataType: string
+		lineageTag: ffb9d342-2a1f-4217-a9da-760e9627f17d
+		summarizeBy: none
+		sourceColumn: Column1
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Matrículas GD' = m
+		mode: import
+		source =
+				let
+				    Fonte = Table.Combine({LORENA, ALTAMIRA, ITABIRITO})
+				in
+				    Fonte
+
+	changedProperty = Name
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

@@ -13,10 +13,6 @@ relationship b08de8a4-88dd-498a-9406-b3c5bae040f2
 	fromColumn: Leads.'Data alteração'
 	toColumn: LocalDateTable_6209402d-885f-444f-b7f6-b9e38b768c04.Date
 
-relationship AutoDetected_f1f903c0-fc04-49e6-9a12-c8d4c6b3b3c6
-	fromColumn: Leads.Canal
-	toColumn: dCanal.Canal
-
 relationship a8dd076f-7d3f-45e4-a341-c4989d7fda92
 	joinOnDateBehavior: datePartOnly
 	fromColumn: dCalendario.Date
@@ -30,4 +26,67 @@ relationship 00d93253-daf3-4df9-888b-a6d1f285003d
 relationship c7509551-e995-b47f-f085-0c0d5ad08369
 	fromColumn: Atendimentos.'Id Lead'
 	toColumn: Leads.'ID Lead'
+
+relationship 8cc51ea1-e653-cb07-c58d-36795b146a85
+	fromColumn: Atendimentos.'Data de Criação'
+	toColumn: dCalendario.Date
+
+relationship 562ade9d-e86c-4404-9f08-8da045df09f2
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 2026-2.'Data Aceite'
+	toColumn: LocalDateTable_084f04e3-ea2f-419a-8467-0c6c38ed01ce.Date
+
+relationship d5a4adc1-143a-4525-98a2-324a6695c8f9
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 2026-2.'Data alteração'
+	toColumn: LocalDateTable_aef72aa3-47a4-4035-a7df-f849323f9699.Date
+
+relationship 68370514-2d62-404d-aa3a-78b7c741f5d4
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 2026-2.'Data Aprovação'
+	toColumn: LocalDateTable_daba6568-9057-4260-a436-134e9e094818.Date
+
+relationship 17928bd8-eea1-de70-1b2d-a97044f4a633
+	fromColumn: 2026-2.'ID Lead'
+	toColumn: Leads.'ID Lead'
+
+relationship 22f4711e-35fa-6f8d-6e16-92ed298bb066
+	fromColumn: 2026-2.Unidade
+	toColumn: dUnidade.Unidade
+
+relationship ed3e3fbe-6bb7-639d-5bed-30895e98f60b
+	fromColumn: 2026-2.Canal
+	toColumn: dCanal.Canal
+
+relationship a88eb8ed-7311-af2b-715e-db07c6547e89
+	fromColumn: 2026-2.'Data de Pagamento'
+	toColumn: dCalendario.Date
+
+relationship 63a7f7a2-3744-bf85-7507-862d25c937c9
+	isActive: false
+	fromColumn: 2026-2.'Data Criacao'
+	toColumn: dCalendario.Date
+
+relationship 5a2d939b-6e20-4a42-acf0-fbf93c9b29a8
+	joinOnDateBehavior: datePartOnly
+	fromColumn: ITABIRITO.'Data e Hora'
+	toColumn: LocalDateTable_e314503a-e405-44ff-9d42-cb9fb75678ba.Date
+
+relationship AutoDetected_8f3b8692-f3a5-4965-b298-61475a32b1d3
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: ALTAMIRA.NOME
+	toColumn: 'Matrículas GD'.NOME
+
+relationship AutoDetected_77c62134-e459-4d34-b522-43ab1d5bca7e
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: LORENA.NOME
+	toColumn: 'Matrículas GD'.NOME
+
+relationship AutoDetected_088557dc-daf3-4846-9972-c71fd0048dca
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: ITABIRITO.NOME
+	toColumn: 'Matrículas GD'.NOME
 
