@@ -109,7 +109,8 @@
                 }
               },
               "queryRef": "Medidas.Dias Sem Atendimento",
-              "nativeQueryRef": "Dias Sem Atendimento"
+              "nativeQueryRef": "Última Interação CRM (Dias)",
+              "displayName": "Última Interação CRM (Dias)"
             },
             {
               "field": {
