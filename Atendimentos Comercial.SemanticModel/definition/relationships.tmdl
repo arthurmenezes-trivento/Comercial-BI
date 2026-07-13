@@ -72,3 +72,7 @@ relationship 5a2d939b-6e20-4a42-acf0-fbf93c9b29a8
 	fromColumn: ITABIRITO.'Data e Hora'
 	toColumn: LocalDateTable_e314503a-e405-44ff-9d42-cb9fb75678ba.Date
 
+relationship fbd7ce99-2e0f-1e2c-fe5b-86ff0e16d26d
+	fromColumn: 'Matrículas GD'.DATA
+	toColumn: dCalendario.Date
+

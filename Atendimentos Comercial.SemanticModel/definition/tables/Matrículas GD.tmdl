@@ -10,12 +10,15 @@ table 'Matrículas GD'
 		annotation SummarizationSetBy = Automatic
 
 	column DATA
-		dataType: string
+		dataType: dateTime
+		formatString: Long Date
 		lineageTag: b414d5ee-0ec1-451b-b250-879da575736b
 		summarizeBy: none
 		sourceColumn: DATA
 
 		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
 
 	column NOME
 		dataType: string
@@ -141,11 +144,10 @@ table 'Matrículas GD'
 		mode: import
 		source =
 				let
-				    Fonte = Table.Combine({LORENA, ALTAMIRA, ITABIRITO})
+				    Fonte = Table.Combine({LORENA, ALTAMIRA, ITABIRITO}),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"DATA", type date}})
 				in
-				    Fonte
-
-	changedProperty = Name
+				    #"Tipo Alterado"
 
 	annotation PBI_NavigationStepName = Navegação
 
