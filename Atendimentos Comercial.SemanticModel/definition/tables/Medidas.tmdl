@@ -120,6 +120,17 @@ table Medidas
 		formatString: 0
 		lineageTag: cfaacc72-d562-4ae0-99f6-f065b7b88504
 
+	measure 'Matr 26-2' = ```
+			
+			    CALCULATE(
+			        DISTINCTCOUNT('2026-2'[ID Lead]),
+			        '2026-2'[Situação Inscrição] = "Matriculado",
+			        USERELATIONSHIP('2026-2'[Data de Pagamento] , dCalendario[Date]),
+			        '2026-2'[Data de Pagamento] <> BLANK()
+			    )
+			```
+		lineageTag: 776476a4-d45f-4e8b-bb47-7bc967379e76
+
 	column 'Coluna 1'
 		dataType: string
 		lineageTag: 686dcc5d-ee01-4a81-ac33-f88f665891bc

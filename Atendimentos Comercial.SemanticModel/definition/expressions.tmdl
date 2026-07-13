@@ -249,89 +249,30 @@ expression Inscricoes =
 
 	annotation PBI_ResultType = Table
 
-expression 2026-2 = ```
+expression Legado = ```
 		let
-		    Fonte = Leads,
-		    #"Personalização Adicionada" = Table.AddColumn(
-		        Fonte,
-		        "Concurso Atual Corrigido",
-		        each Text.Trim(Text.BeforeDelimiter([Concurso Atual], " -"))
+		    FonteSharePoint = SharePoint.Files(
+		        "https://grupoeducacionalsantoant.sharepoint.com/sites/TriventoEducaco",
+		        [ApiVersion = 15]
 		    ),
+		
+		    Arquivo = FonteSharePoint{[Name="BI - Base Legado.xlsx"]}[Content],
+		
+		    Fonte = Excel.Workbook(Arquivo, null, true),
+		
+		    #"Resultado da consulta1" = Fonte{[Name="Resultado da consulta"]}[Data],
 		    
-		    #"Personalização Adicionada1" = Table.AddColumn(
-		        #"Personalização Adicionada",
-		        "Concurso Origem Corrigido",
-		        each Text.Trim(Text.BeforeDelimiter([Concurso Origem], "-"))
-		    ),
-		    
-		    #"Colunas Removidas1" = Table.RemoveColumns(
-		        #"Personalização Adicionada1",
-		        {"Concurso Atual", "Concurso Origem"}
-		    ),
-		    
-		    #"Unidade Corrigida" = Table.ReplaceValue(
-		    #"Colunas Removidas1",
-		    each [Unidade],
-		    each
-		        if [Unidade] = null or [Unidade] = "" then
-		            
-		            // Primeiro tenta pegar da coluna result.crmeduc_unidadeform
-		            if [result.crmeduc_unidadeform] <> null 
-		                and Text.Trim(Text.From([result.crmeduc_unidadeform])) <> "" then
-		                    [result.crmeduc_unidadeform]
-		
-		            // Se não tiver, tenta pegar da coluna result.trivento_unidadetrivento
-		            else if [result.trivento_unidadetrivento] <> null
-		                and Text.Trim(Text.From([result.trivento_unidadetrivento])) <> "" then
-		                    [result.trivento_unidadetrivento]
-		
-		            // Se não tiver, usa Origem Lead ID
-		            else if Text.Contains(Text.Upper(Text.From([Origem Lead ID])), "ALTAMIRA") then "Altamira"
-		            else if Text.Contains(Text.Upper(Text.From([Origem Lead ID])), "LORENA") then "Lorena"
-		            else if Text.Contains(Text.Upper(Text.From([Origem Lead ID])), "ITABIRITO") then "Itabirito"
-		            else if Text.Contains(Text.Upper(Text.From([Origem Lead ID])), "CANAA") then "Canaã"
-		            else if Text.Contains(Text.Upper(Text.From([Origem Lead ID])), "CANAÃ") then "Canaã"
-		            else [Unidade]
-		
-		        else [Unidade],
-		    Replacer.ReplaceValue,
-		    {"Unidade"}
-		),
-		
-		    #"Colunas Renomeadas" = Table.RenameColumns(#"Unidade Corrigida",{{"result.cad_campaigncontent", "UTM Content"}, {"result.cad_campaignmedium", "UTM Medium"}, {"result.cad_campaignname", "UTM Name"}, {"result.cad_campaignsource", "UTM Source"}, {"result.cad_campaignterm", "UTM Term"}}),
-		    #"Consultas Mescladas" = Table.NestedJoin(#"Colunas Renomeadas", {"Numero Inscricao"}, Inscricoes, {"result.cad_numeroinscricao"}, "Inscricoes", JoinKind.LeftOuter),
-		    #"Inscricoes Expandido1" = Table.ExpandTableColumn(#"Consultas Mescladas", "Inscricoes", {"Forma de Ingresso", "Curso ID", "Situação Inscrição", "Situação de Avaliação", "Unidade Inscrito", "Data Aprovação", "Situação Pagamento", "Data de Pagamento"}, {"Forma de Ingresso", "Curso ID", "Situação Inscrição", "Situação de Avaliação", "Unidade Inscrito", "Data Aprovação", "Situação Pagamento", "Data de Pagamento"}),
-		    #"Valor Substituído" = Table.ReplaceValue(#"Inscricoes Expandido1","Canaa","Canaã",Replacer.ReplaceText,{"Unidade"}),
-		    #"Colocar Cada Palavra Em Maiúscula" = Table.TransformColumns(#"Valor Substituído",{{"Unidade", Text.Proper, type text}}),
-		    #"Valor Substituído1" = Table.ReplaceValue(#"Colocar Cada Palavra Em Maiúscula",",","",Replacer.ReplaceText,{"Endereço"}),
-		    #"Valor Substituído2" = Table.ReplaceValue(#"Valor Substituído1",null,"Lead",Replacer.ReplaceValue,{"Situação Inscrição"}),
-		    #"Valor Substituído3" = Table.ReplaceValue(#"Valor Substituído2","ADMINISTRAÇÃO","Administração",Replacer.ReplaceText,{"Curso ID"}),
-		    #"Valor Substituído4" = Table.ReplaceValue(#"Valor Substituído3","Análise de Desenvolvimento de Sistemas","Análise e Desenvolvimento de Sistemas",Replacer.ReplaceText,{"Curso ID"}),
-		    #"Valor Substituído5" = Table.ReplaceValue(#"Valor Substituído4","EDUCAÇÃO FÍSICA","Educação Física",Replacer.ReplaceText,{"Curso ID"}),
-		    #"Valor Substituído6" = Table.ReplaceValue(#"Valor Substituído5","Educação Fisica","Educação Física",Replacer.ReplaceText,{"Curso ID"}),
-		    #"Valor Substituído7" = Table.ReplaceValue(#"Valor Substituído6","Odontoligia","Odontologia",Replacer.ReplaceText,{"Curso ID"}),
-		    #"Curso Unidade Adicionado" = Table.AddColumn(#"Valor Substituído7", "Curso Unidade", each [Unidade Inscrito] & "-" & [Curso ID]),
-		    #"Tipo Alterado" = Table.TransformColumnTypes(#"Curso Unidade Adicionado",{{"Curso Unidade", type text}}),
-		    #"Valor Substituído8" = Table.ReplaceValue(#"Tipo Alterado"," -","",Replacer.ReplaceText,{"Forma de Ingresso"}),
-		    #"Valor Substituído9" = Table.ReplaceValue(#"Valor Substituído8","-","",Replacer.ReplaceText,{"Forma de Ingresso"}),
-		    #"Valor Substituído10" = Table.ReplaceValue(#"Valor Substituído9"," Faculdade Serra Dourada Altamira","",Replacer.ReplaceText,{"Forma de Ingresso"}),
-		    #"Valor Substituído11" = Table.ReplaceValue(#"Valor Substituído10"," Faculdade Serra Dourada Canaã","",Replacer.ReplaceText,{"Forma de Ingresso"}),
-		    #"Valor Substituído12" = Table.ReplaceValue(#"Valor Substituído11"," Faculdade Serra Dourada Lorena","",Replacer.ReplaceText,{"Forma de Ingresso"}),
-		    #"Valor Substituído13" = Table.ReplaceValue(#"Valor Substituído12"," Faculdade Alis","",Replacer.ReplaceText,{"Forma de Ingresso"}),
-		    #"Valor Substituído14" = Table.ReplaceValue(#"Valor Substituído13","Concurso de Bolsas ","Concurso de Bolsas",Replacer.ReplaceText,{"Forma de Ingresso"}),
-		    #"Personalização Adicionada2" = Table.AddColumn(#"Valor Substituído14", "Unidade.1", each if [Unidade Inscrito] = null or Text.Trim([Unidade Inscrito]) = "" then
-		    [result.crmeduc_unidadeform]
-		else
-		    [Unidade Inscrito]),
-		    #"Colunas Renomeadas1" = Table.RenameColumns(#"Personalização Adicionada2",{{"Unidade", "Unidade Lead"}, {"Unidade.1", "Unidade"}}),
-		    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Colunas Renomeadas1",{{"Unidade", type text}})
+		    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(#"Resultado da consulta1", [PromoteAllScalars=true]),
+		    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Nome", type text}, {"Codigo", type text}, {"Celular", type text}, {"Data Criacao", type date}, {"Concuro ID", type text}}),
+		    #"Personalização Adicionada" = Table.AddColumn(#"Tipo Alterado", "Legado", each "Legado"),
+		    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Personalização Adicionada",{{"Legado", type text}})
 		in
 		    #"Tipo Alterado1"
 		```
-	lineageTag: e05e0bfd-3897-49b2-9469-8599d11c330c
+	lineageTag: 189fe268-9383-41e2-9888-d0f3a37c0ecc
 	queryGroup: 'Consultas - Token'
 
 	annotation PBI_NavigationStepName = Navegação
 
-	annotation PBI_ResultType = Table
+	annotation PBI_ResultType = Exception
 

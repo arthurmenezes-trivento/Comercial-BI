@@ -1,0 +1,596 @@
+table 2026-2
+	lineageTag: ee3875e1-0fca-452a-a27d-82e936d9daa1
+
+	column 'Tabulação já foi realizada?'
+		dataType: string
+		lineageTag: a037759b-da19-4fe1-9e0b-beb370022f93
+		summarizeBy: none
+		sourceColumn: Tabulação já foi realizada?
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nome Completo'
+		dataType: string
+		lineageTag: cc4507c2-b399-45c7-a417-5d9ca0033345
+		summarizeBy: none
+		sourceColumn: Nome Completo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Nome
+		dataType: string
+		lineageTag: 29fb9a12-465b-49b9-a755-72c0814f5371
+		summarizeBy: none
+		sourceColumn: Nome
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sobrenome
+		dataType: string
+		lineageTag: b823e932-fa35-4d5e-a1f7-fb9229bf3921
+		summarizeBy: none
+		sourceColumn: Sobrenome
+
+		annotation SummarizationSetBy = Automatic
+
+	column email
+		dataType: string
+		lineageTag: 3f38ed69-a84e-4611-8492-ca6fc4a330fe
+		summarizeBy: none
+		sourceColumn: email
+
+		annotation SummarizationSetBy = Automatic
+
+	column Celular
+		dataType: string
+		lineageTag: bffebb2e-4cba-4b20-a3f5-12a928544c4f
+		summarizeBy: none
+		sourceColumn: Celular
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Celular 2'
+		dataType: string
+		lineageTag: 7bbddad7-1244-47ca-8261-4b452c259383
+		summarizeBy: none
+		sourceColumn: Celular 2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ID Lead'
+		dataType: string
+		lineageTag: e08eca4f-8f18-4f44-bb1a-cc1bcfd475d0
+		summarizeBy: none
+		sourceColumn: ID Lead
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Data Criacao'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: a61c7289-e442-46ee-b083-93c46c23096b
+		summarizeBy: none
+		sourceColumn: Data Criacao
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'result.crmeduc_unidadeform'
+		dataType: string
+		lineageTag: dd760f0e-32d6-43c5-8654-c8786d2025e7
+		summarizeBy: none
+		sourceColumn: result.crmeduc_unidadeform
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Situacao Funil'
+		dataType: string
+		lineageTag: 98ee6f77-ffb7-43e8-bfdd-39d43f82c7b4
+		summarizeBy: none
+		sourceColumn: Situacao Funil
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Origem Lead ID'
+		dataType: string
+		lineageTag: 36817e56-b48b-4591-a389-89549b87a44d
+		summarizeBy: none
+		sourceColumn: Origem Lead ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Canal
+		dataType: string
+		lineageTag: 533c25b3-fe6f-478a-a25f-a297088c3b91
+		summarizeBy: none
+		sourceColumn: Canal
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Origem Lead'
+		dataType: string
+		lineageTag: 5d5aa701-41f8-4513-be92-a58a681a177e
+		summarizeBy: none
+		sourceColumn: Origem Lead
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'result.address1_addressid'
+		dataType: string
+		lineageTag: ed6fbf9c-405e-42e9-ba7b-12143fe7f77f
+		summarizeBy: none
+		sourceColumn: result.address1_addressid
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'result.address2_addressid'
+		dataType: string
+		lineageTag: d20dac5a-90b1-46e6-8880-e448aebeeaff
+		summarizeBy: none
+		sourceColumn: result.address2_addressid
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'UTM Name'
+		dataType: string
+		lineageTag: 7aa94261-cefe-494b-b05c-8a3b02778075
+		summarizeBy: none
+		sourceColumn: UTM Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Idade
+		dataType: string
+		lineageTag: a67a6eb4-fbd1-40fb-9473-76d6933c9011
+		summarizeBy: none
+		sourceColumn: Idade
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Data Aceite'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 84c8c8c6-20e0-4635-bd2d-54a987472d96
+		summarizeBy: none
+		sourceColumn: Data Aceite
+
+		variation Variation
+			isDefault
+			relationship: 562ade9d-e86c-4404-9f08-8da045df09f2
+			defaultHierarchy: LocalDateTable_084f04e3-ea2f-419a-8467-0c6c38ed01ce.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Data alteração'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 10b4840e-d5e6-4419-a80d-988a230fbed4
+		summarizeBy: none
+		sourceColumn: Data alteração
+
+		variation Variation
+			isDefault
+			relationship: d5a4adc1-143a-4525-98a2-324a6695c8f9
+			defaultHierarchy: LocalDateTable_aef72aa3-47a4-4035-a7df-f849323f9699.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Data Nascimento'
+		dataType: string
+		lineageTag: 427609cd-007f-4670-9e49-7b3c593758ab
+		summarizeBy: none
+		sourceColumn: Data Nascimento
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Numero Inscricao'
+		dataType: string
+		lineageTag: 6ed0c149-a2b2-4ae3-8aa7-5536c1cc1acb
+		summarizeBy: none
+		sourceColumn: Numero Inscricao
+
+		annotation SummarizationSetBy = Automatic
+
+	column Curso
+		dataType: string
+		lineageTag: 1d39efcf-ed9c-4895-b310-8028279695f1
+		summarizeBy: none
+		sourceColumn: Curso
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Unidade Lead'
+		dataType: string
+		lineageTag: 5658c8b9-34d0-48cf-bf4b-75be49b225ef
+		summarizeBy: none
+		sourceColumn: Unidade Lead
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Linha de Negócio'
+		dataType: string
+		lineageTag: c8754156-f863-4fbd-b150-48e118606524
+		summarizeBy: none
+		sourceColumn: Linha de Negócio
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'UTM Medium'
+		dataType: string
+		lineageTag: 20c5cc02-81ad-4cfd-a03d-11a055fde54b
+		summarizeBy: none
+		sourceColumn: UTM Medium
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'UTM Source'
+		dataType: string
+		lineageTag: 53ec9da5-289a-490a-9cb6-8abd60f01a19
+		summarizeBy: none
+		sourceColumn: UTM Source
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'result.cad_browser'
+		dataType: string
+		lineageTag: ce410b63-351c-4117-9390-56d43e752b7a
+		summarizeBy: none
+		sourceColumn: result.cad_browser
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cidade
+		dataType: string
+		lineageTag: f30a4adb-da88-40b4-9975-83946e597628
+		summarizeBy: none
+		sourceColumn: Cidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column Endereço
+		dataType: string
+		lineageTag: fc05bef9-142d-4b9d-8e20-57129a1126d7
+		summarizeBy: none
+		sourceColumn: Endereço
+
+		annotation SummarizationSetBy = Automatic
+
+	column Pais
+		dataType: string
+		lineageTag: adba29a1-3ba0-4c8f-a08f-e3ea34dc66e3
+		summarizeBy: none
+		sourceColumn: Pais
+
+		annotation SummarizationSetBy = Automatic
+
+	column Bairro
+		dataType: string
+		lineageTag: 328a8599-b5f4-4c6c-a3e7-f747ee4a3176
+		summarizeBy: none
+		sourceColumn: Bairro
+
+		annotation SummarizationSetBy = Automatic
+
+	column Rua
+		dataType: string
+		lineageTag: 4aa14712-56f6-4833-93fd-e6d0df350f25
+		summarizeBy: none
+		sourceColumn: Rua
+
+		annotation SummarizationSetBy = Automatic
+
+	column Número
+		dataType: string
+		lineageTag: 50fd6ab7-1000-4c59-a4e9-fba48e8cd5ad
+		summarizeBy: none
+		sourceColumn: Número
+
+		annotation SummarizationSetBy = Automatic
+
+	column Complemento
+		dataType: string
+		lineageTag: ceb15521-1cdc-4bfe-a941-149cbc215b1b
+		summarizeBy: none
+		sourceColumn: Complemento
+
+		annotation SummarizationSetBy = Automatic
+
+	column CEP
+		dataType: string
+		lineageTag: 6e08ef45-e35a-46c7-80a6-668cd14975d4
+		summarizeBy: none
+		sourceColumn: CEP
+
+		annotation SummarizationSetBy = Automatic
+
+	column UF
+		dataType: string
+		lineageTag: 70d7901b-cd3a-41d5-9194-0420d36b6a01
+		summarizeBy: none
+		sourceColumn: UF
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'UTM Content'
+		dataType: string
+		lineageTag: 626358f0-4b69-4c55-a472-e9aee9b5f812
+		summarizeBy: none
+		sourceColumn: UTM Content
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'UTM Term'
+		dataType: string
+		lineageTag: 56f7bef1-a93a-44b4-bf60-3f29421eb59a
+		summarizeBy: none
+		sourceColumn: UTM Term
+
+		annotation SummarizationSetBy = Automatic
+
+	column Attribute:name
+		dataType: string
+		lineageTag: c0e2e439-6295-4e2e-8867-f08a938779ee
+		summarizeBy: none
+		sourceColumn: Attribute:name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Última Tabulação'
+		dataType: string
+		lineageTag: 132bfd9c-4ca1-47c3-861e-8df06efa7f76
+		summarizeBy: none
+		sourceColumn: Última Tabulação
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Proprietário Lead'
+		dataType: string
+		lineageTag: 25ad79e6-0659-4731-8b60-ee6449cc2d55
+		summarizeBy: none
+		sourceColumn: Proprietário Lead
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Orgao Expedidor'
+		dataType: string
+		lineageTag: 20b9a5d4-7e61-4d0d-a56f-4d2a11f7af6d
+		summarizeBy: none
+		sourceColumn: Orgao Expedidor
+
+		annotation SummarizationSetBy = Automatic
+
+	column RG
+		dataType: string
+		lineageTag: 5bc1d274-bbf7-4673-8b0c-fe4cc7093dda
+		summarizeBy: none
+		sourceColumn: RG
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cor
+		dataType: string
+		lineageTag: d3410c56-b893-43f8-b070-56a09c1c1c33
+		summarizeBy: none
+		sourceColumn: Cor
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sexo
+		dataType: string
+		lineageTag: bf510848-ab49-4e97-bef7-59507202a711
+		summarizeBy: none
+		sourceColumn: Sexo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tabulação
+		dataType: string
+		lineageTag: c6c0b727-0250-4627-9ea7-d019c4b5e15a
+		summarizeBy: none
+		sourceColumn: Tabulação
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tabulação Detalhe'
+		dataType: string
+		lineageTag: 0c8a0eaa-50a5-4677-988a-50e8247bddac
+		summarizeBy: none
+		sourceColumn: Tabulação Detalhe
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Concurso Atual Corrigido'
+		dataType: string
+		lineageTag: e07968d3-a49b-465c-a719-41a5ae1b9933
+		summarizeBy: none
+		sourceColumn: Concurso Atual Corrigido
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Concurso Origem Corrigido'
+		dataType: string
+		lineageTag: cedf6735-ab20-4a4a-96fb-ce3aac20a2b0
+		summarizeBy: none
+		sourceColumn: Concurso Origem Corrigido
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Forma de Ingresso'
+		dataType: string
+		lineageTag: d1a98550-1c9f-41ce-9caa-390c0042c4ee
+		summarizeBy: none
+		sourceColumn: Forma de Ingresso
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Curso ID'
+		dataType: string
+		lineageTag: e5727bf6-56f6-4780-8fde-b0cd185c7a42
+		summarizeBy: none
+		sourceColumn: Curso ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Situação Inscrição'
+		dataType: string
+		lineageTag: 91eeccb2-6cb2-4fd9-aecb-da49c9423ba5
+		summarizeBy: none
+		sourceColumn: Situação Inscrição
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Situação de Avaliação'
+		dataType: string
+		lineageTag: c4b39e00-c2e8-4160-a739-80db95c4ce26
+		summarizeBy: none
+		sourceColumn: Situação de Avaliação
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Unidade Inscrito'
+		dataType: string
+		lineageTag: 869de599-378f-49a2-a07e-32dcf5490d2d
+		summarizeBy: none
+		sourceColumn: Unidade Inscrito
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Data Aprovação'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 18320fa1-eb00-4be2-bb3b-073c5b08dc60
+		summarizeBy: none
+		sourceColumn: Data Aprovação
+
+		variation Variation
+			isDefault
+			relationship: 68370514-2d62-404d-aa3a-78b7c741f5d4
+			defaultHierarchy: LocalDateTable_daba6568-9057-4260-a436-134e9e094818.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Situação Pagamento'
+		dataType: string
+		lineageTag: fdca6f0f-c53f-41ad-9acb-d560eb9fb22f
+		summarizeBy: none
+		sourceColumn: Situação Pagamento
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Data de Pagamento'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: fb6b50b1-2e02-4285-b6be-795407c23394
+		summarizeBy: none
+		sourceColumn: Data de Pagamento
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Curso Unidade'
+		dataType: string
+		lineageTag: 4b616f06-0c3d-4552-912b-b6f5ec598ed6
+		summarizeBy: none
+		sourceColumn: Curso Unidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column Unidade
+		dataType: string
+		lineageTag: 91418ed4-46ef-4705-829e-fa8bc122214e
+		summarizeBy: none
+		sourceColumn: Unidade
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 2026-2 = m
+		mode: import
+		queryGroup: 'Consultas - Token'
+		source = ```
+				let
+				    Fonte = Leads,
+				    #"Personalização Adicionada" = Table.AddColumn(
+				        Fonte,
+				        "Concurso Atual Corrigido",
+				        each Text.Trim(Text.BeforeDelimiter([Concurso Atual], " -"))
+				    ),
+				    
+				    #"Personalização Adicionada1" = Table.AddColumn(
+				        #"Personalização Adicionada",
+				        "Concurso Origem Corrigido",
+				        each Text.Trim(Text.BeforeDelimiter([Concurso Origem], "-"))
+				    ),
+				    
+				    #"Colunas Removidas1" = Table.RemoveColumns(
+				        #"Personalização Adicionada1",
+				        {"Concurso Atual", "Concurso Origem"}
+				    ),
+				    
+				    #"Unidade Corrigida" = Table.ReplaceValue(
+				    #"Colunas Removidas1",
+				    each [Unidade],
+				    each
+				        if [Unidade] = null or [Unidade] = "" then
+				            
+				            // Primeiro tenta pegar da coluna result.crmeduc_unidadeform
+				            if [result.crmeduc_unidadeform] <> null 
+				                and Text.Trim(Text.From([result.crmeduc_unidadeform])) <> "" then
+				                    [result.crmeduc_unidadeform]
+				
+				            // Se não tiver, tenta pegar da coluna result.trivento_unidadetrivento
+				            else if [result.trivento_unidadetrivento] <> null
+				                and Text.Trim(Text.From([result.trivento_unidadetrivento])) <> "" then
+				                    [result.trivento_unidadetrivento]
+				
+				            // Se não tiver, usa Origem Lead ID
+				            else if Text.Contains(Text.Upper(Text.From([Origem Lead ID])), "ALTAMIRA") then "Altamira"
+				            else if Text.Contains(Text.Upper(Text.From([Origem Lead ID])), "LORENA") then "Lorena"
+				            else if Text.Contains(Text.Upper(Text.From([Origem Lead ID])), "ITABIRITO") then "Itabirito"
+				            else if Text.Contains(Text.Upper(Text.From([Origem Lead ID])), "CANAA") then "Canaã"
+				            else if Text.Contains(Text.Upper(Text.From([Origem Lead ID])), "CANAÃ") then "Canaã"
+				            else [Unidade]
+				
+				        else [Unidade],
+				    Replacer.ReplaceValue,
+				    {"Unidade"}
+				),
+				
+				    #"Colunas Renomeadas" = Table.RenameColumns(#"Unidade Corrigida",{{"result.cad_campaigncontent", "UTM Content"}, {"result.cad_campaignmedium", "UTM Medium"}, {"result.cad_campaignname", "UTM Name"}, {"result.cad_campaignsource", "UTM Source"}, {"result.cad_campaignterm", "UTM Term"}}),
+				    #"Consultas Mescladas" = Table.NestedJoin(#"Colunas Renomeadas", {"Numero Inscricao"}, Inscricoes, {"result.cad_numeroinscricao"}, "Inscricoes", JoinKind.LeftOuter),
+				    #"Inscricoes Expandido1" = Table.ExpandTableColumn(#"Consultas Mescladas", "Inscricoes", {"Forma de Ingresso", "Curso ID", "Situação Inscrição", "Situação de Avaliação", "Unidade Inscrito", "Data Aprovação", "Situação Pagamento", "Data de Pagamento"}, {"Forma de Ingresso", "Curso ID", "Situação Inscrição", "Situação de Avaliação", "Unidade Inscrito", "Data Aprovação", "Situação Pagamento", "Data de Pagamento"}),
+				    #"Valor Substituído" = Table.ReplaceValue(#"Inscricoes Expandido1","Canaa","Canaã",Replacer.ReplaceText,{"Unidade"}),
+				    #"Colocar Cada Palavra Em Maiúscula" = Table.TransformColumns(#"Valor Substituído",{{"Unidade", Text.Proper, type text}}),
+				    #"Valor Substituído1" = Table.ReplaceValue(#"Colocar Cada Palavra Em Maiúscula",",","",Replacer.ReplaceText,{"Endereço"}),
+				    #"Valor Substituído2" = Table.ReplaceValue(#"Valor Substituído1",null,"Lead",Replacer.ReplaceValue,{"Situação Inscrição"}),
+				    #"Valor Substituído3" = Table.ReplaceValue(#"Valor Substituído2","ADMINISTRAÇÃO","Administração",Replacer.ReplaceText,{"Curso ID"}),
+				    #"Valor Substituído4" = Table.ReplaceValue(#"Valor Substituído3","Análise de Desenvolvimento de Sistemas","Análise e Desenvolvimento de Sistemas",Replacer.ReplaceText,{"Curso ID"}),
+				    #"Valor Substituído5" = Table.ReplaceValue(#"Valor Substituído4","EDUCAÇÃO FÍSICA","Educação Física",Replacer.ReplaceText,{"Curso ID"}),
+				    #"Valor Substituído6" = Table.ReplaceValue(#"Valor Substituído5","Educação Fisica","Educação Física",Replacer.ReplaceText,{"Curso ID"}),
+				    #"Valor Substituído7" = Table.ReplaceValue(#"Valor Substituído6","Odontoligia","Odontologia",Replacer.ReplaceText,{"Curso ID"}),
+				    #"Curso Unidade Adicionado" = Table.AddColumn(#"Valor Substituído7", "Curso Unidade", each [Unidade Inscrito] & "-" & [Curso ID]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Curso Unidade Adicionado",{{"Curso Unidade", type text}}),
+				    #"Valor Substituído8" = Table.ReplaceValue(#"Tipo Alterado"," -","",Replacer.ReplaceText,{"Forma de Ingresso"}),
+				    #"Valor Substituído9" = Table.ReplaceValue(#"Valor Substituído8","-","",Replacer.ReplaceText,{"Forma de Ingresso"}),
+				    #"Valor Substituído10" = Table.ReplaceValue(#"Valor Substituído9"," Faculdade Serra Dourada Altamira","",Replacer.ReplaceText,{"Forma de Ingresso"}),
+				    #"Valor Substituído11" = Table.ReplaceValue(#"Valor Substituído10"," Faculdade Serra Dourada Canaã","",Replacer.ReplaceText,{"Forma de Ingresso"}),
+				    #"Valor Substituído12" = Table.ReplaceValue(#"Valor Substituído11"," Faculdade Serra Dourada Lorena","",Replacer.ReplaceText,{"Forma de Ingresso"}),
+				    #"Valor Substituído13" = Table.ReplaceValue(#"Valor Substituído12"," Faculdade Alis","",Replacer.ReplaceText,{"Forma de Ingresso"}),
+				    #"Valor Substituído14" = Table.ReplaceValue(#"Valor Substituído13","Concurso de Bolsas ","Concurso de Bolsas",Replacer.ReplaceText,{"Forma de Ingresso"}),
+				    #"Personalização Adicionada2" = Table.AddColumn(#"Valor Substituído14", "Unidade.1", each if [Unidade Inscrito] = null or Text.Trim([Unidade Inscrito]) = "" then
+				    [result.crmeduc_unidadeform]
+				else
+				    [Unidade Inscrito]),
+				    #"Colunas Renomeadas1" = Table.RenameColumns(#"Personalização Adicionada2",{{"Unidade", "Unidade Lead"}, {"Unidade.1", "Unidade"}}),
+				    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Colunas Renomeadas1",{{"Unidade", type text}})
+				in
+				    #"Tipo Alterado1"
+				```
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

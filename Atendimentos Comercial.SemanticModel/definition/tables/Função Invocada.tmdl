@@ -1,0 +1,23 @@
+table 'Função Invocada'
+	lineageTag: 4e50f249-8f01-4c8c-9c7a-bd0de1db4194
+
+	column 'Função Invocada'
+		dataType: string
+		lineageTag: c7fba768-0ba0-485d-a30b-517db9551ba4
+		summarizeBy: none
+		sourceColumn: Função Invocada
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Função Invocada' = m
+		mode: import
+		source =
+				let
+				    Fonte = #"Token de acesso"()
+				in
+				    Fonte
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Exception
+
