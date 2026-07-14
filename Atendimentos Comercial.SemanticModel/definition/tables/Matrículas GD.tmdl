@@ -145,9 +145,12 @@ table 'Matrículas GD'
 		source =
 				let
 				    Fonte = Table.Combine({LORENA, ALTAMIRA, ITABIRITO}),
-				    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"DATA", type date}})
+				    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"DATA", type date}}),
+				    #"Linhas Filtradas" = Table.SelectRows(#"Tipo Alterado", each ([Unidade] <> "")),
+				    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Linhas Filtradas",{{"Unidade", type text}}),
+				    #"Texto Limpo" = Table.TransformColumns(#"Tipo Alterado1",{{"Unidade", Text.Clean, type text}})
 				in
-				    #"Tipo Alterado"
+				    #"Texto Limpo"
 
 	annotation PBI_NavigationStepName = Navegação
 

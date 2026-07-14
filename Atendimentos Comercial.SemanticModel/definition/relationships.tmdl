@@ -50,10 +50,6 @@ relationship 17928bd8-eea1-de70-1b2d-a97044f4a633
 	fromColumn: 2026-2.'ID Lead'
 	toColumn: Leads.'ID Lead'
 
-relationship 22f4711e-35fa-6f8d-6e16-92ed298bb066
-	fromColumn: 2026-2.Unidade
-	toColumn: dUnidade.Unidade
-
 relationship ed3e3fbe-6bb7-639d-5bed-30895e98f60b
 	fromColumn: 2026-2.Canal
 	toColumn: dCanal.Canal
@@ -75,4 +71,12 @@ relationship 5a2d939b-6e20-4a42-acf0-fbf93c9b29a8
 relationship fbd7ce99-2e0f-1e2c-fe5b-86ff0e16d26d
 	fromColumn: 'Matrículas GD'.DATA
 	toColumn: dCalendario.Date
+
+relationship a8c966b7-8023-a9ec-a1c1-fcfedf39f777
+	fromColumn: 'Matrículas GD'.Unidade
+	toColumn: dUnidade.Unidade
+
+relationship 4041c7f0-f009-457e-9ab1-78e03b3ef1cf
+	fromColumn: Leads.Unidade
+	toColumn: dUnidade.Unidade
 

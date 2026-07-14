@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Leads"
+                      "Entity": "dUnidade"
                     }
                   },
                   "Property": "Unidade"
                 }
               },
-              "queryRef": "Leads.Unidade",
-              "nativeQueryRef": "Unidade1",
+              "queryRef": "dUnidade.Unidade",
+              "nativeQueryRef": "Unidade",
               "active": true
             }
           ]
