@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "cdf417e615efa929e14e",
   "position": {
-    "x": 544.47761194029852,
-    "y": 261.49253731343282,
+    "x": 458.22187254130608,
+    "y": 202.42328874901654,
     "z": 8001,
-    "height": 393.13432835820896,
-    "width": 711.044776119403,
+    "height": 254.79150275373723,
+    "width": 456.20771046420145,
     "tabOrder": 8001
   },
   "visual": {
@@ -223,5 +223,37 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "62c76ce73a785efd10be",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Leads"
+              }
+            },
+            "Property": "Proprietário Lead"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "8166b01d0606899599be",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Qtd tabulações"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

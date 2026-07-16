@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
-  "name": "df509aee806d1d03bcc5",
+  "name": "9bc2b02dce16bd9c9645",
   "position": {
-    "x": 854.00472069236821,
+    "x": 1045.3501180173093,
     "y": 108.76475216365067,
-    "z": 8000,
+    "z": 8004,
     "height": 81.573564122738,
     "width": 161.13296616837138,
-    "tabOrder": 8000
+    "tabOrder": 8004
   },
   "visual": {
     "visualType": "cardVisual",
@@ -23,11 +23,11 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Qtd tabulações"
+                  "Property": "% Tabulação"
                 }
               },
-              "queryRef": "Medidas.Qtd tabulações",
-              "nativeQueryRef": "Qtd tabulações"
+              "queryRef": "Medidas.% Tabulação",
+              "nativeQueryRef": "% Tabulação"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "Medidas"
                   }
                 },
-                "Property": "Qtd tabulações"
+                "Property": "% Tabulação"
               }
             },
             "direction": "Descending"
@@ -223,7 +223,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Total de tabulação'"
+                  "Value": "'% tabulação'"
                 }
               }
             },
@@ -382,7 +382,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "1ee9f1932985ada1fdb5",
+        "name": "48afcee9da5f72d30c35",
         "field": {
           "Measure": {
             "Expression": {
@@ -390,7 +390,7 @@
                 "Entity": "Medidas"
               }
             },
-            "Property": "Qtd tabulações"
+            "Property": "% Tabulação"
           }
         },
         "type": "Advanced"

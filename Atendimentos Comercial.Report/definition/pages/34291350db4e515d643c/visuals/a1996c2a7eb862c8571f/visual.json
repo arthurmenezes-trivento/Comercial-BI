@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "a1996c2a7eb862c8571f",
   "position": {
-    "x": 28.656716417910449,
-    "y": 261.49253731343282,
+    "x": 18.127458693941779,
+    "y": 202.42328874901654,
     "z": 8002,
-    "height": 393.13432835820896,
-    "width": 557.91044776119406,
+    "height": 254.79150275373723,
+    "width": 420.95987411487022,
     "tabOrder": 8002
   },
   "visual": {
@@ -183,5 +183,37 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "26b93c9a98f0b49daa19",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Atendimentos"
+              }
+            },
+            "Property": "Criado por"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "455eee259df7b4ae29cb",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Qtd Atendimentos"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

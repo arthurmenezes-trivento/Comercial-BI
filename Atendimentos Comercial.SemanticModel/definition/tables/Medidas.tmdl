@@ -134,7 +134,8 @@ table Medidas
 	measure 'Qtd tabulações' =
 			
 			CALCULATE(
-			    COUNT(Atendimentos[Resultado do Contato]),
+			    DISTINCTCOUNT(Atendimentos[result.activityid]),
+			    Atendimentos[Resultado do Contato] <> BLANK(),
 			    USERELATIONSHIP(Atendimentos[Data Modificação], dCalendario[Date])
 			)
 		formatString: 0
@@ -143,11 +144,20 @@ table Medidas
 	measure 'Qtd Atendimentos' =
 			
 			CALCULATE(
-			    COUNT(Atendimentos[result.activityid]),
+			    DISTINCTCOUNT(Atendimentos[result.activityid]),
 			    USERELATIONSHIP(Atendimentos[Data Modificação], dCalendario[Date])
 			)
 		formatString: 0
 		lineageTag: 93620f8c-6a35-4bdf-895d-81b78e33e8b5
+
+	measure '% Tabulação' =
+			
+			DIVIDE(
+			    [Qtd tabulações],
+			    [Qtd Atendimentos]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 7a1e3b6c-3d44-42b7-91fd-39265522c5ce
 
 	column 'Coluna 1'
 		dataType: string
