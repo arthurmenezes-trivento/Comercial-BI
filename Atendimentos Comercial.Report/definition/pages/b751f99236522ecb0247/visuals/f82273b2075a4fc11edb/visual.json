@@ -55,7 +55,22 @@
               {
                 "textRuns": [
                   {
-                    "value": "75 % das Matrículas foram feitas em até 4 dias "
+                    "value": "75 % das Matrículas foram feitas em até 4 dias ."
+                  }
+                ],
+                "listType": "bullet"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Está dentro da normalidade até 10 dias"
                   }
                 ],
                 "listType": "bullet"
