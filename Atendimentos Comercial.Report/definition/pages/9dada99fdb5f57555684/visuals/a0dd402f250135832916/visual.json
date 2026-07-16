@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "a0dd402f250135832916",
   "position": {
-    "x": 28.463611859838274,
-    "y": 182.85714285714286,
-    "z": 3001,
-    "height": 471.80592991913744,
-    "width": 611.53638814016165,
-    "tabOrder": 3001
+    "x": 28.656716417910449,
+    "y": 182.68656716417911,
+    "z": 4000,
+    "height": 471.94029850746267,
+    "width": 624.17910447761187,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "barChart",
@@ -36,22 +36,17 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Atendimentos"
-                        }
-                      },
-                      "Property": "result.activityid"
+                    "SourceRef": {
+                      "Entity": "Medidas"
                     }
                   },
-                  "Function": 5
+                  "Property": "Qtd Atendimentos"
                 }
               },
-              "queryRef": "CountNonNull(Atendimentos.result.activityid)",
-              "nativeQueryRef": "Contagem de result.activityid"
+              "queryRef": "Medidas.Qtd Atendimentos",
+              "nativeQueryRef": "Qtd Atendimentos"
             }
           ]
         }
@@ -60,18 +55,13 @@
         "sort": [
           {
             "field": {
-              "Aggregation": {
+              "Measure": {
                 "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Atendimentos"
-                      }
-                    },
-                    "Property": "result.activityid"
+                  "SourceRef": {
+                    "Entity": "Medidas"
                   }
                 },
-                "Function": 5
+                "Property": "Qtd Atendimentos"
               }
             },
             "direction": "Descending"
@@ -193,42 +183,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "7cdabb82c2fc1e34f3d9",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Atendimentos"
-              }
-            },
-            "Property": "Criado por"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "a12d0609e822a31ba7f0",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Atendimentos"
-                  }
-                },
-                "Property": "result.activityid"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

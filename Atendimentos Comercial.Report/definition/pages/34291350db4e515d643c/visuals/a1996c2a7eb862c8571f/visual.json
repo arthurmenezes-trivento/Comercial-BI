@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
-  "name": "602bff3c0486a871e1d7",
+  "name": "a1996c2a7eb862c8571f",
   "position": {
-    "x": 640.29850746268653,
-    "y": 182.68656716417911,
-    "z": 7000,
-    "height": 471.94029850746267,
-    "width": 624.17910447761187,
-    "tabOrder": 7000
+    "x": 18.127458693941779,
+    "y": 202.42328874901654,
+    "z": 8002,
+    "height": 254.79150275373723,
+    "width": 420.95987411487022,
+    "tabOrder": 8002
   },
   "visual": {
     "visualType": "barChart",
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Matrículas GD"
+                      "Entity": "Atendimentos"
                     }
                   },
-                  "Property": "CONSULTOR (a)"
+                  "Property": "Criado por"
                 }
               },
-              "queryRef": "Matrículas GD.CONSULTOR (a)",
-              "nativeQueryRef": "CONSULTOR (a)",
+              "queryRef": "Atendimentos.Criado por",
+              "nativeQueryRef": "Criado por",
               "active": true
             }
           ]
@@ -36,22 +36,17 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Matrículas GD"
-                        }
-                      },
-                      "Property": "CPF (preencher apenas com números)"
+                    "SourceRef": {
+                      "Entity": "Medidas"
                     }
                   },
-                  "Function": 5
+                  "Property": "Qtd Atendimentos"
                 }
               },
-              "queryRef": "CountNonNull(Matrículas GD.CPF (preencher apenas com números))",
-              "nativeQueryRef": "Contagem de CPF (preencher apenas com números)"
+              "queryRef": "Medidas.Qtd Atendimentos",
+              "nativeQueryRef": "Qtd Atendimentos"
             }
           ]
         }
@@ -60,18 +55,13 @@
         "sort": [
           {
             "field": {
-              "Aggregation": {
+              "Measure": {
                 "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Matrículas GD"
-                      }
-                    },
-                    "Property": "CPF (preencher apenas com números)"
+                  "SourceRef": {
+                    "Entity": "Medidas"
                   }
                 },
-                "Function": 5
+                "Property": "Qtd Atendimentos"
               }
             },
             "direction": "Descending"
@@ -84,10 +74,10 @@
       "categoryAxis": [
         {
           "properties": {
-            "fontSize": {
+            "showAxisTitle": {
               "expr": {
                 "Literal": {
-                  "Value": "10D"
+                  "Value": "false"
                 }
               }
             },
@@ -103,10 +93,10 @@
                 }
               }
             },
-            "showAxisTitle": {
+            "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "10D"
                 }
               }
             }
@@ -116,14 +106,14 @@
       "valueAxis": [
         {
           "properties": {
-            "show": {
+            "showAxisTitle": {
               "expr": {
                 "Literal": {
                   "Value": "false"
                 }
               }
             },
-            "showAxisTitle": {
+            "show": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -154,26 +144,14 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Matrículas por Consultor'"
+                  "Value": "'Atendimentos por Consultor'"
                 }
               }
             },
-            "titleWrap": {
+            "alignment": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
+                  "Value": "'center'"
                 }
               }
             },
@@ -188,43 +166,15 @@
                 }
               }
             },
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'center'"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "background": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "transparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "border": [
-        {
-          "properties": {
-            "width": {
-              "expr": {
-                "Literal": {
-                  "Value": "1D"
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
                 }
               }
             }
@@ -237,34 +187,29 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "b4937dee47c8531553f9",
+        "name": "26b93c9a98f0b49daa19",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Matrículas GD"
+                "Entity": "Atendimentos"
               }
             },
-            "Property": "CONSULTOR (a)"
+            "Property": "Criado por"
           }
         },
         "type": "Categorical"
       },
       {
-        "name": "7be251b43da625c068eb",
+        "name": "455eee259df7b4ae29cb",
         "field": {
-          "Aggregation": {
+          "Measure": {
             "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Matrículas GD"
-                  }
-                },
-                "Property": "CPF (preencher apenas com números)"
+              "SourceRef": {
+                "Entity": "Medidas"
               }
             },
-            "Function": 5
+            "Property": "Qtd Atendimentos"
           }
         },
         "type": "Advanced"
