@@ -4,10 +4,10 @@
   "position": {
     "x": 934.571203776554,
     "y": 202.42328874901654,
-    "z": 8005,
+    "z": 11000,
     "height": 254.79150275373723,
     "width": 325.28717545239971,
-    "tabOrder": 8005
+    "tabOrder": 11000
   },
   "visual": {
     "visualType": "barChart",
@@ -233,42 +233,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "6eea4a148b2b412741ff",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Matrículas GD"
-              }
-            },
-            "Property": "CONSULTOR (a)"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "404fbdf4484bb7016aa6",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Matrículas GD"
-                  }
-                },
-                "Property": "CPF (preencher apenas com números)"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

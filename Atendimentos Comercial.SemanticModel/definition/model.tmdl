@@ -13,7 +13,7 @@ queryGroup 'Consultas - Token'
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["Token de acesso","Leads","2026-2","Inscricoes","Pagamentos","Consulta1","dUnidade","DeparaCursos","dCanal","Atendimentos","Medidas","Função Invocada","Legado","ALTAMIRA","LORENA","ITABIRITO","Matrículas GD"]
+annotation PBI_QueryOrder = ["Token de acesso","Leads","Inscricoes","Pagamentos","Consulta1","dUnidade","DeparaCursos","dCanal","Atendimentos","Medidas","Função Invocada","Legado","ALTAMIRA","LORENA","ITABIRITO","Matrículas GD"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
@@ -31,15 +31,13 @@ ref table LocalDateTable_87e26fc0-fd37-4960-be28-b682fd6fb781
 ref table Medidas
 ref table Atendimentos
 ref table 'Função Invocada'
-ref table 2026-2
-ref table LocalDateTable_084f04e3-ea2f-419a-8467-0c6c38ed01ce
-ref table LocalDateTable_aef72aa3-47a4-4035-a7df-f849323f9699
-ref table LocalDateTable_daba6568-9057-4260-a436-134e9e094818
 ref table ALTAMIRA
 ref table LORENA
 ref table ITABIRITO
 ref table LocalDateTable_e314503a-e405-44ff-9d42-cb9fb75678ba
 ref table 'Matrículas GD'
+ref table LocalDateTable_2b17ef05-b7d4-4cc1-962d-44181e6252a7
+ref table LocalDateTable_87986423-bc28-4b16-8941-732d6ced6908
 
 ref cultureInfo pt-BR
 

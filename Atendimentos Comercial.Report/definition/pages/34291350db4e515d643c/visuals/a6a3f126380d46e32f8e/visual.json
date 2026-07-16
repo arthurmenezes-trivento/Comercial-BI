@@ -4,10 +4,10 @@
   "position": {
     "x": 660.64516129032256,
     "y": 108.76475216365067,
-    "z": 8003,
+    "z": 9000,
     "height": 74.523996852871761,
     "width": 163.147128245476,
-    "tabOrder": 8003
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -335,23 +335,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "eb06a646ad2d998060c5",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Qtd Atendimentos"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

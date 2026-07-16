@@ -4,10 +4,10 @@
   "position": {
     "x": 854.00472069236821,
     "y": 108.76475216365067,
-    "z": 8000,
+    "z": 6000,
     "height": 81.573564122738,
     "width": 161.13296616837138,
-    "tabOrder": 8000
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -378,23 +378,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "1ee9f1932985ada1fdb5",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Qtd tabulações"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

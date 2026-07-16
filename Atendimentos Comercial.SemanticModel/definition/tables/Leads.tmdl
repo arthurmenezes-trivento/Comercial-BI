@@ -421,6 +421,70 @@ table Leads
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'Aging Matrícula' =
+			
+			VAR Diferenca = DATEDIFF(
+			    Leads[Data Criacao],
+			    Leads[Data de Pagamento],
+			    DAY
+			)
+			
+			RETURN
+			    IF(Diferenca < 0 , 0 , Diferenca)
+		formatString: 0
+		lineageTag: e1ade157-9e39-4fde-86ab-1c6433bc18b7
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Data Aprovação'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: dc0827e0-154c-410b-9f03-5dc70db3806b
+		summarizeBy: none
+		sourceColumn: Data Aprovação
+
+		variation Variation
+			isDefault
+			relationship: 8a3c3a04-2b94-4d3a-8521-d9a5b6444a33
+			defaultHierarchy: LocalDateTable_2b17ef05-b7d4-4cc1-962d-44181e6252a7.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Data de Pagamento'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 031cabe4-398c-4b29-81e3-29fa0f919366
+		summarizeBy: none
+		sourceColumn: Data de Pagamento
+
+		variation Variation
+			isDefault
+			relationship: b3f525a4-734c-4251-a11f-50dce4305182
+			defaultHierarchy: LocalDateTable_87986423-bc28-4b16-8941-732d6ced6908.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Situação Inscrição'
+		dataType: string
+		lineageTag: 4f507373-fa45-44de-8acc-63f8f464b1d9
+		summarizeBy: none
+		sourceColumn: Situação Inscrição
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Situação Pagamento'
+		dataType: string
+		lineageTag: 0737a1f0-8431-4afd-ba29-afd728996a6c
+		summarizeBy: none
+		sourceColumn: Situação Pagamento
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Leads = m
 		mode: import
 		queryGroup: 'Consultas - Token'
@@ -535,9 +599,12 @@ table Leads
 				    #"Linhas Filtradas" = Table.SelectRows(#"Valor Substituído", each true),
 				    #"Tipo Alterado6" = Table.TransformColumnTypes(#"Linhas Filtradas",{{"Data Criacao", type date}}),
 				    #"Linhas em Branco Removidas" = Table.SelectRows(#"Tipo Alterado6", each not List.IsEmpty(List.RemoveMatchingItems(Record.FieldValues(_), {"", null}))),
-				    #"Duplicatas Removidas" = Table.Distinct(#"Linhas em Branco Removidas", {"ID Lead"})
+				    #"Duplicatas Removidas" = Table.Distinct(#"Linhas em Branco Removidas", {"ID Lead"}),
+				    #"Consultas Mescladas" = Table.NestedJoin(#"Duplicatas Removidas", {"Numero Inscricao"}, Inscricoes, {"result.cad_numeroinscricao"}, "Inscricoes", JoinKind.LeftOuter),
+				    #"Inscricoes Expandido1" = Table.ExpandTableColumn(#"Consultas Mescladas", "Inscricoes", {"Data Aprovação", "Data de Pagamento", "Situação Inscrição", "Situação Pagamento"}, {"Data Aprovação", "Data de Pagamento", "Situação Inscrição", "Situação Pagamento"}),
+				    #"Duplicatas Removidas1" = Table.Distinct(#"Inscricoes Expandido1", {"ID Lead"})
 				in
-				    #"Duplicatas Removidas"
+				    #"Duplicatas Removidas1"
 
 	annotation PBI_NavigationStepName = Navegação
 
