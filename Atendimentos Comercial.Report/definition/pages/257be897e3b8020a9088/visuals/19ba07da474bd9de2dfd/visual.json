@@ -4,10 +4,10 @@
   "position": {
     "x": 11.627939986657392,
     "y": 211.62850775716456,
-    "z": 3001,
+    "z": 4000,
     "height": 496.51303743027069,
     "width": 1268.6082525443214,
-    "tabOrder": 3001
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -419,86 +419,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "bca2f691545bc2dd9eee",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Leads"
-                  }
-                },
-                "Property": "Última Tabulação"
-              }
-            },
-            "Function": 3
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "e8953f02c2c963d3953e",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "data Ultimo Atendimento"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "c12e4c0a2f3c2774256b",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Leads"
-                  }
-                },
-                "Property": "Proprietário Lead"
-              }
-            },
-            "Function": 3
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "1bb4add5af420be4d97e",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "UltimaDataHoraCriacaoProprietario"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "85eeb1fa4482fda9c06b",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Dias Sem Atendimento"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

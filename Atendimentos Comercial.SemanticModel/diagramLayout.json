@@ -194,8 +194,21 @@
       "nodes": [
         {
           "location": {
-            "x": 785,
-            "y": 291
+            "x": 185,
+            "y": 256
+          },
+          "nodeIndex": "Atendimentos",
+          "nodeLineageTag": "48aff271-58b6-4af5-97f5-c49aed976afd",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 567,
+            "y": 35
           },
           "nodeIndex": "dCalendario",
           "nodeLineageTag": "56fddc2c-58c7-4abb-b7fb-6286534cc079",
@@ -204,16 +217,29 @@
             "width": 234
           },
           "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 828,
+            "y": 406
+          },
+          "nodeIndex": "Leads",
+          "nodeLineageTag": "5d5c91c8-075a-48fa-9e31-f3a2365489f1",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
-      "name": "Layout 1",
-      "zoomValue": 79.553182037699813,
+      "name": "Layout 2",
+      "zoomValue": 100,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,
       "tablesLocked": false
     }
   ],
-  "selectedDiagram": "Todas as tabelas",
+  "selectedDiagram": "Layout 2",
   "defaultDiagram": "Todas as tabelas"
 }

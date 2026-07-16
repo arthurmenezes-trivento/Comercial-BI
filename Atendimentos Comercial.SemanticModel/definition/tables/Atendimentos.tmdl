@@ -93,12 +93,15 @@ table Atendimentos
 		annotation SummarizationSetBy = Automatic
 
 	column 'Data Modificação'
-		dataType: string
+		dataType: dateTime
+		formatString: Long Date
 		lineageTag: 7bdb89b1-de53-4f61-885e-4fe7156fe1fa
 		summarizeBy: none
 		sourceColumn: Data Modificação
 
 		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
 
 	column 'Hora da Modificação'
 		dataType: string
@@ -197,7 +200,7 @@ table Atendimentos
 				    #"Data e hora de Modificação" = Table.ExpandTableColumn(#"Modificado por", "result.modifiedon", {"Attribute:date", "Attribute:time"}, {"Data Modificação", "Hora da Modificação"}),
 				    #"renomeado para assunto" = Table.RenameColumns(#"Data e hora de Modificação",{{"result.subject", "Assunto"}, {"result.cad_detalhesdocontato", "detalhes do contato"}}),
 				    #"id e nome do lead" = Table.ExpandTableColumn(#"renomeado para assunto", "result.regardingobjectid", {"Element:Text", "Attribute:name"}, {"Id Lead", "Nome do Lead"}),
-				    #"Tipo Alterado" = Table.TransformColumnTypes(#"id e nome do lead",{{"Data de Criação", type date}})
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"id e nome do lead",{{"Data de Criação", type date}, {"Data Modificação", type date}})
 				in
 				    #"Tipo Alterado"
 

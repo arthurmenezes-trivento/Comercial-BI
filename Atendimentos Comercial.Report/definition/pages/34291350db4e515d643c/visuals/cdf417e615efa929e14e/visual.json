@@ -1,16 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
-  "name": "602bff3c0486a871e1d7",
+  "name": "cdf417e615efa929e14e",
   "position": {
-    "x": 652.93800539083554,
-    "y": 182.85714285714286,
-    "z": 7000,
-    "height": 471.80592991913744,
-    "width": 611.53638814016165,
-    "tabOrder": 7000
+    "x": 544.47761194029852,
+    "y": 261.49253731343282,
+    "z": 8001,
+    "height": 393.13432835820896,
+    "width": 711.044776119403,
+    "tabOrder": 8001
   },
   "visual": {
-    "visualType": "barChart",
+    "visualType": "clusteredColumnChart",
     "query": {
       "queryState": {
         "Category": {
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Matrículas GD"
+                      "Entity": "Leads"
                     }
                   },
-                  "Property": "CONSULTOR (a)"
+                  "Property": "Proprietário Lead"
                 }
               },
-              "queryRef": "Matrículas GD.CONSULTOR (a)",
-              "nativeQueryRef": "CONSULTOR (a)",
+              "queryRef": "Leads.Proprietário Lead",
+              "nativeQueryRef": "Proprietário Lead",
               "active": true
             }
           ]
@@ -36,22 +36,17 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Matrículas GD"
-                        }
-                      },
-                      "Property": "CPF (preencher apenas com números)"
+                    "SourceRef": {
+                      "Entity": "Medidas"
                     }
                   },
-                  "Function": 5
+                  "Property": "Qtd tabulações"
                 }
               },
-              "queryRef": "CountNonNull(Matrículas GD.CPF (preencher apenas com números))",
-              "nativeQueryRef": "Contagem de CPF (preencher apenas com números)"
+              "queryRef": "Medidas.Qtd tabulações",
+              "nativeQueryRef": "Qtd tabulações"
             }
           ]
         }
@@ -60,18 +55,13 @@
         "sort": [
           {
             "field": {
-              "Aggregation": {
+              "Measure": {
                 "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Matrículas GD"
-                      }
-                    },
-                    "Property": "CPF (preencher apenas com números)"
+                  "SourceRef": {
+                    "Entity": "Medidas"
                   }
                 },
-                "Function": 5
+                "Property": "Qtd tabulações"
               }
             },
             "direction": "Descending"
@@ -151,13 +141,6 @@
       "title": [
         {
           "properties": {
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Matrículas por Consultor'"
-                }
-              }
-            },
             "titleWrap": {
               "expr": {
                 "Literal": {
@@ -192,6 +175,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'center'"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Número de tabulações por proprietário'"
                 }
               }
             }

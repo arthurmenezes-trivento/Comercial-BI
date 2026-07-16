@@ -4,10 +4,10 @@
   "position": {
     "x": 28.463611859838274,
     "y": 182.85714285714286,
-    "z": 3001,
+    "z": 4000,
     "height": 471.80592991913744,
     "width": 611.53638814016165,
-    "tabOrder": 3001
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "barChart",
@@ -193,42 +193,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "7cdabb82c2fc1e34f3d9",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Atendimentos"
-              }
-            },
-            "Property": "Criado por"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "a12d0609e822a31ba7f0",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Atendimentos"
-                  }
-                },
-                "Property": "result.activityid"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

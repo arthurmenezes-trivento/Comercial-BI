@@ -131,6 +131,24 @@ table Medidas
 			```
 		lineageTag: 776476a4-d45f-4e8b-bb47-7bc967379e76
 
+	measure 'Qtd tabulações' =
+			
+			CALCULATE(
+			    COUNT(Atendimentos[Resultado do Contato]),
+			    USERELATIONSHIP(Atendimentos[Data Modificação], dCalendario[Date])
+			)
+		formatString: 0
+		lineageTag: 769c3244-4b91-43f0-96ed-617496476eb2
+
+	measure 'Qtd Atendimentos' =
+			
+			CALCULATE(
+			    COUNT(Atendimentos[result.activityid]),
+			    USERELATIONSHIP(Atendimentos[Data Modificação], dCalendario[Date])
+			)
+		formatString: 0
+		lineageTag: 93620f8c-6a35-4bdf-895d-81b78e33e8b5
+
 	column 'Coluna 1'
 		dataType: string
 		lineageTag: 686dcc5d-ee01-4a81-ac33-f88f665891bc

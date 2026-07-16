@@ -80,3 +80,8 @@ relationship 4041c7f0-f009-457e-9ab1-78e03b3ef1cf
 	fromColumn: Leads.Unidade
 	toColumn: dUnidade.Unidade
 
+relationship 0d6b43bd-10c7-3992-d465-e9d4e8d77514
+	isActive: false
+	fromColumn: Atendimentos.'Data Modificação'
+	toColumn: dCalendario.Date
+
