@@ -4,10 +4,10 @@
   "position": {
     "x": 18.127458693941779,
     "y": 202.42328874901654,
-    "z": 8002,
+    "z": 8000,
     "height": 254.79150275373723,
     "width": 420.95987411487022,
-    "tabOrder": 8002
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "barChart",
@@ -183,37 +183,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "26b93c9a98f0b49daa19",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Atendimentos"
-              }
-            },
-            "Property": "Criado por"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "455eee259df7b4ae29cb",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Qtd Atendimentos"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

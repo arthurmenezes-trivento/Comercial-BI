@@ -4,10 +4,10 @@
   "position": {
     "x": 458.22187254130608,
     "y": 202.42328874901654,
-    "z": 8001,
+    "z": 7000,
     "height": 254.79150275373723,
     "width": 456.20771046420145,
-    "tabOrder": 8001
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -223,37 +223,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "62c76ce73a785efd10be",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Leads"
-              }
-            },
-            "Property": "Proprietário Lead"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "8166b01d0606899599be",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Qtd tabulações"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

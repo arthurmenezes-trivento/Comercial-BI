@@ -1,0 +1,72 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "76e06f5eb5e4b7ef6341",
+  "position": {
+    "x": 35.987841945288757,
+    "y": 490.21276595744683,
+    "z": 12000,
+    "height": 193.55623100303953,
+    "width": 402.67477203647417,
+    "tabOrder": 12000
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Atendimentos"
+                    }
+                  },
+                  "Property": "Resultado do Contato"
+                }
+              },
+              "queryRef": "Atendimentos.Resultado do Contato",
+              "nativeQueryRef": "Resultado do Contato",
+              "active": true
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Qtd tabulações"
+                }
+              },
+              "queryRef": "Medidas.Qtd tabulações",
+              "nativeQueryRef": "Qtd tabulações"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

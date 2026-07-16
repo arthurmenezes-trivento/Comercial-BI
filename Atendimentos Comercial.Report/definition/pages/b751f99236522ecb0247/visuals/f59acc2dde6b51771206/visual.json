@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
-  "name": "9bc2b02dce16bd9c9645",
+  "name": "f59acc2dde6b51771206",
   "position": {
-    "x": 1045.3501180173093,
-    "y": 108.76475216365067,
-    "z": 10000,
-    "height": 81.573564122738,
-    "width": 161.13296616837138,
-    "tabOrder": 10000
+    "x": 660.42553191489367,
+    "y": 108.93617021276596,
+    "z": 6000,
+    "height": 81.702127659574472,
+    "width": 163.40425531914894,
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -23,11 +23,11 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "% Tabulação"
+                  "Property": "Média Aging"
                 }
               },
-              "queryRef": "Medidas.% Tabulação",
-              "nativeQueryRef": "% Tabulação"
+              "queryRef": "Medidas.Média Aging",
+              "nativeQueryRef": "Média Aging"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "Medidas"
                   }
                 },
-                "Property": "% Tabulação"
+                "Property": "Média Aging"
               }
             },
             "direction": "Descending"
@@ -69,10 +69,10 @@
         },
         {
           "properties": {
-            "calloutSize": {
+            "autoGrid": {
               "expr": {
                 "Literal": {
-                  "Value": "36D"
+                  "Value": "true"
                 }
               }
             },
@@ -83,10 +83,10 @@
                 }
               }
             },
-            "autoGrid": {
+            "calloutSize": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "36D"
                 }
               }
             }
@@ -168,10 +168,10 @@
         },
         {
           "properties": {
-            "fontSize": {
+            "horizontalAlignment": {
               "expr": {
                 "Literal": {
-                  "Value": "16D"
+                  "Value": "'center'"
                 }
               }
             },
@@ -186,10 +186,10 @@
                 }
               }
             },
-            "horizontalAlignment": {
+            "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "'center'"
+                  "Value": "16D"
                 }
               }
             }
@@ -220,13 +220,6 @@
       "title": [
         {
           "properties": {
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'% tabulação'"
-                }
-              }
-            },
             "show": {
               "expr": {
                 "Literal": {
@@ -234,22 +227,17 @@
                 }
               }
             },
-            "titleWrap": {
+            "text": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "'Média (Geral)'"
                 }
               }
             },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
                 }
               }
             },
@@ -264,10 +252,15 @@
                 }
               }
             },
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'center'"
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
                 }
               }
             },
@@ -303,13 +296,6 @@
                   "Value": "false"
                 }
               }
-            },
-            "transparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
             }
           }
         }
@@ -341,35 +327,6 @@
               "expr": {
                 "Literal": {
                   "Value": "0D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "spacing": [
-        {
-          "properties": {
-            "verticalSpacing": {
-              "expr": {
-                "Literal": {
-                  "Value": "2D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "id": "default"
-          }
-        }
-      ],
-      "border": [
-        {
-          "properties": {
-            "width": {
-              "expr": {
-                "Literal": {
-                  "Value": "1D"
                 }
               }
             }

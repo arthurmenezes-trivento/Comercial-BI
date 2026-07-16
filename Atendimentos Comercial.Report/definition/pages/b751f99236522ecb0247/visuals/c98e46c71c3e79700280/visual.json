@@ -1,0 +1,121 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "c98e46c71c3e79700280",
+  "position": {
+    "x": 652.22222222222217,
+    "y": 191.11111111111111,
+    "z": 8000,
+    "height": 326.66666666666669,
+    "width": 537.77777777777771,
+    "tabOrder": 8000
+  },
+  "visual": {
+    "visualType": "pythonVisual",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Leads"
+                    }
+                  },
+                  "Property": "ID Lead"
+                }
+              },
+              "queryRef": "Leads.ID Lead",
+              "nativeQueryRef": "ID Lead"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Leads"
+                    }
+                  },
+                  "Property": "Aging Matrícula"
+                }
+              },
+              "queryRef": "Leads.Aging Matrícula",
+              "nativeQueryRef": "Aging Matrícula"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "script": [
+        {
+          "properties": {
+            "source": {
+              "expr": {
+                "Literal": {
+                  "Value": "'import matplotlib.pyplot as plt\nimport seaborn as sns\n\nplt.figure(figsize=(10, 6))\n\n# Define um estilo de fundo mais limpo e bonito\nsns.set_theme(style=\"whitegrid\")\n\n# --- CUSTOMIZAÇÃO DA MEDIANA ---\n# Força a linha da mediana a ser vermelha (red) e mais grossa (linewidth=3)\nestilo_mediana = dict(color=\"red\", linewidth=3)\n# -------------------------------\n\n# Cria o Box Plot no Seaborn sem outliers e com o destaque na mediana\nsns.boxplot(\n    y=''Aging Matrícula'', \n    data=dataset, \n    showfliers=False, \n    medianprops=estilo_mediana,\n    color=\"#4C72B0\" # Cor azul elegante para a caixa\n)\n\n# Títulos e tamanhos de fonte ajustados\nplt.title(''Distribuição Geral (Aging Matrícula)'', fontsize=22, fontweight=''bold'', pad=15)\nplt.ylabel(''Dias (Aging)'', fontsize=14)\nplt.yticks(fontsize=15)\n\n# Remove as marcações desnecessárias do eixo X, já que é um gráfico único\nplt.xticks([]) \n\nplt.tight_layout()\nplt.show()\n'"
+                }
+              }
+            },
+            "provider": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Python'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "8124fddb8498ff92860d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Leads"
+              }
+            },
+            "Property": "Aging Matrícula"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "f408446afebff116dc12",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Leads"
+              }
+            },
+            "Property": "ID Lead"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

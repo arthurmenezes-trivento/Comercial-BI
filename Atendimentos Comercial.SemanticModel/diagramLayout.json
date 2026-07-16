@@ -4,8 +4,8 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 272.83950617283949,
-        "y": 46.913580246913575
+        "x": 423.45679012345676,
+        "y": 0
       },
       "nodes": [
         {
@@ -114,19 +114,6 @@
         },
         {
           "location": {
-            "x": 1007.4246152720768,
-            "y": 387.480360839064
-          },
-          "nodeIndex": "2026-2",
-          "nodeLineageTag": "ee3875e1-0fca-452a-a27d-82e936d9daa1",
-          "size": {
-            "height": 300,
-            "width": 234
-          },
-          "zIndex": 9
-        },
-        {
-          "location": {
             "x": 1593.062663479024,
             "y": 309.76949783638651
           },
@@ -232,7 +219,48 @@
           "zIndex": 0
         }
       ],
-      "name": "Layout 2",
+      "name": "Consolidado diario",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    },
+    {
+      "ordinal": 2,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 833,
+            "y": 296
+          },
+          "nodeIndex": "Atendimentos",
+          "nodeLineageTag": "48aff271-58b6-4af5-97f5-c49aed976afd",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 477,
+            "y": 71
+          },
+          "nodeIndex": "Leads",
+          "nodeLineageTag": "5d5c91c8-075a-48fa-9e31-f3a2365489f1",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 2
+        }
+      ],
+      "name": "Aging Matrícula",
       "zoomValue": 100,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
@@ -240,6 +268,6 @@
       "tablesLocked": false
     }
   ],
-  "selectedDiagram": "Layout 2",
+  "selectedDiagram": "Consolidado diario",
   "defaultDiagram": "Todas as tabelas"
 }

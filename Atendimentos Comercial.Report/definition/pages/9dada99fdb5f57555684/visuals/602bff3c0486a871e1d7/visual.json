@@ -233,42 +233,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "b4937dee47c8531553f9",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Matrículas GD"
-              }
-            },
-            "Property": "CONSULTOR (a)"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "7be251b43da625c068eb",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Matrículas GD"
-                  }
-                },
-                "Property": "CPF (preencher apenas com números)"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

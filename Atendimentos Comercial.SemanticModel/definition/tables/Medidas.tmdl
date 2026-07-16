@@ -123,20 +123,21 @@ table Medidas
 	measure 'Matr 26-2' = ```
 			
 			    CALCULATE(
-			        DISTINCTCOUNT('2026-2'[ID Lead]),
-			        '2026-2'[Situação Inscrição] = "Matriculado",
-			        USERELATIONSHIP('2026-2'[Data de Pagamento] , dCalendario[Date]),
-			        '2026-2'[Data de Pagamento] <> BLANK()
-			    )
+			        DISTINCTCOUNT('Leads'[ID Lead]),
+			        'Leads'[Situação Inscrição] = "Matriculado",
+			        'Leads'[Data de Pagamento] <> BLANK(),
+			        CROSSFILTER('Leads'[ID Lead], 'Atendimentos'[Id Lead], Both
+			    ))
 			```
+		formatString: 0
 		lineageTag: 776476a4-d45f-4e8b-bb47-7bc967379e76
 
 	measure 'Qtd tabulações' =
 			
 			CALCULATE(
 			    DISTINCTCOUNT(Atendimentos[result.activityid]),
-			    Atendimentos[Resultado do Contato] <> BLANK(),
-			    USERELATIONSHIP(Atendimentos[Data Modificação], dCalendario[Date])
+			    KEEPFILTERS(Atendimentos[Resultado do Contato] <> BLANK()),
+			    USERELATIONSHIP( dCalendario[Date], Atendimentos[Data Modificação])
 			)
 		formatString: 0
 		lineageTag: 769c3244-4b91-43f0-96ed-617496476eb2
@@ -158,6 +159,21 @@ table Medidas
 			)
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: 7a1e3b6c-3d44-42b7-91fd-39265522c5ce
+
+	measure 'Média Aging' = ```
+			
+			VAR MediaCalculada = 
+			    INT(
+			        CALCULATE(
+			            AVERAGE('Leads'[Aging Matrícula]),
+			            CROSSFILTER('Leads'[ID Lead], 'Atendimentos'[Id Lead], BOTH)
+			        )
+			    )
+			RETURN
+			IF(ISBLANK(MediaCalculada), BLANK(), MediaCalculada & " dias")
+			
+			```
+		lineageTag: 80bdab73-c902-4a6e-999b-9ad9503c17dd
 
 	column 'Coluna 1'
 		dataType: string

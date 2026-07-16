@@ -5,7 +5,7 @@ table dCanal
 		dataType: int64
 		formatString: 0
 		lineageTag: bd17d739-214d-4bef-ba27-55e90ac0205f
-		summarizeBy: none
+		summarizeBy: count
 		sourceColumn: ID
 
 		annotation SummarizationSetBy = Automatic
