@@ -175,6 +175,21 @@ table Medidas
 			```
 		lineageTag: 80bdab73-c902-4a6e-999b-9ad9503c17dd
 
+	measure Media_Movel_7_Dias = ```
+			
+			CALCULATE(
+			    [Média Aging],
+			    DATESINPERIOD(
+			        'dCalendario'[Date], 
+			        LASTDATE('dCalendario'[Date]), 
+			        -7, 
+			        DAY
+			    )
+			)
+			
+			```
+		lineageTag: d917ed7a-17ac-4d66-8a79-d206b911b941
+
 	column 'Coluna 1'
 		dataType: string
 		lineageTag: 686dcc5d-ee01-4a81-ac33-f88f665891bc

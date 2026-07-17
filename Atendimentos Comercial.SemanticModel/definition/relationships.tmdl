@@ -3,33 +3,10 @@ relationship 08e9ce5d-e85c-4f32-b468-b3b988ba6ede
 	fromColumn: 'Ultima Atualizacao'.'Atualizado Em'
 	toColumn: LocalDateTable_dbc3bbb7-e54f-4a4e-8265-240590589075.Date
 
-relationship 5418f71d-907f-4786-a1f8-1e58fcecb5ea
-	joinOnDateBehavior: datePartOnly
-	fromColumn: Leads.'Data Aceite'
-	toColumn: LocalDateTable_13d55816-b77b-4b20-92a9-0ed12f17be0a.Date
-
-relationship b08de8a4-88dd-498a-9406-b3c5bae040f2
-	joinOnDateBehavior: datePartOnly
-	fromColumn: Leads.'Data alteração'
-	toColumn: LocalDateTable_6209402d-885f-444f-b7f6-b9e38b768c04.Date
-
 relationship a8dd076f-7d3f-45e4-a341-c4989d7fda92
 	joinOnDateBehavior: datePartOnly
 	fromColumn: dCalendario.Date
 	toColumn: LocalDateTable_a805f813-464e-407c-b1f9-b2f9e577ec46.Date
-
-relationship 00d93253-daf3-4df9-888b-a6d1f285003d
-	joinOnDateBehavior: datePartOnly
-	fromColumn: Leads.'Data Criacao'
-	toColumn: LocalDateTable_87e26fc0-fd37-4960-be28-b682fd6fb781.Date
-
-relationship c7509551-e995-b47f-f085-0c0d5ad08369
-	fromColumn: Atendimentos.'Id Lead'
-	toColumn: Leads.'ID Lead'
-
-relationship 8cc51ea1-e653-cb07-c58d-36795b146a85
-	fromColumn: Atendimentos.'Data de Criação'
-	toColumn: dCalendario.Date
 
 relationship 5a2d939b-6e20-4a42-acf0-fbf93c9b29a8
 	joinOnDateBehavior: datePartOnly
@@ -43,6 +20,25 @@ relationship fbd7ce99-2e0f-1e2c-fe5b-86ff0e16d26d
 relationship a8c966b7-8023-a9ec-a1c1-fcfedf39f777
 	fromColumn: 'Matrículas GD'.Unidade
 	toColumn: dUnidade.Unidade
+
+relationship 5418f71d-907f-4786-a1f8-1e58fcecb5ea
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Leads.'Data Aceite'
+	toColumn: LocalDateTable_13d55816-b77b-4b20-92a9-0ed12f17be0a.Date
+
+relationship b08de8a4-88dd-498a-9406-b3c5bae040f2
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Leads.'Data alteração'
+	toColumn: LocalDateTable_6209402d-885f-444f-b7f6-b9e38b768c04.Date
+
+relationship c7509551-e995-b47f-f085-0c0d5ad08369
+	fromColumn: Atendimentos.'Id Lead'
+	toColumn: Leads.'ID Lead'
+
+relationship 8cc51ea1-e653-cb07-c58d-36795b146a85
+	isActive: false
+	fromColumn: Atendimentos.'Data de Criação'
+	toColumn: dCalendario.Date
 
 relationship 4041c7f0-f009-457e-9ab1-78e03b3ef1cf
 	fromColumn: Leads.Unidade
@@ -62,4 +58,8 @@ relationship b3f525a4-734c-4251-a11f-50dce4305182
 	joinOnDateBehavior: datePartOnly
 	fromColumn: Leads.'Data de Pagamento'
 	toColumn: LocalDateTable_87986423-bc28-4b16-8941-732d6ced6908.Date
+
+relationship 18129288-eaba-92d1-713f-4eb3c28ab9c8
+	fromColumn: Leads.'Data Criacao'
+	toColumn: dCalendario.Date
 

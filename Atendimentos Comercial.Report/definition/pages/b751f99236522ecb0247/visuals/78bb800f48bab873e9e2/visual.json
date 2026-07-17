@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "78bb800f48bab873e9e2",
   "position": {
-    "x": 80.729483282674778,
-    "y": 207.17325227963528,
+    "x": 22.260869565217391,
+    "y": 199.23478260869564,
     "z": 7000,
-    "height": 472.70516717325228,
-    "width": 455.19756838905778,
+    "height": 473.04347826086956,
+    "width": 398.46956521739128,
     "tabOrder": 7000
   },
   "visual": {
@@ -76,7 +76,7 @@
                     "Entity": "Medidas"
                   }
                 },
-                "Property": "Matr 26-2"
+                "Property": "Média Aging"
               }
             },
             "direction": "Descending"

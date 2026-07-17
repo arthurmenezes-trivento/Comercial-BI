@@ -1,3 +1,15 @@
+expression DeparaCursos =
+		let
+		    Fonte = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("lZRNbtswEIWvQngd9w6tY3eVNkDQboIsxtRYHUAkHZLyfZwsihboKXSxjqSEfxYNZKn3Ps4b/mgeH1fQqDV0HhRZWN2sPjeKNDlvYfg9vJrV082MkIc9WfLmCtMZi7pexGU5ejh35FCguEWH+mS6EynU3ogGxQMvRgUurMziP7Y0dvWBda01Wbf8rY0imF37nJn2uSePvrfApX/YPfDelQlobOAKuCejsEnLfpkUkqQhJdKTqCAhsPSlNJqXI2VXsaHhr5YETmzYHs6jP+ENWeSglL2dpcxOO1ryQzupic0h72Lb9HJ+LmI3/HMkIeHSiKtgyKpR+oBWQYvZo98GVZRUllzHYu4F036SdKIuz2tR/wJLIDajV5B55lU0ya1w2KGvZG+74Y+38Wje4KWal6hCWSl7h3J40QULo7BYehGvncEFvD5a09Toe/b6OIICvtRGyfI08GPL6R6d51Ngkf/ejXFq/sjxWLoOH4BfCP9wa5H2vWN1OEsqmCS/QoTIwidH2b+7GwWPFo4ZkfWwiLwJSVCJtcDDfp6QkfoaxQl6H0WRuEuHU7BP6Rt8R8RP5EDiEW5juQlNdliHdT+93uw8vo1avPGApAdSY0J/BWAaHqGmM21+c9+jfIGFUiV05Kl1Weo+qCWU9l2nQlyKPP0H", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [curso_id = _t, Curso = _t]),
+		    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"curso_id", type text}, {"Curso", type text}})
+		in
+		    #"Tipo Alterado"
+	lineageTag: 37c8b770-54cd-4542-ad5f-995bf48de932
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+
 expression 'Token de acesso' =
 		() =>
 		let
@@ -97,18 +109,6 @@ expression Consulta1 =
 		    TabelaFinal
 	lineageTag: 444837b5-afb7-4fd7-bfb3-4130e4f6c13f
 	queryGroup: 'Consultas - Token'
-
-	annotation PBI_NavigationStepName = Navegação
-
-	annotation PBI_ResultType = Table
-
-expression DeparaCursos =
-		let
-		    Fonte = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("lZRNbtswEIWvQngd9w6tY3eVNkDQboIsxtRYHUAkHZLyfZwsihboKXSxjqSEfxYNZKn3Ps4b/mgeH1fQqDV0HhRZWN2sPjeKNDlvYfg9vJrV082MkIc9WfLmCtMZi7pexGU5ejh35FCguEWH+mS6EynU3ogGxQMvRgUurMziP7Y0dvWBda01Wbf8rY0imF37nJn2uSePvrfApX/YPfDelQlobOAKuCejsEnLfpkUkqQhJdKTqCAhsPSlNJqXI2VXsaHhr5YETmzYHs6jP+ENWeSglL2dpcxOO1ryQzupic0h72Lb9HJ+LmI3/HMkIeHSiKtgyKpR+oBWQYvZo98GVZRUllzHYu4F036SdKIuz2tR/wJLIDajV5B55lU0ya1w2KGvZG+74Y+38Wje4KWal6hCWSl7h3J40QULo7BYehGvncEFvD5a09Toe/b6OIICvtRGyfI08GPL6R6d51Ngkf/ejXFq/sjxWLoOH4BfCP9wa5H2vWN1OEsqmCS/QoTIwidH2b+7GwWPFo4ZkfWwiLwJSVCJtcDDfp6QkfoaxQl6H0WRuEuHU7BP6Rt8R8RP5EDiEW5juQlNdliHdT+93uw8vo1avPGApAdSY0J/BWAaHqGmM21+c9+jfIGFUiV05Kl1Weo+qCWU9l2nQlyKPP0H", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [curso_id = _t, Curso = _t]),
-		    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"curso_id", type text}, {"Curso", type text}})
-		in
-		    #"Tipo Alterado"
-	lineageTag: 37c8b770-54cd-4542-ad5f-995bf48de932
 
 	annotation PBI_NavigationStepName = Navegação
 
