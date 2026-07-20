@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "4663248f95fecc7e39df",
   "position": {
-    "x": 36.254917387883559,
-    "y": 94.66561762391818,
+    "x": 35.820895522388057,
+    "y": 106.4626865671642,
     "z": 4000,
-    "height": 55.389457120377664,
-    "width": 255.79858379228955,
+    "height": 51.044776119402982,
+    "width": 131.64179104477611,
     "tabOrder": 4000
   },
   "visual": {
@@ -43,7 +43,7 @@
               },
               "queryRef": "dCalendario.Date",
               "nativeQueryRef": "Date",
-              "active": true
+              "active": false
             }
           ]
         }
@@ -100,20 +100,7 @@
             "isPinned": true
           }
         ],
-        "root": {
-          "children": [
-            {
-              "identityValues": [
-                {
-                  "Literal": {
-                    "Value": "'s15'"
-                  }
-                }
-              ],
-              "isToggled": true
-            }
-          ]
-        }
+        "root": {}
       }
     ],
     "objects": {
@@ -157,28 +144,13 @@
                               },
                               "Property": "Semana"
                             }
-                          },
-                          {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Source": "d"
-                                }
-                              },
-                              "Property": "Date"
-                            }
                           }
                         ],
                         "Values": [
                           [
                             {
                               "Literal": {
-                                "Value": "'s15'"
-                              }
-                            },
-                            {
-                              "Literal": {
-                                "Value": "datetime'2026-07-17T00:00:00'"
+                                "Value": "'s16'"
                               }
                             }
                           ]
@@ -197,16 +169,6 @@
                               },
                               "Property": "Semana"
                             }
-                          },
-                          {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Entity": "dCalendario"
-                                }
-                              },
-                              "Property": "Date"
-                            }
                           }
                         ],
                         "decomposedIdentities": {
@@ -216,16 +178,7 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "'s15'"
-                                    }
-                                  }
-                                ]
-                              },
-                              {
-                                "1": [
-                                  {
-                                    "Literal": {
-                                      "Value": "datetime'2026-07-17T00:00:00'"
+                                      "Value": "'s16'"
                                     }
                                   }
                                 ]
@@ -244,25 +197,12 @@
                                   "Property": "Semana"
                                 }
                               }
-                            },
-                            {
-                              "value": {
-                                "Column": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Entity": "dCalendario"
-                                    }
-                                  },
-                                  "Property": "Date"
-                                }
-                              }
                             }
                           ]
                         },
                         "valueMap": [
                           {
-                            "0": "s15",
-                            "1": "17/07/2026"
+                            "0": "s16"
                           }
                         ]
                       }

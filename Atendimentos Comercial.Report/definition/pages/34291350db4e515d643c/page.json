@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
   "name": "34291350db4e515d643c",
-  "displayName": "Consolidado",
+  "displayName": "Perfomance",
   "displayOption": "FitToPage",
   "height": 720,
   "width": 1280,

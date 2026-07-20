@@ -190,6 +190,18 @@ table Medidas
 			```
 		lineageTag: d917ed7a-17ac-4d66-8a79-d206b911b941
 
+	measure Aging_RelacionamentoOculto = ```
+			
+			CALCULATE(
+			    MAX('Leads'[Aging Matrícula]),
+			    USERELATIONSHIP('Leads'[Data Criacao], 'dCalendario'[Date])
+			)
+			
+			
+			```
+		formatString: 0
+		lineageTag: 87637f5d-a09b-4320-ab6e-d594c0ba31b2
+
 	column 'Coluna 1'
 		dataType: string
 		lineageTag: 686dcc5d-ee01-4a81-ac33-f88f665891bc

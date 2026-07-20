@@ -45,6 +45,24 @@
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Leads"
+                  }
+                },
+                "Property": "ID Lead"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": true
       }
     },
     "objects": {
@@ -98,37 +116,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "8124fddb8498ff92860d",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Leads"
-              }
-            },
-            "Property": "Aging Matrícula"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "f408446afebff116dc12",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Leads"
-              }
-            },
-            "Property": "ID Lead"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

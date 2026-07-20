@@ -95,7 +95,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Consolidado Diário'"
+                  "Value": "'Perfomance'"
                 }
               }
             },
