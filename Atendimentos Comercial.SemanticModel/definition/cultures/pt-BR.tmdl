@@ -5072,6 +5072,16 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.9
 			          }
+			        },
+			        {
+			          "Matriculado": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -11198,6 +11208,39 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "d_unidades_have_leads"
+			        }
+			      ]
+			    },
+			    "lead_has_medida_conversão_pagamento__matrícula": {
+			      "Binding": {
+			        "ConceptualEntity": "Leads"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "lead": {
+			          "Target": {
+			            "Entity": "lead"
+			          }
+			        },
+			        "medida.conversão_pagamento__matrícula": {
+			          "Target": {
+			            "Entity": "medida.conversão_pagamento__matrícula"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "lead"
+			            },
+			            "Object": {
+			              "Role": "medida.conversão_pagamento__matrícula"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "leads_have__conversão_pagamento__matrícula"
 			        }
 			      ]
 			    },

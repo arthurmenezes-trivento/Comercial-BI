@@ -126,8 +126,8 @@ table Medidas
 			        DISTINCTCOUNT('Leads'[ID Lead]),
 			        'Leads'[Situação Inscrição] = "Matriculado",
 			        'Leads'[Data de Pagamento] <> BLANK(),
-			        CROSSFILTER('Leads'[ID Lead], 'Atendimentos'[Id Lead], Both
-			    ))
+			        USERELATIONSHIP(dCalendario[Date], Leads[Data Criacao])
+			    )
 			```
 		formatString: 0
 		lineageTag: 776476a4-d45f-4e8b-bb47-7bc967379e76
@@ -206,7 +206,8 @@ table Medidas
 			
 			CALCULATE(
 			    COUNTROWS('Leads'),
-			    Leads[Fase Portal do Candidato] <> BLANK()
+			    Leads[Fase Portal do Candidato] <> BLANK(),
+			    USERELATIONSHIP(dCalendario[Date], Leads[Data Criacao])
 			)
 		formatString: 0
 		displayFolder: funil_etapas
@@ -217,7 +218,8 @@ table Medidas
 			CALCULATE(
 			    COUNTROWS('leads'), 
 			    Leads[Fase Portal do Candidato] <> BLANK(),
-			    NOT ('leads'[Fase Portal do Candidato] IN {"Curso"})
+			    NOT ('leads'[Fase Portal do Candidato] IN {"Curso"}),
+			    USERELATIONSHIP(dCalendario[Date], Leads[Data Criacao])
 			)
 			```
 		formatString: 0
@@ -229,7 +231,8 @@ table Medidas
 			CALCULATE(
 			    COUNTROWS('leads'), 
 			    Leads[Fase Portal do Candidato] <> BLANK(),
-			     NOT ('leads'[Fase Portal do Candidato] IN {"Curso", "Dados"})
+			     NOT ('leads'[Fase Portal do Candidato] IN {"Curso", "Dados"}),
+			     USERELATIONSHIP(dCalendario[Date], Leads[Data Criacao])
 			)
 			```
 		formatString: 0
@@ -241,7 +244,8 @@ table Medidas
 			CALCULATE(
 			    COUNTROWS('leads'), 
 			    Leads[Fase Portal do Candidato] <> BLANK(),
-			    NOT ('leads'[Fase Portal do Candidato] IN {"Curso", "dados", "Inscrição", "Prova Objetiva Online", "Matrícula"}))
+			    NOT ('leads'[Fase Portal do Candidato] IN {"Curso", "dados", "Inscrição", "Prova Objetiva Online", "Matrícula"}),
+			    USERELATIONSHIP(dCalendario[Date], Leads[Data Criacao]))
 			```
 		formatString: 0
 		displayFolder: funil_etapas
@@ -252,7 +256,8 @@ table Medidas
 			CALCULATE(
 			    COUNTROWS('leads'), 
 			    Leads[Fase Portal do Candidato] <> BLANK(),
-			     NOT ('leads'[Fase Portal do Candidato] IN {"Curso", "dados", "Inscrição"})
+			     NOT ('leads'[Fase Portal do Candidato] IN {"Curso", "dados", "Inscrição"}),
+			     USERELATIONSHIP(dCalendario[Date], Leads[Data Criacao])
 			)
 			```
 		formatString: 0
@@ -264,7 +269,8 @@ table Medidas
 			CALCULATE(
 			    COUNTROWS('leads'), 
 			    Leads[Fase Portal do Candidato] <> BLANK(),
-			    NOT ('leads'[Fase Portal do Candidato] IN {"Curso", "dados", "Inscrição", "Prova Objetiva Online"}))
+			    NOT ('leads'[Fase Portal do Candidato] IN {"Curso", "dados", "Inscrição", "Prova Objetiva Online"}),
+			    USERELATIONSHIP(dCalendario[Date], Leads[Data Criacao]))
 			```
 		formatString: 0
 		displayFolder: funil_etapas
