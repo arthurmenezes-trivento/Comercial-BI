@@ -202,6 +202,74 @@ table Medidas
 		formatString: 0
 		lineageTag: 87637f5d-a09b-4320-ab6e-d594c0ba31b2
 
+	measure Funil_Curso =
+			
+			CALCULATE(
+			    COUNTROWS('Leads'),
+			    Leads[Fase Portal do Candidato] <> BLANK()
+			)
+		formatString: 0
+		displayFolder: funil_etapas
+		lineageTag: a7d62e40-48c2-4511-b84c-236cfa1c28d0
+
+	measure Funil_Dados = ```
+			
+			CALCULATE(
+			    COUNTROWS('leads'), 
+			    Leads[Fase Portal do Candidato] <> BLANK(),
+			    NOT ('leads'[Fase Portal do Candidato] IN {"Curso"})
+			)
+			```
+		formatString: 0
+		displayFolder: funil_etapas
+		lineageTag: b7cf6908-3e4d-4f99-8553-2a057463374b
+
+	measure Funil_Inscricao = ```
+			
+			CALCULATE(
+			    COUNTROWS('leads'), 
+			    Leads[Fase Portal do Candidato] <> BLANK(),
+			     NOT ('leads'[Fase Portal do Candidato] IN {"Curso", "Dados"})
+			)
+			```
+		formatString: 0
+		displayFolder: funil_etapas
+		lineageTag: 6cd1caf8-edf4-4340-994d-122553cd84cc
+
+	measure Funil_pagamento = ```
+			
+			CALCULATE(
+			    COUNTROWS('leads'), 
+			    Leads[Fase Portal do Candidato] <> BLANK(),
+			    NOT ('leads'[Fase Portal do Candidato] IN {"Curso", "dados", "Inscrição", "Prova Objetiva Online", "Matrícula"}))
+			```
+		formatString: 0
+		displayFolder: funil_etapas
+		lineageTag: 36a2f0a8-e28b-4532-8ad6-16ce94363311
+
+	measure 'Funil_prova online' = ```
+			
+			CALCULATE(
+			    COUNTROWS('leads'), 
+			    Leads[Fase Portal do Candidato] <> BLANK(),
+			     NOT ('leads'[Fase Portal do Candidato] IN {"Curso", "dados", "Inscrição"})
+			)
+			```
+		formatString: 0
+		displayFolder: funil_etapas
+		lineageTag: e0c69281-0700-4b2a-80f4-b5e522f8d46e
+
+	measure Funil_matriculas = ```
+			
+			CALCULATE(
+			    COUNTROWS('leads'), 
+			    Leads[Fase Portal do Candidato] <> BLANK(),
+			    NOT ('leads'[Fase Portal do Candidato] IN {"Curso", "dados", "Inscrição", "Prova Objetiva Online"}))
+			```
+		formatString: 0
+		displayFolder: funil_etapas
+		lineageTag: aec5040f-f712-4f8d-bb7d-79733035dfee
+
 	column 'Coluna 1'
 		dataType: string
 		lineageTag: 686dcc5d-ee01-4a81-ac33-f88f665891bc

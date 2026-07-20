@@ -266,9 +266,10 @@ expression Inscricoes =
 		    #"Tipo Alterado6" = Table.TransformColumnTypes(#"Colunas Renomeadas6",{{"Forma de Ingresso", type text}}),
 		    #"result.coc_situacaopagamento Expandido" = Table.ExpandTableColumn(#"Tipo Alterado6", "result.coc_situacaopagamento", {"Attribute:name"}, {"Attribute:name"}),
 		    #"Colunas Renomeadas7" = Table.RenameColumns(#"result.coc_situacaopagamento Expandido",{{"Attribute:name", "Situação Pagamento"}}),
-		    #"Tipo Alterado7" = Table.TransformColumnTypes(#"Colunas Renomeadas7",{{"Situação Pagamento", type text}})
+		    #"Tipo Alterado7" = Table.TransformColumnTypes(#"Colunas Renomeadas7",{{"Situação Pagamento", type text}}),
+		    #"result.cad_faseportalcandidato Expandido" = Table.ExpandTableColumn(#"Tipo Alterado7", "result.cad_faseportalcandidato", {"Attribute:name"}, {"Fase Portal do Candidato"})
 		in
-		    #"Tipo Alterado7"
+		    #"result.cad_faseportalcandidato Expandido"
 	lineageTag: c3a7adf9-4066-4267-8dea-ee76593a33c4
 	queryGroup: 'Consultas - Token'
 
