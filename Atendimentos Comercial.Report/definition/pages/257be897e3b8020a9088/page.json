@@ -4,5 +4,12 @@
   "displayName": "Analítico",
   "displayOption": "FitToPage",
   "height": 720,
-  "width": 1280
+  "width": 1280,
+  "visualInteractions": [
+    {
+      "source": "31272c3622306ffa642f",
+      "target": "19ba07da474bd9de2dfd",
+      "type": "NoFilter"
+    }
+  ]
 }

@@ -1,27 +1,11 @@
 table Leads
 	lineageTag: 5d5c91c8-075a-48fa-9e31-f3a2365489f1
 
-	column 'Nome Completo'
+	column 'Concurso Atual'
 		dataType: string
-		lineageTag: 437f845b-1194-41b0-bfad-de6673ae9425
+		lineageTag: c905ff24-f16b-4c5a-b873-38dc9cdd901e
 		summarizeBy: none
-		sourceColumn: Nome Completo
-
-		annotation SummarizationSetBy = Automatic
-
-	column Nome
-		dataType: string
-		lineageTag: d5247393-5997-4cd2-877e-963cb5d0cde8
-		summarizeBy: none
-		sourceColumn: Nome
-
-		annotation SummarizationSetBy = Automatic
-
-	column Sobrenome
-		dataType: string
-		lineageTag: 43e8e468-8587-432e-a0a4-33d130579c38
-		summarizeBy: none
-		sourceColumn: Sobrenome
+		sourceColumn: Concurso Atual
 
 		annotation SummarizationSetBy = Automatic
 
@@ -33,11 +17,27 @@ table Leads
 
 		annotation SummarizationSetBy = Automatic
 
-	column Celular
+	column Nome
 		dataType: string
-		lineageTag: bb2a76c4-a263-4a12-a972-79d472f88e5f
+		lineageTag: d5247393-5997-4cd2-877e-963cb5d0cde8
 		summarizeBy: none
-		sourceColumn: Celular
+		sourceColumn: Nome
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nome Completo'
+		dataType: string
+		lineageTag: 437f845b-1194-41b0-bfad-de6673ae9425
+		summarizeBy: none
+		sourceColumn: Nome Completo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sobrenome
+		dataType: string
+		lineageTag: 43e8e468-8587-432e-a0a4-33d130579c38
+		summarizeBy: none
+		sourceColumn: Sobrenome
 
 		annotation SummarizationSetBy = Automatic
 
@@ -57,27 +57,11 @@ table Leads
 
 		annotation SummarizationSetBy = Automatic
 
-	column Idade
+	column Celular
 		dataType: string
-		lineageTag: 4a9b7860-c2b6-4808-84b5-8f8cc7b2c9b5
+		lineageTag: bb2a76c4-a263-4a12-a972-79d472f88e5f
 		summarizeBy: none
-		sourceColumn: Idade
-
-		annotation SummarizationSetBy = Automatic
-
-	column 'Concurso Atual'
-		dataType: string
-		lineageTag: c905ff24-f16b-4c5a-b873-38dc9cdd901e
-		summarizeBy: none
-		sourceColumn: Concurso Atual
-
-		annotation SummarizationSetBy = Automatic
-
-	column 'Data Nascimento'
-		dataType: string
-		lineageTag: 24c7a0dc-4c23-42f8-871c-3268a2ea53f5
-		summarizeBy: none
-		sourceColumn: Data Nascimento
+		sourceColumn: Celular
 
 		annotation SummarizationSetBy = Automatic
 
@@ -94,6 +78,22 @@ table Leads
 		lineageTag: 9952ac56-2a91-4197-9224-b25073052e01
 		summarizeBy: none
 		sourceColumn: Canal
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Data Nascimento'
+		dataType: string
+		lineageTag: 24c7a0dc-4c23-42f8-871c-3268a2ea53f5
+		summarizeBy: none
+		sourceColumn: Data Nascimento
+
+		annotation SummarizationSetBy = Automatic
+
+	column Idade
+		dataType: string
+		lineageTag: 4a9b7860-c2b6-4808-84b5-8f8cc7b2c9b5
+		summarizeBy: none
+		sourceColumn: Idade
 
 		annotation SummarizationSetBy = Automatic
 
@@ -121,19 +121,19 @@ table Leads
 
 		annotation SummarizationSetBy = Automatic
 
-	column 'Situação Inscrição'
-		dataType: string
-		lineageTag: 4f507373-fa45-44de-8acc-63f8f464b1d9
-		summarizeBy: none
-		sourceColumn: Situação Inscrição
-
-		annotation SummarizationSetBy = Automatic
-
-	column 'Situação Pagamento'
-		dataType: string
-		lineageTag: 0737a1f0-8431-4afd-ba29-afd728996a6c
-		summarizeBy: none
-		sourceColumn: Situação Pagamento
+	column 'Aging Matrícula' =
+			
+			VAR Diferenca = DATEDIFF(
+			    Leads[Data Criacao],
+			    Leads[Data de Pagamento],
+			    DAY
+			)
+			
+			RETURN
+			    IF(Diferenca < 0 , 0 , Diferenca)
+		formatString: 0
+		lineageTag: e1ade157-9e39-4fde-86ab-1c6433bc18b7
+		summarizeBy: sum
 
 		annotation SummarizationSetBy = Automatic
 
@@ -169,19 +169,19 @@ table Leads
 
 		annotation UnderlyingDateTimeDataType = Date
 
-	column 'Aging Matrícula' =
-			
-			VAR Diferenca = DATEDIFF(
-			    Leads[Data Criacao],
-			    Leads[Data de Pagamento],
-			    DAY
-			)
-			
-			RETURN
-			    IF(Diferenca < 0 , 0 , Diferenca)
-		formatString: 0
-		lineageTag: e1ade157-9e39-4fde-86ab-1c6433bc18b7
-		summarizeBy: sum
+	column 'Situação Inscrição'
+		dataType: string
+		lineageTag: 4f507373-fa45-44de-8acc-63f8f464b1d9
+		summarizeBy: none
+		sourceColumn: Situação Inscrição
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Situação Pagamento'
+		dataType: string
+		lineageTag: 0737a1f0-8431-4afd-ba29-afd728996a6c
+		summarizeBy: none
+		sourceColumn: Situação Pagamento
 
 		annotation SummarizationSetBy = Automatic
 

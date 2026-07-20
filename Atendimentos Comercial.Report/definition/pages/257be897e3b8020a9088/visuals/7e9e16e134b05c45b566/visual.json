@@ -1,0 +1,52 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "7e9e16e134b05c45b566",
+  "position": {
+    "x": 824.776119402985,
+    "y": 221.19402985074626,
+    "z": 7002,
+    "height": 487.16417910447763,
+    "width": 454.92537313432837,
+    "tabOrder": 7002
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Leads"
+                    }
+                  },
+                  "Property": "Nome Completo"
+                }
+              },
+              "queryRef": "Leads.Nome Completo",
+              "nativeQueryRef": "Nome Completo"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Atendimentos"
+                    }
+                  },
+                  "Property": "Resultado do Contato"
+                }
+              },
+              "queryRef": "Atendimentos.Resultado do Contato",
+              "nativeQueryRef": "Resultado do Contato"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

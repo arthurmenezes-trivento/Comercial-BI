@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "19ba07da474bd9de2dfd",
   "position": {
-    "x": 11.627939986657392,
-    "y": 211.62850775716456,
+    "x": 23.283582089552237,
+    "y": 221.19402985074626,
     "z": 4000,
-    "height": 496.51303743027069,
-    "width": 1268.6082525443214,
+    "height": 487.16417910447763,
+    "width": 749.55223880597009,
     "tabOrder": 4000
   },
   "visual": {
@@ -165,7 +165,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "167.26337084898424D"
+                  "Value": "152.06224493590784D"
                 }
               }
             }
@@ -207,7 +207,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "112.92896577107103D"
+                  "Value": "80.66784913656056D"
                 }
               }
             }
@@ -221,7 +221,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "111.25102103077468D"
+                  "Value": "88.91327523406244D"
                 }
               }
             }
@@ -235,7 +235,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "131.1604671868999D"
+                  "Value": "119.53254629290453D"
                 }
               }
             }
@@ -249,7 +249,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "101.91873418301714D"
+                  "Value": "78.61373955465223D"
                 }
               }
             }
@@ -265,7 +265,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "11D"
+                  "Value": "10D"
                 }
               }
             }

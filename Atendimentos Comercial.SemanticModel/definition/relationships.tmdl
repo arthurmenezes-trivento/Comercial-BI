@@ -36,7 +36,6 @@ relationship c7509551-e995-b47f-f085-0c0d5ad08369
 	toColumn: Leads.'ID Lead'
 
 relationship 8cc51ea1-e653-cb07-c58d-36795b146a85
-	isActive: false
 	fromColumn: Atendimentos.'Data de Criação'
 	toColumn: dCalendario.Date
 
@@ -60,6 +59,7 @@ relationship b3f525a4-734c-4251-a11f-50dce4305182
 	toColumn: LocalDateTable_87986423-bc28-4b16-8941-732d6ced6908.Date
 
 relationship 18129288-eaba-92d1-713f-4eb3c28ab9c8
+	isActive: false
 	fromColumn: Leads.'Data Criacao'
 	toColumn: dCalendario.Date
 

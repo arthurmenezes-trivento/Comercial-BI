@@ -23,15 +23,15 @@ ref table dCalendario
 ref table 'Ultima Atualizacao'
 ref table LocalDateTable_dbc3bbb7-e54f-4a4e-8265-240590589075
 ref table dCanal
+ref table Leads
 ref table LocalDateTable_a805f813-464e-407c-b1f9-b2f9e577ec46
 ref table Medidas
+ref table Atendimentos
 ref table ALTAMIRA
 ref table LORENA
 ref table ITABIRITO
 ref table LocalDateTable_e314503a-e405-44ff-9d42-cb9fb75678ba
 ref table 'Matrículas GD'
-ref table Leads
-ref table Atendimentos
 ref table LocalDateTable_13d55816-b77b-4b20-92a9-0ed12f17be0a
 ref table LocalDateTable_6209402d-885f-444f-b7f6-b9e38b768c04
 ref table 'Função Invocada'
