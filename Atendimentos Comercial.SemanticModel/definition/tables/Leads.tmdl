@@ -488,6 +488,14 @@ table Leads
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'Curso ID'
+		dataType: string
+		lineageTag: 9891c104-54cc-4cbf-be3b-16dabdff28c2
+		summarizeBy: none
+		sourceColumn: Curso ID
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Leads = m
 		mode: import
 		queryGroup: 'Consultas - Token'
@@ -604,8 +612,9 @@ table Leads
 				    #"Linhas em Branco Removidas" = Table.SelectRows(#"Tipo Alterado6", each not List.IsEmpty(List.RemoveMatchingItems(Record.FieldValues(_), {"", null}))),
 				    #"Duplicatas Removidas" = Table.Distinct(#"Linhas em Branco Removidas", {"ID Lead"}),
 				    #"Consultas Mescladas" = Table.NestedJoin(#"Duplicatas Removidas", {"Numero Inscricao"}, Inscricoes, {"result.cad_numeroinscricao"}, "Inscricoes", JoinKind.LeftOuter),
-				    #"Inscricoes Expandido1" = Table.ExpandTableColumn(#"Consultas Mescladas", "Inscricoes", {"Data Aprovação", "Data de Pagamento", "Situação Inscrição", "Situação Pagamento", "Fase Portal do Candidato"}, {"Data Aprovação", "Data de Pagamento", "Situação Inscrição", "Situação Pagamento", "Fase Portal do Candidato
-				"}),
+				    #"Inscricoes Expandido1" = Table.ExpandTableColumn(#"Consultas Mescladas", "Inscricoes", {"Data Aprovação", "Data de Pagamento", "Situação Inscrição", "Situação Pagamento", "Fase Portal do Candidato", "Curso ID"}, {"Data Aprovação", "Data de Pagamento", "Situação Inscrição", "Situação Pagamento", "Fase Portal do Candidato
+				",  "Curso ID"
+				}),
 				    #"Duplicatas Removidas1" = Table.Distinct(#"Inscricoes Expandido1", {"ID Lead"})
 				in
 				    #"Duplicatas Removidas1"

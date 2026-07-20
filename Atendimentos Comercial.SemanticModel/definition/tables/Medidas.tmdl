@@ -276,6 +276,17 @@ table Medidas
 		displayFolder: funil_etapas
 		lineageTag: aec5040f-f712-4f8d-bb7d-79733035dfee
 
+	measure '% conversão pag -> matr' = ```
+			
+			DIVIDE(
+			    [Matr 26-2],
+			    [Funil_pagamento]
+			)
+			
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 9892c2d4-4109-4c6c-9c8f-9535cdd5e36d
+
 	column 'Coluna 1'
 		dataType: string
 		lineageTag: 686dcc5d-ee01-4a81-ac33-f88f665891bc

@@ -139,16 +139,21 @@
         "sort": [
           {
             "field": {
-              "Measure": {
+              "Aggregation": {
                 "Expression": {
-                  "SourceRef": {
-                    "Entity": "Medidas"
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "Leads"
+                      }
+                    },
+                    "Property": "Última Tabulação"
                   }
                 },
-                "Property": "Dias Sem Atendimento"
+                "Function": 3
               }
             },
-            "direction": "Descending"
+            "direction": "Ascending"
           }
         ]
       }

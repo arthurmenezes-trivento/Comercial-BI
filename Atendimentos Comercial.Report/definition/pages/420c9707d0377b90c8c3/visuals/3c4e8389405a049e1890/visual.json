@@ -1,0 +1,104 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "3c4e8389405a049e1890",
+  "position": {
+    "x": 8.0597014925373127,
+    "y": 445.97014925373134,
+    "z": 8006,
+    "height": 237.31343283582089,
+    "width": 621.49253731343276,
+    "tabOrder": 8006
+  },
+  "visual": {
+    "visualType": "hundredPercentStackedColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Leads"
+                    }
+                  },
+                  "Property": "Curso"
+                }
+              },
+              "queryRef": "Leads.Curso",
+              "nativeQueryRef": "Curso",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Funil_pagamento"
+                }
+              },
+              "queryRef": "Medidas.Funil_pagamento",
+              "nativeQueryRef": "Funil_pagamento"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Matr 26-2"
+                }
+              },
+              "queryRef": "Medidas.Matr 26-2",
+              "nativeQueryRef": "Matr 26-2"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Medidas"
+                  }
+                },
+                "Property": "Funil_pagamento"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'proporção entre pagamento e matrícula'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
