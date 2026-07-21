@@ -178,6 +178,14 @@ table ALTAMIRA
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'Número de Inscrição'
+		dataType: string
+		lineageTag: 9793c6ea-0fca-4129-b5f9-348aaed8c200
+		summarizeBy: none
+		sourceColumn: Número de Inscrição
+
+		annotation SummarizationSetBy = Automatic
+
 	partition ALTAMIRA = m
 		mode: import
 		source =

@@ -13,7 +13,7 @@ queryGroup 'Consultas - Token'
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["Token de acesso","Leads","Inscricoes","Pagamentos","Consulta1","dUnidade","DeparaCursos","dCanal","Atendimentos","Medidas","Função Invocada","Legado","ALTAMIRA","LORENA","ITABIRITO","Matrículas GD"]
+annotation PBI_QueryOrder = ["Token de acesso","Inscricoes","dUnidade","DeparaCursos","dCanal","Atendimentos","Medidas","Função Invocada","ALTAMIRA","LORENA","ITABIRITO","Matrículas GD","2026-2","Legado","Leads"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
@@ -23,7 +23,6 @@ ref table dCalendario
 ref table 'Ultima Atualizacao'
 ref table LocalDateTable_dbc3bbb7-e54f-4a4e-8265-240590589075
 ref table dCanal
-ref table Leads
 ref table LocalDateTable_a805f813-464e-407c-b1f9-b2f9e577ec46
 ref table Medidas
 ref table Atendimentos
@@ -32,11 +31,12 @@ ref table LORENA
 ref table ITABIRITO
 ref table LocalDateTable_e314503a-e405-44ff-9d42-cb9fb75678ba
 ref table 'Matrículas GD'
-ref table LocalDateTable_13d55816-b77b-4b20-92a9-0ed12f17be0a
-ref table LocalDateTable_6209402d-885f-444f-b7f6-b9e38b768c04
 ref table 'Função Invocada'
-ref table LocalDateTable_2b17ef05-b7d4-4cc1-962d-44181e6252a7
-ref table LocalDateTable_87986423-bc28-4b16-8941-732d6ced6908
+ref table 2026-2
+ref table LocalDateTable_7e1d0cea-05a8-4f78-a6a4-9df479fa0c63
+ref table LocalDateTable_e35b0647-2caa-440d-876e-c18fef37a511
+ref table LocalDateTable_af65b60f-b650-4761-9a94-94495c997c51
+ref table LocalDateTable_9fa84032-d288-4829-a31c-a5ac6441ea9f
 
 ref cultureInfo pt-BR
 

@@ -178,6 +178,14 @@ table LORENA
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'Número de Inscrição'
+		dataType: string
+		lineageTag: df7c0e0e-d488-4996-b48a-5be68067d737
+		summarizeBy: none
+		sourceColumn: Número de Inscrição
+
+		annotation SummarizationSetBy = Automatic
+
 	partition LORENA = m
 		mode: import
 		source =

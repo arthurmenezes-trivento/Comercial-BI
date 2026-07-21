@@ -201,6 +201,14 @@ table ITABIRITO
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'Número de Inscrição'
+		dataType: string
+		lineageTag: 6e37cea1-a52c-4b53-ae54-2edfde7fbdb8
+		summarizeBy: none
+		sourceColumn: Número de Inscrição
+
+		annotation SummarizationSetBy = Automatic
+
 	partition ITABIRITO = m
 		mode: import
 		source =

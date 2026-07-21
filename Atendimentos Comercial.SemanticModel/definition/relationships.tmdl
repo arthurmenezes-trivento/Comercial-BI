@@ -21,45 +21,49 @@ relationship a8c966b7-8023-a9ec-a1c1-fcfedf39f777
 	fromColumn: 'Matrículas GD'.Unidade
 	toColumn: dUnidade.Unidade
 
-relationship 5418f71d-907f-4786-a1f8-1e58fcecb5ea
-	joinOnDateBehavior: datePartOnly
-	fromColumn: Leads.'Data Aceite'
-	toColumn: LocalDateTable_13d55816-b77b-4b20-92a9-0ed12f17be0a.Date
-
-relationship b08de8a4-88dd-498a-9406-b3c5bae040f2
-	joinOnDateBehavior: datePartOnly
-	fromColumn: Leads.'Data alteração'
-	toColumn: LocalDateTable_6209402d-885f-444f-b7f6-b9e38b768c04.Date
-
-relationship c7509551-e995-b47f-f085-0c0d5ad08369
-	fromColumn: Atendimentos.'Id Lead'
-	toColumn: Leads.'ID Lead'
-
 relationship 8cc51ea1-e653-cb07-c58d-36795b146a85
 	fromColumn: Atendimentos.'Data de Criação'
 	toColumn: dCalendario.Date
-
-relationship 4041c7f0-f009-457e-9ab1-78e03b3ef1cf
-	fromColumn: Leads.Unidade
-	toColumn: dUnidade.Unidade
 
 relationship 0d6b43bd-10c7-3992-d465-e9d4e8d77514
 	isActive: false
 	fromColumn: Atendimentos.'Data Modificação'
 	toColumn: dCalendario.Date
 
-relationship 8a3c3a04-2b94-4d3a-8521-d9a5b6444a33
+relationship 9ecd7f1b-0818-4e61-8bfb-db4f32bf7fce
 	joinOnDateBehavior: datePartOnly
-	fromColumn: Leads.'Data Aprovação'
-	toColumn: LocalDateTable_2b17ef05-b7d4-4cc1-962d-44181e6252a7.Date
+	fromColumn: 2026-2.'Data Aceite'
+	toColumn: LocalDateTable_7e1d0cea-05a8-4f78-a6a4-9df479fa0c63.Date
 
-relationship b3f525a4-734c-4251-a11f-50dce4305182
+relationship 260acb65-e24b-41b5-84db-e15f8b00cdab
 	joinOnDateBehavior: datePartOnly
-	fromColumn: Leads.'Data de Pagamento'
-	toColumn: LocalDateTable_87986423-bc28-4b16-8941-732d6ced6908.Date
+	fromColumn: 2026-2.'Data alteração'
+	toColumn: LocalDateTable_e35b0647-2caa-440d-876e-c18fef37a511.Date
 
-relationship 18129288-eaba-92d1-713f-4eb3c28ab9c8
+relationship 60fb9c05-d340-4c51-aef5-13ddaa665bb8
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 2026-2.'Data Aprovação'
+	toColumn: LocalDateTable_af65b60f-b650-4761-9a94-94495c997c51.Date
+
+relationship f6c30fa8-665f-429b-95cf-3d495e4b03a5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 2026-2.'Data de Pagamento'
+	toColumn: LocalDateTable_9fa84032-d288-4829-a31c-a5ac6441ea9f.Date
+
+relationship AutoDetected_88114a10-14a0-4f3f-819f-76b7cf7a2594
+	fromColumn: 2026-2.Unidade
+	toColumn: dUnidade.Unidade
+
+relationship AutoDetected_5b204d72-7ed7-495a-b0bb-dc6bd7868ca0
+	fromColumn: 2026-2.Canal
+	toColumn: dCanal.Canal
+
+relationship 77c7403e-44b0-dcbf-b3d1-8336312b5056
 	isActive: false
-	fromColumn: Leads.'Data Criacao'
+	fromColumn: 2026-2.'Data Criacao'
 	toColumn: dCalendario.Date
+
+relationship 296fb6b4-a85b-6661-d9ab-7004f96ac0cf
+	fromColumn: Atendimentos.'Id Lead'
+	toColumn: 2026-2.'ID Lead'
 
