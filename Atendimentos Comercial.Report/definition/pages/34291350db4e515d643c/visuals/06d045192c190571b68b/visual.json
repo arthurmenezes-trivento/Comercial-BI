@@ -3,7 +3,7 @@
   "name": "06d045192c190571b68b",
   "position": {
     "x": 176.41791044776119,
-    "y": 106.4626865671642,
+    "y": 102.08955223880596,
     "z": 5000,
     "height": 54.626865671641788,
     "width": 141.49253731343282,
@@ -42,6 +42,32 @@
               "expr": {
                 "Literal": {
                   "Value": "'Dropdown'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "header": [
+        {
+          "properties": {
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "items": [
+        {
+          "properties": {
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
                 }
               }
             }
@@ -100,7 +126,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "10D"
                 }
               }
             }

@@ -135,7 +135,7 @@ table Medidas
 	measure 'Qtd tabulações' =
 			
 			CALCULATE(
-			    DISTINCTCOUNT(Atendimentos[result.activityid]),
+			    COUNTROWS(Atendimentos),
 			    KEEPFILTERS(Atendimentos[Resultado do Contato] <> BLANK()),
 			    USERELATIONSHIP( dCalendario[Date], Atendimentos[Data Modificação])
 			)
@@ -145,7 +145,7 @@ table Medidas
 	measure 'Qtd Atendimentos' =
 			
 			CALCULATE(
-			    DISTINCTCOUNT(Atendimentos[result.activityid]),
+			    COUNTROWS(Atendimentos),
 			    USERELATIONSHIP(Atendimentos[Data Modificação], dCalendario[Date])
 			)
 		formatString: 0
