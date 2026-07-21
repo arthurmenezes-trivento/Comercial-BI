@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Leads"
+                      "Entity": "2026-2"
                     }
                   },
                   "Property": "Curso ID"
                 }
               },
-              "queryRef": "Leads.Curso ID",
-              "nativeQueryRef": "Curso ID",
+              "queryRef": "2026-2.Curso ID",
+              "nativeQueryRef": "Curso ID1",
               "active": true
             }
           ]

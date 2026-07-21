@@ -20,15 +20,16 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Leads"
+                      "Entity": "Atendimentos"
                     }
                   },
-                  "Property": "Última Tabulação"
+                  "Property": "Resultado do Contato"
                 }
               },
-              "queryRef": "Leads.Última Tabulação",
-              "nativeQueryRef": "Última Tabulação",
-              "active": true
+              "queryRef": "Atendimentos.Resultado do Contato",
+              "nativeQueryRef": "Última Tabulação1",
+              "active": true,
+              "displayName": "Última Tabulação"
             }
           ]
         }

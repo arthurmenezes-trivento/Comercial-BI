@@ -54,7 +54,7 @@ table Medidas
 	measure UltimaDataHoraCriacaoProprietario = ```
 			
 			-- Step 1: Clean and standardize the full name
-			VAR NomeCompleto = TRIM(LOWER(COALESCE(SELECTEDVALUE(Leads[Proprietário Lead]), "")))
+			VAR NomeCompleto = TRIM(LOWER(COALESCE(SELECTEDVALUE('2026-2'[Proprietário Lead]), "")))
 			
 			-- Step 2: Find the first space to extract only the first name
 			VAR PosicaoEspaco = SEARCH(" ", NomeCompleto, 1, 0)
@@ -193,9 +193,9 @@ table Medidas
 	measure Funil_Curso =
 			
 			CALCULATE(
-			    DISTINCTCOUNT('Leads'[ID Lead]),
-			    Leads[Fase Portal do Candidato] <> BLANK(),
-			    USERELATIONSHIP(dCalendario[Date], Leads[Data Criacao])
+			    DISTINCTCOUNT('2026-2'[ID Lead]),
+			    '2026-2'[Fase Portal do Candidato] <> BLANK(),
+			    USERELATIONSHIP(dCalendario[Date], '2026-2'[Data Criacao])
 			)
 		formatString: 0
 		displayFolder: funil_etapas
@@ -204,10 +204,10 @@ table Medidas
 	measure Funil_Dados = ```
 			
 			CALCULATE(
-			    DISTINCTCOUNT('Leads'[ID Lead]), 
-			    Leads[Fase Portal do Candidato] <> BLANK(),
-			    NOT ('leads'[Fase Portal do Candidato] IN {"Curso"}),
-			    USERELATIONSHIP(dCalendario[Date], Leads[Data Criacao])
+			    DISTINCTCOUNT('2026-2'[ID Lead]), 
+			    '2026-2'[Fase Portal do Candidato] <> BLANK(),
+			    NOT ('2026-2'[Fase Portal do Candidato] IN {"Curso"}),
+			    USERELATIONSHIP(dCalendario[Date], '2026-2'[Data Criacao])
 			)
 			```
 		formatString: 0
@@ -217,10 +217,10 @@ table Medidas
 	measure Funil_Inscricao = ```
 			
 			CALCULATE(
-			    DISTINCTCOUNT('Leads'[ID Lead]), 
-			    Leads[Fase Portal do Candidato] <> BLANK(),
-			     NOT ('leads'[Fase Portal do Candidato] IN {"Curso", "Dados"}),
-			     USERELATIONSHIP(dCalendario[Date], Leads[Data Criacao])
+			    DISTINCTCOUNT('2026-2'[ID Lead]), 
+			    '2026-2'[Fase Portal do Candidato] <> BLANK(),
+			     NOT ('2026-2'[Fase Portal do Candidato] IN {"Curso", "Dados"}),
+			     USERELATIONSHIP(dCalendario[Date], '2026-2'[Data Criacao])
 			)
 			```
 		formatString: 0
@@ -230,10 +230,10 @@ table Medidas
 	measure Funil_pagamento = ```
 			
 			CALCULATE(
-			    DISTINCTCOUNT('Leads'[ID Lead]), 
-			    Leads[Fase Portal do Candidato] <> BLANK(),
-			    NOT ('leads'[Fase Portal do Candidato] IN {"Curso", "dados", "Inscrição", "Prova Objetiva Online", "Matrícula"}),
-			    USERELATIONSHIP(dCalendario[Date], Leads[Data Criacao]))
+			    DISTINCTCOUNT('2026-2'[ID Lead]), 
+			    '2026-2'[Fase Portal do Candidato] <> BLANK(),
+			    NOT ('2026-2'[Fase Portal do Candidato] IN {"Curso", "dados", "Inscrição", "Prova Objetiva Online", "Matrícula"}),
+			    USERELATIONSHIP(dCalendario[Date], '2026-2'[Data Criacao]))
 			```
 		formatString: 0
 		displayFolder: funil_etapas
@@ -242,10 +242,10 @@ table Medidas
 	measure 'Funil_prova online' = ```
 			
 			CALCULATE(
-			    DISTINCTCOUNT('Leads'[ID Lead]), 
-			    Leads[Fase Portal do Candidato] <> BLANK(),
-			     NOT ('leads'[Fase Portal do Candidato] IN {"Curso", "dados", "Inscrição"}),
-			     USERELATIONSHIP(dCalendario[Date], Leads[Data Criacao])
+			    DISTINCTCOUNT('2026-2'[ID Lead]), 
+			    '2026-2'[Fase Portal do Candidato] <> BLANK(),
+			     NOT ('2026-2'[Fase Portal do Candidato] IN {"Curso", "dados", "Inscrição"}),
+			     USERELATIONSHIP(dCalendario[Date], '2026-2'[Data Criacao])
 			)
 			```
 		formatString: 0
@@ -255,10 +255,10 @@ table Medidas
 	measure Funil_matriculas = ```
 			
 			CALCULATE(
-			    DISTINCTCOUNT('Leads'[ID Lead]), 
-			    Leads[Fase Portal do Candidato] <> BLANK(),
-			    NOT ('leads'[Fase Portal do Candidato] IN {"Curso", "dados", "Inscrição", "Prova Objetiva Online"}),
-			    USERELATIONSHIP(dCalendario[Date], Leads[Data Criacao]))
+			    DISTINCTCOUNT('2026-2'[ID Lead]), 
+			    '2026-2'[Fase Portal do Candidato] <> BLANK(),
+			    NOT ('2026-2'[Fase Portal do Candidato] IN {"Curso", "dados", "Inscrição", "Prova Objetiva Online"}),
+			    USERELATIONSHIP(dCalendario[Date], '2026-2'[Data Criacao]))
 			```
 		formatString: 0
 		displayFolder: funil_etapas

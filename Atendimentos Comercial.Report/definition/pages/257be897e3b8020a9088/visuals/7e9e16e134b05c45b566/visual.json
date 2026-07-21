@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Leads"
+                      "Entity": "2026-2"
                     }
                   },
                   "Property": "Nome Completo"
                 }
               },
-              "queryRef": "Leads.Nome Completo",
-              "nativeQueryRef": "Nome Completo"
+              "queryRef": "2026-2.Nome Completo",
+              "nativeQueryRef": "Nome Completo1"
             },
             {
               "field": {
@@ -41,7 +41,8 @@
                 }
               },
               "queryRef": "Atendimentos.Resultado do Contato",
-              "nativeQueryRef": "Resultado do Contato"
+              "nativeQueryRef": "Última Tabulação",
+              "displayName": "Última Tabulação"
             }
           ]
         }

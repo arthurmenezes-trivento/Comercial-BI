@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Leads"
+                      "Entity": "2026-2"
                     }
                   },
                   "Property": "Nome Completo"
                 }
               },
-              "queryRef": "Leads.Nome Completo",
-              "nativeQueryRef": "Nome Completo",
+              "queryRef": "2026-2.Nome Completo",
+              "nativeQueryRef": "Nome Completo1",
               "active": true
             }
           ]
@@ -41,7 +41,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Leads"
+                          "Entity": "2026-2"
                         }
                       },
                       "Property": "Proprietário Lead"
@@ -50,7 +50,7 @@
                   "Function": 3
                 }
               },
-              "queryRef": "Min(Leads.Proprietário Lead)",
+              "queryRef": "Min(2026-2.Proprietário Lead)",
               "nativeQueryRef": "Proprietário Lead",
               "displayName": "Proprietário Lead"
             },
@@ -65,9 +65,9 @@
                   "Property": "UltimaDataHoraCriacaoProprietario"
                 }
               },
-              "queryRef": "Medidas.UltimaDataCriacaoProprietario",
-              "nativeQueryRef": "Data de Atendimento (Proprietário)",
-              "displayName": "Data de Atendimento (Proprietário)"
+              "queryRef": "Medidas.UltimaDataHoraCriacaoProprietario",
+              "nativeQueryRef": "úlltimo atendimento Proprietario",
+              "displayName": "úlltimo atendimento Proprietario"
             },
             {
               "field": {
@@ -119,43 +119,21 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Leads"
+                          "Entity": "Atendimentos"
                         }
                       },
-                      "Property": "Última Tabulação"
+                      "Property": "Resultado do Contato"
                     }
                   },
                   "Function": 3
                 }
               },
-              "queryRef": "Min(Leads.Última Tabulação)",
-              "nativeQueryRef": "Última Tabulação",
+              "queryRef": "Min(Atendimentos.Resultado do Contato)",
+              "nativeQueryRef": "Última Tabulação1",
               "displayName": "Última Tabulação"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Aggregation": {
-                "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Leads"
-                      }
-                    },
-                    "Property": "Última Tabulação"
-                  }
-                },
-                "Function": 3
-              }
-            },
-            "direction": "Ascending"
-          }
-        ]
       }
     },
     "objects": {
@@ -165,48 +143,6 @@
         }
       ],
       "columnWidth": [
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "152.06224493590784D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Leads.Nome Completo"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "102.67424367821592D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Medidas.UltimaDataCriacaoProprietario"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "116.75818917924181D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Min(Leads.Proprietário Lead)"
-          }
-        },
         {
           "properties": {
             "value": {
@@ -240,13 +176,13 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "119.53254629290453D"
+                  "Value": "73.21390434454511D"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "Min(Leads.Última Tabulação)"
+            "metadata": "Medidas.Dias Sem Atendimento"
           }
         },
         {
@@ -254,13 +190,55 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "78.61373955465223D"
+                  "Value": "153.3134255468583D"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "Medidas.Dias Sem Atendimento"
+            "metadata": "2026-2.Nome Completo"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "82.99149437480237D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Min(2026-2.Proprietário Lead)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "136.32835912336418D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Min(Atendimentos.Resultado do Contato)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "118.91044439465011D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.UltimaDataHoraCriacaoProprietario"
           }
         }
       ],
@@ -302,78 +280,6 @@
   },
   "filterConfig": {
     "filters": [
-      {
-        "name": "c6a6e327a7903772e87d",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Leads"
-              }
-            },
-            "Property": "Nome Completo"
-          }
-        },
-        "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "l",
-              "Entity": "Leads",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "Not": {
-                  "Expression": {
-                    "In": {
-                      "Expressions": [
-                        {
-                          "Column": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Source": "l"
-                              }
-                            },
-                            "Property": "Nome Completo"
-                          }
-                        }
-                      ],
-                      "Values": [
-                        [
-                          {
-                            "Literal": {
-                              "Value": "null"
-                            }
-                          }
-                        ]
-                      ]
-                    }
-                  }
-                }
-              }
-            }
-          ]
-        },
-        "objects": {
-          "general": [
-            {
-              "properties": {
-                "isInvertedSelectionMode": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "true"
-                    }
-                  }
-                }
-              }
-            }
-          ]
-        }
-      },
       {
         "name": "8a03677d309b64dabfe1",
         "field": {
@@ -423,7 +329,8 @@
               }
             }
           ]
-        }
+        },
+        "howCreated": "User"
       }
     ]
   }
