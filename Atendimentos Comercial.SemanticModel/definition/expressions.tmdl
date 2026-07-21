@@ -45,149 +45,6 @@ expression 'Token de acesso' =
 
 	annotation PBI_ResultType = Function
 
-expression Consulta1 =
-		let
-		
-		    Token = #"Token de acesso"(),
-		
-		    url = "https://trivento.api.crmeducacional.com/api/LocalizacaoAvancada",
-		
-		    body =
-		"<fetch version=""1.0"" output-format=""xml-platform"" mapping=""logical"">
-		  <entity name=""lead"" all-attributes=""true"">
-		    <order attribute=""createdon"" descending=""true""/>
-		  </entity>
-		</fetch>",
-		
-		
-		    // FUNÇÃO QUE BUSCA UMA PÁGINA
-		    GetPage = (Pagina as number) =>
-		        let
-		            Fonte =
-		                Web.Contents(
-		                    url,
-		                    [
-		                        Headers = [
-		                            Authorization = "Bearer " & Token,
-		                            #"Content-Type" = "application/xml",
-		                            Pagina = Text.From(Pagina)
-		                        ],
-		                        Content = Text.ToBinary(body)
-		                    ]
-		                ),
-		
-		            XmlConvertido = Xml.Tables(Fonte),
-		
-		            Resultados =
-		                try XmlConvertido{0}[result] otherwise null,
-		
-		            MoreRecords =
-		                try XmlConvertido{0}[morerecords] otherwise "0"
-		
-		        in
-		            [
-		                Data = Resultados,
-		                More = MoreRecords
-		            ],
-		
-		    // LOOP AUTOMÁTICO
-		    Paginas =
-		        List.Generate(
-		            () => [Pg = 1, Resultado = GetPage(1)],
-		            each [Resultado][Data] <> null,
-		            each [
-		                Pg = [Pg] + 1,
-		                Resultado = GetPage([Pg])
-		            ],
-		            each [Resultado][Data]
-		        ),
-		
-		    // JUNTA TODAS AS PÁGINAS
-		    TabelaFinal = Table.Combine(Paginas)
-		
-		in
-		    TabelaFinal
-	lineageTag: 444837b5-afb7-4fd7-bfb3-4130e4f6c13f
-	queryGroup: 'Consultas - Token'
-
-	annotation PBI_NavigationStepName = Navegação
-
-	annotation PBI_ResultType = Table
-
-expression Pagamentos = ```
-		let
-		    Token = #"Token de acesso"(),
-		
-		    url = "https://trivento.api.crmeducacional.com/api/LocalizacaoAvancada",
-		
-		    body =
-		"<fetch version=""1.0"" output-format=""xml-platform"" mapping=""logical"" distinct=""false"">
-		  <entity name=""cad_pagamento"" all-attributes=""true"">
-		    <order attribute=""createdon"" descending=""true""/>
-		  </entity>
-		</fetch>",
-		
-		    Fonte =
-		        Web.Contents(
-		            url,
-		            [
-		                Headers = [
-		                    #"Authorization" = "Bearer " & Token,
-		                    #"Content-Type" = "application/xml"
-		                ],
-		                Content = Text.ToBinary(body),
-		                ManualStatusHandling = {400,401,403,404,500}
-		            ]
-		        ),
-		        
-		    XmlConvertido = Xml.Tables(Fonte),
-		    result = XmlConvertido{0}[result],
-		    #"Tipo Alterado" = Table.TransformColumnTypes(result,{{"cad_idtransacao", Int64.Type}, {"cad_name", type text}, {"cad_pagamentoid", type text}, {"cad_idformapagamento", Int64.Type}, {"cad_urlboleto", type text}, {"cad_nomeoperadoracartao", type text}}),
-		    #"cad_inscricaocandidatoid Expandido" = Table.ExpandTableColumn(#"Tipo Alterado", "cad_inscricaocandidatoid", {"Attribute:name"}, {"Attribute:name"}),
-		    #"cad_valor Expandido" = Table.ExpandTableColumn(#"cad_inscricaocandidatoid Expandido", "cad_valor", {"Attribute:formattedvalue"}, {"Attribute:formattedvalue"}),
-		    #"cad_valordodesconto Expandido" = Table.ExpandTableColumn(#"cad_valor Expandido", "cad_valordodesconto", {"Attribute:formattedvalue"}, {"Attribute:formattedvalue.1"}),
-		    #"cad_datapagamento Expandido" = Table.ExpandTableColumn(#"cad_valordodesconto Expandido", "cad_datapagamento", {"Attribute:date"}, {"Attribute:date"}),
-		    #"cad_formapagamento Expandido" = Table.ExpandTableColumn(#"cad_datapagamento Expandido", "cad_formapagamento", {"Attribute:name"}, {"Attribute:name.1"}),
-		    #"statuscode Expandido" = Table.ExpandTableColumn(#"cad_formapagamento Expandido", "statuscode", {"Attribute:name"}, {"Attribute:name.2"}),
-		    #"Colunas Renomeadas" = Table.RenameColumns(#"statuscode Expandido",{{"Attribute:name", "Numero Inscricao"}, {"Attribute:name.2", "Status"}, {"Attribute:date", "Data de Pagamento"}, {"Attribute:name.1", "Forma de Pagamento"}}),
-		    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Colunas Renomeadas",{{"Numero Inscricao", type text}, {"Attribute:formattedvalue", Currency.Type}, {"Attribute:formattedvalue.1", Currency.Type}, {"Status", type text}, {"Data de Pagamento", type date}, {"Forma de Pagamento", type text}})
-		in
-		    #"Tipo Alterado1"
-		```
-	lineageTag: 1bd96bf1-c88c-487c-a1bf-600ef71c4ccd
-	queryGroup: 'Consultas - Token'
-
-	annotation PBI_NavigationStepName = Navegação
-
-	annotation PBI_ResultType = Table
-
-expression Legado = ```
-		let
-		    FonteSharePoint = SharePoint.Files(
-		        "https://grupoeducacionalsantoant.sharepoint.com/sites/TriventoEducaco",
-		        [ApiVersion = 15]
-		    ),
-		
-		    Arquivo = FonteSharePoint{[Name="BI - Base Legado.xlsx"]}[Content],
-		
-		    Fonte = Excel.Workbook(Arquivo, null, true),
-		
-		    #"Resultado da consulta1" = Fonte{[Name="Resultado da consulta"]}[Data],
-		    
-		    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(#"Resultado da consulta1", [PromoteAllScalars=true]),
-		    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Nome", type text}, {"Codigo", type text}, {"Celular", type text}, {"Data Criacao", type date}, {"Concuro ID", type text}}),
-		    #"Personalização Adicionada" = Table.AddColumn(#"Tipo Alterado", "Legado", each "Legado"),
-		    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Personalização Adicionada",{{"Legado", type text}})
-		in
-		    #"Tipo Alterado1"
-		```
-	lineageTag: 189fe268-9383-41e2-9888-d0f3a37c0ecc
-	queryGroup: 'Consultas - Token'
-
-	annotation PBI_NavigationStepName = Navegação
-
-	annotation PBI_ResultType = Exception
-
 expression Inscricoes =
 		let
 		    Token = #"Token de acesso"(),
@@ -267,17 +124,159 @@ expression Inscricoes =
 		    #"result.coc_situacaopagamento Expandido" = Table.ExpandTableColumn(#"Tipo Alterado6", "result.coc_situacaopagamento", {"Attribute:name"}, {"Attribute:name"}),
 		    #"Colunas Renomeadas7" = Table.RenameColumns(#"result.coc_situacaopagamento Expandido",{{"Attribute:name", "Situação Pagamento"}}),
 		    #"Tipo Alterado7" = Table.TransformColumnTypes(#"Colunas Renomeadas7",{{"Situação Pagamento", type text}}),
-		    #"result.cad_faseportalcandidato Expandido" = Table.ExpandTableColumn(#"Tipo Alterado7", "result.cad_faseportalcandidato", {"Attribute:name"}, {"Fase Portal do Candidato"}),
-		    #"result.cad_clientepotencialid Expandido" = Table.ExpandTableColumn(#"result.cad_faseportalcandidato Expandido", "result.cad_clientepotencialid", {"Element:Text"}, {"Id Lead"}),
-		    #"Tipo Alterado8" = Table.TransformColumnTypes(#"result.cad_clientepotencialid Expandido",{{"Id Lead", type text}}),
-		    #"Linhas Classificadas" = Table.Sort(#"Tipo Alterado8",{{"Data de Pagamento", Order.Descending}}),
-		    #"result.createdon Expandido" = Table.ExpandTableColumn(#"Linhas Classificadas", "result.createdon", {"Attribute:date"}, {"Data Criação"}),
-		    #"Tipo Alterado9" = Table.TransformColumnTypes(#"result.createdon Expandido",{{"Data Criação", type date}}),
-		    #"Linhas Classificadas1" = Table.Sort(#"Tipo Alterado9",{{"Data Criação", Order.Descending}}),
-		    #"Duplicatas Removidas" = Table.Distinct(#"Linhas Classificadas1", {"Id Lead"})
+		    #"result.cad_faseportalcandidato Expandido" = Table.ExpandTableColumn(#"Tipo Alterado7", "result.cad_faseportalcandidato", {"Attribute:name"}, {"Fase Portal do Candidato"})
+		in
+		    #"result.cad_faseportalcandidato Expandido"
+	lineageTag: c3a7adf9-4066-4267-8dea-ee76593a33c4
+	queryGroup: 'Consultas - Token'
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+
+expression Legado = ```
+		let
+		    FonteSharePoint = SharePoint.Files(
+		        "https://grupoeducacionalsantoant.sharepoint.com/sites/TriventoEducaco",
+		        [ApiVersion = 15]
+		    ),
+		
+		    Arquivo = FonteSharePoint{[Name="BI - Base Legado.xlsx"]}[Content],
+		
+		    Fonte = Excel.Workbook(Arquivo, null, true),
+		
+		    #"Resultado da consulta1" = Fonte{[Name="Resultado da consulta"]}[Data],
+		    
+		    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(#"Resultado da consulta1", [PromoteAllScalars=true]),
+		    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Nome", type text}, {"Codigo", type text}, {"Celular", type text}, {"Data Criacao", type date}, {"Concuro ID", type text}}),
+		    #"Personalização Adicionada" = Table.AddColumn(#"Tipo Alterado", "Legado", each "Legado"),
+		    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Personalização Adicionada",{{"Legado", type text}}),
+		    #"Linhas Filtradas" = Table.SelectRows(#"Tipo Alterado1", each [Celular] <> null and [Celular] <> "")
+		in
+		    #"Linhas Filtradas"
+		```
+	lineageTag: 852e0a76-52e7-4f99-aeda-204fe5e1f4cb
+	queryGroup: 'Consultas - Token'
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+
+expression Leads =
+		let
+		    Token = #"Token de acesso"(),
+		    url = "https://trivento.api.crmeducacional.com/api/LocalizacaoAvancada",
+		
+		body =
+		"<fetch version=""1.0"" output-format=""xml-platform"" mapping=""logical"">#(lf)#(lf)  <entity name=""lead"">#(lf)#(lf)    <attribute name=""trivento_tabulacaojafoirealizada""/>#(lf)#(lf) <attribute name=""crmeduc_ultimatabulacao""/>#(lf)#(lf)   <attribute name=""fullname""/>#(lf)#(lf)   <attribute name=""cad_cpf""/>#(lf)#(lf)    <attribute name=""firstname""/>#(lf)#(lf)    <attribute name=""lastname""/>#(lf)#(lf)    <attribute name=""emailaddress1""/>#(lf)#(lf)    <attribute name=""mobilephone""/>#(lf)#(lf)    <attribute name=""telephone1""/>#(lf)#(lf)    <attribute name=""leadid""/>#(lf)#(lf)    <attribute name=""createdon""/>#(lf)#(lf)    <attribute name=""address1_city""/>#(lf)#(lf)    <attribute name=""address1_composite""/>#(lf)#(lf)    <attribute name=""address1_country""/>#(lf)#(lf)    <attribute name=""address1_county""/>#(lf)#(lf)    <attribute name=""address1_line1""/>#(lf)#(lf)    <attribute name=""address1_line2""/>#(lf)#(lf)    <attribute name=""address1_line3""/>#(lf)#(lf)    <attribute name=""address1_postalcode""/>#(lf)#(lf)    <attribute name=""address1_stateorprovince""/>#(lf)#(lf)    <attribute name=""cad_nacionalidade""/>#(lf)#(lf)    <attribute name=""cad_orgaoexpedidor""/>#(lf)#(lf)    <attribute name=""cad_rg""/>#(lf)#(lf)    <attribute name=""crmeduc_unidadeform""/>#(lf)#(lf)    <attribute name=""crmeduc_detalhamentotabulacao""/>#(lf)#(lf)    <attribute name=""crmeduc_idade""/>#(lf)#(lf)    <attribute name=""cad_dataaceitelgpd""/>#(lf)#(lf)    <attribute name=""cad_dataalteracaocadastrooferta""/>#(lf)#(lf)    <attribute name=""cad_concursoatual""/>#(lf)#(lf)    <attribute name=""cad_concursodeorigem""/>#(lf)#(lf)    <attribute name=""cad_datanascimento""/>#(lf)#(lf)    <attribute name=""cad_inscricaoatual""/>#(lf)#(lf)    <attribute name=""cad_ofertaatual""/>#(lf)#(lf)    <attribute name=""cad_situacaofunil""/>#(lf)#(lf)    <attribute name=""cad_corraca""/>#(lf)#(lf)    <attribute name=""cad_origemleadid""/>#(lf)#(lf)    <attribute name=""cad_proprietariopro""/>#(lf)#(lf)    <attribute name=""crmeduc_canal""/>#(lf)#(lf)    <attribute name=""crmeduc_unidade""/>#(lf)#(lf)    <attribute name=""crmeduc_tabulacaodolead""/>#(lf)#(lf)    <attribute name=""leadsourcecode""/>#(lf)#(lf)    <attribute name=""new_sexo""/>#(lf)#(lf)    <attribute name=""trivento_linhadenegociostrivento""/>#(lf)#(lf)#(lf)    <attribute name=""cad_estadocivil""/>#(lf)#(lf)#(lf)    <attribute name=""cad_campaigncontent""/>#(lf)#(cr)#(lf)#(lf)    <attribute name=""cad_campaignmedium""/>#(lf)#(cr)#(lf)#(lf)    <attribute name=""cad_campaignname""/>#(lf)#(cr)#(lf)#(lf)    <attribute name=""cad_campaignsource""/>#(lf)#(cr)#(lf)#(lf)    <attribute name=""cad_campaignterm""/>#(lf)    #(cr)#(lf)  <attribute name=""address1_addressid""/>#(lf)#(cr)#(lf)#(lf)    <attribute name=""cad_browser""/>#(lf)    <attribute name=""address2_addressid""/>#(lf)#(cr)#(lf)#(cr)#(lf)#(cr)#(lf)<order attribute=""createdon"" descending=""true""/>#(lf)#(lf)  </entity>#(lf)#(lf)</fetch>",
+		
+		
+		    // FUNÇÃO QUE BUSCA UMA PÁGINA
+		    GetPage = (Pagina as number) =>
+		        let
+		            Fonte =
+		                Web.Contents(
+		                    url,
+		                    [
+		                        Headers = [
+		                            Authorization = "Bearer " & Token,
+		                            #"Content-Type" = "application/xml",
+		                            Pagina = Text.From(Pagina)
+		                        ],
+		                        Content = Text.ToBinary(body)
+		                    ]
+		                ),
+		
+		            XmlConvertido = Xml.Tables(Fonte),
+		
+		            Resultados =
+		                try XmlConvertido{0}[result] otherwise null,
+		
+		            MoreRecords =
+		                try XmlConvertido{0}[morerecords] otherwise "0"
+		
+		        in
+		            [
+		                Data = Resultados,
+		                More = MoreRecords
+		            ],
+		
+		    // LOOP AUTOMÁTICO
+		    Paginas =
+		        List.Generate(
+		            () => [Pg = 1, Resultado = GetPage(1)],
+		            each [Resultado][Data] <> null,
+		            each [
+		                Pg = [Pg] + 1,
+		                Resultado = GetPage([Pg])
+		            ],
+		            each [Resultado][Data]
+		        ),
+		
+		    // JUNTA TODAS AS PÁGINAS
+		    TabelaFinal = Table.Combine(
+		    List.Transform(
+		        Paginas,
+		        each Table.PrefixColumns(_, "result")
+		    )
+		),
+		    #"Colunas Renomeadas21" = Table.RenameColumns(TabelaFinal,{{"result.cad_cpf", "CPF"}}),
+		    #"result.trivento_tabulacaojafoirealizada Expandido" = Table.ExpandTableColumn(#"Colunas Renomeadas21", "result.trivento_tabulacaojafoirealizada", {"Attribute:name"}, {"Attribute:name"}),
+		    #"Colunas Renomeadas19" = Table.RenameColumns(#"result.trivento_tabulacaojafoirealizada Expandido",{{"Attribute:name", "Tabulação já foi realizada?"}}),
+		    #"Tipo Alterado5" = Table.TransformColumnTypes(#"Colunas Renomeadas19",{{"Tabulação já foi realizada?", type text}}),
+		    #"Colunas Renomeadas20" = Table.RenameColumns(#"Tipo Alterado5",{{"result.crmeduc_ultimatabulacao", "Última Tabulação"}}),
+		    #"result.crmeduc_canal Expandido" = Table.ExpandTableColumn(#"Colunas Renomeadas20", "result.crmeduc_canal", {"Attribute:name"}, {"Attribute:name"}),
+		    #"Colunas Renomeadas18" = Table.RenameColumns(#"result.crmeduc_canal Expandido",{{"Attribute:name", "Canal"}}),
+		    #"Tipo Alterado4" = Table.TransformColumnTypes(#"Colunas Renomeadas18",{{"Canal", type text}}),
+		    #"result.cad_concursoatual Expandido" = Table.ExpandTableColumn(#"Tipo Alterado4", "result.cad_concursoatual", {"Attribute:name"}, {"Attribute:name"}),
+		    #"Colunas Renomeadas" = Table.RenameColumns(#"result.cad_concursoatual Expandido",{{"Attribute:name", "Concurso Atual"}}),
+		    #"result.cad_concursodeorigem Expandido" = Table.ExpandTableColumn(#"Colunas Renomeadas", "result.cad_concursodeorigem", {"Attribute:name"}, {"Attribute:name"}),
+		    #"Colunas Renomeadas1" = Table.RenameColumns(#"result.cad_concursodeorigem Expandido",{{"Attribute:name", "Concurso Origem"}}),
+		    #"result.cad_datanascimento Expandido" = Table.ExpandTableColumn(#"Colunas Renomeadas1", "result.cad_datanascimento", {"Attribute:date"}, {"Attribute:date"}),
+		    #"Colunas Renomeadas2" = Table.RenameColumns(#"result.cad_datanascimento Expandido",{{"Attribute:date", "Data Nascimento"}}),
+		    #"result.cad_inscricaoatual Expandido" = Table.ExpandTableColumn(#"Colunas Renomeadas2", "result.cad_inscricaoatual", {"Attribute:name"}, {"Attribute:name"}),
+		    #"Colunas Renomeadas3" = Table.RenameColumns(#"result.cad_inscricaoatual Expandido",{{"Attribute:name", "Numero Inscricao"}}),
+		    #"result.cad_ofertaatual Expandido" = Table.ExpandTableColumn(#"Colunas Renomeadas3", "result.cad_ofertaatual", {"Attribute:name"}, {"Attribute:name"}),
+		    #"Colunas Renomeadas4" = Table.RenameColumns(#"result.cad_ofertaatual Expandido",{{"Attribute:name", "Curso"}}),
+		    #"result.cad_situacaofunil Expandido" = Table.ExpandTableColumn(#"Colunas Renomeadas4", "result.cad_situacaofunil", {"Attribute:name"}, {"Attribute:name"}),
+		    #"Colunas Renomeadas5" = Table.RenameColumns(#"result.cad_situacaofunil Expandido",{{"Attribute:name", "Situacao Funil"}}),
+		    #"result.createdon Expandido" = Table.ExpandTableColumn(#"Colunas Renomeadas5", "result.createdon", {"Attribute:date"}, {"Attribute:date"}),
+		    #"Colunas Renomeadas6" = Table.RenameColumns(#"result.createdon Expandido",{{"Attribute:date", "Data Criacao"}}),
+		    #"result.crmeduc_idade Expandido" = Table.ExpandTableColumn(#"Colunas Renomeadas6", "result.crmeduc_idade", {"Element:Text"}, {"Element:Text"}),
+		    #"Colunas Renomeadas7" = Table.RenameColumns(#"result.crmeduc_idade Expandido",{{"Element:Text", "Idade"}, {"result.emailaddress1", "email"}, {"result.firstname", "Nome"}, {"result.fullname", "Nome Completo"}, {"result.lastname", "Sobrenome"}, {"result.leadid", "ID Lead"}}),
+		    #"result.leadsourcecode Expandido" = Table.ExpandTableColumn(#"Colunas Renomeadas7", "result.leadsourcecode", {"Attribute:name"}, {"Attribute:name"}),
+		    #"Colunas Renomeadas8" = Table.RenameColumns(#"result.leadsourcecode Expandido",{{"Attribute:name", "Origem Lead"}, {"result.mobilephone", "Celular"}}),
+		    #"result.new_sexo Expandido" = Table.ExpandTableColumn(#"Colunas Renomeadas8", "result.new_sexo", {"Attribute:name"}, {"Attribute:name"}),
+		    #"Colunas Renomeadas9" = Table.RenameColumns(#"result.new_sexo Expandido",{{"Attribute:name", "Sexo"}, {"result.telephone1", "Celular 2"}}),
+		    #"result.trivento_linhadenegociostrivento Expandido" = Table.ExpandTableColumn(#"Colunas Renomeadas9", "result.trivento_linhadenegociostrivento", {"Attribute:name"}, {"Attribute:name"}),
+		    #"Colunas Renomeadas10" = Table.RenameColumns(#"result.trivento_linhadenegociostrivento Expandido",{{"Attribute:name", "Linha de Negócio"}, {"result.address1_city", "Cidade"}, {"result.address1_composite", "Endereço"}, {"result.address1_country", "Pais"}, {"result.address1_county", "Bairro"}, {"result.address1_line1", "Rua"}, {"result.address1_line2", "Número"}, {"result.address1_postalcode", "CEP"}, {"result.address1_stateorprovince", "UF"}, {"result.cad_nacionalidade", "Nacionalidade"}}),
+		    #"result.cad_corraca Expandido" = Table.ExpandTableColumn(#"Colunas Renomeadas10", "result.cad_corraca", {"Attribute:name"}, {"Attribute:name"}),
+		    #"Colunas Renomeadas11" = Table.RenameColumns(#"result.cad_corraca Expandido",{{"Attribute:name", "Cor"}, {"result.cad_orgaoexpedidor", "Orgao Expedidor"}, {"result.cad_rg", "RG"}, {"result.address1_line3", "Complemento"}}),
+		    #"result.cad_estadocivil Expandido" = Table.ExpandTableColumn(#"Colunas Renomeadas11", "result.cad_estadocivil", {"Attribute:name"}, {"Attribute:name"}),
+		    #"result.cad_origemleadid Expandido" = Table.ExpandTableColumn(#"result.cad_estadocivil Expandido", "result.cad_origemleadid", {"Attribute:name"}, {"Attribute:name.1"}),
+		    #"Colunas Renomeadas12" = Table.RenameColumns(#"result.cad_origemleadid Expandido",{{"Attribute:name.1", "Origem Lead ID"}}),
+		    #"result.crmeduc_unidade Expandido" = Table.ExpandTableColumn(#"Colunas Renomeadas12", "result.crmeduc_unidade", {"Attribute:name"}, {"Attribute:name.1"}),
+		    #"Colunas Renomeadas17" = Table.RenameColumns(#"result.crmeduc_unidade Expandido",{{"Attribute:name.1", "Unidade"}}),
+		    #"result.cad_dataaceitelgpd Expandido" = Table.ExpandTableColumn(#"Colunas Renomeadas17", "result.cad_dataaceitelgpd", {"Element:Text"}, {"result.cad_dataaceitelgpd.Element:Text"}),
+		    #"Colunas Renomeadas13" = Table.RenameColumns(#"result.cad_dataaceitelgpd Expandido",{{"result.cad_dataaceitelgpd.Element:Text", "Data Aceite"}}),
+		    #"Tipo Alterado" = Table.TransformColumnTypes(#"Colunas Renomeadas13",{{"Data Aceite", type datetime}}),
+		    #"result.cad_dataalteracaocadastrooferta Expandido" = Table.ExpandTableColumn(#"Tipo Alterado", "result.cad_dataalteracaocadastrooferta", {"Element:Text"}, {"result.cad_dataalteracaocadastrooferta.Element:Text"}),
+		    #"Colunas Renomeadas14" = Table.RenameColumns(#"result.cad_dataalteracaocadastrooferta Expandido",{{"result.cad_dataalteracaocadastrooferta.Element:Text", "Data alteração"}}),
+		    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Colunas Renomeadas14",{{"Data alteração", type datetime}}),
+		    #"result.crmeduc_tabulacaodolead Expandido" = Table.ExpandTableColumn(#"Tipo Alterado1", "result.crmeduc_tabulacaodolead", {"Attribute:name"}, {"Attribute:name.1"}),
+		    #"Colunas Renomeadas15" = Table.RenameColumns(#"result.crmeduc_tabulacaodolead Expandido",{{"Attribute:name.1", "Tabulação"}, {"result.crmeduc_detalhamentotabulacao", "Tabulação Detalhe"}}),
+		    #"Tipo Alterado2" = Table.TransformColumnTypes(#"Colunas Renomeadas15",{{"Tabulação", type text}}),
+		    #"result.cad_proprietariopro Expandido" = Table.ExpandTableColumn(#"Tipo Alterado2", "result.cad_proprietariopro", {"Attribute:name"}, {"Attribute:name.1"}),
+		    #"Colunas Renomeadas16" = Table.RenameColumns(#"result.cad_proprietariopro Expandido",{{"Attribute:name.1", "Proprietário Lead"}}),
+		    #"Tipo Alterado3" = Table.TransformColumnTypes(#"Colunas Renomeadas16",{{"Proprietário Lead", type text}}),
+		    #"Colocar Cada Palavra Em Maiúscula" = Table.TransformColumns(#"Tipo Alterado3",{{"result.crmeduc_unidadeform", Text.Proper, type text}}),
+		    #"Valor Substituído" = Table.ReplaceValue(#"Colocar Cada Palavra Em Maiúscula","Canaa","Canaã",Replacer.ReplaceText,{"result.crmeduc_unidadeform"}),
+		    #"Linhas Filtradas" = Table.SelectRows(#"Valor Substituído", each true),
+		    #"Tipo Alterado6" = Table.TransformColumnTypes(#"Linhas Filtradas",{{"Data Criacao", type date}}),
+		    #"Duplicatas Removidas" = Table.Distinct(#"Tipo Alterado6", {"ID Lead"})
 		in
 		    #"Duplicatas Removidas"
-	lineageTag: c3a7adf9-4066-4267-8dea-ee76593a33c4
+	lineageTag: aa95495f-be44-43d9-925f-fd888b26b4ee
 	queryGroup: 'Consultas - Token'
 
 	annotation PBI_NavigationStepName = Navegação

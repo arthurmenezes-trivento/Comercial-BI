@@ -123,10 +123,10 @@ table Medidas
 	measure 'Matr 26-2' = ```
 			
 			    CALCULATE(
-			        DISTINCTCOUNT('Leads'[ID Lead]),
-			        'Leads'[Situação Inscrição] = "Matriculado",
-			        'Leads'[Data de Pagamento] <> BLANK(),
-			        USERELATIONSHIP(dCalendario[Date], Leads[Data Criacao])
+			        DISTINCTCOUNT('2026-2'[ID Lead]),
+			        '2026-2'[Situação Inscrição] = "Matriculado",
+			        '2026-2'[Data de Pagamento] <> BLANK(),
+			        USERELATIONSHIP(dCalendario[Date], '2026-2'[Data Criacao])
 			    )
 			```
 		formatString: 0
@@ -165,12 +165,12 @@ table Medidas
 			VAR MediaCalculada = 
 			    INT(
 			        CALCULATE(
-			            AVERAGE('Leads'[Aging Matrícula]),
-			            CROSSFILTER('Leads'[ID Lead], 'Atendimentos'[Id Lead], BOTH)
+			            AVERAGE('2026-2'[Aging Matricula]),
+			            CROSSFILTER('2026-2'[ID Lead], 'Atendimentos'[Id Lead], BOTH)
 			        )
 			    )
 			RETURN
-			IF(ISBLANK(MediaCalculada), BLANK(), MediaCalculada & " dias")
+			IF(ISBLANK(MediaCalculada), BLANK(), MediaCalculada)
 			
 			```
 		lineageTag: 80bdab73-c902-4a6e-999b-9ad9503c17dd
@@ -189,18 +189,6 @@ table Medidas
 			
 			```
 		lineageTag: d917ed7a-17ac-4d66-8a79-d206b911b941
-
-	measure Aging_RelacionamentoOculto = ```
-			
-			CALCULATE(
-			    MAX('Leads'[Aging Matrícula]),
-			    USERELATIONSHIP('Leads'[Data Criacao], 'dCalendario'[Date])
-			)
-			
-			
-			```
-		formatString: 0
-		lineageTag: 87637f5d-a09b-4320-ab6e-d594c0ba31b2
 
 	measure Funil_Curso =
 			

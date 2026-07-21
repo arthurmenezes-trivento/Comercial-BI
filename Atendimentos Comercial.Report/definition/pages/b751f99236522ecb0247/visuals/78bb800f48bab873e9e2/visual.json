@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Leads"
+                      "Entity": "2026-2"
                     }
                   },
                   "Property": "Proprietário Lead"
                 }
               },
-              "queryRef": "Leads.Proprietário Lead",
-              "nativeQueryRef": "Proprietário Lead",
+              "queryRef": "2026-2.Proprietário Lead",
+              "nativeQueryRef": "Proprietário Lead1",
               "active": true
             }
           ]
@@ -79,7 +79,7 @@
                 "Property": "Média Aging"
               }
             },
-            "direction": "Ascending"
+            "direction": "Descending"
           }
         ]
       }
