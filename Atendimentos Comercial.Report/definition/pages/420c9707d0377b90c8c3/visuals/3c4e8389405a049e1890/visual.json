@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "3c4e8389405a049e1890",
   "position": {
-    "x": 8.0597014925373127,
-    "y": 445.97014925373134,
+    "x": 11.641791044776118,
+    "y": 436.1194029850746,
     "z": 8006,
     "height": 237.31343283582089,
-    "width": 621.49253731343276,
+    "width": 838.20895522388059,
     "tabOrder": 8006
   },
   "visual": {
@@ -23,11 +23,11 @@
                       "Entity": "Leads"
                     }
                   },
-                  "Property": "Curso"
+                  "Property": "Curso ID"
                 }
               },
-              "queryRef": "Leads.Curso",
-              "nativeQueryRef": "Curso",
+              "queryRef": "Leads.Curso ID",
+              "nativeQueryRef": "Curso ID",
               "active": true
             }
           ]

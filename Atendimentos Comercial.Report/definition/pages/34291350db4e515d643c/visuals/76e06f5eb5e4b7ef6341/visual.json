@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "76e06f5eb5e4b7ef6341",
   "position": {
-    "x": 934.02985074626861,
+    "x": 865.07462686567158,
     "y": 225.67164179104478,
     "z": 12000,
-    "height": 423.58208955223881,
-    "width": 311.64179104477608,
+    "height": 417.31343283582089,
+    "width": 414.62686567164178,
     "tabOrder": 12000
   },
   "visual": {
@@ -47,6 +47,17 @@
               },
               "queryRef": "Medidas.Qtd tabulações",
               "nativeQueryRef": "Qtd tabulações"
+            },
+            {
+              "field": {
+                "NativeVisualCalculation": {
+                  "Language": "dax",
+                  "Expression": "FORMAT(DIVIDE([Qtd tabulações], COLLAPSEALL([Qtd tabulações], ROWS)), \"percent\")",
+                  "Name": "Percentual do total geral"
+                }
+              },
+              "queryRef": "select",
+              "nativeQueryRef": "Percentual do total geral"
             }
           ]
         }
@@ -245,7 +256,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "183D"
+                  "Value": "141.80596522772822D"
                 }
               }
             }

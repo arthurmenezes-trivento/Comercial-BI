@@ -205,7 +205,7 @@ table Medidas
 	measure Funil_Curso =
 			
 			CALCULATE(
-			    COUNTROWS('Leads'),
+			    DISTINCTCOUNT('Leads'[ID Lead]),
 			    Leads[Fase Portal do Candidato] <> BLANK(),
 			    USERELATIONSHIP(dCalendario[Date], Leads[Data Criacao])
 			)
@@ -216,7 +216,7 @@ table Medidas
 	measure Funil_Dados = ```
 			
 			CALCULATE(
-			    COUNTROWS('leads'), 
+			    DISTINCTCOUNT('Leads'[ID Lead]), 
 			    Leads[Fase Portal do Candidato] <> BLANK(),
 			    NOT ('leads'[Fase Portal do Candidato] IN {"Curso"}),
 			    USERELATIONSHIP(dCalendario[Date], Leads[Data Criacao])
@@ -229,7 +229,7 @@ table Medidas
 	measure Funil_Inscricao = ```
 			
 			CALCULATE(
-			    COUNTROWS('leads'), 
+			    DISTINCTCOUNT('Leads'[ID Lead]), 
 			    Leads[Fase Portal do Candidato] <> BLANK(),
 			     NOT ('leads'[Fase Portal do Candidato] IN {"Curso", "Dados"}),
 			     USERELATIONSHIP(dCalendario[Date], Leads[Data Criacao])
@@ -242,7 +242,7 @@ table Medidas
 	measure Funil_pagamento = ```
 			
 			CALCULATE(
-			    COUNTROWS('leads'), 
+			    DISTINCTCOUNT('Leads'[ID Lead]), 
 			    Leads[Fase Portal do Candidato] <> BLANK(),
 			    NOT ('leads'[Fase Portal do Candidato] IN {"Curso", "dados", "Inscrição", "Prova Objetiva Online", "Matrícula"}),
 			    USERELATIONSHIP(dCalendario[Date], Leads[Data Criacao]))
@@ -254,7 +254,7 @@ table Medidas
 	measure 'Funil_prova online' = ```
 			
 			CALCULATE(
-			    COUNTROWS('leads'), 
+			    DISTINCTCOUNT('Leads'[ID Lead]), 
 			    Leads[Fase Portal do Candidato] <> BLANK(),
 			     NOT ('leads'[Fase Portal do Candidato] IN {"Curso", "dados", "Inscrição"}),
 			     USERELATIONSHIP(dCalendario[Date], Leads[Data Criacao])
@@ -267,7 +267,7 @@ table Medidas
 	measure Funil_matriculas = ```
 			
 			CALCULATE(
-			    COUNTROWS('leads'), 
+			    DISTINCTCOUNT('Leads'[ID Lead]), 
 			    Leads[Fase Portal do Candidato] <> BLANK(),
 			    NOT ('leads'[Fase Portal do Candidato] IN {"Curso", "dados", "Inscrição", "Prova Objetiva Online"}),
 			    USERELATIONSHIP(dCalendario[Date], Leads[Data Criacao]))

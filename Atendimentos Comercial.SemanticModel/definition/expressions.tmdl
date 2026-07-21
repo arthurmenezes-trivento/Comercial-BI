@@ -267,9 +267,16 @@ expression Inscricoes =
 		    #"result.coc_situacaopagamento Expandido" = Table.ExpandTableColumn(#"Tipo Alterado6", "result.coc_situacaopagamento", {"Attribute:name"}, {"Attribute:name"}),
 		    #"Colunas Renomeadas7" = Table.RenameColumns(#"result.coc_situacaopagamento Expandido",{{"Attribute:name", "Situação Pagamento"}}),
 		    #"Tipo Alterado7" = Table.TransformColumnTypes(#"Colunas Renomeadas7",{{"Situação Pagamento", type text}}),
-		    #"result.cad_faseportalcandidato Expandido" = Table.ExpandTableColumn(#"Tipo Alterado7", "result.cad_faseportalcandidato", {"Attribute:name"}, {"Fase Portal do Candidato"})
+		    #"result.cad_faseportalcandidato Expandido" = Table.ExpandTableColumn(#"Tipo Alterado7", "result.cad_faseportalcandidato", {"Attribute:name"}, {"Fase Portal do Candidato"}),
+		    #"result.cad_clientepotencialid Expandido" = Table.ExpandTableColumn(#"result.cad_faseportalcandidato Expandido", "result.cad_clientepotencialid", {"Element:Text"}, {"Id Lead"}),
+		    #"Tipo Alterado8" = Table.TransformColumnTypes(#"result.cad_clientepotencialid Expandido",{{"Id Lead", type text}}),
+		    #"Linhas Classificadas" = Table.Sort(#"Tipo Alterado8",{{"Data de Pagamento", Order.Descending}}),
+		    #"result.createdon Expandido" = Table.ExpandTableColumn(#"Linhas Classificadas", "result.createdon", {"Attribute:date"}, {"Data Criação"}),
+		    #"Tipo Alterado9" = Table.TransformColumnTypes(#"result.createdon Expandido",{{"Data Criação", type date}}),
+		    #"Linhas Classificadas1" = Table.Sort(#"Tipo Alterado9",{{"Data Criação", Order.Descending}}),
+		    #"Duplicatas Removidas" = Table.Distinct(#"Linhas Classificadas1", {"Id Lead"})
 		in
-		    #"result.cad_faseportalcandidato Expandido"
+		    #"Duplicatas Removidas"
 	lineageTag: c3a7adf9-4066-4267-8dea-ee76593a33c4
 	queryGroup: 'Consultas - Token'
 

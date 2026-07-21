@@ -76,10 +76,10 @@
                     "Entity": "Medidas"
                   }
                 },
-                "Property": "Matr 26-2"
+                "Property": "Média Aging"
               }
             },
-            "direction": "Descending"
+            "direction": "Ascending"
           }
         ]
       }
