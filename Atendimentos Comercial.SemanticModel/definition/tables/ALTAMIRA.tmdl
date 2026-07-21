@@ -193,9 +193,10 @@ table ALTAMIRA
 				    Fonte = GoogleSheets.Contents("https://docs.google.com/spreadsheets/d/13DBRdUsHT5wupKkq3Omi9VUr9Nj3R5gYVMfSSkmtXQM/edit?gid=0#gid=0"),
 				    ALTAMIRA_Table = Fonte{[name="ALTAMIRA",ItemKind="Table"]}[Data],
 				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(ALTAMIRA_Table, [PromoteAllScalars=true]),
-				    #"Linhas em Branco Removidas" = Table.SelectRows(#"Cabeçalhos Promovidos", each not List.IsEmpty(List.RemoveMatchingItems(Record.FieldValues(_), {"", null})))
+				    #"Linhas em Branco Removidas" = Table.SelectRows(#"Cabeçalhos Promovidos", each not List.IsEmpty(List.RemoveMatchingItems(Record.FieldValues(_), {"", null}))),
+				    #"Valor Substituído" = Table.TransformColumns(#"Linhas em Branco Removidas", {{"Unidade", each "Altamira", type text}})
 				in
-				    #"Linhas em Branco Removidas"
+				    #"Valor Substituído"
 
 	changedProperty = IsHidden
 

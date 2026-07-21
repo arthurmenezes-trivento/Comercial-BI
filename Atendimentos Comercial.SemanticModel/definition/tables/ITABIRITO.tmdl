@@ -217,9 +217,10 @@ table ITABIRITO
 				    ITABIRITO_Table = Fonte{[name="ITABIRITO",ItemKind="Table"]}[Data],
 				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(ITABIRITO_Table, [PromoteAllScalars=true]),
 				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"CONSULTOR (a)", type text}, {"DATA", type any}, {"NOME", type text}, {"CELULAR", type any}, {"CPF (preencher apenas com números)", type any}, {"CURSO", type text}, {"FORMA DE INGRESSO", type text}, {"% BOLSA CONCEDIDA", type number}, {"CONDIÇÃO", type text}, {"VALOR PG MATRÍCULA", type number}, {"NOME DO PAGADOR ", type text}, {"FORMA DE PAGAMNTO", type text}, {"QUANTIDADE DE PARCELAS", type text}, {"OBSERVAÇÃO", type text}, {"Unidade", type text}, {"Data e Hora", type date}, {"", type text}}),
-				    #"Linhas em Branco Removidas" = Table.SelectRows(#"Tipo Alterado", each not List.IsEmpty(List.RemoveMatchingItems(Record.FieldValues(_), {"", null})))
+				    #"Linhas em Branco Removidas" = Table.SelectRows(#"Tipo Alterado", each not List.IsEmpty(List.RemoveMatchingItems(Record.FieldValues(_), {"", null}))),
+				    #"Valor Substituído" = Table.TransformColumns(#"Linhas em Branco Removidas", {{"Unidade", each "Itabirito", type text}})
 				in
-				    #"Linhas em Branco Removidas"
+				    #"Valor Substituído"
 
 	changedProperty = IsHidden
 
