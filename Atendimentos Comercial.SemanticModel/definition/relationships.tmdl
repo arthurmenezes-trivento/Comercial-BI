@@ -63,9 +63,7 @@ relationship 77c7403e-44b0-dcbf-b3d1-8336312b5056
 	fromColumn: 2026-2.'Data Criacao'
 	toColumn: dCalendario.Date
 
-relationship abaf3621-2d4b-5515-6918-4b2610325482
-	crossFilteringBehavior: bothDirections
-	toCardinality: many
-	fromColumn: 2026-2.'ID Lead'
-	toColumn: Atendimentos.'Id Lead'
+relationship 296fb6b4-a85b-6661-d9ab-7004f96ac0cf
+	fromColumn: Atendimentos.'Id Lead'
+	toColumn: 2026-2.'ID Lead'
 

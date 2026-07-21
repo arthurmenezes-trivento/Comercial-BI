@@ -140,6 +140,14 @@ table 'Matrículas GD'
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'Número de Inscrição'
+		dataType: string
+		lineageTag: ce2cb23e-0dee-4341-a90b-bbb10973754c
+		summarizeBy: none
+		sourceColumn: Número de Inscrição
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 'Matrículas GD' = m
 		mode: import
 		source =

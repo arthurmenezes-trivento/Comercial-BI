@@ -660,9 +660,10 @@ table 2026-2
 				    #"Consultas Mescladas1" = Table.NestedJoin(#"Tipo Alterado2", {"Celular Comparar Legado"}, Legado, {"Celular"}, "Legado", JoinKind.LeftOuter),
 				    #"Legado Expandido" = Table.ExpandTableColumn(#"Consultas Mescladas1", "Legado", {"Legado"}, {"Legado.1"}),
 				    #"Colunas Renomeadas2" = Table.RenameColumns(#"Legado Expandido",{{"Legado.1", "Legado"}}),
-				    #"Valor Substituído15" = Table.ReplaceValue(#"Colunas Renomeadas2",null,"Ciclo Atual",Replacer.ReplaceValue,{"Legado"})
+				    #"Valor Substituído15" = Table.ReplaceValue(#"Colunas Renomeadas2",null,"Ciclo Atual",Replacer.ReplaceValue,{"Legado"}),
+				    #"Duplicatas Removidas" = Table.Distinct(#"Valor Substituído15", {"ID Lead"})
 				in
-				    #"Valor Substituído15"
+				    #"Duplicatas Removidas"
 				```
 
 	annotation PBI_NavigationStepName = Navegação

@@ -5,8 +5,8 @@
     "x": 23.283582089552237,
     "y": 221.19402985074626,
     "z": 4000,
-    "height": 487.16417910447763,
-    "width": 749.55223880597009,
+    "height": 454.92537313432837,
+    "width": 801.49253731343276,
     "tabOrder": 4000
   },
   "visual": {
@@ -119,17 +119,17 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Atendimentos"
+                          "Entity": "2026-2"
                         }
                       },
-                      "Property": "Resultado do Contato"
+                      "Property": "Última Tabulação"
                     }
                   },
                   "Function": 3
                 }
               },
-              "queryRef": "Min(Atendimentos.Resultado do Contato)",
-              "nativeQueryRef": "Última Tabulação1",
+              "queryRef": "Min(2026-2.Última Tabulação)",
+              "nativeQueryRef": "Última Tabulação",
               "displayName": "Última Tabulação"
             }
           ]
@@ -211,20 +211,6 @@
           },
           "selector": {
             "metadata": "Min(2026-2.Proprietário Lead)"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "136.32835912336418D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Min(Atendimentos.Resultado do Contato)"
           }
         },
         {
