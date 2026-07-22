@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
   "name": "4663248f95fecc7e39df",
   "position": {
-    "x": 35.820895522388057,
-    "y": 102.08955223880596,
+    "x": 269.59556321734794,
+    "y": 90.455927051671736,
     "z": 4000,
     "height": 51.044776119402982,
     "width": 131.64179104477611,
@@ -463,5 +463,37 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "3026df8ba560084830c9",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dCalendario"
+              }
+            },
+            "Property": "Semana"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "411e3cea6625d02b5402",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dCalendario"
+              }
+            },
+            "Property": "Date"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

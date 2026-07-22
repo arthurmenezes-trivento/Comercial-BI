@@ -145,6 +145,16 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.714
 			          }
+			        },
+			        {
+			          "Data de Matrícula": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ],
 			      "SemanticType": "Time"
@@ -1544,6 +1554,9 @@ cultureInfo pt-BR
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "criado por": {
@@ -9738,42 +9751,63 @@ cultureInfo pt-BR
 			          }
 			        }
 			      ]
-			    }
-			  },
-			  "Relationships": {
-			    "entity_20262_data_de_pagamento_hierarquia_de_data_has_entity_20262_data_de_pagamento_mê": {
-			      "Binding": {
-			        "ConceptualEntity": "2026-2"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "entity_20262.data_de_pagamento.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "entity_20262.data_de_pagamento.hierarquia_de_data"
-			          }
-			        },
-			        "entity_20262.data_de_pagamento.mê": {
-			          "Target": {
-			            "Entity": "entity_20262.data_de_pagamento.mê"
-			          }
+			    },
+			    "d_atendente": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dAtendentes"
 			        }
 			      },
-			      "Phrasings": [
+			      "State": "Generated",
+			      "Terms": [
 			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_20262.data_de_pagamento.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "entity_20262.data_de_pagamento.mê"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê"
+			          "d atendente": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dAtendentes": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
 			        }
 			      ]
 			    },
+			    "d_atendente.criado_por": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dAtendentes",
+			          "ConceptualProperty": "Criado por"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "criado por": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "d_atendente.equipe": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dAtendentes",
+			          "ConceptualProperty": "Equipe"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "equipe": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
 			    "entity_20262_data_de_pagamento_hierarquia_de_data_has_entity_20262_data_de_pagamento_trimestre": {
 			      "Binding": {
 			        "ConceptualEntity": "2026-2"
@@ -10133,7 +10167,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê1"
+			          "ID": "hierarquia_de_data_have_mê"
 			        }
 			      ]
 			    },
@@ -10496,7 +10530,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê2"
+			          "ID": "hierarquia_de_data_have_mê1"
 			        }
 			      ]
 			    },
@@ -10859,7 +10893,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê3"
+			          "ID": "hierarquia_de_data_have_mê2"
 			        }
 			      ]
 			    },
@@ -11222,7 +11256,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê4"
+			          "ID": "hierarquia_de_data_have_mê3"
 			        }
 			      ]
 			    },
@@ -11585,7 +11619,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê5"
+			          "ID": "hierarquia_de_data_have_mê4"
 			        }
 			      ]
 			    },
@@ -11879,6 +11913,52 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
+			    "atendimento_has_d_atendente": {
+			      "Binding": {
+			        "ConceptualEntity": "Atendimentos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "atendimento": {
+			          "Target": {
+			            "Entity": "atendimento"
+			          }
+			        },
+			        "d_atendente": {
+			          "Target": {
+			            "Entity": "d_atendente"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "atendimento"
+			            },
+			            "Object": {
+			              "Role": "d_atendente"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "atendimentos_have_d_atendentes"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_atendente"
+			            },
+			            "Object": {
+			              "Role": "atendimento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_atendentes_have_atendimentos"
+			        }
+			      ]
+			    },
 			    "atendimento_has_entity_20262": {
 			      "Binding": {
 			        "ConceptualEntity": "Atendimentos"
@@ -11968,6 +12048,72 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "d_calendarios_have_atendimentos"
+			        }
+			      ]
+			    },
+			    "d_atendente_has_equipe": {
+			      "Binding": {
+			        "ConceptualEntity": "dAtendentes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_atendente": {
+			          "Target": {
+			            "Entity": "d_atendente"
+			          }
+			        },
+			        "d_atendente.equipe": {
+			          "Target": {
+			            "Entity": "d_atendente.equipe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_atendente"
+			            },
+			            "Object": {
+			              "Role": "d_atendente.equipe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_atendentes_have_equipes"
+			        }
+			      ]
+			    },
+			    "d_atendente_has_criado_por": {
+			      "Binding": {
+			        "ConceptualEntity": "dAtendentes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_atendente": {
+			          "Target": {
+			            "Entity": "d_atendente"
+			          }
+			        },
+			        "d_atendente.criado_por": {
+			          "Target": {
+			            "Entity": "d_atendente.criado_por"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_atendente"
+			            },
+			            "Object": {
+			              "Role": "d_atendente.criado_por"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_atendentes_have_criado_pors"
 			        }
 			      ]
 			    },
@@ -15416,39 +15562,6 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "atendimento_has_criado_por": {
-			      "Binding": {
-			        "ConceptualEntity": "Atendimentos"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "atendimento": {
-			          "Target": {
-			            "Entity": "atendimento"
-			          }
-			        },
-			        "atendimento.criado_por": {
-			          "Target": {
-			            "Entity": "atendimento.criado_por"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "atendimento"
-			            },
-			            "Object": {
-			              "Role": "atendimento.criado_por"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "atendimentos_have_criado_pors"
-			        }
-			      ]
-			    },
 			    "atendimento_has_retorno_de_contato": {
 			      "Binding": {
 			        "ConceptualEntity": "Atendimentos"
@@ -16429,6 +16542,39 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "ID_are_names_IDs_of_d_unidades"
+			        }
+			      ]
+			    },
+			    "entity_20262_data_de_pagamento_hierarquia_de_data_has_entity_20262_data_de_pagamento_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "2026-2"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_20262.data_de_pagamento.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "entity_20262.data_de_pagamento.hierarquia_de_data"
+			          }
+			        },
+			        "entity_20262.data_de_pagamento.mê": {
+			          "Target": {
+			            "Entity": "entity_20262.data_de_pagamento.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_20262.data_de_pagamento.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "entity_20262.data_de_pagamento.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_mê5"
 			        }
 			      ]
 			    },

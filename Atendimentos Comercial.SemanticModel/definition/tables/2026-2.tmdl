@@ -566,6 +566,26 @@ table 2026-2
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'Aging Faixa' = ```
+			
+			    SWITCH(
+			        TRUE(),
+			        '2026-2'[Aging Matricula] >= 90 , "+90" ,
+			        '2026-2'[Aging Matricula] >= 60 , "+60" ,
+			        '2026-2'[Aging Matricula] >= 30 , "+30" ,
+			        '2026-2'[Aging Matricula] >= 15 , "+15" ,
+			        '2026-2'[Aging Matricula] >= 7 , "+7" ,
+			        '2026-2'[Aging Matricula] > 1 , "+1" ,
+			        '2026-2'[Aging Matricula] <= 1 , "0" ,
+			        BLANK()
+			    )
+			
+			```
+		lineageTag: 98c783d9-1785-40f8-ad50-ac7bbb028660
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 2026-2 = m
 		mode: import
 		queryGroup: 'Consultas - Token'
