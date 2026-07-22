@@ -1,0 +1,56 @@
+table dAtendentes
+	lineageTag: a20427fb-c742-431f-82d9-cb91d255774c
+
+	column 'Criado por'
+		dataType: string
+		lineageTag: 16b22626-fa9a-45ed-bce7-04ce7b49d292
+		summarizeBy: none
+		sourceColumn: Criado por
+
+		annotation SummarizationSetBy = Automatic
+
+	column Equipe =
+			
+			SWITCH(
+			    dAtendentes[Criado por],
+			    "Thiago Oliveira da Cruz", "Unidade Altamira",
+			    "Giovanna Eduarda Do Carmo Braga", "Unidade Itabirito",
+			    "Hailton Alves Júnior", "Célula",
+			    "Maria Rafaela da Rocha Tavares", "Unidade Lorena",
+			    "Daniel Faria Santos", "Célula",
+			    "Thalia Gabriela de Araújo Silva", "Unidade Lorena",
+			    "Lorena Viana Gonçalves Pereira", "Célula",
+			    "Karolaine de Oliveira Alves Souza", "Célula",
+			    "Adauri Marques Delfino Junior", "Célula",
+			    "Geovana Souza da Silva", "Unidade Altamira",
+			    "Agnata Pamela Silva Souza", "Unidade Lorena",
+			    "Karen Flávia", "Unidade Canaã",
+			    "Matheus Duarte", "Sem Equipe",
+			    "Caroline Mahe", "Sem Equipe",
+			    "Camila Guimarães Santos", "Sem Equipe",
+			    "Fernanda Santos", "Sem Equipe",
+			    "Thalyta Costa", "Sem Equipe",
+			    "Breno Assis Ferreira", "Sem Equipe",
+			    "Flavio Henrique de Oliveira", "Sem Equipe",
+			    "Sem Equipe"
+			)
+		lineageTag: 30a26d64-c5b8-42f7-bdec-0880781837cc
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dAtendentes = m
+		mode: import
+		queryGroup: 'Consultas - Token'
+		source =
+				let
+				    Fonte = Atendimentos,
+				    #"Outras Colunas Removidas" = Table.SelectColumns(Fonte,{"Criado por"}),
+				    #"Duplicatas Removidas" = Table.Distinct(#"Outras Colunas Removidas")
+				in
+				    #"Duplicatas Removidas"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

@@ -156,9 +156,10 @@ table 'Matrículas GD'
 				    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"DATA", type date}}),
 				    #"Linhas Filtradas" = Table.SelectRows(#"Tipo Alterado", each ([Unidade] <> "")),
 				    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Linhas Filtradas",{{"Unidade", type text}}),
-				    #"Texto Limpo" = Table.TransformColumns(#"Tipo Alterado1",{{"Unidade", Text.Clean, type text}})
+				    #"Texto Limpo" = Table.TransformColumns(#"Tipo Alterado1",{{"Unidade", Text.Clean, type text}}),
+				    #"Linhas Filtradas1" = Table.SelectRows(#"Texto Limpo", each ([DATA] = #date(2026, 7, 22)))
 				in
-				    #"Texto Limpo"
+				    #"Linhas Filtradas1"
 
 	annotation PBI_NavigationStepName = Navegação
 

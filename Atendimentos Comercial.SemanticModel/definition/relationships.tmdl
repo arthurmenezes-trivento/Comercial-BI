@@ -67,3 +67,7 @@ relationship 296fb6b4-a85b-6661-d9ab-7004f96ac0cf
 	fromColumn: Atendimentos.'Id Lead'
 	toColumn: 2026-2.'ID Lead'
 
+relationship AutoDetected_e12cb417-63ad-481a-967a-91089e6fb915
+	fromColumn: Atendimentos.'Criado por'
+	toColumn: dAtendentes.'Criado por'
+
