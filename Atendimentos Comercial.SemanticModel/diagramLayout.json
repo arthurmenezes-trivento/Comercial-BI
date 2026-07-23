@@ -233,8 +233,8 @@
         },
         {
           "location": {
-            "x": 830.50646009622915,
-            "y": 341.13488265069424
+            "x": 824.9006132755261,
+            "y": 416.25323004811457
           },
           "nodeIndex": "2026-2",
           "nodeLineageTag": "b26d4ab7-80b2-4625-a783-b252ec6a50a5",
@@ -251,36 +251,8 @@
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,
       "tablesLocked": false
-    },
-    {
-      "ordinal": 2,
-      "scrollPosition": {
-        "x": 0,
-        "y": 0
-      },
-      "nodes": [
-        {
-          "location": {
-            "x": 833,
-            "y": 296
-          },
-          "nodeIndex": "Atendimentos",
-          "nodeLineageTag": "48aff271-58b6-4af5-97f5-c49aed976afd",
-          "size": {
-            "height": 300,
-            "width": 234
-          },
-          "zIndex": 1
-        }
-      ],
-      "name": "Aging Matrícula",
-      "zoomValue": 100,
-      "pinKeyFieldsToTop": false,
-      "showExtraHeaderInfo": false,
-      "hideKeyFieldsWhenCollapsed": false,
-      "tablesLocked": false
     }
   ],
-  "selectedDiagram": "Todas as tabelas",
+  "selectedDiagram": "Consolidado diario",
   "defaultDiagram": "Todas as tabelas"
 }

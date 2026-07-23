@@ -22,6 +22,7 @@ relationship a8c966b7-8023-a9ec-a1c1-fcfedf39f777
 	toColumn: dUnidade.Unidade
 
 relationship 8cc51ea1-e653-cb07-c58d-36795b146a85
+	isActive: false
 	fromColumn: Atendimentos.'Data de Criação'
 	toColumn: dCalendario.Date
 
@@ -45,11 +46,6 @@ relationship 60fb9c05-d340-4c51-aef5-13ddaa665bb8
 	fromColumn: 2026-2.'Data Aprovação'
 	toColumn: LocalDateTable_af65b60f-b650-4761-9a94-94495c997c51.Date
 
-relationship f6c30fa8-665f-429b-95cf-3d495e4b03a5
-	joinOnDateBehavior: datePartOnly
-	fromColumn: 2026-2.'Data de Pagamento'
-	toColumn: LocalDateTable_9fa84032-d288-4829-a31c-a5ac6441ea9f.Date
-
 relationship AutoDetected_88114a10-14a0-4f3f-819f-76b7cf7a2594
 	fromColumn: 2026-2.Unidade
 	toColumn: dUnidade.Unidade
@@ -59,7 +55,6 @@ relationship AutoDetected_5b204d72-7ed7-495a-b0bb-dc6bd7868ca0
 	toColumn: dCanal.Canal
 
 relationship 77c7403e-44b0-dcbf-b3d1-8336312b5056
-	isActive: false
 	fromColumn: 2026-2.'Data Criacao'
 	toColumn: dCalendario.Date
 
@@ -70,4 +65,9 @@ relationship 296fb6b4-a85b-6661-d9ab-7004f96ac0cf
 relationship AutoDetected_e12cb417-63ad-481a-967a-91089e6fb915
 	fromColumn: Atendimentos.'Criado por'
 	toColumn: dAtendentes.'Criado por'
+
+relationship b870d859-f2ba-9b37-1060-088475287b74
+	isActive: false
+	fromColumn: 2026-2.'Data de Pagamento'
+	toColumn: dCalendario.Date
 

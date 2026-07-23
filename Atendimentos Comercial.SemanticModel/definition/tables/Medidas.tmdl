@@ -1,23 +1,25 @@
 table Medidas
 	lineageTag: 4419056a-db71-48c1-bdbb-d01910b4e999
 
-	measure UltimoAtendente =
+	measure UltimoAtendente = ```
 			
 			VAR UltimoRegistro =
 			    TOPN(
 			        1,
-			        FILTER(
+			        CALCULATETABLE(
 			            'Atendimentos',
-			            'Atendimentos'[Assunto] <> "Alteração em Massa"
-			                && NOT ISBLANK('Atendimentos'[Assunto])
+			            'Atendimentos'[Assunto] <> "Alteração em Massa",
+			            NOT ISBLANK('Atendimentos'[Assunto])
 			        ),
 			        'Atendimentos'[Data de Criação], DESC
 			    )
 			RETURN
-			MAXX(
-			    UltimoRegistro,
-			    'Atendimentos'[Criado por]
-			)
+			    CALCULATE(
+			        SELECTEDVALUE('Atendimentos'[Criado por]),
+			        UltimoRegistro
+			    )
+			
+			```
 		lineageTag: c2990e0a-0c93-4df1-848b-3acbcbe83565
 
 	measure 'Data Último Atendimento' =
@@ -125,10 +127,9 @@ table Medidas
 			        DISTINCTCOUNT('2026-2'[ID Lead]),
 			        '2026-2'[Situação Inscrição] = "Matriculado",
 			        '2026-2'[Data de Pagamento] <> BLANK(),
-			        USERELATIONSHIP(dCalendario[Date], '2026-2'[Data Criacao])
+			        USERELATIONSHIP(dCalendario[Date], '2026-2'[Data de Pagamento])
 			    )
 			```
-		formatString: 0
 		lineageTag: 776476a4-d45f-4e8b-bb47-7bc967379e76
 
 	measure 'Qtd tabulações' =
@@ -145,7 +146,7 @@ table Medidas
 			
 			CALCULATE(
 			    COUNTROWS(Atendimentos),
-			    USERELATIONSHIP(Atendimentos[Data Modificação], dCalendario[Date])
+			    USERELATIONSHIP(Atendimentos[Data de Criação], dCalendario[Date])
 			)
 		formatString: 0
 		lineageTag: 93620f8c-6a35-4bdf-895d-81b78e33e8b5
@@ -282,6 +283,28 @@ table Medidas
 			)
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: 280035e9-81c1-44bf-81fc-fd4b7a7d2a86
+
+	measure 'última tabulacao' = ```
+			
+			
+			VAR UltimoRegistro =
+			    TOPN(
+			        1,
+			        CALCULATETABLE(
+			            'Atendimentos',
+			            'Atendimentos'[Assunto] <> "Alteração em Massa",
+			            NOT ISBLANK('Atendimentos'[Assunto])
+			        
+			        ),
+			        'Atendimentos'[Data de Criação], DESC
+			    )
+			RETURN
+			    CALCULATE(
+			        SELECTEDVALUE('Atendimentos'[Resultado do Contato]),
+			        UltimoRegistro
+			    )
+			```
+		lineageTag: d6129c4c-f29e-4899-95c4-866f665f6ae5
 
 	column 'Coluna 1'
 		dataType: string

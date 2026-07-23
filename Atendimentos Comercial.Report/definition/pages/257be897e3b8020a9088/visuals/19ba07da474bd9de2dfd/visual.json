@@ -6,7 +6,7 @@
     "y": 221.19402985074626,
     "z": 4000,
     "height": 454.92537313432837,
-    "width": 801.49253731343276,
+    "width": 762.98507462686564,
     "tabOrder": 4000
   },
   "visual": {
@@ -226,6 +226,20 @@
           "selector": {
             "metadata": "Medidas.UltimaDataHoraCriacaoProprietario"
           }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "145.28358282466533D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Min(2026-2.Última Tabulação)"
+          }
         }
       ],
       "values": [
@@ -388,25 +402,6 @@
               }
             },
             "Property": "Dias Sem Atendimento"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "32914e2056d38358b2ba",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "2026-2"
-                  }
-                },
-                "Property": "Última Tabulação"
-              }
-            },
-            "Function": 3
           }
         },
         "type": "Advanced"

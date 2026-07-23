@@ -1,0 +1,112 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "fd0b09db52e561d45462",
+  "position": {
+    "x": 91.343283582089555,
+    "y": 456.71641791044777,
+    "z": 16004,
+    "height": 250.74626865671641,
+    "width": 863.28358208955217,
+    "tabOrder": 16004
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "2026-2"
+                    }
+                  },
+                  "Property": "Nome Completo"
+                }
+              },
+              "queryRef": "2026-2.Nome Completo",
+              "nativeQueryRef": "Nome Completo"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "2026-2"
+                    }
+                  },
+                  "Property": "Proprietário Lead"
+                }
+              },
+              "queryRef": "2026-2.Proprietário Lead",
+              "nativeQueryRef": "Proprietário Lead"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "2026-2"
+                    }
+                  },
+                  "Property": "Situação Inscrição"
+                }
+              },
+              "queryRef": "2026-2.Situação Inscrição",
+              "nativeQueryRef": "Situação Inscrição"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Atendimentos"
+                    }
+                  },
+                  "Property": "Criado por"
+                }
+              },
+              "queryRef": "Atendimentos.Criado por",
+              "nativeQueryRef": "Criado por"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "UltimoAtendente"
+                }
+              },
+              "queryRef": "Medidas.UltimoAtendente",
+              "nativeQueryRef": "UltimoAtendente"
+            }
+          ],
+          "showAll": true
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "2026-2"
+                  }
+                },
+                "Property": "Situação Inscrição"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

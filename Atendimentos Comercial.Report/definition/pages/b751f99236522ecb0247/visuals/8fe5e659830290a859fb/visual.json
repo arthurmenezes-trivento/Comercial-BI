@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "8fe5e659830290a859fb",
   "position": {
     "x": 36.254917387883559,
@@ -43,7 +43,7 @@
               },
               "queryRef": "dCalendario.Date",
               "nativeQueryRef": "Date",
-              "active": false
+              "active": true
             }
           ]
         }
@@ -100,7 +100,20 @@
             "isPinned": true
           }
         ],
-        "root": {}
+        "root": {
+          "children": [
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'s16'"
+                  }
+                }
+              ],
+              "isToggled": true
+            }
+          ]
+        }
       }
     ],
     "objects": {

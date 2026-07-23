@@ -495,11 +495,6 @@ table 2026-2
 		summarizeBy: none
 		sourceColumn: Data de Pagamento
 
-		variation Variation
-			isDefault
-			relationship: f6c30fa8-665f-429b-95cf-3d495e4b03a5
-			defaultHierarchy: LocalDateTable_9fa84032-d288-4829-a31c-a5ac6441ea9f.'Hierarquia de datas'
-
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date
@@ -548,8 +543,9 @@ table 2026-2
 			
 			RETURN
 			IF(
-			    Diferenca < 0, 0, Diferenca
-			)
+			    Diferenca < 0, 0, Diferenca)
+			
+			
 			
 			```
 		formatString: 0

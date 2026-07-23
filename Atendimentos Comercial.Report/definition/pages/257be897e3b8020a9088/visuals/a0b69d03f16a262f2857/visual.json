@@ -1,9 +1,9 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "a0b69d03f16a262f2857",
   "position": {
-    "x": 825.07279644135053,
-    "y": 102.95412266003872,
+    "x": 599.40115465030533,
+    "y": 97.5809883316805,
     "z": 7000,
     "height": 79.069991909270271,
     "width": 240.69835772380802,
@@ -20,16 +20,15 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Atendimentos"
+                      "Entity": "2026-2"
                     }
                   },
-                  "Property": "Resultado do Contato"
+                  "Property": "Última Tabulação"
                 }
               },
-              "queryRef": "Atendimentos.Resultado do Contato",
-              "nativeQueryRef": "Última Tabulação1",
-              "active": true,
-              "displayName": "Última Tabulação"
+              "queryRef": "2026-2.Última Tabulação",
+              "nativeQueryRef": "Última Tabulação",
+              "active": true
             }
           ]
         }
