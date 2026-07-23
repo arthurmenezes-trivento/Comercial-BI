@@ -1,0 +1,54 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "name": "81a978df044290da36c7",
+  "position": {
+    "x": 870.44776119402979,
+    "y": 188.955223880597,
+    "z": 8008,
+    "height": 337.61194029850748,
+    "width": 409.25373134328356,
+    "tabOrder": 8008
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "obs: "
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "-- Os matriculados que não passaram pela etapa de pagamento"
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "podem ser do PROUNI e FIES."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

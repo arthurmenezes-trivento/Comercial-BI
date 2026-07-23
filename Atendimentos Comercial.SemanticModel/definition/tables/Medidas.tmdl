@@ -1,87 +1,86 @@
 table Medidas
 	lineageTag: 4419056a-db71-48c1-bdbb-d01910b4e999
 
-	measure UltimoAtendente = ```
+	measure UltimoAtendente =
 			
-			VAR TabelaFiltrada = 
-			    FILTER(
-			        'Atendimentos',
-			        'Atendimentos'[Assunto] <> "Alteração em Massa" &&
-			        NOT(ISBLANK('Atendimentos'[Assunto]))
-			        
-			    )
-			VAR DataMaisRecente = 
-			    CALCULATE(
-			        MAX('Atendimentos'[Data de Criação]),
-			        TabelaFiltrada
+			VAR UltimoRegistro =
+			    TOPN(
+			        1,
+			        FILTER(
+			            'Atendimentos',
+			            'Atendimentos'[Assunto] <> "Alteração em Massa"
+			                && NOT ISBLANK('Atendimentos'[Assunto])
+			        ),
+			        'Atendimentos'[Data de Criação], DESC
 			    )
 			RETURN
-			CALCULATE(
-			    MAX('Atendimentos'[Criado por]),
-			    TabelaFiltrada,
-			    'Atendimentos'[Data de Criação] = DataMaisRecente
+			MAXX(
+			    UltimoRegistro,
+			    'Atendimentos'[Criado por]
 			)
-			
-			```
 		lineageTag: c2990e0a-0c93-4df1-848b-3acbcbe83565
 
-	measure 'data Ultimo Atendimento' = ```
+	measure 'Data Último Atendimento' =
 			
-			VAR TabelaFiltrada = 
+			VAR TabelaFiltrada =
 			    FILTER(
 			        'Atendimentos',
-			        'Atendimentos'[Assunto] <> "Alteração em Massa" &&
-			        NOT ISBLANK('Atendimentos'[Assunto])
-			    )
-			RETURN
-			    CALCULATE(
-			        -- Isola a linha com a data mais recente e concatena como texto
-			        CONCATENATEX(
-			            TOPN(
-			                1,
-			                'Atendimentos',
-			                'Atendimentos'[Data de Criação], DESC,
-			                'Atendimentos'[hora de Criação], DESC),
-			            FORMAT('Atendimentos'[Data de Criação], "dd/mm/yyyy") & " " & FORMAT('Atendimentos'[Hora de Criação], "hh:mm"),
-			            " "
-			        ),
-			        TabelaFiltrada
+			        'Atendimentos'[Assunto] <> "Alteração em Massa"
+			            && NOT ISBLANK('Atendimentos'[Assunto])
 			    )
 			
-			```
+			VAR DataHora =
+			    MAXX(
+			        TabelaFiltrada,
+			        'Atendimentos'[Data de Criação] + 'Atendimentos'[Hora de Criação]
+			    )
+			
+			RETURN
+			FORMAT(DataHora, "dd/MM/yyyy HH:mm")
 		lineageTag: 1f666bc8-5ee7-4469-85d1-44c98ed78c45
 
-	measure UltimaDataHoraCriacaoProprietario = ```
+	measure UltimaDataHoraCriacaoProprietario =
 			
-			-- Step 1: Clean and standardize the full name
-			VAR NomeCompleto = TRIM(LOWER(COALESCE(SELECTEDVALUE('2026-2'[Proprietário Lead]), "")))
+			VAR NomeCompleto =
+			    TRIM(
+			        LOWER(
+			            COALESCE(
+			                SELECTEDVALUE('2026-2'[Proprietário Lead]),
+			                ""
+			            )
+			        )
+			    )
 			
-			-- Step 2: Find the first space to extract only the first name
-			VAR PosicaoEspaco = SEARCH(" ", NomeCompleto, 1, 0)
-			VAR NomeProprietario = 
+			VAR PosicaoEspaco =
+			    SEARCH(" ", NomeCompleto, 1, 0)
+			
+			VAR NomeProprietario =
 			    IF(
 			        PosicaoEspaco > 0,
 			        LEFT(NomeCompleto, PosicaoEspaco - 1),
 			        NomeCompleto
 			    )
 			
-			RETURN
-			    IF(
-			        NomeProprietario = "",
-			        BLANK(),
-			        CALCULATE(
-			            -- Concatenamos a Data e a Hora da linha mais recente em formato de texto
-			            CONCATENATEX(
-			                TOPN(1, Atendimentos, Atendimentos[Data de Criação], DESC),
-			                FORMAT(Atendimentos[Data de Criação], "dd/mm/yyyy") & " " & FORMAT(Atendimentos[Hora de Criação], "hh:mm"),
-			                " "
-			            ),
-			            -- Mantemos o seu filtro de busca por nome
-			            SEARCH(NomeProprietario, TRIM(LOWER(Atendimentos[Criado por])), 1, 0) > 0
-			        )
+			VAR DataHoraMaxima =
+			    CALCULATE(
+			        MAXX(
+			            Atendimentos,
+			            Atendimentos[Data de Criação] + Atendimentos[Hora de Criação]
+			        ),
+			        SEARCH(
+			            NomeProprietario,
+			            TRIM(LOWER(Atendimentos[Criado por])),
+			            1,
+			            0
+			        ) > 0
 			    )
 			
-			```
+			RETURN
+			IF(
+			    NomeProprietario = "",
+			    BLANK(),
+			    FORMAT(DataHoraMaxima, "dd/MM/yyyy HH:mm")
+			)
 		lineageTag: 694999aa-e88d-4256-bce6-46893fa0a8d7
 
 	measure 'Dias Sem Atendimento' = ```
@@ -274,6 +273,15 @@ table Medidas
 			```
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: 9892c2d4-4109-4c6c-9c8f-9535cdd5e36d
+
+	measure 'conver. atend - matr' =
+			
+			DIVIDE(
+			    [Matr 26-2],
+			    [Qtd Atendimentos]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 280035e9-81c1-44bf-81fc-fd4b7a7d2a86
 
 	column 'Coluna 1'
 		dataType: string

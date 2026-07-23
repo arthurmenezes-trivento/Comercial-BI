@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "19ba07da474bd9de2dfd",
   "position": {
     "x": 23.283582089552237,
@@ -91,11 +91,11 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "data Ultimo Atendimento"
+                  "Property": "Data Último Atendimento"
                 }
               },
               "queryRef": "Medidas.data Ultimo Atendimento",
-              "nativeQueryRef": "data Ultimo Atendimento1"
+              "nativeQueryRef": "Data Último Atendimento"
             },
             {
               "field": {
@@ -315,8 +315,101 @@
               }
             }
           ]
+        }
+      },
+      {
+        "name": "9d1f1a1109e1b87db67a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "2026-2"
+              }
+            },
+            "Property": "Nome Completo"
+          }
         },
-        "howCreated": "User"
+        "type": "Categorical"
+      },
+      {
+        "name": "a124221a35ce1a92a5c8",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "2026-2"
+                  }
+                },
+                "Property": "Proprietário Lead"
+              }
+            },
+            "Function": 3
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "0e02a5292abc10063ba8",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "UltimaDataHoraCriacaoProprietario"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "078dc54bbc853cc28636",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Data Último Atendimento"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "9773d4115271641b00be",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Dias Sem Atendimento"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "32914e2056d38358b2ba",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "2026-2"
+                  }
+                },
+                "Property": "Última Tabulação"
+              }
+            },
+            "Function": 3
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

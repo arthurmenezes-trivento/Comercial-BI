@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "5a3475f0952963219620",
+  "name": "3ede30dde11401c6b7b0",
   "position": {
-    "x": 8.0597014925373127,
-    "y": 108.35820895522387,
-    "z": 8000,
-    "height": 54.626865671641788,
-    "width": 137.91044776119404,
-    "tabOrder": 8000
+    "x": 17.507598784194531,
+    "y": 90.455927051671736,
+    "z": 12000,
+    "height": 62.249240121580549,
+    "width": 242.18844984802433,
+    "tabOrder": 12000
   },
   "visual": {
     "visualType": "slicer",
@@ -23,27 +23,12 @@
                       "Entity": "dCalendario"
                     }
                   },
-                  "Property": "Semana"
-                }
-              },
-              "queryRef": "dCalendario.Semana",
-              "nativeQueryRef": "Semana",
-              "active": true
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "dCalendario"
-                    }
-                  },
                   "Property": "Date"
                 }
               },
               "queryRef": "dCalendario.Date",
               "nativeQueryRef": "Date",
-              "active": false
+              "active": true
             }
           ]
         }
@@ -58,7 +43,7 @@
                     "Entity": "dCalendario"
                   }
                 },
-                "Property": "Semana"
+                "Property": "Date"
               }
             },
             "direction": "Ascending"
@@ -67,50 +52,21 @@
         "isDefaultSort": true
       }
     },
-    "expansionStates": [
-      {
-        "roles": [
-          "Values"
-        ],
-        "levels": [
-          {
-            "queryRefs": [
-              "dCalendario.Semana"
-            ],
-            "isCollapsed": true,
-            "identityKeys": [
-              {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "dCalendario"
-                    }
-                  },
-                  "Property": "Semana"
-                }
-              }
-            ],
-            "isPinned": true
-          },
-          {
-            "queryRefs": [
-              "dCalendario.Date"
-            ],
-            "isCollapsed": true,
-            "isPinned": true
-          }
-        ],
-        "root": {}
-      }
-    ],
     "objects": {
       "data": [
         {
           "properties": {
+            "startDate": {
+              "expr": {
+                "Literal": {
+                  "Value": "datetime'2026-04-07T00:00:00'"
+                }
+              }
+            },
             "mode": {
               "expr": {
                 "Literal": {
-                  "Value": "'Dropdown'"
+                  "Value": "'Between'"
                 }
               }
             }
@@ -133,78 +89,23 @@
                 "Where": [
                   {
                     "Condition": {
-                      "In": {
-                        "Expressions": [
-                          {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Source": "d"
-                                }
-                              },
-                              "Property": "Semana"
-                            }
+                      "Comparison": {
+                        "ComparisonKind": 2,
+                        "Left": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "d"
+                              }
+                            },
+                            "Property": "Date"
                           }
-                        ],
-                        "Values": [
-                          [
-                            {
-                              "Literal": {
-                                "Value": "'s16'"
-                              }
-                            }
-                          ]
-                        ]
-                      }
-                    },
-                    "Annotations": {
-                      "filterExpressionMetadata": {
-                        "expressions": [
-                          {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Entity": "dCalendario"
-                                }
-                              },
-                              "Property": "Semana"
-                            }
-                          }
-                        ],
-                        "decomposedIdentities": {
-                          "values": [
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'s16'"
-                                    }
-                                  }
-                                ]
-                              }
-                            ]
-                          ],
-                          "columns": [
-                            {
-                              "value": {
-                                "Column": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Entity": "dCalendario"
-                                    }
-                                  },
-                                  "Property": "Semana"
-                                }
-                              }
-                            }
-                          ]
                         },
-                        "valueMap": [
-                          {
-                            "0": "s16"
+                        "Right": {
+                          "Literal": {
+                            "Value": "datetime'2026-04-07T00:00:00'"
                           }
-                        ]
+                        }
                       }
                     }
                   }
@@ -217,10 +118,23 @@
       "header": [
         {
           "properties": {
-            "text": {
+            "textSize": {
               "expr": {
                 "Literal": {
-                  "Value": "'Semana'"
+                  "Value": "8D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "items": [
+        {
+          "properties": {
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
                 }
               }
             }
@@ -279,7 +193,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "10D"
                 }
               }
             }
