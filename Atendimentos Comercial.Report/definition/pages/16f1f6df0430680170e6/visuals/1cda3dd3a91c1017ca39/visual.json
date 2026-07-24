@@ -1,34 +1,20 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "fd0b09db52e561d45462",
+  "name": "1cda3dd3a91c1017ca39",
   "position": {
     "x": 48.973913043478262,
-    "y": 430.74782608695654,
-    "z": 16004,
-    "height": 243.75652173913045,
-    "width": 1170.9217391304348,
-    "tabOrder": 16004
+    "y": 152.48695652173913,
+    "z": 16005,
+    "height": 263.7913043478261,
+    "width": 554.295652173913,
+    "tabOrder": 16005
   },
   "visual": {
-    "visualType": "tableEx",
+    "visualType": "pivotTable",
     "query": {
       "queryState": {
-        "Values": {
+        "Rows": {
           "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "2026-2"
-                    }
-                  },
-                  "Property": "Nome Completo"
-                }
-              },
-              "queryRef": "2026-2.Nome Completo",
-              "nativeQueryRef": "Nome Completo"
-            },
             {
               "field": {
                 "Column": {
@@ -41,35 +27,27 @@
                 }
               },
               "queryRef": "2026-2.Proprietário Lead",
-              "nativeQueryRef": "Proprietário Lead"
-            },
+              "nativeQueryRef": "Proprietário Lead",
+              "active": true
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
             {
               "field": {
-                "Column": {
+                "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "2026-2"
+                      "Entity": "Medidas"
                     }
                   },
-                  "Property": "Situação Inscrição"
+                  "Property": "Matr 26-2"
                 }
               },
-              "queryRef": "2026-2.Situação Inscrição",
-              "nativeQueryRef": "Situação Inscrição"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Atendimentos"
-                    }
-                  },
-                  "Property": "Criado por"
-                }
-              },
-              "queryRef": "Atendimentos.Criado por",
-              "nativeQueryRef": "Criado por"
+              "queryRef": "Medidas.Matr 26-2",
+              "nativeQueryRef": "Matrículas",
+              "displayName": "Matrículas"
             },
             {
               "field": {
@@ -79,30 +57,45 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "UltimoAtendente"
+                  "Property": "Qtd Atendimentos"
                 }
               },
-              "queryRef": "Medidas.UltimoAtendente",
-              "nativeQueryRef": "UltimoAtendente"
+              "queryRef": "Medidas.Qtd Atendimentos",
+              "nativeQueryRef": "Leads Atendidos",
+              "displayName": "Leads Atendidos"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "conver. atend - matr"
+                }
+              },
+              "queryRef": "Medidas.conver. atend - matr",
+              "nativeQueryRef": "% atend. -> Matr.",
+              "displayName": "% atend. -> Matr."
             }
-          ],
-          "showAll": true
+          ]
         }
       },
       "sortDefinition": {
         "sort": [
           {
             "field": {
-              "Column": {
+              "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "2026-2"
+                    "Entity": "Medidas"
                   }
                 },
-                "Property": "Situação Inscrição"
+                "Property": "conver. atend - matr"
               }
             },
-            "direction": "Ascending"
+            "direction": "Descending"
           }
         ]
       }

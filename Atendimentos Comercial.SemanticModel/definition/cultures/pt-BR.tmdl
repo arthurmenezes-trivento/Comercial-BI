@@ -2441,6 +2441,16 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.9
 			          }
+			        },
+			        {
+			          "Matrículas": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -5008,6 +5018,16 @@ cultureInfo pt-BR
 			        {
 			          "qtd atendimentos": {
 			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Leads Atendidos": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -9417,6 +9437,16 @@ cultureInfo pt-BR
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
+			        },
+			        {
+			          "% atend. -> Matr.": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -9438,468 +9468,6 @@ cultureInfo pt-BR
 			    }
 			  },
 			  "Relationships": {
-			    "ultima_atualizacao_atualizado_em_trimestre_in_ultima_atualizacao_atualizado_em_ano": {
-			      "Binding": {
-			        "ConceptualEntity": "Ultima Atualizacao"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "ultima_atualizacao.atualizado_em.trimestre": {
-			          "Target": {
-			            "Entity": "ultima_atualizacao.atualizado_em.trimestre"
-			          }
-			        },
-			        "ultima_atualizacao.atualizado_em.ano": {
-			          "Target": {
-			            "Entity": "ultima_atualizacao.atualizado_em.ano"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "ultima_atualizacao.atualizado_em.trimestre"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "ultima_atualizacao.atualizado_em.ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_are_in_anos"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "ultima_atualizacao.atualizado_em.ano"
-			            },
-			            "Object": {
-			              "Role": "ultima_atualizacao.atualizado_em.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres3"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "ultima_atualizacao.atualizado_em.trimestre"
-			            },
-			            "Object": {
-			              "Role": "ultima_atualizacao.atualizado_em.ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos3"
-			        }
-			      ]
-			    },
-			    "d_calendario_date_dia_in_d_calendario_date_mê": {
-			      "Binding": {
-			        "ConceptualEntity": "dCalendario"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "d_calendario.date.dia": {
-			          "Target": {
-			            "Entity": "d_calendario.date.dia"
-			          }
-			        },
-			        "d_calendario.date.mê": {
-			          "Target": {
-			            "Entity": "d_calendario.date.mê"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "d_calendario.date.dia"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "d_calendario.date.mê"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dias_are_in_mê"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "d_calendario.date.mê"
-			            },
-			            "Object": {
-			              "Role": "d_calendario.date.dia"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mê_have_dias4"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "d_calendario.date.dia"
-			            },
-			            "Object": {
-			              "Role": "d_calendario.date.mê"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dias_have_mê4"
-			        }
-			      ]
-			    },
-			    "d_calendario_date_mê_in_d_calendario_date_trimestre": {
-			      "Binding": {
-			        "ConceptualEntity": "dCalendario"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "d_calendario.date.mê": {
-			          "Target": {
-			            "Entity": "d_calendario.date.mê"
-			          }
-			        },
-			        "d_calendario.date.trimestre": {
-			          "Target": {
-			            "Entity": "d_calendario.date.trimestre"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "d_calendario.date.mê"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "d_calendario.date.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mê_are_in_trimestres"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "d_calendario.date.trimestre"
-			            },
-			            "Object": {
-			              "Role": "d_calendario.date.mê"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê4"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "d_calendario.date.mê"
-			            },
-			            "Object": {
-			              "Role": "d_calendario.date.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres4"
-			        }
-			      ]
-			    },
-			    "d_calendario_date_trimestre_in_d_calendario_date_ano": {
-			      "Binding": {
-			        "ConceptualEntity": "dCalendario"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "d_calendario.date.trimestre": {
-			          "Target": {
-			            "Entity": "d_calendario.date.trimestre"
-			          }
-			        },
-			        "d_calendario.date.ano": {
-			          "Target": {
-			            "Entity": "d_calendario.date.ano"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "d_calendario.date.trimestre"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "d_calendario.date.ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_are_in_anos1"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "d_calendario.date.ano"
-			            },
-			            "Object": {
-			              "Role": "d_calendario.date.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres4"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "d_calendario.date.trimestre"
-			            },
-			            "Object": {
-			              "Role": "d_calendario.date.ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos4"
-			        }
-			      ]
-			    },
-			    "entity_20262_data_aprovação_mê_has_entity_20262_data_aprovação_dia": {
-			      "Binding": {
-			        "ConceptualEntity": "2026-2"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "entity_20262.data_aprovação.mê": {
-			          "Target": {
-			            "Entity": "entity_20262.data_aprovação.mê"
-			          }
-			        },
-			        "entity_20262.data_aprovação.dia": {
-			          "Target": {
-			            "Entity": "entity_20262.data_aprovação.dia"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_20262.data_aprovação.mê"
-			            },
-			            "Object": {
-			              "Role": "entity_20262.data_aprovação.dia"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mê_have_dias"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_20262.data_aprovação.dia"
-			            },
-			            "Object": {
-			              "Role": "entity_20262.data_aprovação.mê"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dias_have_mê"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "entity_20262.data_aprovação.dia"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "entity_20262.data_aprovação.mê"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dias_are_in_mê4"
-			        }
-			      ]
-			    },
-			    "entity_20262_data_aprovação_trimestre_has_entity_20262_data_aprovação_mê": {
-			      "Binding": {
-			        "ConceptualEntity": "2026-2"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "entity_20262.data_aprovação.trimestre": {
-			          "Target": {
-			            "Entity": "entity_20262.data_aprovação.trimestre"
-			          }
-			        },
-			        "entity_20262.data_aprovação.mê": {
-			          "Target": {
-			            "Entity": "entity_20262.data_aprovação.mê"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_20262.data_aprovação.trimestre"
-			            },
-			            "Object": {
-			              "Role": "entity_20262.data_aprovação.mê"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_20262.data_aprovação.mê"
-			            },
-			            "Object": {
-			              "Role": "entity_20262.data_aprovação.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "entity_20262.data_aprovação.mê"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "entity_20262.data_aprovação.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mê_are_in_trimestres4"
-			        }
-			      ]
-			    },
-			    "entity_20262_data_aprovação_ano_has_entity_20262_data_aprovação_trimestre": {
-			      "Binding": {
-			        "ConceptualEntity": "2026-2"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "entity_20262.data_aprovação.ano": {
-			          "Target": {
-			            "Entity": "entity_20262.data_aprovação.ano"
-			          }
-			        },
-			        "entity_20262.data_aprovação.trimestre": {
-			          "Target": {
-			            "Entity": "entity_20262.data_aprovação.trimestre"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_20262.data_aprovação.ano"
-			            },
-			            "Object": {
-			              "Role": "entity_20262.data_aprovação.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_20262.data_aprovação.trimestre"
-			            },
-			            "Object": {
-			              "Role": "entity_20262.data_aprovação.ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "entity_20262.data_aprovação.trimestre"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "entity_20262.data_aprovação.ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_are_in_anos4"
-			        }
-			      ]
-			    },
 			    "entity_20262_data_aprovação_hierarquia_de_data_has_entity_20262_data_aprovação_dia": {
 			      "Binding": {
 			        "ConceptualEntity": "2026-2"
@@ -10094,7 +9662,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_dias1"
+			          "ID": "mê_have_dias"
 			        },
 			        {
 			          "Attribute": {
@@ -10107,7 +9675,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dias_have_mê1"
+			          "ID": "dias_have_mê"
 			        },
 			        {
 			          "Preposition": {
@@ -10160,7 +9728,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê1"
+			          "ID": "trimestres_have_mê"
 			        },
 			        {
 			          "Attribute": {
@@ -10173,7 +9741,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres1"
+			          "ID": "mê_have_trimestres"
 			        },
 			        {
 			          "Preposition": {
@@ -10226,7 +9794,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres1"
+			          "ID": "anos_have_trimestres"
 			        },
 			        {
 			          "Attribute": {
@@ -10239,7 +9807,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos1"
+			          "ID": "trimestres_have_anos"
 			        },
 			        {
 			          "Preposition": {
@@ -10457,7 +10025,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_dias2"
+			          "ID": "mê_have_dias1"
 			        },
 			        {
 			          "Attribute": {
@@ -10470,7 +10038,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dias_have_mê2"
+			          "ID": "dias_have_mê1"
 			        },
 			        {
 			          "Preposition": {
@@ -10523,7 +10091,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê2"
+			          "ID": "trimestres_have_mê1"
 			        },
 			        {
 			          "Attribute": {
@@ -10536,7 +10104,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres2"
+			          "ID": "mê_have_trimestres1"
 			        },
 			        {
 			          "Preposition": {
@@ -10589,7 +10157,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres2"
+			          "ID": "anos_have_trimestres1"
 			        },
 			        {
 			          "Attribute": {
@@ -10602,7 +10170,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos2"
+			          "ID": "trimestres_have_anos1"
 			        },
 			        {
 			          "Preposition": {
@@ -10820,7 +10388,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_dias3"
+			          "ID": "mê_have_dias2"
 			        },
 			        {
 			          "Attribute": {
@@ -10833,7 +10401,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dias_have_mê3"
+			          "ID": "dias_have_mê2"
 			        },
 			        {
 			          "Preposition": {
@@ -10886,7 +10454,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê3"
+			          "ID": "trimestres_have_mê2"
 			        },
 			        {
 			          "Attribute": {
@@ -10899,7 +10467,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres3"
+			          "ID": "mê_have_trimestres2"
 			        },
 			        {
 			          "Preposition": {
@@ -10920,6 +10488,72 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "mê_are_in_trimestres1"
+			        }
+			      ]
+			    },
+			    "ultima_atualizacao_atualizado_em_ano_has_ultima_atualizacao_atualizado_em_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "Ultima Atualizacao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ultima_atualizacao.atualizado_em.ano": {
+			          "Target": {
+			            "Entity": "ultima_atualizacao.atualizado_em.ano"
+			          }
+			        },
+			        "ultima_atualizacao.atualizado_em.trimestre": {
+			          "Target": {
+			            "Entity": "ultima_atualizacao.atualizado_em.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "ultima_atualizacao.atualizado_em.ano"
+			            },
+			            "Object": {
+			              "Role": "ultima_atualizacao.atualizado_em.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "anos_have_trimestres2"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "ultima_atualizacao.atualizado_em.trimestre"
+			            },
+			            "Object": {
+			              "Role": "ultima_atualizacao.atualizado_em.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_anos2"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "ultima_atualizacao.atualizado_em.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "ultima_atualizacao.atualizado_em.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_anos1"
 			        }
 			      ]
 			    },
@@ -11085,6 +10719,204 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "atualizado_ems_have_hierarquia_de_data"
+			        }
+			      ]
+			    },
+			    "d_calendario_date_mê_has_d_calendario_date_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "dCalendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_calendario.date.mê": {
+			          "Target": {
+			            "Entity": "d_calendario.date.mê"
+			          }
+			        },
+			        "d_calendario.date.dia": {
+			          "Target": {
+			            "Entity": "d_calendario.date.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_calendario.date.mê"
+			            },
+			            "Object": {
+			              "Role": "d_calendario.date.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_have_dias3"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_calendario.date.dia"
+			            },
+			            "Object": {
+			              "Role": "d_calendario.date.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dias_have_mê3"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "d_calendario.date.dia"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "d_calendario.date.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dias_are_in_mê"
+			        }
+			      ]
+			    },
+			    "d_calendario_date_trimestre_has_d_calendario_date_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "dCalendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_calendario.date.trimestre": {
+			          "Target": {
+			            "Entity": "d_calendario.date.trimestre"
+			          }
+			        },
+			        "d_calendario.date.mê": {
+			          "Target": {
+			            "Entity": "d_calendario.date.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_calendario.date.trimestre"
+			            },
+			            "Object": {
+			              "Role": "d_calendario.date.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_mê3"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_calendario.date.mê"
+			            },
+			            "Object": {
+			              "Role": "d_calendario.date.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_have_trimestres3"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "d_calendario.date.mê"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "d_calendario.date.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_are_in_trimestres"
+			        }
+			      ]
+			    },
+			    "d_calendario_date_ano_has_d_calendario_date_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "dCalendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_calendario.date.ano": {
+			          "Target": {
+			            "Entity": "d_calendario.date.ano"
+			          }
+			        },
+			        "d_calendario.date.trimestre": {
+			          "Target": {
+			            "Entity": "d_calendario.date.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_calendario.date.ano"
+			            },
+			            "Object": {
+			              "Role": "d_calendario.date.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "anos_have_trimestres3"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_calendario.date.trimestre"
+			            },
+			            "Object": {
+			              "Role": "d_calendario.date.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_anos3"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "d_calendario.date.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "d_calendario.date.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_anos"
 			        }
 			      ]
 			    },
@@ -16205,6 +16037,204 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "ID_are_names_IDs_of_d_unidades"
+			        }
+			      ]
+			    },
+			    "entity_20262_data_aprovação_ano_has_entity_20262_data_aprovação_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "2026-2"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_20262.data_aprovação.ano": {
+			          "Target": {
+			            "Entity": "entity_20262.data_aprovação.ano"
+			          }
+			        },
+			        "entity_20262.data_aprovação.trimestre": {
+			          "Target": {
+			            "Entity": "entity_20262.data_aprovação.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_20262.data_aprovação.ano"
+			            },
+			            "Object": {
+			              "Role": "entity_20262.data_aprovação.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "anos_have_trimestres4"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_20262.data_aprovação.trimestre"
+			            },
+			            "Object": {
+			              "Role": "entity_20262.data_aprovação.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_anos4"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "entity_20262.data_aprovação.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "entity_20262.data_aprovação.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_anos4"
+			        }
+			      ]
+			    },
+			    "entity_20262_data_aprovação_trimestre_has_entity_20262_data_aprovação_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "2026-2"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_20262.data_aprovação.trimestre": {
+			          "Target": {
+			            "Entity": "entity_20262.data_aprovação.trimestre"
+			          }
+			        },
+			        "entity_20262.data_aprovação.mê": {
+			          "Target": {
+			            "Entity": "entity_20262.data_aprovação.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_20262.data_aprovação.trimestre"
+			            },
+			            "Object": {
+			              "Role": "entity_20262.data_aprovação.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_mê4"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_20262.data_aprovação.mê"
+			            },
+			            "Object": {
+			              "Role": "entity_20262.data_aprovação.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_have_trimestres4"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "entity_20262.data_aprovação.mê"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "entity_20262.data_aprovação.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_are_in_trimestres4"
+			        }
+			      ]
+			    },
+			    "entity_20262_data_aprovação_mê_has_entity_20262_data_aprovação_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "2026-2"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_20262.data_aprovação.mê": {
+			          "Target": {
+			            "Entity": "entity_20262.data_aprovação.mê"
+			          }
+			        },
+			        "entity_20262.data_aprovação.dia": {
+			          "Target": {
+			            "Entity": "entity_20262.data_aprovação.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_20262.data_aprovação.mê"
+			            },
+			            "Object": {
+			              "Role": "entity_20262.data_aprovação.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_have_dias4"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_20262.data_aprovação.dia"
+			            },
+			            "Object": {
+			              "Role": "entity_20262.data_aprovação.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dias_have_mê4"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "entity_20262.data_aprovação.dia"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "entity_20262.data_aprovação.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dias_are_in_mê4"
 			        }
 			      ]
 			    }

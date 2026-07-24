@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "4663248f95fecc7e39df",
   "position": {
     "x": 269.59556321734794,
@@ -178,7 +178,7 @@
                             },
                             {
                               "Literal": {
-                                "Value": "datetime'2026-07-22T00:00:00'"
+                                "Value": "datetime'2026-07-24T00:00:00'"
                               }
                             }
                           ]
@@ -225,7 +225,7 @@
                                 "1": [
                                   {
                                     "Literal": {
-                                      "Value": "datetime'2026-07-22T00:00:00'"
+                                      "Value": "datetime'2026-07-24T00:00:00'"
                                     }
                                   }
                                 ]
@@ -262,7 +262,7 @@
                         "valueMap": [
                           {
                             "0": "s16",
-                            "1": "22/07/2026"
+                            "1": "24/07/2026"
                           }
                         ]
                       }
