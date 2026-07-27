@@ -4,10 +4,10 @@
   "position": {
     "x": 195.22457291972898,
     "y": 94.9081009647152,
-    "z": 15000,
+    "z": 5000,
     "height": 54.626865671641788,
     "width": 141.49253731343282,
-    "tabOrder": 15000
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "slicer",
@@ -108,6 +108,34 @@
                             {
                               "Literal": {
                                 "Value": "'Célula'"
+                              }
+                            }
+                          ],
+                          [
+                            {
+                              "Literal": {
+                                "Value": "'Unidade Altamira'"
+                              }
+                            }
+                          ],
+                          [
+                            {
+                              "Literal": {
+                                "Value": "'Unidade Canaã'"
+                              }
+                            }
+                          ],
+                          [
+                            {
+                              "Literal": {
+                                "Value": "'Unidade Itabirito'"
+                              }
+                            }
+                          ],
+                          [
+                            {
+                              "Literal": {
+                                "Value": "'Unidade Lorena'"
                               }
                             }
                           ]

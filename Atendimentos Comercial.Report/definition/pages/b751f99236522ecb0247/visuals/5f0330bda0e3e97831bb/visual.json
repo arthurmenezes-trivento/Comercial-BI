@@ -4,10 +4,10 @@
   "position": {
     "x": 439.48051948051949,
     "y": 202.90909090909091,
-    "z": 7002,
+    "z": 9000,
     "height": 432.93506493506493,
     "width": 832.20779220779218,
-    "tabOrder": 7002
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "pythonVisual",
@@ -315,62 +315,6 @@
         },
         "type": "Categorical",
         "howCreated": "User"
-      },
-      {
-        "name": "e384684a1684d00c929d",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dCalendario"
-              }
-            },
-            "Property": "Date"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "3de7afe207b06e16a5c6",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "2026-2"
-              }
-            },
-            "Property": "Legado"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "d236c835dcc85e5e9e10",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "2026-2"
-              }
-            },
-            "Property": "Aging Faixa"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "7dac95a4d214c989e0d0",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Matr 26-2"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "702ea1ca5b733ea760a4",
   "position": {
     "x": 469.78723404255322,
     "y": 203.28267477203647,
-    "z": 7001,
+    "z": 8000,
     "height": 209.11854103343467,
     "width": 672.09726443769,
-    "tabOrder": 7001
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -553,62 +553,6 @@
         },
         "type": "Categorical",
         "howCreated": "User"
-      },
-      {
-        "name": "2e2fc1f0b575e067d2c0",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "2026-2"
-              }
-            },
-            "Property": "Legado"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "e6e4513564d76ee83896",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dCalendario"
-              }
-            },
-            "Property": "Date"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "1b75cf1343466a5b7388",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Matr 26-2"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "fb2ee754e8b35e0333dd",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "2026-2"
-              }
-            },
-            "Property": "Aging Faixa"
-          }
-        },
-        "type": "Categorical"
       }
     ]
   }

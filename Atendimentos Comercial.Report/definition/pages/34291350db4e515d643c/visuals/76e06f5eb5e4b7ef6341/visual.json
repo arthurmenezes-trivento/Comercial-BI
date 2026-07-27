@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "76e06f5eb5e4b7ef6341",
   "position": {
     "x": 865.07462686567158,
     "y": 225.67164179104478,
-    "z": 12000,
+    "z": 11000,
     "height": 417.31343283582089,
     "width": 414.62686567164178,
-    "tabOrder": 12000
+    "tabOrder": 11000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -346,37 +346,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "02f074ab60d502a55a9d",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Atendimentos"
-              }
-            },
-            "Property": "Resultado do Contato"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "72dae30349a00e05d227",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Qtd tabulações"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

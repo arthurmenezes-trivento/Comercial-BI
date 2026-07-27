@@ -45,34 +45,6 @@ expression 'Token de acesso' =
 
 	annotation PBI_ResultType = Function
 
-expression Legado = ```
-		let
-		    FonteSharePoint = SharePoint.Files(
-		        "https://grupoeducacionalsantoant.sharepoint.com/sites/TriventoEducaco",
-		        [ApiVersion = 15]
-		    ),
-		
-		    Arquivo = FonteSharePoint{[Name="BI - Base Legado.xlsx"]}[Content],
-		
-		    Fonte = Excel.Workbook(Arquivo, null, true),
-		
-		    #"Resultado da consulta1" = Fonte{[Name="Resultado da consulta"]}[Data],
-		    
-		    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(#"Resultado da consulta1", [PromoteAllScalars=true]),
-		    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Nome", type text}, {"Codigo", type text}, {"Celular", type text}, {"Data Criacao", type date}, {"Concuro ID", type text}}),
-		    #"Personalização Adicionada" = Table.AddColumn(#"Tipo Alterado", "Legado", each "Legado"),
-		    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Personalização Adicionada",{{"Legado", type text}}),
-		    #"Linhas Filtradas" = Table.SelectRows(#"Tipo Alterado1", each [Celular] <> null and [Celular] <> "")
-		in
-		    #"Linhas Filtradas"
-		```
-	lineageTag: 852e0a76-52e7-4f99-aeda-204fe5e1f4cb
-	queryGroup: 'Consultas - Token'
-
-	annotation PBI_NavigationStepName = Navegação
-
-	annotation PBI_ResultType = Table
-
 expression Inscricoes =
 		let
 		    Token = #"Token de acesso"(),
@@ -156,6 +128,34 @@ expression Inscricoes =
 		in
 		    #"result.cad_faseportalcandidato Expandido"
 	lineageTag: c3a7adf9-4066-4267-8dea-ee76593a33c4
+	queryGroup: 'Consultas - Token'
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+
+expression Legado = ```
+		let
+		    FonteSharePoint = SharePoint.Files(
+		        "https://grupoeducacionalsantoant.sharepoint.com/sites/TriventoEducaco",
+		        [ApiVersion = 15]
+		    ),
+		
+		    Arquivo = FonteSharePoint{[Name="BI - Base Legado.xlsx"]}[Content],
+		
+		    Fonte = Excel.Workbook(Arquivo, null, true),
+		
+		    #"Resultado da consulta1" = Fonte{[Name="Resultado da consulta"]}[Data],
+		    
+		    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(#"Resultado da consulta1", [PromoteAllScalars=true]),
+		    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Nome", type text}, {"Codigo", type text}, {"Celular", type text}, {"Data Criacao", type date}, {"Concuro ID", type text}}),
+		    #"Personalização Adicionada" = Table.AddColumn(#"Tipo Alterado", "Legado", each "Legado"),
+		    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Personalização Adicionada",{{"Legado", type text}}),
+		    #"Linhas Filtradas" = Table.SelectRows(#"Tipo Alterado1", each [Celular] <> null and [Celular] <> "")
+		in
+		    #"Linhas Filtradas"
+		```
+	lineageTag: 852e0a76-52e7-4f99-aeda-204fe5e1f4cb
 	queryGroup: 'Consultas - Token'
 
 	annotation PBI_NavigationStepName = Navegação

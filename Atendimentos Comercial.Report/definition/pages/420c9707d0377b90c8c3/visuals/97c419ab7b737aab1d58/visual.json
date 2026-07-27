@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "97c419ab7b737aab1d58",
   "position": {
     "x": 515.820895522388,
     "y": 188.955223880597,
-    "z": 8005,
+    "z": 8000,
     "height": 233.73134328358208,
     "width": 334.02985074626866,
-    "tabOrder": 8005
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "funnel",

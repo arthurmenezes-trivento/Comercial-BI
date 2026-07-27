@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "0c8a1274d4a90469d5eb",
   "position": {
     "x": 713.920972644377,
     "y": 90.455927051671736,
-    "z": 13004,
+    "z": 16000,
     "height": 62.249240121580549,
     "width": 241.21580547112464,
-    "tabOrder": 13004
+    "tabOrder": 16000
   },
   "visual": {
     "visualType": "slicer",
@@ -231,23 +231,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "04cc1025cc06b0b1ca96",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Atendimentos"
-              }
-            },
-            "Property": "Criado por"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

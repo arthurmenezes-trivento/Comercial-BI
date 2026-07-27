@@ -1,6 +1,22 @@
 table Atendimentos
 	lineageTag: 48aff271-58b6-4af5-97f5-c49aed976afd
 
+	column 'Canal de Origem'
+		dataType: string
+		lineageTag: 025e9b84-c27d-4c72-9339-ea9d2bc95b80
+		summarizeBy: none
+		sourceColumn: Canal de Origem
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Resultado do Contato'
+		dataType: string
+		lineageTag: 61d450a7-cf0c-459c-bfa0-eca20a67d820
+		summarizeBy: none
+		sourceColumn: Resultado do Contato
+
+		annotation SummarizationSetBy = Automatic
+
 	column 'Criado por'
 		dataType: string
 		lineageTag: 2700d898-82fb-4327-9d96-31e71f4a49c7
@@ -52,22 +68,6 @@ table Atendimentos
 		lineageTag: d440a88f-fce9-40d2-9ff5-dfaaf9b752c0
 		summarizeBy: none
 		sourceColumn: Assunto
-
-		annotation SummarizationSetBy = Automatic
-
-	column 'Canal de Origem'
-		dataType: string
-		lineageTag: 025e9b84-c27d-4c72-9339-ea9d2bc95b80
-		summarizeBy: none
-		sourceColumn: Canal de Origem
-
-		annotation SummarizationSetBy = Automatic
-
-	column 'Resultado do Contato'
-		dataType: string
-		lineageTag: 61d450a7-cf0c-459c-bfa0-eca20a67d820
-		summarizeBy: none
-		sourceColumn: Resultado do Contato
 
 		annotation SummarizationSetBy = Automatic
 

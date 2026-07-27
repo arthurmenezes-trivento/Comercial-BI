@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "78bb800f48bab873e9e2",
   "position": {
     "x": 22.260869565217391,
@@ -120,51 +120,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "53ab6075b26a23766074",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "2026-2"
-              }
-            },
-            "Property": "Proprietário Lead"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "573bc35649bd8cc7a610",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Matr 26-2"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "a1e52d5105bcb64221ad",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Média Aging"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

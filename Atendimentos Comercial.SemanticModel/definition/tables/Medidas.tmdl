@@ -279,7 +279,7 @@ table Medidas
 			
 			DIVIDE(
 			    [Matr 26-2],
-			    [Qtd Atendimentos]
+			    [Atendimentos (Proprietário)]
 			)
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: 280035e9-81c1-44bf-81fc-fd4b7a7d2a86
@@ -305,6 +305,20 @@ table Medidas
 			    )
 			```
 		lineageTag: d6129c4c-f29e-4899-95c4-866f665f6ae5
+
+	measure 'Atendimentos (Proprietário)' = ```
+			
+			CALCULATE(
+			    COUNTROWS('atendimentos'),
+			    FILTER(
+			        'atendimentos',
+			        'Atendimentos'[Criado por] = RELATED('2026-2'[Proprietário Lead])
+			    )
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 8129f827-26c2-44e4-be31-6dce2876b637
 
 	column 'Coluna 1'
 		dataType: string

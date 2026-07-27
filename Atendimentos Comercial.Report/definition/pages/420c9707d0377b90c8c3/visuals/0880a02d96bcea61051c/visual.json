@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "0880a02d96bcea61051c",
   "position": {
     "x": 8.0597014925373127,
     "y": 188.955223880597,
-    "z": 8001,
+    "z": 7000,
     "height": 247.1641791044776,
     "width": 437.0149253731343,
-    "tabOrder": 8001
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "funnel",
@@ -248,79 +248,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "85007a5b4bb0a10c7808",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Funil_Curso"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "54efee1e0bd73825382a",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Funil_Dados"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "166e715760a71a0a0a81",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Funil_Inscricao"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "924da66c870251080a06",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Funil_prova online"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "268404b4ce8421e58b48",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Funil_pagamento"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

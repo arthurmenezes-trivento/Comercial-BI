@@ -5019,16 +5019,6 @@ cultureInfo pt-BR
 			          "qtd atendimentos": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "Leads Atendidos": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -9465,6 +9455,28 @@ cultureInfo pt-BR
 			          }
 			        }
 			      ]
+			    },
+			    "medida.atendimentos_proprietário": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Atendimentos (Proprietário)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "atendimentos (proprietário)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "atendimentos": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
@@ -11411,6 +11423,72 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "Phrasing20262_have_atendimentos"
+			        }
+			      ]
+			    },
+			    "atendimento_has_medida_atendimentos_proprietário": {
+			      "Binding": {
+			        "ConceptualEntity": "Atendimentos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "atendimento": {
+			          "Target": {
+			            "Entity": "atendimento"
+			          }
+			        },
+			        "medida.atendimentos_proprietário": {
+			          "Target": {
+			            "Entity": "medida.atendimentos_proprietário"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "atendimento"
+			            },
+			            "Object": {
+			              "Role": "medida.atendimentos_proprietário"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "atendimentos_have_atendimentos_proprietário"
+			        }
+			      ]
+			    },
+			    "entity_20262_has_medida_matriculado_sem_fase_do_candidato": {
+			      "Binding": {
+			        "ConceptualEntity": "2026-2"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_20262": {
+			          "Target": {
+			            "Entity": "entity_20262"
+			          }
+			        },
+			        "medida.matriculado_sem_fase_do_candidato": {
+			          "Target": {
+			            "Entity": "medida.matriculado_sem_fase_do_candidato"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_20262"
+			            },
+			            "Object": {
+			              "Role": "medida.matriculado_sem_fase_do_candidato"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing20262_have_matriculado_sem_fase_do_candidato"
 			        }
 			      ]
 			    },

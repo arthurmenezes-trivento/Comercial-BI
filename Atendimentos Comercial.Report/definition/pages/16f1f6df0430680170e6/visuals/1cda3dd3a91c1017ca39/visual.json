@@ -4,10 +4,10 @@
   "position": {
     "x": 48.973913043478262,
     "y": 152.48695652173913,
-    "z": 16005,
+    "z": 8000,
     "height": 263.7913043478261,
     "width": 554.295652173913,
-    "tabOrder": 16005
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -57,12 +57,12 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Qtd Atendimentos"
+                  "Property": "Atendimentos (Proprietário)"
                 }
               },
-              "queryRef": "Medidas.Qtd Atendimentos",
-              "nativeQueryRef": "Leads Atendidos",
-              "displayName": "Leads Atendidos"
+              "queryRef": "Medidas.Leads Atendidos Proprietário",
+              "nativeQueryRef": "Atendimentos",
+              "displayName": "Atendimentos"
             },
             {
               "field": {
@@ -99,6 +99,49 @@
           }
         ]
       }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "102.52394588355772D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.Leads Atendidos Proprietário"
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {}
+        }
+      ],
+      "subTotals": [
+        {
+          "properties": {
+            "columnSubtotals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "rowSubtotals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
   }

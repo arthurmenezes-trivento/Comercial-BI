@@ -4,8 +4,8 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 0,
-        "y": 181.48148148148147
+        "x": 423.45679012345676,
+        "y": 35.802469135802468
       },
       "nodes": [
         {
@@ -233,8 +233,8 @@
         },
         {
           "location": {
-            "x": 837.23347628107274,
-            "y": 328.8020196451476
+            "x": 854.05101674318178,
+            "y": 443.161294787489
           },
           "nodeIndex": "2026-2",
           "nodeLineageTag": "b26d4ab7-80b2-4625-a783-b252ec6a50a5",
@@ -253,6 +253,6 @@
       "tablesLocked": false
     }
   ],
-  "selectedDiagram": "Todas as tabelas",
+  "selectedDiagram": "Consolidado diario",
   "defaultDiagram": "Todas as tabelas"
 }

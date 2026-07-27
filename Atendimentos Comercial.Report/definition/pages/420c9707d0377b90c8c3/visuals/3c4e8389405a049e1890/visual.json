@@ -4,10 +4,10 @@
   "position": {
     "x": 26.865671641791042,
     "y": 436.1194029850746,
-    "z": 8006,
+    "z": 9000,
     "height": 252.53731343283582,
     "width": 388.65671641791045,
-    "tabOrder": 8006
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -236,6 +236,20 @@
           },
           "selector": {
             "metadata": "Atendimentos.Resultado do Contato"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "152.7761224692537D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "2026-2.Curso ID"
           }
         }
       ],
