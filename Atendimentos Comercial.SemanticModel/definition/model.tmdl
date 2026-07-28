@@ -16,9 +16,14 @@ queryGroup 'Erros na Consulta - 27/07/2026 16:53:19'
 
 	annotation PBI_QueryGroupOrder = 1
 
+/// Erros nas consultas que foram carregadas em 28/07/2026 18:55:56.
+queryGroup 'Erros na Consulta - 28/07/2026 18:55:56'
+
+	annotation PBI_QueryGroupOrder = 2
+
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["Token de acesso","Inscricoes","dUnidade","DeparaCursos","dCanal","Atendimentos","Medidas","Função Invocada","ALTAMIRA","LORENA","ITABIRITO","Matrículas GD","2026-2","Legado","Leads","dAtendentes"]
+annotation PBI_QueryOrder = ["Token de acesso","Inscricoes","dUnidade","DeparaCursos","dCanal","Atendimentos","Medidas","Função Invocada","ALTAMIRA","LORENA","ITABIRITO","Matrículas GD","2026-2","Legado","Leads","dAtendentes","Erros em Matrículas GD"]
 
 annotation PBI_ProTooling = ["DevMode"]
 

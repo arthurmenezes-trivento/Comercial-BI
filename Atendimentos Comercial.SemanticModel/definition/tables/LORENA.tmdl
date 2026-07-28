@@ -167,22 +167,19 @@ table LORENA
 
 		annotation SummarizationSetBy = Automatic
 
-	column 'CONSULTOR (a)'
-		dataType: string
-		isHidden
-		lineageTag: 7eb3b4d5-9f0c-4675-a39c-a6fbd57be257
-		summarizeBy: none
-		sourceColumn: CONSULTOR (a)
-
-		changedProperty = IsHidden
-
-		annotation SummarizationSetBy = Automatic
-
 	column 'Número de Inscrição'
 		dataType: string
 		lineageTag: df7c0e0e-d488-4996-b48a-5be68067d737
 		summarizeBy: none
 		sourceColumn: Número de Inscrição
+
+		annotation SummarizationSetBy = Automatic
+
+	column obrigadaa
+		dataType: string
+		lineageTag: c41ee14f-f76a-4e1b-822a-8725f5b493bd
+		summarizeBy: none
+		sourceColumn: obrigadaa
 
 		annotation SummarizationSetBy = Automatic
 

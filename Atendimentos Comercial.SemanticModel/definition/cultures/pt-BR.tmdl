@@ -2194,6 +2194,16 @@ cultureInfo pt-BR
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
+			        },
+			        {
+			          "Último Atendente": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -3484,31 +3494,6 @@ cultureInfo pt-BR
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.591
-			          }
-			        }
-			      ]
-			    },
-			    "lorena.CONSULTOR_a": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "LORENA",
-			          "ConceptualProperty": "CONSULTOR (a)"
-			        }
-			      },
-			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
-			      "Terms": [
-			        {
-			          "CONSULTOR (a)": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "CONSULTOR": {
-			            "State": "Generated",
-			            "Weight": 0.75
 			          }
 			        }
 			      ]
@@ -9507,42 +9492,25 @@ cultureInfo pt-BR
 			          }
 			        }
 			      ]
+			    },
+			    "entity_20262.forma_de_pagamento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "2026-2",
+			          "ConceptualProperty": "forma de pagamento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "forma de pagamento": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "entity_20262_data_aprovação_hierarquia_de_data_has_entity_20262_data_aprovação_dia": {
-			      "Binding": {
-			        "ConceptualEntity": "2026-2"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "entity_20262.data_aprovação.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "entity_20262.data_aprovação.hierarquia_de_data"
-			          }
-			        },
-			        "entity_20262.data_aprovação.dia": {
-			          "Target": {
-			            "Entity": "entity_20262.data_aprovação.dia"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_20262.data_aprovação.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "entity_20262.data_aprovação.dia"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias"
-			        }
-			      ]
-			    },
 			    "entity_20262_data_aprovação_hierarquia_de_data_has_entity_20262_data_aprovação_mê": {
 			      "Binding": {
 			        "ConceptualEntity": "2026-2"
@@ -9902,7 +9870,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias1"
+			          "ID": "hierarquia_de_data_have_dias"
 			        }
 			      ]
 			    },
@@ -10265,7 +10233,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias2"
+			          "ID": "hierarquia_de_data_have_dias1"
 			        }
 			      ]
 			    },
@@ -10628,7 +10596,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias3"
+			          "ID": "hierarquia_de_data_have_dias2"
 			        }
 			      ]
 			    },
@@ -10991,7 +10959,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias4"
+			          "ID": "hierarquia_de_data_have_dias3"
 			        }
 			      ]
 			    },
@@ -11453,6 +11421,105 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "Phrasing20262_have_atendimentos"
+			        }
+			      ]
+			    },
+			    "entity_20262_has_forma_de_pagamento": {
+			      "Binding": {
+			        "ConceptualEntity": "2026-2"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_20262": {
+			          "Target": {
+			            "Entity": "entity_20262"
+			          }
+			        },
+			        "entity_20262.forma_de_pagamento": {
+			          "Target": {
+			            "Entity": "entity_20262.forma_de_pagamento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_20262"
+			            },
+			            "Object": {
+			              "Role": "entity_20262.forma_de_pagamento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing20262_have_forma_de_pagamentos"
+			        }
+			      ]
+			    },
+			    "atendimento_has_medida_atendente_teste": {
+			      "Binding": {
+			        "ConceptualEntity": "Atendimentos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "atendimento": {
+			          "Target": {
+			            "Entity": "atendimento"
+			          }
+			        },
+			        "medida.atendente_teste": {
+			          "Target": {
+			            "Entity": "medida.atendente_teste"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "atendimento"
+			            },
+			            "Object": {
+			              "Role": "medida.atendente_teste"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "atendimentos_have_atendente_teste"
+			        }
+			      ]
+			    },
+			    "entity_20262_has_medida_atendente_teste": {
+			      "Binding": {
+			        "ConceptualEntity": "2026-2"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_20262": {
+			          "Target": {
+			            "Entity": "entity_20262"
+			          }
+			        },
+			        "medida.atendente_teste": {
+			          "Target": {
+			            "Entity": "medida.atendente_teste"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_20262"
+			            },
+			            "Object": {
+			              "Role": "medida.atendente_teste"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing20262_have_atendente_teste"
 			        }
 			      ]
 			    },
@@ -14868,6 +14935,39 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
+			    "entity_20262_has_medida_ultimo_atendente": {
+			      "Binding": {
+			        "ConceptualEntity": "2026-2"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_20262": {
+			          "Target": {
+			            "Entity": "entity_20262"
+			          }
+			        },
+			        "medida.ultimo_atendente": {
+			          "Target": {
+			            "Entity": "medida.ultimo_atendente"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_20262"
+			            },
+			            "Object": {
+			              "Role": "medida.ultimo_atendente"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing20262_have_ultimo_atendente"
+			        }
+			      ]
+			    },
 			    "atendimento_has_assunto": {
 			      "Binding": {
 			        "ConceptualEntity": "Atendimentos"
@@ -16112,6 +16212,39 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "ID_are_names_IDs_of_d_unidades"
+			        }
+			      ]
+			    },
+			    "entity_20262_data_aprovação_hierarquia_de_data_has_entity_20262_data_aprovação_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "2026-2"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_20262.data_aprovação.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "entity_20262.data_aprovação.hierarquia_de_data"
+			          }
+			        },
+			        "entity_20262.data_aprovação.dia": {
+			          "Target": {
+			            "Entity": "entity_20262.data_aprovação.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_20262.data_aprovação.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "entity_20262.data_aprovação.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_dias4"
 			        }
 			      ]
 			    },

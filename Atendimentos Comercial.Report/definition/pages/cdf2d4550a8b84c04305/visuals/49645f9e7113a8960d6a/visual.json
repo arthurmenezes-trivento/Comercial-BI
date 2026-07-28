@@ -1,19 +1,19 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "19ba07da474bd9de2dfd",
+  "name": "49645f9e7113a8960d6a",
   "position": {
-    "x": 23.283582089552237,
-    "y": 221.19402985074626,
+    "x": 33.069908814589667,
+    "y": 220.790273556231,
     "z": 4000,
-    "height": 454.92537313432837,
-    "width": 871.3432835820895,
+    "height": 415.31914893617022,
+    "width": 1222.613981762918,
     "tabOrder": 4000
   },
   "visual": {
-    "visualType": "pivotTable",
+    "visualType": "tableEx",
     "query": {
       "queryState": {
-        "Rows": {
+        "Values": {
           "projections": [
             {
               "field": {
@@ -27,47 +27,105 @@
                 }
               },
               "queryRef": "2026-2.Nome Completo",
-              "nativeQueryRef": "Nome Completo1",
-              "active": true
-            }
-          ]
-        },
-        "Values": {
-          "projections": [
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "2026-2"
-                        }
-                      },
-                      "Property": "Proprietário Lead"
-                    }
-                  },
-                  "Function": 3
-                }
-              },
-              "queryRef": "Min(2026-2.Proprietário Lead)",
-              "nativeQueryRef": "Proprietário Lead",
-              "displayName": "Proprietário Lead"
+              "nativeQueryRef": "Nome Completo1"
             },
             {
               "field": {
-                "Measure": {
+                "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Medidas"
+                      "Entity": "2026-2"
                     }
                   },
-                  "Property": "UltimaDataHoraCriacaoProprietario"
+                  "Property": "Celular"
                 }
               },
-              "queryRef": "Medidas.UltimaDataHoraCriacaoProprietario",
-              "nativeQueryRef": "úlltimo atendimento Proprietario",
-              "displayName": "úlltimo atendimento Proprietario"
+              "queryRef": "2026-2.Celular",
+              "nativeQueryRef": "Celular"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "2026-2"
+                    }
+                  },
+                  "Property": "email"
+                }
+              },
+              "queryRef": "2026-2.email",
+              "nativeQueryRef": "email"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "2026-2"
+                    }
+                  },
+                  "Property": "forma de pagamento"
+                }
+              },
+              "queryRef": "2026-2.forma de pagamento",
+              "nativeQueryRef": "forma de pagamento"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "2026-2"
+                    }
+                  },
+                  "Property": "Situação Pagamento"
+                }
+              },
+              "queryRef": "2026-2.Situação Pagamento",
+              "nativeQueryRef": "Situação Pagamento"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "2026-2"
+                    }
+                  },
+                  "Property": "Última Tabulação"
+                }
+              },
+              "queryRef": "2026-2.Última Tabulação",
+              "nativeQueryRef": "Última Tabulação"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "2026-2"
+                    }
+                  },
+                  "Property": "Unidade"
+                }
+              },
+              "queryRef": "2026-2.Unidade",
+              "nativeQueryRef": "Unidade"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "2026-2"
+                    }
+                  },
+                  "Property": "Forma de Ingresso"
+                }
+              },
+              "queryRef": "2026-2.Forma de Ingresso",
+              "nativeQueryRef": "Forma de Ingresso"
             },
             {
               "field": {
@@ -81,56 +139,8 @@
                 }
               },
               "queryRef": "Medidas.UltimoAtendente",
-              "nativeQueryRef": "UltimoAtendente1"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Medidas"
-                    }
-                  },
-                  "Property": "Data Último Atendimento"
-                }
-              },
-              "queryRef": "Medidas.data Ultimo Atendimento",
-              "nativeQueryRef": "Data Último Atendimento"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Medidas"
-                    }
-                  },
-                  "Property": "Dias Sem Atendimento"
-                }
-              },
-              "queryRef": "Medidas.Dias Sem Atendimento",
-              "nativeQueryRef": "Última Interação CRM (Dias)",
-              "displayName": "Última Interação CRM (Dias)"
-            },
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "2026-2"
-                        }
-                      },
-                      "Property": "Última Tabulação"
-                    }
-                  },
-                  "Function": 3
-                }
-              },
-              "queryRef": "Min(2026-2.Última Tabulação)",
-              "nativeQueryRef": "Última Tabulação",
-              "displayName": "Última Tabulação"
+              "nativeQueryRef": "Último Atendente",
+              "displayName": "Último Atendente"
             }
           ]
         }
@@ -139,16 +149,16 @@
         "sort": [
           {
             "field": {
-              "Measure": {
+              "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Medidas"
+                    "Entity": "2026-2"
                   }
                 },
-                "Property": "Dias Sem Atendimento"
+                "Property": "Unidade"
               }
             },
-            "direction": "Descending"
+            "direction": "Ascending"
           }
         ]
       }
@@ -193,13 +203,6 @@
                   "Value": "'Center'"
                 }
               }
-            },
-            "titleAlignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Center'"
-                }
-              }
             }
           }
         }
@@ -238,34 +241,6 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "122.99998920328814D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Medidas.UltimaDataHoraCriacaoProprietario"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "133.04472520155244D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Min(2026-2.Proprietário Lead)"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
                   "Value": "154.95522083822897D"
                 }
               }
@@ -280,55 +255,41 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "133.92539012076747D"
+                  "Value": "121.59701314176883D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "2026-2.forma de pagamento"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "112.01492032046016D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "2026-2.Situação Pagamento"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "144.1063992201706D"
                 }
               }
             }
           },
           "selector": {
             "metadata": "Medidas.UltimoAtendente"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "111.40299425233366D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Medidas.data Ultimo Atendimento"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "80.98691028413052D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Medidas.Dias Sem Atendimento"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "122.89552357141248D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Min(2026-2.Última Tabulação)"
           }
         }
       ],
@@ -393,54 +354,6 @@
           }
         }
       ],
-      "subTotals": [
-        {
-          "properties": {
-            "columnSubtotals": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "rowSubtotals": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        },
-        {
-          "properties": {
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          },
-          "selector": {
-            "id": "Row"
-          }
-        },
-        {
-          "properties": {
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          },
-          "selector": {
-            "id": "Column"
-          }
-        }
-      ],
       "grid": [
         {
           "properties": {
@@ -460,32 +373,6 @@
               "expr": {
                 "Literal": {
                   "Value": "0D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "rowTotal": [
-        {
-          "properties": {
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "columnTotal": [
-        {
-          "properties": {
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
                 }
               }
             }
@@ -589,21 +476,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "8a03677d309b64dabfe1",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "UltimoAtendente"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "d4ad5d4d90e97d153d5b",
+        "name": "c3316450b004b3162229",
         "field": {
           "Column": {
             "Expression": {
@@ -617,26 +490,105 @@
         "type": "Categorical"
       },
       {
-        "name": "f7e250fb4c0013a50e28",
+        "name": "66a665385e9e43016232",
         "field": {
-          "Aggregation": {
+          "Column": {
             "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "2026-2"
-                  }
-                },
-                "Property": "Proprietário Lead"
+              "SourceRef": {
+                "Entity": "2026-2"
               }
             },
-            "Function": 3
+            "Property": "Celular"
           }
         },
-        "type": "Advanced"
+        "type": "Categorical"
       },
       {
-        "name": "1d8c8f9364b6468220d6",
+        "name": "1bf7b9f0047a050a70de",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "2026-2"
+              }
+            },
+            "Property": "email"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "bb1114cdad28cdc460c6",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "2026-2"
+              }
+            },
+            "Property": "Unidade"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "87a8b10f0380e9040000",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "2026-2"
+              }
+            },
+            "Property": "Forma de Ingresso"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "1d749a1f6cc6bb468db0",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "2026-2"
+              }
+            },
+            "Property": "forma de pagamento"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "590284c2030e874ed425",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "2026-2"
+              }
+            },
+            "Property": "Situação Pagamento"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "1e1917fe5b02787631d1",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "2026-2"
+              }
+            },
+            "Property": "Última Tabulação"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "df11fbb8a90577e2ba74",
         "field": {
           "Measure": {
             "Expression": {
@@ -644,54 +596,7 @@
                 "Entity": "Medidas"
               }
             },
-            "Property": "UltimaDataHoraCriacaoProprietario"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "a5258505907adb406201",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Data Último Atendimento"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "3900171c2519edddbde5",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Dias Sem Atendimento"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "46db710ce60e1a5c0480",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "2026-2"
-                  }
-                },
-                "Property": "Última Tabulação"
-              }
-            },
-            "Function": 3
+            "Property": "UltimoAtendente"
           }
         },
         "type": "Advanced"

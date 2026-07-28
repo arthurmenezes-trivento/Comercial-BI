@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "e7d68fe39019b03d1a95",
   "position": {
     "x": 313.43283582089549,
     "y": 181.79104477611941,
     "z": 10000,
     "height": 35.820895522388057,
-    "width": 66.268656716417908,
+    "width": 90.447761194029852,
     "tabOrder": 10000
   },
   "visual": {
@@ -19,7 +19,10 @@
               {
                 "textRuns": [
                   {
-                    "value": "Leads"
+                    "value": "Leads",
+                    "textStyle": {
+                      "fontSize": "18pt"
+                    }
                   }
                 ]
               }

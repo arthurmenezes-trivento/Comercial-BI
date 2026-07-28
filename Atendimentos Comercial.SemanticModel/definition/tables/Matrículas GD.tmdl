@@ -148,6 +148,14 @@ table 'Matrículas GD'
 
 		annotation SummarizationSetBy = Automatic
 
+	column obrigadaa
+		dataType: string
+		lineageTag: b33b38b0-a318-4fdc-bbe6-bd8c5e27c150
+		summarizeBy: none
+		sourceColumn: obrigadaa
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 'Matrículas GD' = m
 		mode: import
 		source =

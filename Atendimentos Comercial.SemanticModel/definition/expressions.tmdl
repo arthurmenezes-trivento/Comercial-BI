@@ -124,9 +124,10 @@ expression Inscricoes =
 		    #"result.coc_situacaopagamento Expandido" = Table.ExpandTableColumn(#"Tipo Alterado6", "result.coc_situacaopagamento", {"Attribute:name"}, {"Attribute:name"}),
 		    #"Colunas Renomeadas7" = Table.RenameColumns(#"result.coc_situacaopagamento Expandido",{{"Attribute:name", "Situação Pagamento"}}),
 		    #"Tipo Alterado7" = Table.TransformColumnTypes(#"Colunas Renomeadas7",{{"Situação Pagamento", type text}}),
-		    #"result.cad_faseportalcandidato Expandido" = Table.ExpandTableColumn(#"Tipo Alterado7", "result.cad_faseportalcandidato", {"Attribute:name"}, {"Fase Portal do Candidato"})
+		    #"result.cad_faseportalcandidato Expandido" = Table.ExpandTableColumn(#"Tipo Alterado7", "result.cad_faseportalcandidato", {"Attribute:name"}, {"Fase Portal do Candidato"}),
+		    #"result.cad_formapagamento Expandido" = Table.ExpandTableColumn(#"result.cad_faseportalcandidato Expandido", "result.cad_formapagamento", {"Attribute:name"}, {"forma de pagamento"})
 		in
-		    #"result.cad_faseportalcandidato Expandido"
+		    #"result.cad_formapagamento Expandido"
 	lineageTag: c3a7adf9-4066-4267-8dea-ee76593a33c4
 	queryGroup: 'Consultas - Token'
 
@@ -277,6 +278,29 @@ expression Leads =
 		    #"Tipo Alterado6"
 	lineageTag: aa95495f-be44-43d9-925f-fd888b26b4ee
 	queryGroup: 'Consultas - Token'
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+
+expression 'Erros em Matrículas GD' =
+		let
+		Fonte = #"Matrículas GD",
+		  #"Incompatibilidades de Tipo Detectadas" = let
+		    tableWithOnlyPrimitiveTypes = Table.SelectColumns(Fonte, Table.ColumnsOfType(Fonte, {type nullable number, type nullable text, type nullable logical, type nullable date, type nullable datetime, type nullable datetimezone, type nullable time, type nullable duration})),
+		    recordTypeFields = Type.RecordFields(Type.TableRow(Value.Type(tableWithOnlyPrimitiveTypes))),
+		    fieldNames = Record.FieldNames(recordTypeFields),
+		    fieldTypes = List.Transform(Record.ToList(recordTypeFields), each [Type]),
+		    pairs = List.Transform(List.Positions(fieldNames), (i) => {fieldNames{i}, (v) => if v = null or Value.Is(v, fieldTypes{i}) then v else error [Message = "O tipo do valor não corresponde ao tipo da coluna.", Detail = v], fieldTypes{i}})
+		in
+		    Table.TransformColumns(Fonte, pairs),
+		  #"Índice Adicionado" = Table.AddIndexColumn(#"Incompatibilidades de Tipo Detectadas", "Número da Linha" ,1),
+		  #"Erros Mantidos" = Table.SelectRowsWithErrors(#"Índice Adicionado", {"CONSULTOR (a)", "DATA", "Número de Inscrição", "NOME", "CELULAR", "CPF (preencher apenas com números)", "CURSO", "FORMA DE INGRESSO", "% BOLSA CONCEDIDA", "CONDIÇÃO", "VALOR PG MATRÍCULA", "NOME DO PAGADOR ", "FORMA DE PAGAMNTO", "QUANTIDADE DE PARCELAS", "OBSERVAÇÃO", "Unidade", "Data e Hora", ""}),
+		  #"Colunas Reordenadas" = Table.ReorderColumns(#"Erros Mantidos", {"Número da Linha", "CONSULTOR (a)", "DATA", "Número de Inscrição", "NOME", "CELULAR", "CPF (preencher apenas com números)", "CURSO", "FORMA DE INGRESSO", "% BOLSA CONCEDIDA", "CONDIÇÃO", "VALOR PG MATRÍCULA", "NOME DO PAGADOR ", "FORMA DE PAGAMNTO", "QUANTIDADE DE PARCELAS", "OBSERVAÇÃO", "Unidade", "Data e Hora", ""})
+		in
+		  #"Colunas Reordenadas"
+	lineageTag: 3c3f26b9-7ea6-479f-a6f4-5b6db47b70e0
+	queryGroup: 'Erros na Consulta - 28/07/2026 18:55:56'
 
 	annotation PBI_NavigationStepName = Navegação
 

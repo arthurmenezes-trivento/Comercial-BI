@@ -582,6 +582,14 @@ table 2026-2
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'forma de pagamento'
+		dataType: string
+		lineageTag: 382bb721-14dd-4e0d-ba29-dd1e9b43b954
+		summarizeBy: none
+		sourceColumn: forma de pagamento
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 2026-2 = m
 		mode: import
 		queryGroup: 'Consultas - Token'
@@ -636,7 +644,7 @@ table 2026-2
 				
 				    #"Colunas Renomeadas" = Table.RenameColumns(#"Unidade Corrigida",{{"result.cad_campaigncontent", "UTM Content"}, {"result.cad_campaignmedium", "UTM Medium"}, {"result.cad_campaignname", "UTM Name"}, {"result.cad_campaignsource", "UTM Source"}, {"result.cad_campaignterm", "UTM Term"}}),
 				    #"Consultas Mescladas" = Table.NestedJoin(#"Colunas Renomeadas", {"Numero Inscricao"}, #"Inscricoes", {"result.cad_numeroinscricao"}, "Inscricoes", JoinKind.LeftOuter),
-				    #"Inscricoes Expandido1" = Table.ExpandTableColumn(#"Consultas Mescladas", "Inscricoes", {"Forma de Ingresso", "Curso ID", "Situação Inscrição", "Situação de Avaliação", "Unidade Inscrito", "Data Aprovação", "Situação Pagamento", "Data de Pagamento", "Fase Portal do Candidato"}, {"Forma de Ingresso", "Curso ID", "Situação Inscrição", "Situação de Avaliação", "Unidade Inscrito", "Data Aprovação", "Situação Pagamento", "Data de Pagamento", "Fase Portal do Candidato"}),
+				    #"Inscricoes Expandido1" = Table.ExpandTableColumn(#"Consultas Mescladas", "Inscricoes", {"Forma de Ingresso", "Curso ID", "Situação Inscrição", "Situação de Avaliação", "Unidade Inscrito", "Data Aprovação", "Situação Pagamento", "Data de Pagamento", "Fase Portal do Candidato", "forma de pagamento"}, {"Forma de Ingresso", "Curso ID", "Situação Inscrição", "Situação de Avaliação", "Unidade Inscrito", "Data Aprovação", "Situação Pagamento", "Data de Pagamento", "Fase Portal do Candidato", "forma de pagamento"}),
 				    #"Valor Substituído" = Table.ReplaceValue(#"Inscricoes Expandido1","Canaa","Canaã",Replacer.ReplaceText,{"Unidade"}),
 				    #"Colocar Cada Palavra Em Maiúscula" = Table.TransformColumns(#"Valor Substituído",{{"Unidade", Text.Proper, type text}}),
 				    #"Valor Substituído1" = Table.ReplaceValue(#"Colocar Cada Palavra Em Maiúscula",",","",Replacer.ReplaceText,{"Endereço"}),
@@ -684,5 +692,5 @@ table 2026-2
 
 	annotation PBI_NavigationStepName = Navegação
 
-	annotation PBI_ResultType = Exception
+	annotation PBI_ResultType = Table
 

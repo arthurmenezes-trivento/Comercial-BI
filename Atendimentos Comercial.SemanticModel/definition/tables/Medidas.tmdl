@@ -3,20 +3,36 @@ table Medidas
 
 	measure UltimoAtendente = ```
 			
+			
+			-- 1. Captura o contexto do cliente/aluno da linha atual do visual
+			VAR ClienteAtual = SELECTEDVALUE('2026-2'[Nome Completo]) 
+			
+			-- 2. Busca o último registro garantindo que pertence ao cliente da linha
 			VAR UltimoRegistro =
 			    TOPN(
 			        1,
 			        CALCULATETABLE(
 			            'Atendimentos',
+			            'Atendimentos'[Nome do Lead] = ClienteAtual, -- Altere para a coluna de relacionamento correta (ex: ID ou Nome)
 			            'Atendimentos'[Assunto] <> "Alteração em Massa",
 			            NOT ISBLANK('Atendimentos'[Assunto])
 			        ),
 			        'Atendimentos'[Data de Criação], DESC
 			    )
-			RETURN
+			
+			-- 3. Busca o nome do atendente
+			VAR Resultado = 
 			    CALCULATE(
 			        SELECTEDVALUE('Atendimentos'[Criado por]),
 			        UltimoRegistro
+			    )
+			
+			RETURN
+			    -- 4. Se o cliente for válido mas não tiver atendente, retorna o texto sem quebrar os filtros
+			    IF(
+			        NOT ISBLANK(ClienteAtual),
+			        IF(ISBLANK(Resultado), "Sem Atendente", Resultado),
+			        BLANK()
 			    )
 			
 			```

@@ -1,38 +1,19 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "42971e3933dd6f005e51",
+  "name": "44b6f0d0088707d5c700",
   "position": {
-    "x": 291.04477611940297,
-    "y": 470.14925373134326,
-    "z": 10000,
-    "height": 179.1044776119403,
-    "width": 272.23880597014926,
-    "tabOrder": 10000
+    "x": 364.74164133738606,
+    "y": 116.71732522796353,
+    "z": 6000,
+    "height": 86.565349544072959,
+    "width": 214.95440729483283,
+    "tabOrder": 6000
   },
   "visual": {
-    "visualType": "barChart",
+    "visualType": "cardVisual",
     "query": {
       "queryState": {
-        "Category": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Matrículas GD"
-                    }
-                  },
-                  "Property": "CONSULTOR (a)"
-                }
-              },
-              "queryRef": "Matrículas GD.CONSULTOR (a)",
-              "nativeQueryRef": "CONSULTOR (a)",
-              "active": true
-            }
-          ]
-        },
-        "Y": {
+        "Data": {
           "projections": [
             {
               "field": {
@@ -41,17 +22,17 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Matrículas GD"
+                          "Entity": "2026-2"
                         }
                       },
-                      "Property": "CPF (preencher apenas com números)"
+                      "Property": "ID Lead"
                     }
                   },
-                  "Function": 5
+                  "Function": 2
                 }
               },
-              "queryRef": "CountNonNull(Matrículas GD.CPF (preencher apenas com números))",
-              "nativeQueryRef": "Contagem de CPF (preencher apenas com números)"
+              "queryRef": "Min(2026-2.ID Lead)",
+              "nativeQueryRef": "Contagem de ID Lead"
             }
           ]
         }
@@ -65,13 +46,13 @@
                   "Column": {
                     "Expression": {
                       "SourceRef": {
-                        "Entity": "Matrículas GD"
+                        "Entity": "2026-2"
                       }
                     },
-                    "Property": "CPF (preencher apenas com números)"
+                    "Property": "ID Lead"
                   }
                 },
-                "Function": 5
+                "Function": 2
               }
             },
             "direction": "Descending"
@@ -81,46 +62,7 @@
       }
     },
     "objects": {
-      "categoryAxis": [
-        {
-          "properties": {
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "10D"
-                }
-              }
-            },
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "labelColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            },
-            "showAxisTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "valueAxis": [
+      "divider": [
         {
           "properties": {
             "show": {
@@ -129,8 +71,17 @@
                   "Value": "false"
                 }
               }
-            },
-            "showAxisTitle": {
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "fillCustom": [
+        {
+          "properties": {
+            "show": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -140,7 +91,96 @@
           }
         }
       ],
-      "labels": [
+      "label": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "layout": [
+        {
+          "properties": {
+            "calloutSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "36D"
+                }
+              }
+            },
+            "style": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Cards'"
+                }
+              }
+            },
+            "autoGrid": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "backgroundShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "outline": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "referenceLabelLayout": [
+        {
+          "properties": {
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'below'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "value": [
         {
           "properties": {
             "show": {
@@ -149,26 +189,39 @@
                   "Value": "true"
                 }
               }
-            },
+            }
+          }
+        },
+        {
+          "properties": {
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "10D"
+                  "Value": "18D"
                 }
               }
             },
-            "color": {
+            "fontColor": {
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0
+                    "Literal": {
+                      "Value": "'#3344A4'"
                     }
                   }
                 }
               }
+            },
+            "horizontalAlignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
             }
+          },
+          "selector": {
+            "id": "default"
           }
         }
       ]
@@ -177,10 +230,10 @@
       "title": [
         {
           "properties": {
-            "text": {
+            "show": {
               "expr": {
                 "Literal": {
-                  "Value": "'Matrículas por Consultor'"
+                  "Value": "true"
                 }
               }
             },
@@ -220,6 +273,20 @@
                   "Value": "'center'"
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Pendências'"
+                }
+              }
             }
           }
         }
@@ -230,7 +297,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -256,6 +323,68 @@
             }
           }
         }
+      ],
+      "spacing": [
+        {
+          "properties": {
+            "verticalSpacing": {
+              "expr": {
+                "Literal": {
+                  "Value": "2D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "lockAspect": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
@@ -263,34 +392,20 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "46869c629edb3b685cd0",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Matrículas GD"
-              }
-            },
-            "Property": "CONSULTOR (a)"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "d73f0730d57c4906655b",
+        "name": "64dd82f95e1048eec8a2",
         "field": {
           "Aggregation": {
             "Expression": {
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Matrículas GD"
+                    "Entity": "2026-2"
                   }
                 },
-                "Property": "CPF (preencher apenas com números)"
+                "Property": "ID Lead"
               }
             },
-            "Function": 5
+            "Function": 2
           }
         },
         "type": "Advanced"
