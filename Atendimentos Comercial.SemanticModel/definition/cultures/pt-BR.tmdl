@@ -1517,6 +1517,16 @@ cultureInfo pt-BR
 			          "resultado do contato": {
 			            "State": "Generated"
 			          }
+			        },
+			        {
+			          "última tabulação": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -1555,6 +1565,16 @@ cultureInfo pt-BR
 			        },
 			        {
 			          "Atendente": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Consultor": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -2423,6 +2443,16 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
+			          "Matrículas": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
 			          "Matr": {
 			            "State": "Suggested",
 			            "Source": {
@@ -2434,16 +2464,6 @@ cultureInfo pt-BR
 			        },
 			        {
 			          "Matriculado": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        },
-			        {
-			          "Matrículas": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -5018,6 +5038,16 @@ cultureInfo pt-BR
 			        {
 			          "qtd atendimentos": {
 			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Atendimentos": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -9429,7 +9459,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "% atend. -> Matr.": {
+			          "% Conversão": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -11456,39 +11486,6 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "atendimentos_have_atendimentos_proprietário"
-			        }
-			      ]
-			    },
-			    "entity_20262_has_medida_matriculado_sem_fase_do_candidato": {
-			      "Binding": {
-			        "ConceptualEntity": "2026-2"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "entity_20262": {
-			          "Target": {
-			            "Entity": "entity_20262"
-			          }
-			        },
-			        "medida.matriculado_sem_fase_do_candidato": {
-			          "Target": {
-			            "Entity": "medida.matriculado_sem_fase_do_candidato"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_20262"
-			            },
-			            "Object": {
-			              "Role": "medida.matriculado_sem_fase_do_candidato"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "Phrasing20262_have_matriculado_sem_fase_do_candidato"
 			        }
 			      ]
 			    },

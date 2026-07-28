@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "cb6078398144b12ec134",
+  "name": "241647d2bea857103563",
   "position": {
-    "x": 43.768996960486326,
-    "y": 149.78723404255319,
-    "z": 8001,
-    "height": 263.7913043478261,
-    "width": 554.295652173913,
-    "tabOrder": 8001
+    "x": 57.3134328358209,
+    "y": 157.61194029850745,
+    "z": 9000,
+    "height": 281.19402985074623,
+    "width": 602.68656716417911,
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -20,15 +20,16 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "2026-2"
+                      "Entity": "Atendimentos"
                     }
                   },
-                  "Property": "Proprietário Lead"
+                  "Property": "Criado por"
                 }
               },
-              "queryRef": "2026-2.Proprietário Lead",
-              "nativeQueryRef": "Proprietário Lead",
-              "active": true
+              "queryRef": "Atendimentos.Criado por",
+              "nativeQueryRef": "Consultor",
+              "active": true,
+              "displayName": "Consultor"
             }
           ]
         },
@@ -61,7 +62,8 @@
                 }
               },
               "queryRef": "Medidas.Qtd Atendimentos",
-              "nativeQueryRef": "Qtd Atendimentos"
+              "nativeQueryRef": "Atendimentos",
+              "displayName": "Atendimentos"
             },
             {
               "field": {
@@ -75,8 +77,8 @@
                 }
               },
               "queryRef": "Medidas.conver. atend - matr",
-              "nativeQueryRef": "% atend. -> Matr.",
-              "displayName": "% atend. -> Matr."
+              "nativeQueryRef": "% Conversão",
+              "displayName": "% Conversão"
             }
           ]
         }
@@ -102,7 +104,52 @@
     "objects": {
       "columnHeaders": [
         {
-          "properties": {}
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#3465A4'"
+                    }
+                  }
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            },
+            "titleAlignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          }
         }
       ],
       "subTotals": [
@@ -123,15 +170,37 @@
               }
             }
           }
+        },
+        {
+          "properties": {
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "Row"
+          }
+        },
+        {
+          "properties": {
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "Column"
+          }
         }
       ],
       "columnFormatting": [
-        {
-          "properties": {},
-          "selector": {
-            "metadata": "Medidas.Matr 26-2"
-          }
-        },
         {
           "properties": {
             "dataBars": {
@@ -140,7 +209,7 @@
                   "color": {
                     "expr": {
                       "Literal": {
-                        "Value": "'maxColor'"
+                        "Value": "'#FFD47D'"
                       }
                     }
                   }
@@ -194,6 +263,34 @@
           "selector": {
             "metadata": "Medidas.conver. atend - matr"
           }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            },
+            "styleHeader": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "styleTotal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.Leads"
+          }
         }
       ],
       "values": [
@@ -211,7 +308,7 @@
                               "Entity": "Medidas"
                             }
                           },
-                          "Property": "Matr 26-2"
+                          "Property": "Leads"
                         }
                       },
                       "FillRule": {
@@ -226,7 +323,7 @@
                           "max": {
                             "color": {
                               "Literal": {
-                                "Value": "'maxColor'"
+                                "Value": "'#DAE4F2'"
                               }
                             }
                           },
@@ -253,71 +350,153 @@
                 }
               }
             ],
-            "metadata": "Medidas.Matr 26-2"
+            "metadata": "Medidas.Leads"
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "outlineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.6
+                    }
+                  }
+                }
+              }
+            },
+            "rowPadding": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "rowTotal": [
+        {
+          "properties": {
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnTotal": [
+        {
+          "properties": {
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "190.79913080738783D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "2026-2.Situação Inscrição"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "73.50748184461658D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "select"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Minimal'"
+                }
+              }
+            }
           }
         }
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "b60b6b44c064260a43b5",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "2026-2"
-              }
-            },
-            "Property": "Proprietário Lead"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "67c5c7f1466059916c13",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Matr 26-2"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "7584e480b5d1abe1c200",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "conver. atend - matr"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "1fce5280db5b90e769a6",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Qtd Atendimentos"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

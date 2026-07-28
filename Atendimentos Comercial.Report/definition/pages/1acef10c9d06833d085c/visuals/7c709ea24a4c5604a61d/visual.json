@@ -309,67 +309,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "3909d065c706a6eecaed",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "2026-2"
-              }
-            },
-            "Property": "Curso ID"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "4cc5279f9e5d5aebc30c",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "2026-2"
-              }
-            },
-            "Property": "Fase Portal do Candidato"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "1aee238b70b092e2c295",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "2026-2"
-              }
-            },
-            "Property": "Nome Completo"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "d99b196e5e7754b6507d",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "2026-2"
-                  }
-                },
-                "Property": "Fase Portal do Candidato"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }
