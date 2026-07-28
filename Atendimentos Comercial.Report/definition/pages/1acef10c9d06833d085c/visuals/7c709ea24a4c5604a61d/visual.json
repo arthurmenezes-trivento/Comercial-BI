@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "7c709ea24a4c5604a61d",
   "position": {
-    "x": 56.413373860182375,
-    "y": 48.632218844984806,
+    "x": 112.82674772036475,
+    "y": 56.413373860182375,
     "z": 0,
     "height": 464.92401215805472,
     "width": 724.62006079027356,
@@ -43,7 +43,7 @@
               },
               "queryRef": "2026-2.Fase Portal do Candidato",
               "nativeQueryRef": "Fase Portal do Candidato",
-              "active": false
+              "active": true
             },
             {
               "field": {
@@ -58,7 +58,7 @@
               },
               "queryRef": "2026-2.Nome Completo",
               "nativeQueryRef": "Nome Completo",
-              "active": false
+              "active": true
             }
           ]
         },
@@ -151,7 +151,32 @@
             "isPinned": true
           }
         ],
-        "root": {}
+        "root": {
+          "children": [
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'Administração'"
+                  }
+                }
+              ],
+              "isToggled": true,
+              "children": [
+                {
+                  "identityValues": [
+                    {
+                      "Literal": {
+                        "Value": "'Inscrição'"
+                      }
+                    }
+                  ],
+                  "isToggled": true
+                }
+              ]
+            }
+          ]
+        }
       }
     ],
     "drillFilterOtherVisuals": true
@@ -284,6 +309,67 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "3909d065c706a6eecaed",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "2026-2"
+              }
+            },
+            "Property": "Curso ID"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "4cc5279f9e5d5aebc30c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "2026-2"
+              }
+            },
+            "Property": "Fase Portal do Candidato"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "1aee238b70b092e2c295",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "2026-2"
+              }
+            },
+            "Property": "Nome Completo"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "d99b196e5e7754b6507d",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "2026-2"
+                  }
+                },
+                "Property": "Fase Portal do Candidato"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

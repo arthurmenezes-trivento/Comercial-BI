@@ -279,7 +279,7 @@ table Medidas
 			
 			DIVIDE(
 			    [Matr 26-2],
-			    [Atendimentos (Proprietário)]
+			    [Qtd Atendimentos]
 			)
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: 280035e9-81c1-44bf-81fc-fd4b7a7d2a86

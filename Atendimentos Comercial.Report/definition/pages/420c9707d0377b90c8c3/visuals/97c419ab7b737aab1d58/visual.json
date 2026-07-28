@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "97c419ab7b737aab1d58",
   "position": {
-    "x": 515.820895522388,
-    "y": 188.955223880597,
+    "x": 515.50151975683889,
+    "y": 188.69300911854103,
     "z": 8000,
-    "height": 233.73134328358208,
-    "width": 334.02985074626866,
+    "height": 234.40729483282675,
+    "width": 386.13981762917933,
     "tabOrder": 8000
   },
   "visual": {
@@ -188,5 +188,37 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "c56179b3e0dd4c747573",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Funil_pagamento"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "dffc450bb8a8ca8bbb1d",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Matr 26-2"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

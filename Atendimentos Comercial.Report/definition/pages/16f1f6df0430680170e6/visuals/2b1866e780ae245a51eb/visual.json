@@ -2,7 +2,7 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "2b1866e780ae245a51eb",
   "position": {
-    "x": 43.83252102116672,
+    "x": 250.03312892390232,
     "y": 94.9081009647152,
     "z": 4000,
     "height": 54.626865671641788,
@@ -230,5 +230,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "29b46e2904400dddae00",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dUnidade"
+              }
+            },
+            "Property": "Unidade"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

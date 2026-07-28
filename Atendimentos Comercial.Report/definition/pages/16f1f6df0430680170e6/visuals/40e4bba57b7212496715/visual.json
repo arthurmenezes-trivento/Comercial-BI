@@ -2,7 +2,7 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "40e4bba57b7212496715",
   "position": {
-    "x": 346.61662481829018,
+    "x": 552.81723272102579,
     "y": 94.9081009647152,
     "z": 6000,
     "height": 62.249240121580549,
@@ -236,5 +236,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "bddae49d4d7d3d790374",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Atendimentos"
+              }
+            },
+            "Property": "Criado por"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }
