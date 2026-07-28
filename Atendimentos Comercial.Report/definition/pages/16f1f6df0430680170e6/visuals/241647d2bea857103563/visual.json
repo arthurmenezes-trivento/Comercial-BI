@@ -352,6 +352,17 @@
             ],
             "metadata": "Medidas.Leads"
           }
+        },
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
+                }
+              }
+            }
+          }
         }
       ],
       "grid": [
@@ -498,5 +509,65 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "b20d218354500043853e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Atendimentos"
+              }
+            },
+            "Property": "Criado por"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "96a32a5d9edebe39b889",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Matr 26-2"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "8fa3cceb67eca9e657b4",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Qtd Atendimentos"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "4e85c93d007ba8accdc6",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "conver. atend - matr"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

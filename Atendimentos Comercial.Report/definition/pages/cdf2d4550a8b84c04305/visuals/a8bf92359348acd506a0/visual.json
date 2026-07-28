@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "050eb8e2b05234722c3a",
+  "name": "a8bf92359348acd506a0",
   "position": {
-    "x": 60.8955223880597,
-    "y": 116.41791044776119,
-    "z": 5000,
+    "x": 228.57142857142858,
+    "y": 116.71732522796353,
+    "z": 6001,
     "height": 58.208955223880594,
     "width": 145.97014925373134,
-    "tabOrder": 5000
+    "tabOrder": 6001
   },
   "visual": {
     "visualType": "slicer",
@@ -20,29 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dCalendario"
+                      "Entity": "2026-2"
                     }
                   },
-                  "Property": "Semana"
+                  "Property": "Situação Pagamento"
                 }
               },
-              "queryRef": "dCalendario.Semana",
-              "nativeQueryRef": "Semana",
-              "active": true
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "dCalendario"
-                    }
-                  },
-                  "Property": "Date"
-                }
-              },
-              "queryRef": "dCalendario.Date",
-              "nativeQueryRef": "Date",
+              "queryRef": "2026-2.Situação Pagamento",
+              "nativeQueryRef": "Situação Pagamento",
               "active": true
             }
           ]
@@ -55,10 +40,10 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "dCalendario"
+                    "Entity": "2026-2"
                   }
                 },
-                "Property": "Semana"
+                "Property": "Situação Pagamento"
               }
             },
             "direction": "Ascending"
@@ -75,45 +60,13 @@
         "levels": [
           {
             "queryRefs": [
-              "dCalendario.Semana"
-            ],
-            "isCollapsed": true,
-            "identityKeys": [
-              {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "dCalendario"
-                    }
-                  },
-                  "Property": "Semana"
-                }
-              }
-            ],
-            "isPinned": true
-          },
-          {
-            "queryRefs": [
-              "dCalendario.Date"
+              "2026-2.Situação Pagamento"
             ],
             "isCollapsed": true,
             "isPinned": true
           }
         ],
-        "root": {
-          "children": [
-            {
-              "identityValues": [
-                {
-                  "Literal": {
-                    "Value": "'s17'"
-                  }
-                }
-              ],
-              "isToggled": true
-            }
-          ]
-        }
+        "root": {}
       }
     ],
     "objects": {
@@ -138,8 +91,8 @@
                 "Version": 2,
                 "From": [
                   {
-                    "Name": "d",
-                    "Entity": "dCalendario",
+                    "Name": "2",
+                    "Entity": "2026-2",
                     "Type": 0
                   }
                 ],
@@ -152,10 +105,10 @@
                             "Column": {
                               "Expression": {
                                 "SourceRef": {
-                                  "Source": "d"
+                                  "Source": "2"
                                 }
                               },
-                              "Property": "Semana"
+                              "Property": "Situação Pagamento"
                             }
                           }
                         ],
@@ -163,60 +116,10 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'s17'"
+                                "Value": "'Em aberto'"
                               }
                             }
                           ]
-                        ]
-                      }
-                    },
-                    "Annotations": {
-                      "filterExpressionMetadata": {
-                        "expressions": [
-                          {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Entity": "dCalendario"
-                                }
-                              },
-                              "Property": "Semana"
-                            }
-                          }
-                        ],
-                        "decomposedIdentities": {
-                          "values": [
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'s17'"
-                                    }
-                                  }
-                                ]
-                              }
-                            ]
-                          ],
-                          "columns": [
-                            {
-                              "value": {
-                                "Column": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Entity": "dCalendario"
-                                    }
-                                  },
-                                  "Property": "Semana"
-                                }
-                              }
-                            }
-                          ]
-                        },
-                        "valueMap": [
-                          {
-                            "0": "s17"
-                          }
                         ]
                       }
                     }
@@ -233,7 +136,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Semana'"
+                  "Value": "'Situação de pagamento'"
                 }
               }
             },
@@ -268,7 +171,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -313,6 +216,13 @@
               "expr": {
                 "Literal": {
                   "Value": "10D"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Situação'"
                 }
               }
             }
@@ -420,29 +330,15 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "0f23cb44d115c74bcb66",
+        "name": "de4241b0de704e637307",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "dCalendario"
+                "Entity": "2026-2"
               }
             },
-            "Property": "Semana"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "aae773084270e4819de1",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dCalendario"
-              }
-            },
-            "Property": "Date"
+            "Property": "Situação Pagamento"
           }
         },
         "type": "Categorical"

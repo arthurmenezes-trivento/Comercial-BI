@@ -306,3 +306,26 @@ expression 'Erros em Matrículas GD' =
 
 	annotation PBI_ResultType = Table
 
+expression 'Erros em Matrículas GD (2)' =
+		let
+		Fonte = #"Matrículas GD",
+		  #"Incompatibilidades de Tipo Detectadas" = let
+		    tableWithOnlyPrimitiveTypes = Table.SelectColumns(Fonte, Table.ColumnsOfType(Fonte, {type nullable number, type nullable text, type nullable logical, type nullable date, type nullable datetime, type nullable datetimezone, type nullable time, type nullable duration})),
+		    recordTypeFields = Type.RecordFields(Type.TableRow(Value.Type(tableWithOnlyPrimitiveTypes))),
+		    fieldNames = Record.FieldNames(recordTypeFields),
+		    fieldTypes = List.Transform(Record.ToList(recordTypeFields), each [Type]),
+		    pairs = List.Transform(List.Positions(fieldNames), (i) => {fieldNames{i}, (v) => if v = null or Value.Is(v, fieldTypes{i}) then v else error [Message = "O tipo do valor não corresponde ao tipo da coluna.", Detail = v], fieldTypes{i}})
+		in
+		    Table.TransformColumns(Fonte, pairs),
+		  #"Índice Adicionado" = Table.AddIndexColumn(#"Incompatibilidades de Tipo Detectadas", "Número da Linha" ,1),
+		  #"Erros Mantidos" = Table.SelectRowsWithErrors(#"Índice Adicionado", {"CONSULTOR (a)", "DATA", "Número de Inscrição", "NOME", "CELULAR", "CPF (preencher apenas com números)", "CURSO", "FORMA DE INGRESSO", "% BOLSA CONCEDIDA", "CONDIÇÃO", "VALOR PG MATRÍCULA", "NOME DO PAGADOR ", "FORMA DE PAGAMNTO", "QUANTIDADE DE PARCELAS", "OBSERVAÇÃO", "Unidade", "Data e Hora", ""}),
+		  #"Colunas Reordenadas" = Table.ReorderColumns(#"Erros Mantidos", {"Número da Linha", "CONSULTOR (a)", "DATA", "Número de Inscrição", "NOME", "CELULAR", "CPF (preencher apenas com números)", "CURSO", "FORMA DE INGRESSO", "% BOLSA CONCEDIDA", "CONDIÇÃO", "VALOR PG MATRÍCULA", "NOME DO PAGADOR ", "FORMA DE PAGAMNTO", "QUANTIDADE DE PARCELAS", "OBSERVAÇÃO", "Unidade", "Data e Hora", ""})
+		in
+		    #"Colunas Reordenadas"
+	lineageTag: 93d66a0c-0a84-4cc7-b388-77bd854f65ec
+	queryGroup: 'Erros na Consulta - 28/07/2026 19:47:33'
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

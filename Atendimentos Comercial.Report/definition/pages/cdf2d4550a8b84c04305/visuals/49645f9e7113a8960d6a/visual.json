@@ -65,39 +65,11 @@
                       "Entity": "2026-2"
                     }
                   },
-                  "Property": "forma de pagamento"
+                  "Property": "Forma de Ingresso"
                 }
               },
-              "queryRef": "2026-2.forma de pagamento",
-              "nativeQueryRef": "forma de pagamento"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "2026-2"
-                    }
-                  },
-                  "Property": "Situação Pagamento"
-                }
-              },
-              "queryRef": "2026-2.Situação Pagamento",
-              "nativeQueryRef": "Situação Pagamento"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "2026-2"
-                    }
-                  },
-                  "Property": "Última Tabulação"
-                }
-              },
-              "queryRef": "2026-2.Última Tabulação",
-              "nativeQueryRef": "Última Tabulação"
+              "queryRef": "2026-2.Forma de Ingresso",
+              "nativeQueryRef": "Forma de Ingresso"
             },
             {
               "field": {
@@ -121,11 +93,25 @@
                       "Entity": "2026-2"
                     }
                   },
-                  "Property": "Forma de Ingresso"
+                  "Property": "forma de pagamento"
                 }
               },
-              "queryRef": "2026-2.Forma de Ingresso",
-              "nativeQueryRef": "Forma de Ingresso"
+              "queryRef": "2026-2.forma de pagamento",
+              "nativeQueryRef": "forma de pagamento"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "2026-2"
+                    }
+                  },
+                  "Property": "Situação Pagamento"
+                }
+              },
+              "queryRef": "2026-2.Situação Pagamento",
+              "nativeQueryRef": "Situação Pagamento"
             },
             {
               "field": {
@@ -141,6 +127,20 @@
               "queryRef": "Medidas.UltimoAtendente",
               "nativeQueryRef": "Último Atendente",
               "displayName": "Último Atendente"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "2026-2"
+                    }
+                  },
+                  "Property": "Última Tabulação"
+                }
+              },
+              "queryRef": "2026-2.Última Tabulação",
+              "nativeQueryRef": "Última Tabulação"
             }
           ]
         }
@@ -532,49 +532,21 @@
         "type": "Categorical"
       },
       {
-        "name": "87a8b10f0380e9040000",
+        "name": "df11fbb8a90577e2ba74",
         "field": {
-          "Column": {
+          "Measure": {
             "Expression": {
               "SourceRef": {
-                "Entity": "2026-2"
+                "Entity": "Medidas"
               }
             },
-            "Property": "Forma de Ingresso"
+            "Property": "UltimoAtendente"
           }
         },
-        "type": "Categorical"
+        "type": "Advanced"
       },
       {
-        "name": "1d749a1f6cc6bb468db0",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "2026-2"
-              }
-            },
-            "Property": "forma de pagamento"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "590284c2030e874ed425",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "2026-2"
-              }
-            },
-            "Property": "Situação Pagamento"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "1e1917fe5b02787631d1",
+        "name": "a63fcc46879c4e16d895",
         "field": {
           "Column": {
             "Expression": {
@@ -588,18 +560,46 @@
         "type": "Categorical"
       },
       {
-        "name": "df11fbb8a90577e2ba74",
+        "name": "b2576954c2776e965448",
         "field": {
-          "Measure": {
+          "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Medidas"
+                "Entity": "2026-2"
               }
             },
-            "Property": "UltimoAtendente"
+            "Property": "Situação Pagamento"
           }
         },
-        "type": "Advanced"
+        "type": "Categorical"
+      },
+      {
+        "name": "c7c3daf96e1be53013b0",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "2026-2"
+              }
+            },
+            "Property": "Forma de Ingresso"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "fb69ef590b201eab1da8",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "2026-2"
+              }
+            },
+            "Property": "forma de pagamento"
+          }
+        },
+        "type": "Categorical"
       }
     ]
   }

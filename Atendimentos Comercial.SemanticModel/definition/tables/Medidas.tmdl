@@ -249,8 +249,7 @@ table Medidas
 			
 			CALCULATE(
 			    DISTINCTCOUNT('2026-2'[ID Lead]), 
-			    '2026-2'[Fase Portal do Candidato] <> BLANK(),
-			    NOT ('2026-2'[Fase Portal do Candidato] IN {"Curso", "dados", "Inscrição", "Prova Objetiva Online", "Matrícula"}),
+			    NOT( ISBLANK('2026-2'[Situação Pagamento])),
 			    USERELATIONSHIP(dCalendario[Date], '2026-2'[Data Criacao]))
 			```
 		formatString: 0
