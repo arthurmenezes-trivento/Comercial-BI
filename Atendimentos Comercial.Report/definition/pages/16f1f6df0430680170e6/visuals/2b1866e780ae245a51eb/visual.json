@@ -230,23 +230,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "29b46e2904400dddae00",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dUnidade"
-              }
-            },
-            "Property": "Unidade"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

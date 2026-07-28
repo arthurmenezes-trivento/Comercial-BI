@@ -339,51 +339,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "ead5d9d838de0809beb0",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "2026-2"
-              }
-            },
-            "Property": "Proprietário Lead"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "a7de59b766d9ce327383",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Matr 26-2"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "5742693902c73e191368",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "% conversão pag -> matr"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

@@ -4,10 +4,10 @@
   "position": {
     "x": 108.93617021276596,
     "y": 94.346504559270514,
-    "z": 8002,
+    "z": 8000,
     "height": 50.577507598784194,
     "width": 132.27963525835867,
-    "tabOrder": 8002
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "slicer",
@@ -43,7 +43,7 @@
               },
               "queryRef": "dCalendario.Date",
               "nativeQueryRef": "Date",
-              "active": false
+              "active": true
             }
           ]
         }
@@ -100,7 +100,20 @@
             "isPinned": true
           }
         ],
-        "root": {}
+        "root": {
+          "children": [
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'s17'"
+                  }
+                }
+              ],
+              "isToggled": true
+            }
+          ]
+        }
       }
     ],
     "objects": {
@@ -150,7 +163,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'s17'"
+                                "Value": "'s16'"
                               }
                             }
                           ]
@@ -178,7 +191,7 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "'s17'"
+                                      "Value": "'s16'"
                                     }
                                   }
                                 ]
@@ -202,7 +215,7 @@
                         },
                         "valueMap": [
                           {
-                            "0": "s17"
+                            "0": "s16"
                           }
                         ]
                       }
@@ -403,37 +416,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "9cc79be57da05b7a798e",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dCalendario"
-              }
-            },
-            "Property": "Semana"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "55320da032197c01587d",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dCalendario"
-              }
-            },
-            "Property": "Date"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

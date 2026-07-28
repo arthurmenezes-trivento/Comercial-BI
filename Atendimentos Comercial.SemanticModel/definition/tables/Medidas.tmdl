@@ -127,9 +127,11 @@ table Medidas
 			        DISTINCTCOUNT('2026-2'[ID Lead]),
 			        '2026-2'[Situação Inscrição] = "Matriculado",
 			        '2026-2'[Data de Pagamento] <> BLANK(),
+			        CROSSFILTER('2026-2'[ID Lead], Atendimentos[Id Lead], Both),
 			        USERELATIONSHIP(dCalendario[Date], '2026-2'[Data de Pagamento])
 			    )
 			```
+		formatString: 0
 		lineageTag: 776476a4-d45f-4e8b-bb47-7bc967379e76
 
 	measure 'Qtd tabulações' =
