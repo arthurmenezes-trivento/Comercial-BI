@@ -5039,6 +5039,16 @@ cultureInfo pt-BR
 			          "qtd atendimentos": {
 			            "State": "Generated"
 			          }
+			        },
+			        {
+			          "Atendimentos": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -9449,7 +9459,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "% atend. -> Matr.": {
+			          "% Conversão": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
