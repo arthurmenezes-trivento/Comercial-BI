@@ -20,15 +20,33 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Atendimentos"
+                      "Entity": "2026-2"
                     }
                   },
-                  "Property": "Criado por"
+                  "Property": "Proprietário Lead"
                 }
               },
-              "queryRef": "Atendimentos.Criado por",
-              "nativeQueryRef": "Contagem de Criado por",
+              "queryRef": "2026-2.Proprietário Lead",
+              "nativeQueryRef": "Proprietário Lead",
               "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Matr 26-2"
+                }
+              },
+              "queryRef": "Medidas.Matr 26-2",
+              "nativeQueryRef": "Matr 26-2"
             }
           ]
         }
@@ -37,18 +55,13 @@
         "sort": [
           {
             "field": {
-              "Aggregation": {
+              "Measure": {
                 "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Atendimentos"
-                      }
-                    },
-                    "Property": "Criado por"
+                  "SourceRef": {
+                    "Entity": "Medidas"
                   }
                 },
-                "Function": 5
+                "Property": "Matr 26-2"
               }
             },
             "direction": "Descending"
@@ -236,5 +249,37 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "bab2cf6c4152e014aee9",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "2026-2"
+              }
+            },
+            "Property": "Proprietário Lead"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "acd881450009226be258",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Matr 26-2"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

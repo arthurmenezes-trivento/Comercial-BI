@@ -201,9 +201,10 @@ table Atendimentos
 				    #"Data e hora de Modificação" = Table.ExpandTableColumn(#"Modificado por", "result.modifiedon", {"Attribute:date", "Attribute:time"}, {"Data Modificação", "Hora da Modificação"}),
 				    #"renomeado para assunto" = Table.RenameColumns(#"Data e hora de Modificação",{{"result.subject", "Assunto"}, {"result.cad_detalhesdocontato", "detalhes do contato"}}),
 				    #"id e nome do lead" = Table.ExpandTableColumn(#"renomeado para assunto", "result.regardingobjectid", {"Element:Text", "Attribute:name"}, {"Id Lead", "Nome do Lead"}),
-				    #"Tipo Alterado" = Table.TransformColumnTypes(#"id e nome do lead",{{"Data de Criação", type date}, {"Data Modificação", type date}})
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"id e nome do lead",{{"Data de Criação", type date}, {"Data Modificação", type date}}),
+				    #"Texto Limpo" = Table.TransformColumns(#"Tipo Alterado",{{"Criado por", Text.Clean, type text}})
 				in
-				    #"Tipo Alterado"
+				    #"Texto Limpo"
 
 	annotation PBI_NavigationStepName = Navegação
 

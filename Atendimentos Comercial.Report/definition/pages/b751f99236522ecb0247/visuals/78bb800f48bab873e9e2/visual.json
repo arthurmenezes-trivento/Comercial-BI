@@ -98,7 +98,7 @@
             "rowSubtotals": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             }
@@ -487,5 +487,51 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "9615009f85c72d02a079",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "2026-2"
+              }
+            },
+            "Property": "Proprietário Lead"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "8a932798c02a728661ce",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Matr 26-2"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "ae380c707106e0426455",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Média Aging"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

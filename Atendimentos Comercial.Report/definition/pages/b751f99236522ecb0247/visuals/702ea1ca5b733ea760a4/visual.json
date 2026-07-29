@@ -527,6 +527,62 @@
         },
         "type": "Categorical",
         "howCreated": "User"
+      },
+      {
+        "name": "cbf4496505da1c5a12b7",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "2026-2"
+              }
+            },
+            "Property": "Legado"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "d763fec0c2ca0e4a0157",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "2026-2"
+              }
+            },
+            "Property": "Aging Faixa"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "d2910d837637b9e0040e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dCalendario"
+              }
+            },
+            "Property": "Date"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "db1872d736119e0d0141",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Matr 26-2"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

@@ -38,29 +38,6 @@ table Medidas
 			```
 		lineageTag: c2990e0a-0c93-4df1-848b-3acbcbe83565
 
-	measure 'Data Último Atendimento' = ```
-			
-			
-			VAR TabelaFiltrada =
-			    FILTER(
-			        'Atendimentos',
-			        'Atendimentos'[Assunto] <> "Alteração em Massa" &&
-			        NOT(ISBLANK('Atendimentos'[Assunto]))
-			         )
-			
-			VAR DataHora =
-			    MAXX(
-			        TabelaFiltrada,
-			        'Atendimentos'[Data de Criação] + 'Atendimentos'[Hora de Criação]
-			    )
-			
-			RETURN
-			    FORMAT(DataHora, "dd/MM/yyyy HH:mm")
-			    
-			    
-			```
-		lineageTag: 1f666bc8-5ee7-4469-85d1-44c98ed78c45
-
 	measure UltimaDataHoraCriacaoProprietario =
 			
 			VAR NomeCompleto =
@@ -320,11 +297,24 @@ table Medidas
 
 	measure 'Atendimentos (Proprietário)' = ```
 			
+			VAR Proprietario =
+			    SELECTEDVALUE('2026-2'[Proprietário Lead])
+			
+			RETURN
 			CALCULATE(
-			    COUNTROWS('atendimentos'),
-			    USERELATIONSHIP(Atendimentos[Data de Criação], 'dCalendario'[Date]),'2026-2'
-			        
+			    COUNTROWS(Atendimentos),
+			    USERELATIONSHIP(
+			        Atendimentos[Data de Criação],
+			        'dCalendario'[Date]
+			    ),
+			    FILTER(
+			        Atendimentos,
+			        CONTAINSSTRING(
+			            LOWER(Atendimentos[Criado por]),
+			            LOWER(Proprietario)
+			        )
 			    )
+			)
 			
 			
 			```
@@ -340,7 +330,7 @@ table Medidas
 		formatString: 0
 		lineageTag: a33e22a6-279c-410a-976d-ffb6b7bc3e8d
 
-	measure 'Data Último Atendimento (teste)' = ```
+	measure 'Data Último Atendimento' = ```
 			
 			CALCULATE(
 			    CONVERT(MAX('Atendimentos'[Data de Criação]), DATETIME) + CONVERT(MAX('Atendimentos'[Hora de Criação]), DATETIME),

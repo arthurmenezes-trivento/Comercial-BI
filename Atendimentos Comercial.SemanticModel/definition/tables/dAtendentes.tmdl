@@ -39,17 +39,6 @@ table dAtendentes
 
 		annotation SummarizationSetBy = Automatic
 
-	column 'Atendente Formatado' = ```
-			
-			
-			
-			```
-		formatString: 0
-		lineageTag: 582a9c5e-d038-4648-bee6-1fbd2441bbf5
-		summarizeBy: none
-
-		annotation SummarizationSetBy = Automatic
-
 	partition dAtendentes = m
 		mode: import
 		queryGroup: 'Consultas - Token'

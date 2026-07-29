@@ -5,8 +5,8 @@
     "x": 57.38601823708207,
     "y": 157.56838905775078,
     "z": 9000,
-    "height": 285.95744680851067,
-    "width": 691.55015197568389,
+    "height": 385.16717325227967,
+    "width": 725.59270516717334,
     "tabOrder": 9000
   },
   "visual": {
@@ -507,5 +507,65 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "76c39e601434d0a89469",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Matr 26-2"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "055e03b0ed914eba0360",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "conver. atend - matr"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "61721f6b84407721e322",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "2026-2"
+              }
+            },
+            "Property": "Proprietário Lead"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "c5b91ac70e011663e0ad",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Atendimentos (Proprietário)"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

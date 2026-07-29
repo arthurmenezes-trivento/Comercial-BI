@@ -2197,92 +2197,6 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "medida.data_último_atendimento": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Data Último Atendimento"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "data último atendimento": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "information último atendimento": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.609
-			          }
-			        },
-			        {
-			          "fact último atendimento": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.609
-			          }
-			        },
-			        {
-			          "info último atendimento": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.609
-			          }
-			        },
-			        {
-			          "statistic último atendimento": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.609
-			          }
-			        },
-			        {
-			          "document último atendimento": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "figure último atendimento": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "record último atendimento": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        }
-			      ]
-			    },
 			    "medida.ultima_data_hora_criacao_proprietario": {
 			      "Definition": {
 			        "Binding": {
@@ -6952,7 +6866,7 @@ cultureInfo pt-BR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Data Último Atendimento (teste)"
+			          "ConceptualProperty": "Data Último Atendimento"
 			        }
 			      },
 			      "State": "Generated",
@@ -6976,22 +6890,6 @@ cultureInfo pt-BR
 			        }
 			      ],
 			      "SemanticType": "Time"
-			    },
-			    "d_atendente.atendente_formatado": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "dAtendentes",
-			          "ConceptualProperty": "Atendente Formatado"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "atendente formatado": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
 			    }
 			  },
 			  "Relationships": {

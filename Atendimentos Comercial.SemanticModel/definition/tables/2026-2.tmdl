@@ -685,9 +685,10 @@ table 2026-2
 				    #"Legado Expandido" = Table.ExpandTableColumn(#"Consultas Mescladas1", "Legado", {"Legado"}, {"Legado.1"}),
 				    #"Colunas Renomeadas2" = Table.RenameColumns(#"Legado Expandido",{{"Legado.1", "Legado"}}),
 				    #"Valor Substituído15" = Table.ReplaceValue(#"Colunas Renomeadas2",null,"Ciclo Atual",Replacer.ReplaceValue,{"Legado"}),
-				    #"Duplicatas Removidas" = Table.Distinct(#"Valor Substituído15", {"ID Lead"})
+				    #"Duplicatas Removidas" = Table.Distinct(#"Valor Substituído15", {"ID Lead"}),
+				    #"Texto Limpo" = Table.TransformColumns(#"Duplicatas Removidas",{{"Proprietário Lead", Text.Clean, type text}})
 				in
-				    #"Duplicatas Removidas"
+				    #"Texto Limpo"
 				```
 
 	annotation PBI_NavigationStepName = Navegação

@@ -91,7 +91,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Data Último Atendimento (teste)"
+                  "Property": "Data Último Atendimento"
                 }
               },
               "queryRef": "Medidas.Data Último Atendimento (teste)",
@@ -692,7 +692,7 @@
                 "Entity": "Medidas"
               }
             },
-            "Property": "Data Último Atendimento (teste)"
+            "Property": "Data Último Atendimento"
           }
         },
         "type": "Advanced"
