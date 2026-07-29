@@ -4,10 +4,10 @@
   "position": {
     "x": 394.89361702127661,
     "y": 116.71732522796353,
-    "z": 6002,
+    "z": 8000,
     "height": 58.208955223880594,
     "width": 145.97014925373134,
-    "tabOrder": 6002
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "slicer",
@@ -269,23 +269,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "abe444fc811b2e5e5a09",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dUnidade"
-              }
-            },
-            "Property": "Unidade"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

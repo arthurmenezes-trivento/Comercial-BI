@@ -31,9 +31,6 @@
               "active": true
             }
           ]
-        },
-        "Y": {
-          "projections": []
         }
       },
       "sortDefinition": {
@@ -219,23 +216,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "e0dccc6bdb0c6e302905",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dUnidade"
-              }
-            },
-            "Property": "Unidade"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

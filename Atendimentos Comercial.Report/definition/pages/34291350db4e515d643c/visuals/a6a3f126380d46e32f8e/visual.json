@@ -335,23 +335,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "d60bf20fe24780c44594",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Atendimentos (geral)"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

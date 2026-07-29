@@ -141,6 +141,21 @@
               },
               "queryRef": "2026-2.Última Tabulação",
               "nativeQueryRef": "Última Tabulação"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Data Último Atendimento (teste)"
+                }
+              },
+              "queryRef": "Medidas.Data Último Atendimento (teste)",
+              "nativeQueryRef": "Data Último Atendimento",
+              "displayName": "Data Último Atendimento"
             }
           ]
         }
@@ -318,6 +333,20 @@
           },
           "selector": {
             "metadata": "2026-2.email"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "140.44985439994161D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.Data Último Atendimento (teste)"
           }
         }
       ],
@@ -517,7 +546,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "c3316450b004b3162229",
+        "name": "295d0c57dc61e031a03e",
         "field": {
           "Column": {
             "Expression": {
@@ -531,7 +560,7 @@
         "type": "Categorical"
       },
       {
-        "name": "66a665385e9e43016232",
+        "name": "be81331238addba7e22e",
         "field": {
           "Column": {
             "Expression": {
@@ -545,7 +574,7 @@
         "type": "Categorical"
       },
       {
-        "name": "1bf7b9f0047a050a70de",
+        "name": "970c0f2fab00c8913ce9",
         "field": {
           "Column": {
             "Expression": {
@@ -559,63 +588,7 @@
         "type": "Categorical"
       },
       {
-        "name": "bb1114cdad28cdc460c6",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "2026-2"
-              }
-            },
-            "Property": "Unidade"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "df11fbb8a90577e2ba74",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "UltimoAtendente"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "a63fcc46879c4e16d895",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "2026-2"
-              }
-            },
-            "Property": "Última Tabulação"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "b2576954c2776e965448",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "2026-2"
-              }
-            },
-            "Property": "Situação Pagamento"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "c7c3daf96e1be53013b0",
+        "name": "cf3d25eb64c4302265d1",
         "field": {
           "Column": {
             "Expression": {
@@ -629,7 +602,21 @@
         "type": "Categorical"
       },
       {
-        "name": "fb69ef590b201eab1da8",
+        "name": "af86baa06e5094132eb2",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "2026-2"
+              }
+            },
+            "Property": "Unidade"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "347678905a0e30a3094d",
         "field": {
           "Column": {
             "Expression": {
@@ -641,6 +628,62 @@
           }
         },
         "type": "Categorical"
+      },
+      {
+        "name": "7470f0c3b63418020100",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "2026-2"
+              }
+            },
+            "Property": "Situação Pagamento"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "fd87b1176040bd6830db",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "UltimoAtendente"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "216f8bdd20c237006c05",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "2026-2"
+              }
+            },
+            "Property": "Última Tabulação"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "7a29cf4534d8b4446b1d",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Data Último Atendimento (teste)"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

@@ -91,11 +91,12 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Data Último Atendimento"
+                  "Property": "Data Último Atendimento (teste)"
                 }
               },
-              "queryRef": "Medidas.data Ultimo Atendimento",
-              "nativeQueryRef": "Data Último Atendimento"
+              "queryRef": "Medidas.Data Último Atendimento (teste)",
+              "nativeQueryRef": "Data Último Atendimento",
+              "displayName": "Data Último Atendimento"
             },
             {
               "field": {
@@ -294,20 +295,6 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "111.40299425233366D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Medidas.data Ultimo Atendimento"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
                   "Value": "80.98691028413052D"
                 }
               }
@@ -329,6 +316,20 @@
           },
           "selector": {
             "metadata": "Min(2026-2.Última Tabulação)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "118.44681929725432D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.Data Último Atendimento (teste)"
           }
         }
       ],
@@ -589,21 +590,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "8a03677d309b64dabfe1",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "UltimoAtendente"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "d4ad5d4d90e97d153d5b",
+        "name": "166fb32e00a3d79b5491",
         "field": {
           "Column": {
             "Expression": {
@@ -617,7 +604,7 @@
         "type": "Categorical"
       },
       {
-        "name": "f7e250fb4c0013a50e28",
+        "name": "1298c137b6c522be0039",
         "field": {
           "Aggregation": {
             "Expression": {
@@ -636,7 +623,7 @@
         "type": "Advanced"
       },
       {
-        "name": "1d8c8f9364b6468220d6",
+        "name": "fd964a186a2753e023b8",
         "field": {
           "Measure": {
             "Expression": {
@@ -650,7 +637,7 @@
         "type": "Advanced"
       },
       {
-        "name": "a5258505907adb406201",
+        "name": "c92fab10c65a5d3b6d3b",
         "field": {
           "Measure": {
             "Expression": {
@@ -658,13 +645,13 @@
                 "Entity": "Medidas"
               }
             },
-            "Property": "Data Último Atendimento"
+            "Property": "UltimoAtendente"
           }
         },
         "type": "Advanced"
       },
       {
-        "name": "3900171c2519edddbde5",
+        "name": "53c68c3e0251089d30a0",
         "field": {
           "Measure": {
             "Expression": {
@@ -678,7 +665,7 @@
         "type": "Advanced"
       },
       {
-        "name": "46db710ce60e1a5c0480",
+        "name": "740ca72bd48ddd085892",
         "field": {
           "Aggregation": {
             "Expression": {
@@ -692,6 +679,20 @@
               }
             },
             "Function": 3
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "fe0f5a3e04896dc587ac",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Data Último Atendimento (teste)"
           }
         },
         "type": "Advanced"

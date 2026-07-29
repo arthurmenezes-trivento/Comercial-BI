@@ -378,23 +378,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "079a2affa0e5eec3378a",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "% Tabulação"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

@@ -4,10 +4,10 @@
   "position": {
     "x": 228.57142857142858,
     "y": 116.71732522796353,
-    "z": 6001,
+    "z": 7000,
     "height": 58.208955223880594,
     "width": 145.97014925373134,
-    "tabOrder": 6001
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "slicer",
@@ -326,23 +326,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "de4241b0de704e637307",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "2026-2"
-              }
-            },
-            "Property": "Situação Pagamento"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

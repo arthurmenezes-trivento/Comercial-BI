@@ -412,37 +412,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "5673e436d03ee04eb223",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Atendimentos"
-              }
-            },
-            "Property": "Resultado do Contato"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "7c7f11d7acd74255449c",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Qtd tabulações"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

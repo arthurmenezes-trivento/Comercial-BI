@@ -58,3 +58,8 @@ relationship b870d859-f2ba-9b37-1060-088475287b74
 	fromColumn: 2026-2.'Data de Pagamento'
 	toColumn: dCalendario.Date
 
+relationship 4d45ade1-203a-dd4b-e6ad-d048092cda26
+	isActive: false
+	fromColumn: 2026-2.'Proprietário Lead'
+	toColumn: dAtendentes.'Criado por'
+
