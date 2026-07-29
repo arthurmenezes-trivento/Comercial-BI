@@ -45,6 +45,34 @@ expression 'Token de acesso' =
 
 	annotation PBI_ResultType = Function
 
+expression Legado = ```
+		let
+		    FonteSharePoint = SharePoint.Files(
+		        "https://grupoeducacionalsantoant.sharepoint.com/sites/TriventoEducaco",
+		        [ApiVersion = 15]
+		    ),
+		
+		    Arquivo = FonteSharePoint{[Name="BI - Base Legado.xlsx"]}[Content],
+		
+		    Fonte = Excel.Workbook(Arquivo, null, true),
+		
+		    #"Resultado da consulta1" = Fonte{[Name="Resultado da consulta"]}[Data],
+		    
+		    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(#"Resultado da consulta1", [PromoteAllScalars=true]),
+		    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Nome", type text}, {"Codigo", type text}, {"Celular", type text}, {"Data Criacao", type date}, {"Concuro ID", type text}}),
+		    #"Personalização Adicionada" = Table.AddColumn(#"Tipo Alterado", "Legado", each "Legado"),
+		    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Personalização Adicionada",{{"Legado", type text}}),
+		    #"Linhas Filtradas" = Table.SelectRows(#"Tipo Alterado1", each [Celular] <> null and [Celular] <> "")
+		in
+		    #"Linhas Filtradas"
+		```
+	lineageTag: 852e0a76-52e7-4f99-aeda-204fe5e1f4cb
+	queryGroup: 'Consultas - Token'
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+
 expression Inscricoes =
 		let
 		    Token = #"Token de acesso"(),
@@ -129,34 +157,6 @@ expression Inscricoes =
 		in
 		    #"result.cad_formapagamento Expandido"
 	lineageTag: c3a7adf9-4066-4267-8dea-ee76593a33c4
-	queryGroup: 'Consultas - Token'
-
-	annotation PBI_NavigationStepName = Navegação
-
-	annotation PBI_ResultType = Table
-
-expression Legado = ```
-		let
-		    FonteSharePoint = SharePoint.Files(
-		        "https://grupoeducacionalsantoant.sharepoint.com/sites/TriventoEducaco",
-		        [ApiVersion = 15]
-		    ),
-		
-		    Arquivo = FonteSharePoint{[Name="BI - Base Legado.xlsx"]}[Content],
-		
-		    Fonte = Excel.Workbook(Arquivo, null, true),
-		
-		    #"Resultado da consulta1" = Fonte{[Name="Resultado da consulta"]}[Data],
-		    
-		    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(#"Resultado da consulta1", [PromoteAllScalars=true]),
-		    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Nome", type text}, {"Codigo", type text}, {"Celular", type text}, {"Data Criacao", type date}, {"Concuro ID", type text}}),
-		    #"Personalização Adicionada" = Table.AddColumn(#"Tipo Alterado", "Legado", each "Legado"),
-		    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Personalização Adicionada",{{"Legado", type text}}),
-		    #"Linhas Filtradas" = Table.SelectRows(#"Tipo Alterado1", each [Celular] <> null and [Celular] <> "")
-		in
-		    #"Linhas Filtradas"
-		```
-	lineageTag: 852e0a76-52e7-4f99-aeda-204fe5e1f4cb
 	queryGroup: 'Consultas - Token'
 
 	annotation PBI_NavigationStepName = Navegação
@@ -283,47 +283,60 @@ expression Leads =
 
 	annotation PBI_ResultType = Table
 
-expression 'Erros em Matrículas GD' =
+expression 'Matrículas GD' =
 		let
-		Fonte = #"Matrículas GD",
-		  #"Incompatibilidades de Tipo Detectadas" = let
-		    tableWithOnlyPrimitiveTypes = Table.SelectColumns(Fonte, Table.ColumnsOfType(Fonte, {type nullable number, type nullable text, type nullable logical, type nullable date, type nullable datetime, type nullable datetimezone, type nullable time, type nullable duration})),
-		    recordTypeFields = Type.RecordFields(Type.TableRow(Value.Type(tableWithOnlyPrimitiveTypes))),
-		    fieldNames = Record.FieldNames(recordTypeFields),
-		    fieldTypes = List.Transform(Record.ToList(recordTypeFields), each [Type]),
-		    pairs = List.Transform(List.Positions(fieldNames), (i) => {fieldNames{i}, (v) => if v = null or Value.Is(v, fieldTypes{i}) then v else error [Message = "O tipo do valor não corresponde ao tipo da coluna.", Detail = v], fieldTypes{i}})
+		    Fonte = Table.Combine({LORENA, ALTAMIRA, ITABIRITO}),
+		    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"DATA", type date}}),
+		    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Tipo Alterado",{{"Unidade", type text}})
 		in
-		    Table.TransformColumns(Fonte, pairs),
-		  #"Índice Adicionado" = Table.AddIndexColumn(#"Incompatibilidades de Tipo Detectadas", "Número da Linha" ,1),
-		  #"Erros Mantidos" = Table.SelectRowsWithErrors(#"Índice Adicionado", {"CONSULTOR (a)", "DATA", "Número de Inscrição", "NOME", "CELULAR", "CPF (preencher apenas com números)", "CURSO", "FORMA DE INGRESSO", "% BOLSA CONCEDIDA", "CONDIÇÃO", "VALOR PG MATRÍCULA", "NOME DO PAGADOR ", "FORMA DE PAGAMNTO", "QUANTIDADE DE PARCELAS", "OBSERVAÇÃO", "Unidade", "Data e Hora", ""}),
-		  #"Colunas Reordenadas" = Table.ReorderColumns(#"Erros Mantidos", {"Número da Linha", "CONSULTOR (a)", "DATA", "Número de Inscrição", "NOME", "CELULAR", "CPF (preencher apenas com números)", "CURSO", "FORMA DE INGRESSO", "% BOLSA CONCEDIDA", "CONDIÇÃO", "VALOR PG MATRÍCULA", "NOME DO PAGADOR ", "FORMA DE PAGAMNTO", "QUANTIDADE DE PARCELAS", "OBSERVAÇÃO", "Unidade", "Data e Hora", ""})
-		in
-		  #"Colunas Reordenadas"
-	lineageTag: 3c3f26b9-7ea6-479f-a6f4-5b6db47b70e0
-	queryGroup: 'Erros na Consulta - 28/07/2026 18:55:56'
+		    #"Tipo Alterado1"
+	lineageTag: 9bd5a8fb-6297-4225-80c3-eb7a3879d613
 
 	annotation PBI_NavigationStepName = Navegação
 
 	annotation PBI_ResultType = Table
 
-expression 'Erros em Matrículas GD (2)' =
+expression ALTAMIRA =
 		let
-		Fonte = #"Matrículas GD",
-		  #"Incompatibilidades de Tipo Detectadas" = let
-		    tableWithOnlyPrimitiveTypes = Table.SelectColumns(Fonte, Table.ColumnsOfType(Fonte, {type nullable number, type nullable text, type nullable logical, type nullable date, type nullable datetime, type nullable datetimezone, type nullable time, type nullable duration})),
-		    recordTypeFields = Type.RecordFields(Type.TableRow(Value.Type(tableWithOnlyPrimitiveTypes))),
-		    fieldNames = Record.FieldNames(recordTypeFields),
-		    fieldTypes = List.Transform(Record.ToList(recordTypeFields), each [Type]),
-		    pairs = List.Transform(List.Positions(fieldNames), (i) => {fieldNames{i}, (v) => if v = null or Value.Is(v, fieldTypes{i}) then v else error [Message = "O tipo do valor não corresponde ao tipo da coluna.", Detail = v], fieldTypes{i}})
+		    Fonte = GoogleSheets.Contents("https://docs.google.com/spreadsheets/d/13DBRdUsHT5wupKkq3Omi9VUr9Nj3R5gYVMfSSkmtXQM/edit?gid=0#gid=0"),
+		    ALTAMIRA_Table = Fonte{[name="ALTAMIRA",ItemKind="Table"]}[Data],
+		    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(ALTAMIRA_Table, [PromoteAllScalars=true]),
+		    #"Linhas em Branco Removidas" = Table.SelectRows(#"Cabeçalhos Promovidos", each not List.IsEmpty(List.RemoveMatchingItems(Record.FieldValues(_), {"", null}))),
+		    #"Valor Substituído" = Table.TransformColumns(#"Linhas em Branco Removidas", {{"Unidade", each "Altamira", type text}})
 		in
-		    Table.TransformColumns(Fonte, pairs),
-		  #"Índice Adicionado" = Table.AddIndexColumn(#"Incompatibilidades de Tipo Detectadas", "Número da Linha" ,1),
-		  #"Erros Mantidos" = Table.SelectRowsWithErrors(#"Índice Adicionado", {"CONSULTOR (a)", "DATA", "Número de Inscrição", "NOME", "CELULAR", "CPF (preencher apenas com números)", "CURSO", "FORMA DE INGRESSO", "% BOLSA CONCEDIDA", "CONDIÇÃO", "VALOR PG MATRÍCULA", "NOME DO PAGADOR ", "FORMA DE PAGAMNTO", "QUANTIDADE DE PARCELAS", "OBSERVAÇÃO", "Unidade", "Data e Hora", ""}),
-		  #"Colunas Reordenadas" = Table.ReorderColumns(#"Erros Mantidos", {"Número da Linha", "CONSULTOR (a)", "DATA", "Número de Inscrição", "NOME", "CELULAR", "CPF (preencher apenas com números)", "CURSO", "FORMA DE INGRESSO", "% BOLSA CONCEDIDA", "CONDIÇÃO", "VALOR PG MATRÍCULA", "NOME DO PAGADOR ", "FORMA DE PAGAMNTO", "QUANTIDADE DE PARCELAS", "OBSERVAÇÃO", "Unidade", "Data e Hora", ""})
+		    #"Valor Substituído"
+	lineageTag: 89aa6d47-ad4c-4e4f-89e5-5a8cbb26ca1a
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+
+expression LORENA =
+		let
+		    Fonte = GoogleSheets.Contents("https://docs.google.com/spreadsheets/d/13DBRdUsHT5wupKkq3Omi9VUr9Nj3R5gYVMfSSkmtXQM/edit?gid=0#gid=0"),
+		    LORENA_Table = Fonte{[name="LORENA",ItemKind="Table"]}[Data],
+		    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(LORENA_Table, [PromoteAllScalars=true]),
+		    #"Linhas em Branco Removidas" = Table.SelectRows(#"Cabeçalhos Promovidos", each not List.IsEmpty(List.RemoveMatchingItems(Record.FieldValues(_), {"", null}))),
+		    #"Valor Substituído" = Table.TransformColumns(#"Linhas em Branco Removidas", {{"Unidade", each "Lorena", type text}})
 		in
-		    #"Colunas Reordenadas"
-	lineageTag: 93d66a0c-0a84-4cc7-b388-77bd854f65ec
-	queryGroup: 'Erros na Consulta - 28/07/2026 19:47:33'
+		    #"Valor Substituído"
+	lineageTag: ea082ae6-7101-4995-8c58-45d2661b1918
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+
+expression ITABIRITO =
+		let
+		    Fonte = GoogleSheets.Contents("https://docs.google.com/spreadsheets/d/13DBRdUsHT5wupKkq3Omi9VUr9Nj3R5gYVMfSSkmtXQM/edit?gid=0#gid=0"),
+		    ITABIRITO_Table = Fonte{[name="ITABIRITO",ItemKind="Table"]}[Data],
+		    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(ITABIRITO_Table, [PromoteAllScalars=true]),
+		    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"CONSULTOR (a)", type text}, {"DATA", type any}, {"NOME", type text}, {"CELULAR", type any}, {"CPF (preencher apenas com números)", type any}, {"CURSO", type text}, {"FORMA DE INGRESSO", type text}, {"% BOLSA CONCEDIDA", type number}, {"CONDIÇÃO", type text}, {"VALOR PG MATRÍCULA", type number}, {"NOME DO PAGADOR ", type text}, {"FORMA DE PAGAMNTO", type text}, {"QUANTIDADE DE PARCELAS", type text}, {"OBSERVAÇÃO", type text}, {"Unidade", type text}, {"Data e Hora", type date}, {"", type text}}),
+		    #"Linhas em Branco Removidas" = Table.SelectRows(#"Tipo Alterado", each not List.IsEmpty(List.RemoveMatchingItems(Record.FieldValues(_), {"", null}))),
+		    #"Valor Substituído" = Table.TransformColumns(#"Linhas em Branco Removidas", {{"Unidade", each "Itabirito", type text}})
+		in
+		    #"Valor Substituído"
+	lineageTag: c008e15f-9750-4794-a7ae-89e62ecbf8ec
 
 	annotation PBI_NavigationStepName = Navegação
 

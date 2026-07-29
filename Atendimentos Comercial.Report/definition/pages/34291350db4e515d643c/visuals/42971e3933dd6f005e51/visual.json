@@ -20,38 +20,15 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Matrículas GD"
+                      "Entity": "Atendimentos"
                     }
                   },
-                  "Property": "CONSULTOR (a)"
+                  "Property": "Criado por"
                 }
               },
-              "queryRef": "Matrículas GD.CONSULTOR (a)",
-              "nativeQueryRef": "CONSULTOR (a)",
+              "queryRef": "Atendimentos.Criado por",
+              "nativeQueryRef": "Contagem de Criado por",
               "active": true
-            }
-          ]
-        },
-        "Y": {
-          "projections": [
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Matrículas GD"
-                        }
-                      },
-                      "Property": "CPF (preencher apenas com números)"
-                    }
-                  },
-                  "Function": 5
-                }
-              },
-              "queryRef": "CountNonNull(Matrículas GD.CPF (preencher apenas com números))",
-              "nativeQueryRef": "Contagem de CPF (preencher apenas com números)"
             }
           ]
         }
@@ -65,10 +42,10 @@
                   "Column": {
                     "Expression": {
                       "SourceRef": {
-                        "Entity": "Matrículas GD"
+                        "Entity": "Atendimentos"
                       }
                     },
-                    "Property": "CPF (preencher apenas com números)"
+                    "Property": "Criado por"
                   }
                 },
                 "Function": 5
@@ -259,42 +236,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "46869c629edb3b685cd0",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Matrículas GD"
-              }
-            },
-            "Property": "CONSULTOR (a)"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "d73f0730d57c4906655b",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Matrículas GD"
-                  }
-                },
-                "Property": "CPF (preencher apenas com números)"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

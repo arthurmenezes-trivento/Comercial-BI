@@ -33,50 +33,10 @@
           ]
         },
         "Y": {
-          "projections": [
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Matrículas GD"
-                        }
-                      },
-                      "Property": "CPF (preencher apenas com números)"
-                    }
-                  },
-                  "Function": 5
-                }
-              },
-              "queryRef": "CountNonNull(Matrículas GD.CPF (preencher apenas com números))",
-              "nativeQueryRef": "Contagem de CPF (preencher apenas com números)"
-            }
-          ]
+          "projections": []
         }
       },
       "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Aggregation": {
-                "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Matrículas GD"
-                      }
-                    },
-                    "Property": "CPF (preencher apenas com números)"
-                  }
-                },
-                "Function": 5
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
         "isDefaultSort": true
       }
     },

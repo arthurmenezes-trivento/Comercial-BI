@@ -11,24 +11,9 @@ queryGroup 'Consultas - Token'
 
 	annotation PBI_QueryGroupOrder = 0
 
-/// Erros nas consultas que foram carregadas em 27/07/2026 16:53:19.
-queryGroup 'Erros na Consulta - 27/07/2026 16:53:19'
-
-	annotation PBI_QueryGroupOrder = 1
-
-/// Erros nas consultas que foram carregadas em 28/07/2026 18:55:56.
-queryGroup 'Erros na Consulta - 28/07/2026 18:55:56'
-
-	annotation PBI_QueryGroupOrder = 2
-
-/// Erros nas consultas que foram carregadas em 28/07/2026 19:47:33.
-queryGroup 'Erros na Consulta - 28/07/2026 19:47:33'
-
-	annotation PBI_QueryGroupOrder = 3
-
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["Token de acesso","Inscricoes","dUnidade","DeparaCursos","dCanal","Atendimentos","Medidas","Função Invocada","ALTAMIRA","LORENA","ITABIRITO","Matrículas GD","2026-2","Legado","Leads","dAtendentes","Erros em Matrículas GD","Erros em Matrículas GD (2)"]
+annotation PBI_QueryOrder = ["Token de acesso","Inscricoes","dUnidade","DeparaCursos","dCanal","Atendimentos","Medidas","Função Invocada","ALTAMIRA","LORENA","ITABIRITO","Matrículas GD","2026-2","Legado","Leads","dAtendentes"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
@@ -41,11 +26,6 @@ ref table dCanal
 ref table LocalDateTable_a805f813-464e-407c-b1f9-b2f9e577ec46
 ref table Medidas
 ref table Atendimentos
-ref table ALTAMIRA
-ref table LORENA
-ref table ITABIRITO
-ref table LocalDateTable_e314503a-e405-44ff-9d42-cb9fb75678ba
-ref table 'Matrículas GD'
 ref table 'Função Invocada'
 ref table 2026-2
 ref table LocalDateTable_7e1d0cea-05a8-4f78-a6a4-9df479fa0c63

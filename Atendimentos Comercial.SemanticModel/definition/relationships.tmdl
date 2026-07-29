@@ -8,19 +8,6 @@ relationship a8dd076f-7d3f-45e4-a341-c4989d7fda92
 	fromColumn: dCalendario.Date
 	toColumn: LocalDateTable_a805f813-464e-407c-b1f9-b2f9e577ec46.Date
 
-relationship 5a2d939b-6e20-4a42-acf0-fbf93c9b29a8
-	joinOnDateBehavior: datePartOnly
-	fromColumn: ITABIRITO.'Data e Hora'
-	toColumn: LocalDateTable_e314503a-e405-44ff-9d42-cb9fb75678ba.Date
-
-relationship fbd7ce99-2e0f-1e2c-fe5b-86ff0e16d26d
-	fromColumn: 'Matrículas GD'.DATA
-	toColumn: dCalendario.Date
-
-relationship a8c966b7-8023-a9ec-a1c1-fcfedf39f777
-	fromColumn: 'Matrículas GD'.Unidade
-	toColumn: dUnidade.Unidade
-
 relationship 8cc51ea1-e653-cb07-c58d-36795b146a85
 	isActive: false
 	fromColumn: Atendimentos.'Data de Criação'
