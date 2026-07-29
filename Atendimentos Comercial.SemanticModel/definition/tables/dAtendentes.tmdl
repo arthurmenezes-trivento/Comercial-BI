@@ -9,6 +9,14 @@ table dAtendentes
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'Proprietário lead'
+		dataType: string
+		lineageTag: 85370991-4102-4bff-b26e-c41aee647a19
+		summarizeBy: none
+		sourceColumn: Proprietário lead
+
+		annotation SummarizationSetBy = Automatic
+
 	column Equipe =
 			
 			SWITCH(
@@ -46,9 +54,46 @@ table dAtendentes
 				let
 				    Fonte = Atendimentos,
 				    #"Outras Colunas Removidas" = Table.SelectColumns(Fonte,{"Criado por"}),
-				    #"Duplicatas Removidas" = Table.Distinct(#"Outras Colunas Removidas")
+				    fnNormalizaNome = (valor as nullable text) as nullable text =>
+				        let
+				            TextoBase = if valor = null then null else Text.Lower(Text.Trim(Text.Clean(Text.Replace(valor, Character.FromNumber(160), " ")))),
+				            TextoSemAcentos = if TextoBase = null then null else List.Accumulate(
+				                {
+				                    {"á", "a"}, {"à", "a"}, {"â", "a"}, {"ã", "a"}, {"ä", "a"},
+				                    {"é", "e"}, {"ê", "e"}, {"ë", "e"},
+				                    {"í", "i"}, {"ï", "i"},
+				                    {"ó", "o"}, {"ô", "o"}, {"õ", "o"}, {"ö", "o"},
+				                    {"ú", "u"}, {"ü", "u"},
+				                    {"ç", "c"}
+				                },
+				                TextoBase,
+				                (state, current) => Text.Replace(state, current{0}, current{1})
+				            ),
+				            TextoSemPontuacao = if TextoSemAcentos = null then null else List.Accumulate(
+				                {".", ",", "-", "(", ")", "/", "'", ":"},
+				                TextoSemAcentos,
+				                (state, current) => Text.Replace(state, current, "")
+				            ),
+				            Tokens = if TextoSemPontuacao = null then null else List.Select(Text.SplitAny(TextoSemPontuacao, " "), each _ <> ""),
+				            Resultado = if Tokens = null then null else Text.Combine(Tokens, " ")
+				        in
+				            Resultado,
+				    #"Duplicatas Removidas" = Table.Distinct(#"Outras Colunas Removidas"),
+				    #"Chave Criado por" = Table.AddColumn(#"Duplicatas Removidas", "Chave Normalizada", each fnNormalizaNome([Criado por]), type text),
+				    #"Proprietários Distintos" = Table.Distinct(
+				        Table.AddColumn(
+				            Table.SelectColumns(#"2026-2", {"Proprietário Lead"}),
+				            "Chave Normalizada",
+				            each fnNormalizaNome([Proprietário Lead]),
+				            type text
+				        ),
+				        {"Chave Normalizada"}
+				    ),
+				    #"Consultas Mescladas" = Table.NestedJoin(#"Chave Criado por", {"Chave Normalizada"}, #"Proprietários Distintos", {"Chave Normalizada"}, "2026-2", JoinKind.LeftOuter),
+				    #"Proprietário lead Expandido" = Table.ExpandTableColumn(#"Consultas Mescladas", "2026-2", {"Proprietário Lead"}, {"Proprietário lead"}),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Proprietário lead Expandido",{"Chave Normalizada"})
 				in
-				    #"Duplicatas Removidas"
+				    #"Colunas Removidas"
 
 	annotation PBI_NavigationStepName = Navegação
 
