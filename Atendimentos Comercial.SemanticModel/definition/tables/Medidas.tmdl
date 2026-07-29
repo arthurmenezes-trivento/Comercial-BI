@@ -298,7 +298,7 @@ table Medidas
 	measure 'Atendimentos (Proprietário)' = ```
 			
 			VAR Proprietario =
-			    SELECTEDVALUE('dAtendentes'[Proprietário lead])
+			    SELECTEDVALUE('2026-2'[Proprietário lead])
 			
 			RETURN
 			IF(
@@ -311,7 +311,7 @@ table Medidas
 			            'dCalendario'[Date]
 			        ),
 			        KEEPFILTERS(
-			            Atendimentos[Criado por] = Proprietario
+			            'dAtendentes'[Proprietário lead] = Proprietario
 			        )
 			    )
 			)

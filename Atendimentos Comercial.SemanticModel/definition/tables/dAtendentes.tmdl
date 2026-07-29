@@ -9,14 +9,6 @@ table dAtendentes
 
 		annotation SummarizationSetBy = Automatic
 
-	column 'Proprietário lead'
-		dataType: string
-		lineageTag: 85370991-4102-4bff-b26e-c41aee647a19
-		summarizeBy: none
-		sourceColumn: Proprietário lead
-
-		annotation SummarizationSetBy = Automatic
-
 	column Equipe =
 			
 			SWITCH(
@@ -44,6 +36,14 @@ table dAtendentes
 			)
 		lineageTag: 30a26d64-c5b8-42f7-bdec-0880781837cc
 		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Proprietário lead'
+		dataType: string
+		lineageTag: 85370991-4102-4bff-b26e-c41aee647a19
+		summarizeBy: none
+		sourceColumn: Proprietário lead
 
 		annotation SummarizationSetBy = Automatic
 
