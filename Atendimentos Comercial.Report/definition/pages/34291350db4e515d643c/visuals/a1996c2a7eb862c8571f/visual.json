@@ -42,11 +42,11 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Qtd Atendimentos"
+                  "Property": "Atendimentos (geral)"
                 }
               },
-              "queryRef": "Medidas.Qtd Atendimentos",
-              "nativeQueryRef": "Qtd Atendimentos"
+              "queryRef": "Medidas.Atendimentos (geral)",
+              "nativeQueryRef": "Atendimentos (geral)"
             }
           ]
         }
@@ -61,7 +61,7 @@
                     "Entity": "Medidas"
                   }
                 },
-                "Property": "Qtd Atendimentos"
+                "Property": "Atendimentos (geral)"
               }
             },
             "direction": "Descending"
@@ -249,5 +249,37 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "f37ddc109798c798b480",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Atendimentos"
+              }
+            },
+            "Property": "Criado por"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "0b142622cb7d0ae7ea7b",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Atendimentos (geral)"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

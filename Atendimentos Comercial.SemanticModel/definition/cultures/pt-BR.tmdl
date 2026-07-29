@@ -2537,32 +2537,6 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "medida.qtd_atendimentos": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Qtd Atendimentos"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "qtd atendimentos": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "Atendimentos": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        }
-			      ]
-			    },
 			    "medida.tabulação": {
 			      "Definition": {
 			        "Binding": {

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "702ea1ca5b733ea760a4",
   "position": {
-    "x": 469.78723404255322,
-    "y": 203.28267477203647,
+    "x": 470.14925373134326,
+    "y": 198.80597014925374,
     "z": 8000,
-    "height": 209.11854103343467,
-    "width": 672.09726443769,
+    "height": 388.65671641791045,
+    "width": 749.55223880597009,
     "tabOrder": 8000
   },
   "visual": {
@@ -107,7 +107,7 @@
             "rowPadding": {
               "expr": {
                 "Literal": {
-                  "Value": "1D"
+                  "Value": "0D"
                 }
               }
             }
@@ -117,13 +117,6 @@
       "columnHeaders": [
         {
           "properties": {
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Center'"
-                }
-              }
-            },
             "titleAlignment": {
               "expr": {
                 "Literal": {
@@ -131,10 +124,40 @@
                 }
               }
             },
-            "columnAdjustment": {
+            "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "'growToFit'"
+                  "Value": "12D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#3465A4'"
+                    }
+                  }
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
                 }
               }
             }
@@ -156,7 +179,7 @@
                               "Entity": "Medidas"
                             }
                           },
-                          "Property": "Matr 26-2"
+                          "Property": "Leads"
                         }
                       },
                       "FillRule": {
@@ -198,7 +221,7 @@
                 }
               }
             ],
-            "metadata": "Medidas.Matr 26-2"
+            "metadata": "Medidas.Leads"
           }
         }
       ],
@@ -284,7 +307,7 @@
             }
           },
           "selector": {
-            "metadata": "Medidas.Matr 26-2"
+            "metadata": "Medidas.Leads"
           }
         }
       ],
@@ -307,13 +330,13 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "67.31555880204529D"
+                  "Value": "190.79913080738783D"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "dCalendario.Date"
+            "metadata": "2026-2.Situação Inscrição"
           }
         },
         {
@@ -321,36 +344,69 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "56.84057971014493D"
+                  "Value": "73.50748184461658D"
                 }
               }
             }
           },
           "selector": {
-            "data": [
-              {
-                "scopeId": {
-                  "Comparison": {
-                    "ComparisonKind": 0,
-                    "Left": {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "2026-2"
-                          }
-                        },
-                        "Property": "Aging Faixa"
-                      }
-                    },
-                    "Right": {
-                      "Literal": {
-                        "Value": "'Legado'"
-                      }
-                    }
-                  }
+            "metadata": "select"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "154.95522083822897D"
                 }
               }
-            ]
+            }
+          },
+          "selector": {
+            "metadata": "2026-2.Nome Completo"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "121.59701314176883D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "2026-2.forma de pagamento"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "112.01492032046016D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "2026-2.Situação Pagamento"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "144.1063992201706D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.UltimoAtendente"
           }
         }
       ]
@@ -359,34 +415,6 @@
       "title": [
         {
           "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "titleWrap": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'center'"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "12D"
-                }
-              }
-            },
             "text": {
               "expr": {
                 "Literal": {
@@ -394,14 +422,10 @@
                 }
               }
             },
-            "background": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#F0F0F0'"
-                    }
-                  }
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -437,32 +461,6 @@
                   "Value": "1D"
                 }
               }
-            },
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.3
-                    }
-                  }
-                }
-              }
-            },
-            "radius": {
-              "expr": {
-                "Literal": {
-                  "Value": "5D"
-                }
-              }
             }
           }
         }
@@ -474,30 +472,6 @@
               "expr": {
                 "Literal": {
                   "Value": "'Minimal'"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "divider": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#b3b3b3'"
-                    }
-                  }
                 }
               }
             }

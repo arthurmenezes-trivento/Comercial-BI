@@ -1,19 +1,19 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "3d4de5394e266a5b06cd",
+  "name": "92cbf87faca4a097a002",
   "position": {
-    "x": 579.40298507462683,
-    "y": 470.14925373134326,
-    "z": 13000,
-    "height": 179.1044776119403,
-    "width": 268.65671641791045,
-    "tabOrder": 13000
+    "x": 394.89361702127661,
+    "y": 116.71732522796353,
+    "z": 6002,
+    "height": 58.208955223880594,
+    "width": 145.97014925373134,
+    "tabOrder": 6002
   },
   "visual": {
-    "visualType": "barChart",
+    "visualType": "slicer",
     "query": {
       "queryState": {
-        "Category": {
+        "Values": {
           "projections": [
             {
               "field": {
@@ -31,101 +31,75 @@
               "active": true
             }
           ]
-        },
-        "Y": {
-          "projections": []
         }
       },
       "sortDefinition": {
         "isDefaultSort": true
       }
     },
+    "expansionStates": [
+      {
+        "roles": [
+          "Values"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "dUnidade.Unidade"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          }
+        ],
+        "root": {}
+      }
+    ],
     "objects": {
-      "categoryAxis": [
+      "data": [
         {
           "properties": {
-            "fontSize": {
+            "mode": {
               "expr": {
                 "Literal": {
-                  "Value": "10D"
-                }
-              }
-            },
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "labelColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            },
-            "showAxisTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
+                  "Value": "'Dropdown'"
                 }
               }
             }
           }
         }
       ],
-      "valueAxis": [
+      "general": [
+        {
+          "properties": {}
+        }
+      ],
+      "header": [
         {
           "properties": {
-            "show": {
+            "text": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "'Unidade'"
                 }
               }
             },
-            "showAxisTitle": {
+            "textSize": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "8D"
                 }
               }
             }
           }
         }
       ],
-      "labels": [
+      "items": [
         {
           "properties": {
-            "show": {
+            "textSize": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "10D"
-                }
-              }
-            },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0
-                    }
-                  }
+                  "Value": "8D"
                 }
               }
             }
@@ -137,10 +111,10 @@
       "title": [
         {
           "properties": {
-            "text": {
+            "show": {
               "expr": {
                 "Literal": {
-                  "Value": "'Matrículas por Unidade'"
+                  "Value": "false"
                 }
               }
             },
@@ -180,7 +154,37 @@
                   "Value": "'center'"
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Situação'"
+                }
+              }
             }
+          }
+        }
+      ],
+      "spacing": [
+        {
+          "properties": {
+            "verticalSpacing": {
+              "expr": {
+                "Literal": {
+                  "Value": "2D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
           }
         }
       ],
@@ -190,7 +194,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -198,6 +202,39 @@
               "expr": {
                 "Literal": {
                   "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "lockAspect": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -216,6 +253,19 @@
             }
           }
         }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
@@ -223,7 +273,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "e0dccc6bdb0c6e302905",
+        "name": "abe444fc811b2e5e5a09",
         "field": {
           "Column": {
             "Expression": {

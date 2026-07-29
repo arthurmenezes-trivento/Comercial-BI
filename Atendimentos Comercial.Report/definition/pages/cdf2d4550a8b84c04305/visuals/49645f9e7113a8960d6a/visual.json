@@ -283,13 +283,41 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "144.1063992201706D"
+                  "Value": "111.0580144558033D"
                 }
               }
             }
           },
           "selector": {
             "metadata": "Medidas.UltimoAtendente"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "129.6261547320287D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "2026-2.Forma de Ingresso"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "113.96960034431994D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "2026-2.email"
           }
         }
       ],
@@ -406,6 +434,19 @@
           },
           "selector": {
             "metadata": "Medidas.Leads"
+          }
+        }
+      ],
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
           }
         }
       ]

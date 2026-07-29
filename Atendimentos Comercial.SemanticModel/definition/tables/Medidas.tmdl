@@ -160,20 +160,11 @@ table Medidas
 		formatString: 0
 		lineageTag: 769c3244-4b91-43f0-96ed-617496476eb2
 
-	measure 'Qtd Atendimentos' =
-			
-			CALCULATE(
-			    COUNTROWS(Atendimentos),
-			    USERELATIONSHIP(Atendimentos[Data de Criação], dCalendario[Date])
-			)
-		formatString: 0
-		lineageTag: 93620f8c-6a35-4bdf-895d-81b78e33e8b5
-
 	measure '% Tabulação' =
 			
 			DIVIDE(
 			    [Qtd tabulações],
-			    [Qtd Atendimentos]
+			    [Atendimentos (geral)]
 			)
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: 7a1e3b6c-3d44-42b7-91fd-39265522c5ce
@@ -296,7 +287,7 @@ table Medidas
 			
 			DIVIDE(
 			    [Matr 26-2],
-			    [Qtd Atendimentos]
+			    [Atendimentos (Proprietário)]
 			)
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: 280035e9-81c1-44bf-81fc-fd4b7a7d2a86
@@ -327,15 +318,26 @@ table Medidas
 			
 			CALCULATE(
 			    COUNTROWS('atendimentos'),
+			    USERELATIONSHIP(Atendimentos[Data de Criação], 'dCalendario'[Date]),
 			    FILTER(
 			        'atendimentos',
 			        'Atendimentos'[Criado por] = RELATED('2026-2'[Proprietário Lead])
+			        
 			    )
 			)
 			
 			```
 		formatString: 0
 		lineageTag: 8129f827-26c2-44e4-be31-6dce2876b637
+
+	measure 'Atendimentos (geral)' =
+			
+			CALCULATE(
+			    COUNTROWS('Atendimentos'),
+			    USERELATIONSHIP(Atendimentos[Data de Criação], 'dCalendario'[Date])
+			)
+		formatString: 0
+		lineageTag: a33e22a6-279c-410a-976d-ffb6b7bc3e8d
 
 	column 'Coluna 1'
 		dataType: string

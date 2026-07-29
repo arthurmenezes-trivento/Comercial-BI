@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "241647d2bea857103563",
   "position": {
-    "x": 57.3134328358209,
-    "y": 157.61194029850745,
+    "x": 57.38601823708207,
+    "y": 157.56838905775078,
     "z": 9000,
-    "height": 281.19402985074623,
-    "width": 602.68656716417911,
+    "height": 285.95744680851067,
+    "width": 691.55015197568389,
     "tabOrder": 9000
   },
   "visual": {
@@ -20,16 +20,15 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Atendimentos"
+                      "Entity": "2026-2"
                     }
                   },
-                  "Property": "Criado por"
+                  "Property": "Proprietário Lead"
                 }
               },
-              "queryRef": "Atendimentos.Criado por",
-              "nativeQueryRef": "Consultor",
-              "active": true,
-              "displayName": "Consultor"
+              "queryRef": "2026-2.Proprietário Lead",
+              "nativeQueryRef": "Proprietário Lead",
+              "active": true
             }
           ]
         },
@@ -58,12 +57,11 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Qtd Atendimentos"
+                  "Property": "Atendimentos (Proprietário)"
                 }
               },
-              "queryRef": "Medidas.Qtd Atendimentos",
-              "nativeQueryRef": "Atendimentos",
-              "displayName": "Atendimentos"
+              "queryRef": "Medidas.Atendimentos (Proprietário)",
+              "nativeQueryRef": "Atendimentos (Proprietário)"
             },
             {
               "field": {
@@ -513,20 +511,6 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "b20d218354500043853e",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Atendimentos"
-              }
-            },
-            "Property": "Criado por"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
         "name": "96a32a5d9edebe39b889",
         "field": {
           "Measure": {
@@ -541,20 +525,6 @@
         "type": "Advanced"
       },
       {
-        "name": "8fa3cceb67eca9e657b4",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Qtd Atendimentos"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
         "name": "4e85c93d007ba8accdc6",
         "field": {
           "Measure": {
@@ -564,6 +534,34 @@
               }
             },
             "Property": "conver. atend - matr"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "bee49f469867c8d15043",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "2026-2"
+              }
+            },
+            "Property": "Proprietário Lead"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "73d3a2c8d24bb00548e4",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Atendimentos (Proprietário)"
           }
         },
         "type": "Advanced"
