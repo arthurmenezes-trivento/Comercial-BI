@@ -298,20 +298,20 @@ table Medidas
 	measure 'Atendimentos (Proprietário)' = ```
 			
 			VAR Proprietario =
-			    SELECTEDVALUE('2026-2'[Proprietário Lead])
+			    SELECTEDVALUE('dAtendentes'[Proprietário lead])
 			
 			RETURN
-			CALCULATE(
-			    COUNTROWS(Atendimentos),
-			    USERELATIONSHIP(
-			        Atendimentos[Data de Criação],
-			        'dCalendario'[Date]
-			    ),
-			    FILTER(
-			        Atendimentos,
-			        CONTAINSSTRING(
-			            LOWER(Atendimentos[Criado por]),
-			            LOWER(Proprietario)
+			IF(
+			    ISBLANK(Proprietario),
+			    BLANK(),
+			    CALCULATE(
+			        COUNTROWS(Atendimentos),
+			        USERELATIONSHIP(
+			            Atendimentos[Data de Criação],
+			            'dCalendario'[Date]
+			        ),
+			        KEEPFILTERS(
+			            Atendimentos[Criado por] = Proprietario
 			        )
 			    )
 			)
