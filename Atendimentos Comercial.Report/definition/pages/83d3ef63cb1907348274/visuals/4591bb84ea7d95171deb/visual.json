@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "4591bb84ea7d95171deb",
   "position": {
-    "x": 137.14285714285714,
-    "y": 219.81762917933131,
+    "x": 137.5609756097561,
+    "y": 247.3170731707317,
     "z": 8000,
-    "height": 437.68996960486322,
-    "width": 746.01823708206689,
+    "height": 409.7560975609756,
+    "width": 759.51219512195121,
     "tabOrder": 8000
   },
   "visual": {
@@ -56,10 +56,10 @@
                 }
               },
               "queryRef": "Medidas.última tabulação (tabela)",
-              "nativeQueryRef": "última tabulação",
-              "displayName": "última tabulação"
+              "nativeQueryRef": "última tabulação (tabela)"
             }
-          ]
+          ],
+          "showAll": true
         }
       }
     },
@@ -358,51 +358,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "b3aacd787ec30b1d8a56",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Atendimentos"
-              }
-            },
-            "Property": "Criado por"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "7ad0b393e7845c050bc6",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Atendimentos"
-              }
-            },
-            "Property": "Nome do Lead"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "d36ca3f0764a5ca09dea",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "última tabulação (tabela)"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }
