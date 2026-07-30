@@ -356,6 +356,17 @@ table Medidas
 			```
 		lineageTag: 45697b88-c4a5-4c4d-a184-b7da411f1f2f
 
+	measure 'Hora de Criação (tabela)' = ```
+			
+			CALCULATE(
+			    
+			        SELECTEDVALUE(Atendimentos[hora de Criação])
+			    ,
+			    USERELATIONSHIP(Atendimentos[Data de Criação], dCalendario[Date])
+			)
+			```
+		lineageTag: ac02b8db-18be-44b5-9f1c-3290409da5a3
+
 	column 'Coluna 1'
 		dataType: string
 		lineageTag: 686dcc5d-ee01-4a81-ac33-f88f665891bc

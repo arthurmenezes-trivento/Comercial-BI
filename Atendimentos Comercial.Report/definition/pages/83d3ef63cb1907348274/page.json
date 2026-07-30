@@ -1,11 +1,10 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
   "name": "83d3ef63cb1907348274",
-  "displayName": " Analítico Atendimentos",
+  "displayName": "Consulta Atendimentos",
   "displayOption": "FitToPage",
   "height": 720,
   "width": 1280,
-  "visibility": "HiddenInViewMode",
   "visualInteractions": [
     {
       "source": "01a3287720295c590c72",

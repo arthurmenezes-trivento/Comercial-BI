@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "4591bb84ea7d95171deb",
   "position": {
-    "x": 137.5609756097561,
-    "y": 247.3170731707317,
+    "x": 155.1219512195122,
+    "y": 218.04878048780486,
     "z": 8000,
-    "height": 409.7560975609756,
-    "width": 759.51219512195121,
+    "height": 475.609756097561,
+    "width": 768.29268292682923,
     "tabOrder": 8000
   },
   "visual": {
@@ -57,10 +57,41 @@
               },
               "queryRef": "Medidas.última tabulação (tabela)",
               "nativeQueryRef": "última tabulação (tabela)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Hora de Criação (tabela)"
+                }
+              },
+              "queryRef": "Medidas.Hora de Criação (tabela)",
+              "nativeQueryRef": "Hora de Criação (tabela)"
             }
           ],
           "showAll": true
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Medidas"
+                  }
+                },
+                "Property": "Hora de Criação (tabela)"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
       }
     },
     "objects": {
@@ -198,6 +229,13 @@
               "expr": {
                 "Literal": {
                   "Value": "0D"
+                }
+              }
+            },
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
                 }
               }
             }

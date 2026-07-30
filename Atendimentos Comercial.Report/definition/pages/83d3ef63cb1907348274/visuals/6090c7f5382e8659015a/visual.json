@@ -95,7 +95,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Analítico'"
+                  "Value": "'Consulta Atendimentos'"
                 }
               }
             },
