@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "a0b69d03f16a262f2857",
   "position": {
-    "x": 599.40115465030533,
-    "y": 97.5809883316805,
+    "x": 587.47720364741645,
+    "y": 95.319148936170222,
     "z": 7000,
     "height": 79.069991909270271,
     "width": 240.69835772380802,
@@ -50,49 +50,7 @@
       ],
       "general": [
         {
-          "properties": {
-            "filter": {
-              "filter": {
-                "Version": 2,
-                "From": [
-                  {
-                    "Name": "2",
-                    "Entity": "2026-2",
-                    "Type": 0
-                  }
-                ],
-                "Where": [
-                  {
-                    "Condition": {
-                      "In": {
-                        "Expressions": [
-                          {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Source": "2"
-                                }
-                              },
-                              "Property": "Última Tabulação"
-                            }
-                          }
-                        ],
-                        "Values": [
-                          [
-                            {
-                              "Literal": {
-                                "Value": "'1º Atendimento'"
-                              }
-                            }
-                          ]
-                        ]
-                      }
-                    }
-                  }
-                ]
-              }
-            }
-          }
+          "properties": {}
         }
       ]
     },
@@ -145,5 +103,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "8d716a13b61c27707568",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "2026-2"
+              }
+            },
+            "Property": "Última Tabulação"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

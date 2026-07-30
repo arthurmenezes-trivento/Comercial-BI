@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "31272c3622306ffa642f",
+  "name": "9f6e1d75782da09100bc",
   "position": {
-    "x": 315.67941897586479,
-    "y": 97.5809883316805,
-    "z": 6000,
-    "height": 79.069991909270271,
-    "width": 240.69835772380802,
-    "tabOrder": 6000
+    "x": 617.629179331307,
+    "y": 107.96352583586626,
+    "z": 11002,
+    "height": 72.948328267477208,
+    "width": 172.15805471124619,
+    "tabOrder": 11002
   },
   "visual": {
     "visualType": "slicer",
@@ -23,13 +23,13 @@
                       "Entity": "Atendimentos"
                     }
                   },
-                  "Property": "Criado por"
+                  "Property": "Resultado do Contato"
                 }
               },
-              "queryRef": "Atendimentos.Criado por",
-              "nativeQueryRef": "Atendente",
+              "queryRef": "Atendimentos.Resultado do Contato",
+              "nativeQueryRef": "Última tabulação",
               "active": true,
-              "displayName": "Atendente"
+              "displayName": "Última tabulação"
             }
           ]
         }
@@ -163,6 +163,7 @@
             }
           ]
         },
+        "howCreated": "User",
         "objects": {
           "general": [
             {
@@ -178,6 +179,20 @@
             }
           ]
         }
+      },
+      {
+        "name": "e0fb48651506364e7b54",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Atendimentos"
+              }
+            },
+            "Property": "Resultado do Contato"
+          }
+        },
+        "type": "Categorical"
       }
     ]
   }

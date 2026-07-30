@@ -249,5 +249,37 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "c765e0e212245cb69100",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Atendimentos"
+              }
+            },
+            "Property": "Criado por"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "54c721c42de04ba5eb59",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Atendimentos (geral)"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

@@ -5,7 +5,7 @@
       "ordinal": 0,
       "scrollPosition": {
         "x": 377.77777777777777,
-        "y": 179.01234567901233
+        "y": 179.45566948103942
       },
       "nodes": [
         {
@@ -201,6 +201,6 @@
       "tablesLocked": false
     }
   ],
-  "selectedDiagram": "Todas as tabelas",
+  "selectedDiagram": "Consolidado diario",
   "defaultDiagram": "Todas as tabelas"
 }

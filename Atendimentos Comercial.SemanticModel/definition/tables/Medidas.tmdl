@@ -344,6 +344,14 @@ table Medidas
 		formatString: General Date
 		lineageTag: 776d8749-a672-4b35-bab0-ead263973162
 
+	measure 'última tabulação (tabela)' =
+			
+			CALCULATE(
+			    SELECTEDVALUE(Atendimentos[Resultado do Contato]),
+			    USERELATIONSHIP(Atendimentos[Data de Criação], dCalendario[Date])
+			)
+		lineageTag: 45697b88-c4a5-4c4d-a184-b7da411f1f2f
+
 	column 'Coluna 1'
 		dataType: string
 		lineageTag: 686dcc5d-ee01-4a81-ac33-f88f665891bc

@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "4663248f95fecc7e39df",
+  "name": "f11d12637a09b9eb2096",
   "position": {
-    "x": 269.59556321734794,
-    "y": 90.455927051671736,
-    "z": 4000,
-    "height": 51.044776119402982,
-    "width": 131.64179104477611,
-    "tabOrder": 4000
+    "x": 853.00911854103344,
+    "y": 95.319148936170222,
+    "z": 11001,
+    "height": 66.139817629179333,
+    "width": 191.61094224924014,
+    "tabOrder": 11001
   },
   "visual": {
     "visualType": "slicer",
@@ -283,26 +283,6 @@
                   "Value": "'Semana'"
                 }
               }
-            },
-            "textSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "8D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "items": [
-        {
-          "properties": {
-            "textSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "8D"
-                }
-              }
             }
           }
         }
@@ -312,73 +292,13 @@
       "title": [
         {
           "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
             "titleWrap": {
               "expr": {
                 "Literal": {
                   "Value": "true"
                 }
               }
-            },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            },
-            "background": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#3465A4'"
-                    }
-                  }
-                }
-              }
-            },
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'center'"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "10D"
-                }
-              }
             }
-          }
-        }
-      ],
-      "spacing": [
-        {
-          "properties": {
-            "verticalSpacing": {
-              "expr": {
-                "Literal": {
-                  "Value": "2D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "id": "default"
           }
         }
       ],
@@ -388,7 +308,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -396,39 +316,6 @@
               "expr": {
                 "Literal": {
                   "Value": "0D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "padding": [
-        {
-          "properties": {
-            "top": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            },
-            "bottom": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "lockAspect": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
                 }
               }
             }
@@ -447,19 +334,6 @@
             }
           }
         }
-      ],
-      "visualHeader": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
       ]
     },
     "drillFilterOtherVisuals": true
@@ -467,7 +341,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "3972110000c1d58ec649",
+        "name": "25b9045129956b60a727",
         "field": {
           "Column": {
             "Expression": {
@@ -481,7 +355,7 @@
         "type": "Categorical"
       },
       {
-        "name": "b326e4010390d0c362b3",
+        "name": "3a17fc03300c0c7a2ae6",
         "field": {
           "Column": {
             "Expression": {

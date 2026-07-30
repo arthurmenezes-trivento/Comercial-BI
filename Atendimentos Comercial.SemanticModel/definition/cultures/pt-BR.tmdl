@@ -6862,7 +6862,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "medida.data_último_atendimento_teste": {
+			    "medida.data_último_atendimento": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
@@ -6872,7 +6872,7 @@ cultureInfo pt-BR
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "data último atendimento (teste)": {
+			          "data último atendimento": {
 			            "State": "Generated"
 			          }
 			        },
@@ -6883,13 +6883,215 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "data último atendimento": {
-			            "State": "Generated",
-			            "Weight": 0.75
+			          "information último atendimento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "fact último atendimento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "info último atendimento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "statistic último atendimento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "document último atendimento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "figure último atendimento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "record último atendimento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
 			          }
 			        }
 			      ],
 			      "SemanticType": "Time"
+			    },
+			    "d_atendente.proprietário_lead": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dAtendentes",
+			          "ConceptualProperty": "Proprietário lead"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "proprietário lead": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "proprietário principal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "proprietário chief": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "proprietário main": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "proprietário central": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "proprietário prime": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "proprietário top": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "proprietário indication": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "proprietário information": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "proprietário pointer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "proprietário clue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        }
+			      ]
+			    },
+			    "medida.última_tabulação_tabela": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "última tabulação (tabela)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "última tabulação (tabela)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "última tabulação": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
@@ -8740,7 +8942,40 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "d_atendente_has_atendente_formatado": {
+			    "atendimento_has_medida_última_tabulação_tabela": {
+			      "Binding": {
+			        "ConceptualEntity": "Atendimentos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "atendimento": {
+			          "Target": {
+			            "Entity": "atendimento"
+			          }
+			        },
+			        "medida.última_tabulação_tabela": {
+			          "Target": {
+			            "Entity": "medida.última_tabulação_tabela"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "atendimento"
+			            },
+			            "Object": {
+			              "Role": "medida.última_tabulação_tabela"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "atendimentos_have_última_tabulação_tabela"
+			        }
+			      ]
+			    },
+			    "d_atendente_has_proprietário_lead": {
 			      "Binding": {
 			        "ConceptualEntity": "dAtendentes"
 			      },
@@ -8751,9 +8986,9 @@ cultureInfo pt-BR
 			            "Entity": "d_atendente"
 			          }
 			        },
-			        "d_atendente.atendente_formatado": {
+			        "d_atendente.proprietário_lead": {
 			          "Target": {
-			            "Entity": "d_atendente.atendente_formatado"
+			            "Entity": "d_atendente.proprietário_lead"
 			          }
 			        }
 			      },
@@ -8764,16 +8999,16 @@ cultureInfo pt-BR
 			              "Role": "d_atendente"
 			            },
 			            "Object": {
-			              "Role": "d_atendente.atendente_formatado"
+			              "Role": "d_atendente.proprietário_lead"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "d_atendentes_have_atendente_formatados"
+			          "ID": "d_atendentes_have_proprietário_leads"
 			        }
 			      ]
 			    },
-			    "medida_has_data_último_atendimento_teste": {
+			    "medida_has_data_último_atendimento": {
 			      "Binding": {
 			        "ConceptualEntity": "Medidas"
 			      },
@@ -8784,9 +9019,9 @@ cultureInfo pt-BR
 			            "Entity": "medida"
 			          }
 			        },
-			        "medida.data_último_atendimento_teste": {
+			        "medida.data_último_atendimento": {
 			          "Target": {
-			            "Entity": "medida.data_último_atendimento_teste"
+			            "Entity": "medida.data_último_atendimento"
 			          }
 			        }
 			      },
@@ -8797,12 +9032,12 @@ cultureInfo pt-BR
 			              "Role": "medida"
 			            },
 			            "Object": {
-			              "Role": "medida.data_último_atendimento_teste"
+			              "Role": "medida.data_último_atendimento"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "medidas_have_data_último_atendimento_teste"
+			          "ID": "medidas_have_data_último_atendimento"
 			        }
 			      ]
 			    },
@@ -8902,6 +9137,39 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "atendimentos_have_atendimentos_proprietário"
+			        }
+			      ]
+			    },
+			    "entity_20262_has_medida_atendimentos_proprietário": {
+			      "Binding": {
+			        "ConceptualEntity": "2026-2"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_20262": {
+			          "Target": {
+			            "Entity": "entity_20262"
+			          }
+			        },
+			        "medida.atendimentos_proprietário": {
+			          "Target": {
+			            "Entity": "medida.atendimentos_proprietário"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_20262"
+			            },
+			            "Object": {
+			              "Role": "medida.atendimentos_proprietário"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing20262_have_atendimentos_proprietário"
 			        }
 			      ]
 			    },
@@ -11621,39 +11889,6 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "Phrasing20262_have_ultima_data_hora_criacao_proprietario"
-			        }
-			      ]
-			    },
-			    "atendimento_has_medida_data_último_atendimento": {
-			      "Binding": {
-			        "ConceptualEntity": "Atendimentos"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "atendimento": {
-			          "Target": {
-			            "Entity": "atendimento"
-			          }
-			        },
-			        "medida.data_último_atendimento": {
-			          "Target": {
-			            "Entity": "medida.data_último_atendimento"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "atendimento"
-			            },
-			            "Object": {
-			              "Role": "medida.data_último_atendimento"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "atendimentos_have_data_último_atendimento"
 			        }
 			      ]
 			    },

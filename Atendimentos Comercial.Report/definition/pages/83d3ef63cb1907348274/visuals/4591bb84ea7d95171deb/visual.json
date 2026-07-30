@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "7e9e16e134b05c45b566",
+  "name": "4591bb84ea7d95171deb",
   "position": {
-    "x": 894.62686567164178,
-    "y": 221.19402985074626,
-    "z": 9000,
-    "height": 445.07462686567163,
-    "width": 385.07462686567163,
-    "tabOrder": 9000
+    "x": 137.14285714285714,
+    "y": 219.81762917933131,
+    "z": 8000,
+    "height": 437.68996960486322,
+    "width": 746.01823708206689,
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "tableEx",
@@ -46,23 +46,18 @@
             },
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Atendimentos"
-                        }
-                      },
-                      "Property": "Resultado do Contato"
+                    "SourceRef": {
+                      "Entity": "Medidas"
                     }
                   },
-                  "Function": 3
+                  "Property": "última tabulação (tabela)"
                 }
               },
-              "queryRef": "Min(Atendimentos.Resultado do Contato)",
-              "nativeQueryRef": "tabulação",
-              "displayName": "tabulação"
+              "queryRef": "Medidas.última tabulação (tabela)",
+              "nativeQueryRef": "última tabulação",
+              "displayName": "última tabulação"
             }
           ]
         }
@@ -138,20 +133,6 @@
           },
           "selector": {
             "metadata": "Atendimentos.Criado por"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "122.69303305146778D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Atendimentos.Nome do Lead"
           }
         }
       ],
@@ -381,7 +362,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "297a3dfe6db416e8c050",
+        "name": "b3aacd787ec30b1d8a56",
         "field": {
           "Column": {
             "Expression": {
@@ -395,7 +376,7 @@
         "type": "Categorical"
       },
       {
-        "name": "419a57871a5180aeb7cd",
+        "name": "7ad0b393e7845c050bc6",
         "field": {
           "Column": {
             "Expression": {
@@ -409,20 +390,15 @@
         "type": "Categorical"
       },
       {
-        "name": "384266604bba503d1b5e",
+        "name": "d36ca3f0764a5ca09dea",
         "field": {
-          "Aggregation": {
+          "Measure": {
             "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Atendimentos"
-                  }
-                },
-                "Property": "Resultado do Contato"
+              "SourceRef": {
+                "Entity": "Medidas"
               }
             },
-            "Function": 3
+            "Property": "última tabulação (tabela)"
           }
         },
         "type": "Advanced"

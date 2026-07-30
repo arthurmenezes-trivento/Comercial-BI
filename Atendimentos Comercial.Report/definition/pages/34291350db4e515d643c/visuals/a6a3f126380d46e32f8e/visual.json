@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "a6a3f126380d46e32f8e",
   "position": {
-    "x": 45.67278221116397,
-    "y": 155.82089552238804,
+    "x": 29.179331306990882,
+    "y": 155.62310030395136,
     "z": 8000,
-    "height": 60.8955223880597,
-    "width": 112.83582089552239,
+    "height": 61.276595744680854,
+    "width": 129.36170212765958,
     "tabOrder": 8000
   },
   "visual": {
@@ -335,5 +335,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "16bdee68c5c7917373e0",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Atendimentos (geral)"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

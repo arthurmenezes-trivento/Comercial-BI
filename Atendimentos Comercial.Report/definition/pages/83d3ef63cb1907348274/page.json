@@ -1,0 +1,26 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "83d3ef63cb1907348274",
+  "displayName": " Analítico Atendimentos",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "visibility": "HiddenInViewMode",
+  "visualInteractions": [
+    {
+      "source": "01a3287720295c590c72",
+      "target": "dd0214474b615580b00a",
+      "type": "NoFilter"
+    },
+    {
+      "source": "dd0214474b615580b00a",
+      "target": "01a3287720295c590c72",
+      "type": "NoFilter"
+    },
+    {
+      "source": "dd0214474b615580b00a",
+      "target": "9f6e1d75782da09100bc",
+      "type": "NoFilter"
+    }
+  ]
+}
