@@ -367,6 +367,38 @@ table Medidas
 			```
 		lineageTag: ac02b8db-18be-44b5-9f1c-3290409da5a3
 
+	measure filtro_sem_atendente = ```
+			
+			IF(
+			    [UltimoAtendente] = "Sem Atendente",
+			    1,
+			    0)
+			
+			```
+		formatString: 0
+		lineageTag: da8d39d1-6938-493b-b53f-035d2c7d40ec
+
+	measure Dias_sem_atendimento = ```
+			
+			
+			DATEDIFF([Data Último Atendimento], NOW(), DAY)
+			
+			
+			```
+		formatString: 0
+		lineageTag: fd740ab8-ca0d-4a67-963f-75ebe4562502
+
+	measure '2 dias sem atendimento' =
+			
+			
+			IF(
+			    [Dias_sem_atendimento] > 1,
+			    1,
+			    0
+			)
+		formatString: 0
+		lineageTag: 13a06019-f16a-4070-8f9e-a1cb5eabed87
+
 	column 'Coluna 1'
 		dataType: string
 		lineageTag: 686dcc5d-ee01-4a81-ac33-f88f665891bc

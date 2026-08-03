@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "49645f9e7113a8960d6a",
   "position": {
-    "x": 33.069908814589667,
-    "y": 220.790273556231,
+    "x": 28.206686930091188,
+    "y": 222.73556231003042,
     "z": 4000,
     "height": 415.31914893617022,
     "width": 1222.613981762918,
@@ -156,6 +156,20 @@
               "queryRef": "Medidas.Data Último Atendimento (teste)",
               "nativeQueryRef": "Data Último Atendimento",
               "displayName": "Data Último Atendimento"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Dias_sem_atendimento"
+                }
+              },
+              "queryRef": "Medidas.Dias_sem_atendimento",
+              "nativeQueryRef": "Dias_sem_atendimento"
             }
           ]
         }
@@ -164,13 +178,13 @@
         "sort": [
           {
             "field": {
-              "Column": {
+              "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "2026-2"
+                    "Entity": "Medidas"
                   }
                 },
-                "Property": "Unidade"
+                "Property": "Dias_sem_atendimento"
               }
             },
             "direction": "Ascending"
@@ -546,21 +560,8 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "295d0c57dc61e031a03e",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "2026-2"
-              }
-            },
-            "Property": "Nome Completo"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
         "name": "be81331238addba7e22e",
+        "ordinal": 0,
         "field": {
           "Column": {
             "Expression": {
@@ -574,7 +575,88 @@
         "type": "Categorical"
       },
       {
+        "name": "51db32d12c63488e4080",
+        "ordinal": 1,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "2 dias sem atendimento"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "m",
+              "Entity": "Medidas",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Comparison": {
+                  "ComparisonKind": 0,
+                  "Left": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "m"
+                        }
+                      },
+                      "Property": "2 dias sem atendimento"
+                    }
+                  },
+                  "Right": {
+                    "Literal": {
+                      "Value": "1L"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "7a29cf4534d8b4446b1d",
+        "ordinal": 2,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Data Último Atendimento"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "7fe56450a8ca5a62e058",
+        "ordinal": 3,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Dias_sem_atendimento"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
         "name": "970c0f2fab00c8913ce9",
+        "ordinal": 4,
         "field": {
           "Column": {
             "Expression": {
@@ -589,6 +671,7 @@
       },
       {
         "name": "cf3d25eb64c4302265d1",
+        "ordinal": 5,
         "field": {
           "Column": {
             "Expression": {
@@ -602,21 +685,8 @@
         "type": "Categorical"
       },
       {
-        "name": "af86baa06e5094132eb2",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "2026-2"
-              }
-            },
-            "Property": "Unidade"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
         "name": "347678905a0e30a3094d",
+        "ordinal": 6,
         "field": {
           "Column": {
             "Expression": {
@@ -630,7 +700,23 @@
         "type": "Categorical"
       },
       {
+        "name": "295d0c57dc61e031a03e",
+        "ordinal": 7,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "2026-2"
+              }
+            },
+            "Property": "Nome Completo"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
         "name": "7470f0c3b63418020100",
+        "ordinal": 8,
         "field": {
           "Column": {
             "Expression": {
@@ -644,21 +730,8 @@
         "type": "Categorical"
       },
       {
-        "name": "fd87b1176040bd6830db",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "UltimoAtendente"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
         "name": "216f8bdd20c237006c05",
+        "ordinal": 9,
         "field": {
           "Column": {
             "Expression": {
@@ -672,7 +745,8 @@
         "type": "Categorical"
       },
       {
-        "name": "7a29cf4534d8b4446b1d",
+        "name": "fd87b1176040bd6830db",
+        "ordinal": 10,
         "field": {
           "Measure": {
             "Expression": {
@@ -680,11 +754,27 @@
                 "Entity": "Medidas"
               }
             },
-            "Property": "Data Último Atendimento"
+            "Property": "UltimoAtendente"
           }
         },
         "type": "Advanced"
+      },
+      {
+        "name": "af86baa06e5094132eb2",
+        "ordinal": 11,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "2026-2"
+              }
+            },
+            "Property": "Unidade"
+          }
+        },
+        "type": "Categorical"
       }
-    ]
+    ],
+    "filterSortOrder": "Custom"
   }
 }
