@@ -106,7 +106,7 @@
               "identityValues": [
                 {
                   "Literal": {
-                    "Value": "'s18'"
+                    "Value": "'s19'"
                   }
                 }
               ],
@@ -157,13 +157,28 @@
                               },
                               "Property": "Semana"
                             }
+                          },
+                          {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Source": "d"
+                                }
+                              },
+                              "Property": "Date"
+                            }
                           }
                         ],
                         "Values": [
                           [
                             {
                               "Literal": {
-                                "Value": "'s18'"
+                                "Value": "'s19'"
+                              }
+                            },
+                            {
+                              "Literal": {
+                                "Value": "datetime'2026-08-10T00:00:00'"
                               }
                             }
                           ]
@@ -182,6 +197,16 @@
                               },
                               "Property": "Semana"
                             }
+                          },
+                          {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "dCalendario"
+                                }
+                              },
+                              "Property": "Date"
+                            }
                           }
                         ],
                         "decomposedIdentities": {
@@ -191,7 +216,16 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "'s18'"
+                                      "Value": "'s19'"
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "1": [
+                                  {
+                                    "Literal": {
+                                      "Value": "datetime'2026-08-10T00:00:00'"
                                     }
                                   }
                                 ]
@@ -210,12 +244,25 @@
                                   "Property": "Semana"
                                 }
                               }
+                            },
+                            {
+                              "value": {
+                                "Column": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "dCalendario"
+                                    }
+                                  },
+                                  "Property": "Date"
+                                }
+                              }
                             }
                           ]
                         },
                         "valueMap": [
                           {
-                            "0": "s18"
+                            "0": "s19",
+                            "1": "10/08/2026"
                           }
                         ]
                       }
