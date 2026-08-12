@@ -188,5 +188,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "97fe3244902e36e0dd7d",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Matr 26-2"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

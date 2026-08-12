@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "12e70d5464d1c2e55859",
+  "name": "bae8fc1bec5db088c598",
   "position": {
-    "x": 199.39209726443769,
-    "y": 64.194528875379945,
-    "z": 1,
-    "height": 620.54711246200611,
-    "width": 694.468085106383,
-    "tabOrder": 1
+    "x": 131.30699088145897,
+    "y": 186.74772036474164,
+    "z": 5001,
+    "height": 442.55319148936172,
+    "width": 364.74164133738606,
+    "tabOrder": 5001
   },
   "visual": {
     "visualType": "pivotTable",
@@ -81,10 +81,33 @@
                 }
               },
               "queryRef": "Min(Matrículas GD.Número de Inscrição)",
-              "nativeQueryRef": "Contagem de Número de Inscrição"
+              "nativeQueryRef": "Matrículas",
+              "displayName": "Matrículas"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "Matrículas GD"
+                      }
+                    },
+                    "Property": "Número de Inscrição"
+                  }
+                },
+                "Function": 5
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
       }
     },
     "expansionStates": [
@@ -198,6 +221,20 @@
           },
           "selector": {
             "metadata": "2026-2.Última Tabulação"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "126.79634350992092D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Min(Matrículas GD.Número de Inscrição)"
           }
         }
       ],
@@ -365,6 +402,69 @@
           "selector": {
             "metadata": "Medidas.Leads"
           }
+        },
+        {
+          "properties": {
+            "dataBars": {
+              "positiveColor": {
+                "solid": {
+                  "color": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "'maxColor'"
+                      }
+                    }
+                  }
+                }
+              },
+              "negativeColor": {
+                "solid": {
+                  "color": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "'minColor'"
+                      }
+                    }
+                  }
+                }
+              },
+              "axisColor": {
+                "solid": {
+                  "color": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "'foreground'"
+                      }
+                    }
+                  }
+                }
+              },
+              "reverseDirection": {
+                "expr": {
+                  "Literal": {
+                    "Value": "false"
+                  }
+                }
+              },
+              "hideText": {
+                "expr": {
+                  "Literal": {
+                    "Value": "false"
+                  }
+                }
+              },
+              "totalMatchingOption": {
+                "expr": {
+                  "Literal": {
+                    "Value": "1L"
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Min(Matrículas GD.Número de Inscrição)"
+          }
         }
       ]
     },
@@ -488,7 +588,7 @@
         "howCreated": "User"
       },
       {
-        "name": "ab4140d86b59a5550953",
+        "name": "85b7c1653508304a7762",
         "field": {
           "Column": {
             "Expression": {
@@ -502,7 +602,35 @@
         "type": "Categorical"
       },
       {
-        "name": "a44d21bac2ac571d4897",
+        "name": "25fe76230bedc1e194e8",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Matrículas GD"
+              }
+            },
+            "Property": "Unidade"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "39539260196a87d005d3",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Matrículas GD"
+              }
+            },
+            "Property": "DATA"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "aa1f424ee31ca20e00c6",
         "field": {
           "Aggregation": {
             "Expression": {
@@ -519,34 +647,6 @@
           }
         },
         "type": "Advanced"
-      },
-      {
-        "name": "58a5c7be4e00e0a5dd97",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Matrículas GD"
-              }
-            },
-            "Property": "DATA"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "562c56098525e3660909",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Matrículas GD"
-              }
-            },
-            "Property": "Unidade"
-          }
-        },
-        "type": "Categorical"
       }
     ]
   }

@@ -1,8 +1,9 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
-  "name": "85d171beb12a00babdb5",
-  "displayName": "matriculas julho",
+  "name": "0ab2f0d0046ec95470e4",
+  "displayName": "Matrículas Mensais",
   "displayOption": "FitToPage",
   "height": 720,
-  "width": 1280
+  "width": 1280,
+  "visualInteractions": []
 }
