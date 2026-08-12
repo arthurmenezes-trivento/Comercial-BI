@@ -43,7 +43,7 @@
               },
               "queryRef": "dCalendario.Date",
               "nativeQueryRef": "Date",
-              "active": true
+              "active": false
             }
           ]
         }
@@ -100,20 +100,7 @@
             "isPinned": true
           }
         ],
-        "root": {
-          "children": [
-            {
-              "identityValues": [
-                {
-                  "Literal": {
-                    "Value": "'s17'"
-                  }
-                }
-              ],
-              "isToggled": true
-            }
-          ]
-        }
+        "root": {}
       }
     ],
     "objects": {
@@ -146,88 +133,28 @@
                 "Where": [
                   {
                     "Condition": {
-                      "And": {
-                        "Left": {
-                          "In": {
-                            "Expressions": [
-                              {
-                                "Column": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Source": "d"
-                                    }
-                                  },
-                                  "Property": "Semana"
+                      "In": {
+                        "Expressions": [
+                          {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Source": "d"
                                 }
-                              }
-                            ],
-                            "Values": [
-                              [
-                                {
-                                  "Literal": {
-                                    "Value": "'s17'"
-                                  }
-                                }
-                              ]
-                            ]
-                          }
-                        },
-                        "Right": {
-                          "Not": {
-                            "Expression": {
-                              "In": {
-                                "Expressions": [
-                                  {
-                                    "Column": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Source": "d"
-                                        }
-                                      },
-                                      "Property": "Semana"
-                                    }
-                                  },
-                                  {
-                                    "Column": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Source": "d"
-                                        }
-                                      },
-                                      "Property": "Date"
-                                    }
-                                  }
-                                ],
-                                "Values": [
-                                  [
-                                    {
-                                      "Literal": {
-                                        "Value": "'s17'"
-                                      }
-                                    },
-                                    {
-                                      "Literal": {
-                                        "Value": "datetime'2026-07-27T00:00:00'"
-                                      }
-                                    }
-                                  ],
-                                  [
-                                    {
-                                      "Literal": {
-                                        "Value": "'s17'"
-                                      }
-                                    },
-                                    {
-                                      "Literal": {
-                                        "Value": "datetime'2026-07-28T00:00:00'"
-                                      }
-                                    }
-                                  ]
-                                ]
-                              }
+                              },
+                              "Property": "Semana"
                             }
                           }
-                        }
+                        ],
+                        "Values": [
+                          [
+                            {
+                              "Literal": {
+                                "Value": "'s19'"
+                              }
+                            }
+                          ]
+                        ]
                       }
                     },
                     "Annotations": {
@@ -242,16 +169,6 @@
                               },
                               "Property": "Semana"
                             }
-                          },
-                          {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Entity": "dCalendario"
-                                }
-                              },
-                              "Property": "Date"
-                            }
                           }
                         ],
                         "decomposedIdentities": {
@@ -261,47 +178,7 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "'s17'"
-                                    }
-                                  }
-                                ]
-                              }
-                            ],
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'s17'"
-                                    }
-                                  }
-                                ]
-                              },
-                              {
-                                "1": [
-                                  {
-                                    "Literal": {
-                                      "Value": "datetime'2026-07-27T00:00:00'"
-                                    }
-                                  }
-                                ]
-                              }
-                            ],
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'s17'"
-                                    }
-                                  }
-                                ]
-                              },
-                              {
-                                "1": [
-                                  {
-                                    "Literal": {
-                                      "Value": "datetime'2026-07-28T00:00:00'"
+                                      "Value": "'s19'"
                                     }
                                   }
                                 ]
@@ -320,32 +197,12 @@
                                   "Property": "Semana"
                                 }
                               }
-                            },
-                            {
-                              "value": {
-                                "Column": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Entity": "dCalendario"
-                                    }
-                                  },
-                                  "Property": "Date"
-                                }
-                              }
                             }
                           ]
                         },
                         "valueMap": [
                           {
-                            "0": "s17"
-                          },
-                          {
-                            "0": "s17",
-                            "1": "27/07/2026"
-                          },
-                          {
-                            "0": "s17",
-                            "1": "28/07/2026"
+                            "0": "s19"
                           }
                         ]
                       }

@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
   "name": "28768bee49784ea99e74",
   "position": {
-    "x": 11.641791044776118,
-    "y": 470.14925373134326,
+    "x": 11.671732522796352,
+    "y": 469.78723404255322,
     "z": 14000,
     "height": 179.1044776119403,
     "width": 266.86567164179104,
@@ -20,13 +20,13 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dUnidade"
+                      "Entity": "2026-2"
                     }
                   },
                   "Property": "Unidade"
                 }
               },
-              "queryRef": "dUnidade.Unidade",
+              "queryRef": "2026-2.Unidade",
               "nativeQueryRef": "Unidade",
               "active": true
             }
@@ -249,5 +249,37 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "2a708f6580c7ea706b57",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Atendimentos (geral)"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "3b92f00e0abc5940ceb8",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "2026-2"
+              }
+            },
+            "Property": "Unidade"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

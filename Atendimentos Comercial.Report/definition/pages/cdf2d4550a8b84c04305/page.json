@@ -262,5 +262,6 @@
         "howCreated": "User"
       }
     ]
-  }
+  },
+  "visibility": "HiddenInViewMode"
 }

@@ -43,7 +43,7 @@
               },
               "queryRef": "Matrículas GD.Unidade",
               "nativeQueryRef": "Unidade",
-              "active": true
+              "active": false
             },
             {
               "field": {
@@ -139,20 +139,7 @@
             "isPinned": true
           }
         ],
-        "root": {
-          "children": [
-            {
-              "identityValues": [
-                {
-                  "Literal": {
-                    "Value": "'Daniel'"
-                  }
-                }
-              ],
-              "isToggled": true
-            }
-          ]
-        }
+        "root": {}
       }
     ],
     "objects": {

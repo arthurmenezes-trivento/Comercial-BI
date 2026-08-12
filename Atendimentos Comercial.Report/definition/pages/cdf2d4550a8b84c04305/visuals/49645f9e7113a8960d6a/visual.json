@@ -93,20 +93,6 @@
                       "Entity": "2026-2"
                     }
                   },
-                  "Property": "forma de pagamento"
-                }
-              },
-              "queryRef": "2026-2.forma de pagamento",
-              "nativeQueryRef": "forma de pagamento"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "2026-2"
-                    }
-                  },
                   "Property": "Situação Pagamento"
                 }
               },
@@ -284,20 +270,6 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "121.59701314176883D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "2026-2.forma de pagamento"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
                   "Value": "112.01492032046016D"
                 }
               }
@@ -366,53 +338,7 @@
       ],
       "values": [
         {
-          "properties": {
-            "backColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "FillRule": {
-                      "Input": {
-                        "Measure": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "Medidas"
-                            }
-                          },
-                          "Property": "Leads"
-                        }
-                      },
-                      "FillRule": {
-                        "linearGradient2": {
-                          "min": {
-                            "color": {
-                              "Literal": {
-                                "Value": "'#FFFFFF'"
-                              }
-                            }
-                          },
-                          "max": {
-                            "color": {
-                              "Literal": {
-                                "Value": "'#DAE4F2'"
-                              }
-                            }
-                          },
-                          "nullColoringStrategy": {
-                            "strategy": {
-                              "Literal": {
-                                "Value": "'asZero'"
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
+          "properties": {},
           "selector": {
             "data": [
               {
@@ -685,23 +611,8 @@
         "type": "Categorical"
       },
       {
-        "name": "347678905a0e30a3094d",
-        "ordinal": 6,
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "2026-2"
-              }
-            },
-            "Property": "forma de pagamento"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
         "name": "295d0c57dc61e031a03e",
-        "ordinal": 7,
+        "ordinal": 6,
         "field": {
           "Column": {
             "Expression": {
@@ -716,7 +627,7 @@
       },
       {
         "name": "7470f0c3b63418020100",
-        "ordinal": 8,
+        "ordinal": 7,
         "field": {
           "Column": {
             "Expression": {
@@ -731,7 +642,7 @@
       },
       {
         "name": "216f8bdd20c237006c05",
-        "ordinal": 9,
+        "ordinal": 8,
         "field": {
           "Column": {
             "Expression": {
@@ -746,7 +657,7 @@
       },
       {
         "name": "fd87b1176040bd6830db",
-        "ordinal": 10,
+        "ordinal": 9,
         "field": {
           "Measure": {
             "Expression": {
@@ -761,7 +672,7 @@
       },
       {
         "name": "af86baa06e5094132eb2",
-        "ordinal": 11,
+        "ordinal": 10,
         "field": {
           "Column": {
             "Expression": {

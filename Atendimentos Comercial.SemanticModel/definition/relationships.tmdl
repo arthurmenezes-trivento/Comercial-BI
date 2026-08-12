@@ -18,37 +18,6 @@ relationship 0d6b43bd-10c7-3992-d465-e9d4e8d77514
 	fromColumn: Atendimentos.'Data Modificação'
 	toColumn: dCalendario.Date
 
-relationship 9ecd7f1b-0818-4e61-8bfb-db4f32bf7fce
-	joinOnDateBehavior: datePartOnly
-	fromColumn: 2026-2.'Data Aceite'
-	toColumn: LocalDateTable_7e1d0cea-05a8-4f78-a6a4-9df479fa0c63.Date
-
-relationship 260acb65-e24b-41b5-84db-e15f8b00cdab
-	joinOnDateBehavior: datePartOnly
-	fromColumn: 2026-2.'Data alteração'
-	toColumn: LocalDateTable_e35b0647-2caa-440d-876e-c18fef37a511.Date
-
-relationship 60fb9c05-d340-4c51-aef5-13ddaa665bb8
-	joinOnDateBehavior: datePartOnly
-	fromColumn: 2026-2.'Data Aprovação'
-	toColumn: LocalDateTable_af65b60f-b650-4761-9a94-94495c997c51.Date
-
-relationship AutoDetected_88114a10-14a0-4f3f-819f-76b7cf7a2594
-	fromColumn: 2026-2.Unidade
-	toColumn: dUnidade.Unidade
-
-relationship AutoDetected_5b204d72-7ed7-495a-b0bb-dc6bd7868ca0
-	fromColumn: 2026-2.Canal
-	toColumn: dCanal.Canal
-
-relationship 77c7403e-44b0-dcbf-b3d1-8336312b5056
-	fromColumn: 2026-2.'Data Criacao'
-	toColumn: dCalendario.Date
-
-relationship 296fb6b4-a85b-6661-d9ab-7004f96ac0cf
-	fromColumn: Atendimentos.'Id Lead'
-	toColumn: 2026-2.'ID Lead'
-
 relationship b870d859-f2ba-9b37-1060-088475287b74
 	isActive: false
 	fromColumn: 2026-2.'Data de Pagamento'
@@ -65,4 +34,27 @@ relationship AutoDetected_b6ef5929-6e77-4f2d-b258-b3a0985fe29b
 relationship 2cbbcea6-ec66-ce6c-9157-c7a601029dc6
 	fromColumn: 'Matrículas GD'.DATA
 	toColumn: dCalendario.Date
+
+relationship 463a0ef1-da88-4daf-bcac-d31dd58faf1a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 2026-2.'Data Criacao'
+	toColumn: LocalDateTable_902ee6ed-8382-4f35-ada4-1a52b6b1f630.Date
+
+relationship 637d05f9-c569-48fa-80d3-6ec22aec1a5a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 2026-2.'Data Aceite'
+	toColumn: LocalDateTable_42ef74b0-3334-4660-9dc5-a97982b3bbe8.Date
+
+relationship faa36547-76a2-458f-a364-0f4606a207c8
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 2026-2.'Data alteração'
+	toColumn: LocalDateTable_e59bd786-d20d-4986-86bc-7b325c2afab5.Date
+
+relationship AutoDetected_bc78ebbb-2f26-46c9-b202-3bfe453c1bd7
+	fromColumn: 2026-2.Canal
+	toColumn: dCanal.Canal
+
+relationship fd75da89-9ff3-db8b-7424-b2d1a12d06df
+	fromColumn: Atendimentos.'Id Lead'
+	toColumn: 2026-2.'ID Lead'
 

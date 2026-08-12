@@ -20,13 +20,13 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dUnidade"
+                      "Entity": "2026-2"
                     }
                   },
                   "Property": "Unidade"
                 }
               },
-              "queryRef": "dUnidade.Unidade",
+              "queryRef": "2026-2.Unidade",
               "nativeQueryRef": "Unidade",
               "active": true
             }
@@ -253,20 +253,6 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "8ffb83efcc3a92ac800a",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dUnidade"
-              }
-            },
-            "Property": "Unidade"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
         "name": "2a8b00c40809860d6701",
         "field": {
           "Measure": {
@@ -279,6 +265,20 @@
           }
         },
         "type": "Advanced"
+      },
+      {
+        "name": "181b1045697ba95606de",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "2026-2"
+              }
+            },
+            "Property": "Unidade"
+          }
+        },
+        "type": "Categorical"
       }
     ]
   }
