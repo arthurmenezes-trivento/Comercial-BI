@@ -58,3 +58,11 @@ relationship 447344ee-f86a-d639-4592-12ca17fc84e3
 	fromColumn: Atendimentos.'Criado por'
 	toColumn: dAtendentes.'Criado por'
 
+relationship AutoDetected_b6ef5929-6e77-4f2d-b258-b3a0985fe29b
+	fromColumn: 'Matrículas GD'.Unidade
+	toColumn: dUnidade.Unidade
+
+relationship 2cbbcea6-ec66-ce6c-9157-c7a601029dc6
+	fromColumn: 'Matrículas GD'.DATA
+	toColumn: dCalendario.Date
+

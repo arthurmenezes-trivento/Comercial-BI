@@ -1,0 +1,196 @@
+table 'Matrículas GD'
+	lineageTag: 53bb7c14-480d-469c-af3f-883b2f4f69b2
+
+	column 'CONSULTOR (a)'
+		dataType: string
+		lineageTag: 7585442c-0aa6-4df5-b9db-1d5b5dc3e5e2
+		summarizeBy: none
+		sourceColumn: CONSULTOR (a)
+
+		annotation SummarizationSetBy = Automatic
+
+	column DATA
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: f0383067-9be8-4731-8de7-374431f13863
+		summarizeBy: none
+		sourceColumn: DATA
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Número de Inscrição'
+		dataType: string
+		lineageTag: fae805f4-8995-4ab4-a53a-087ed3726d08
+		summarizeBy: none
+		sourceColumn: Número de Inscrição
+
+		annotation SummarizationSetBy = Automatic
+
+	column NOME
+		dataType: string
+		lineageTag: 27fc1766-ef09-4310-9bb6-26c9a8bbc08e
+		summarizeBy: none
+		sourceColumn: NOME
+
+		annotation SummarizationSetBy = Automatic
+
+	column CELULAR
+		dataType: string
+		lineageTag: 4cce24d8-39a8-4295-a2fb-98a2e91885c7
+		summarizeBy: none
+		sourceColumn: CELULAR
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'CPF (preencher apenas com números)'
+		dataType: string
+		lineageTag: 44d6776a-42e3-44d8-b191-4f28db3ebcd6
+		summarizeBy: none
+		sourceColumn: CPF (preencher apenas com números)
+
+		annotation SummarizationSetBy = Automatic
+
+	column CURSO
+		dataType: string
+		lineageTag: a8acd070-4518-42c1-b9f4-d45c3518fa1c
+		summarizeBy: none
+		sourceColumn: CURSO
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'FORMA DE INGRESSO'
+		dataType: string
+		lineageTag: 50b019aa-571e-4205-ad68-76f7dbaaab83
+		summarizeBy: none
+		sourceColumn: FORMA DE INGRESSO
+
+		annotation SummarizationSetBy = Automatic
+
+	column '1º Boleto alterado para 20/08?'
+		dataType: string
+		lineageTag: e3e0af14-e92b-4110-af5e-5d10e216d3b4
+		summarizeBy: none
+		sourceColumn: 1º Boleto alterado para 20/08?
+
+		annotation SummarizationSetBy = Automatic
+
+	column '% BOLSA CONCEDIDA'
+		dataType: string
+		lineageTag: 6ef7379a-38da-4614-8b00-eda2e782bca4
+		summarizeBy: none
+		sourceColumn: % BOLSA CONCEDIDA
+
+		annotation SummarizationSetBy = Automatic
+
+	column CONDIÇÃO
+		dataType: string
+		lineageTag: 0e09074b-422a-41eb-af53-9ddaed27d72b
+		summarizeBy: none
+		sourceColumn: CONDIÇÃO
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'VALOR PG MATRÍCULA'
+		dataType: string
+		lineageTag: 35384a8c-8462-4b48-8ef1-a1e64a9eb87e
+		summarizeBy: none
+		sourceColumn: VALOR PG MATRÍCULA
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'NOME DO PAGADOR '
+		dataType: string
+		lineageTag: d20a6e70-2674-4423-b566-2d8d7bc86202
+		summarizeBy: none
+		sourceColumn: "NOME DO PAGADOR "
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'FORMA DE PAGAMNTO'
+		dataType: string
+		lineageTag: dbd83e16-e94d-48ca-ba73-066ed9207db3
+		summarizeBy: none
+		sourceColumn: FORMA DE PAGAMNTO
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'QUANTIDADE DE PARCELAS'
+		dataType: string
+		lineageTag: 7d11d795-4e60-4fcb-82da-a3cf27a6778f
+		summarizeBy: none
+		sourceColumn: QUANTIDADE DE PARCELAS
+
+		annotation SummarizationSetBy = Automatic
+
+	column OBSERVAÇÃO
+		dataType: string
+		lineageTag: 846fee21-ba10-42f0-9d00-8ad4d8fda0c4
+		summarizeBy: none
+		sourceColumn: OBSERVAÇÃO
+
+		annotation SummarizationSetBy = Automatic
+
+	column Unidade
+		dataType: string
+		lineageTag: fff5bc8e-196e-4462-a201-870342d922b5
+		summarizeBy: none
+		sourceColumn: Unidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Data e Hora'
+		dataType: string
+		lineageTag: b5f8f4ab-ca15-46ee-84dc-21d7e408ce90
+		summarizeBy: none
+		sourceColumn: Data e Hora
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'DATA BOLETO AGOSTO (EXCEÇÕES) '
+		dataType: string
+		lineageTag: 75aac297-ad6e-432c-99fb-a32ab9ee5477
+		summarizeBy: none
+		sourceColumn: "DATA BOLETO AGOSTO (EXCEÇÕES) "
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column1
+		dataType: string
+		lineageTag: 8f3b6f6d-2816-4111-b75a-ccaf11aa8b6a
+		summarizeBy: none
+		sourceColumn: Column1
+
+		annotation SummarizationSetBy = Automatic
+
+	column _1
+		dataType: string
+		lineageTag: 12112570-335a-4da9-9744-005b5cf47868
+		summarizeBy: none
+		sourceColumn: _1
+
+		annotation SummarizationSetBy = Automatic
+
+	column _2
+		dataType: string
+		lineageTag: 8cb01c0d-b0df-40d4-8145-5c63535fa7d8
+		summarizeBy: none
+		sourceColumn: _2
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Matrículas GD' = m
+		mode: import
+		source =
+				let
+				    Fonte = Table.Combine({LORENA, ALTAMIRA, ITABIRITO, CANAA}),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"DATA", type date}}),
+				    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Tipo Alterado",{{"Unidade", type text}})
+				in
+				    #"Tipo Alterado1"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

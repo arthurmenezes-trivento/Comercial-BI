@@ -283,19 +283,6 @@ expression Leads =
 
 	annotation PBI_ResultType = Table
 
-expression 'Matrículas GD' =
-		let
-		    Fonte = Table.Combine({LORENA, ALTAMIRA, ITABIRITO}),
-		    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"DATA", type date}}),
-		    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Tipo Alterado",{{"Unidade", type text}})
-		in
-		    #"Tipo Alterado1"
-	lineageTag: 9bd5a8fb-6297-4225-80c3-eb7a3879d613
-
-	annotation PBI_NavigationStepName = Navegação
-
-	annotation PBI_ResultType = Table
-
 expression ALTAMIRA =
 		let
 		    Fonte = GoogleSheets.Contents("https://docs.google.com/spreadsheets/d/13DBRdUsHT5wupKkq3Omi9VUr9Nj3R5gYVMfSSkmtXQM/edit?gid=0#gid=0"),
@@ -337,6 +324,21 @@ expression ITABIRITO =
 		in
 		    #"Valor Substituído"
 	lineageTag: c008e15f-9750-4794-a7ae-89e62ecbf8ec
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+
+expression CANAA =
+		let
+		    Fonte = GoogleSheets.Contents("https://docs.google.com/spreadsheets/d/13DBRdUsHT5wupKkq3Omi9VUr9Nj3R5gYVMfSSkmtXQM/edit?gid=0#gid=0"),
+		    ITABIRITO_Table = Fonte{[name="Canaã",ItemKind="Table"]}[Data],
+		    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(ITABIRITO_Table, [PromoteAllScalars=true]),
+		    #"Linhas em Branco Removidas" = Table.SelectRows(#"Cabeçalhos Promovidos", each not List.IsEmpty(List.RemoveMatchingItems(Record.FieldValues(_), {"", null}))),
+		    #"Personalização Adicionada" = Table.AddColumn(#"Linhas em Branco Removidas", "Unidade", each "Canaã")
+		in
+		    #"Personalização Adicionada"
+	lineageTag: 7a051662-77e9-4582-9705-78ea5e7b5d6b
 
 	annotation PBI_NavigationStepName = Navegação
 
