@@ -58,3 +58,9 @@ relationship fd75da89-9ff3-db8b-7424-b2d1a12d06df
 	fromColumn: Atendimentos.'Id Lead'
 	toColumn: 2026-2.'ID Lead'
 
+relationship c37b636d-92b2-d80a-5f59-622c6aa92835
+	crossFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: dAtendentes.Consultor
+	toColumn: 'Matrículas GD'.'CONSULTOR (a)'
+

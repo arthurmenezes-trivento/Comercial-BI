@@ -40,11 +40,62 @@
               "queryRef": "dCalendario.Date.Variation.Hierarquia de datas.Mês",
               "nativeQueryRef": "Date Mês",
               "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dCalendario"
+                    }
+                  },
+                  "Property": "Semana"
+                }
+              },
+              "queryRef": "dCalendario.Semana",
+              "nativeQueryRef": "Semana",
+              "active": false
             }
           ]
         }
       }
     },
+    "expansionStates": [
+      {
+        "roles": [
+          "Values"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "dCalendario.Date.Variation.Hierarquia de datas.Mês"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "LocalDateTable_a805f813-464e-407c-b1f9-b2f9e577ec46"
+                    }
+                  },
+                  "Property": "Mês"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "dCalendario.Semana"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          }
+        ],
+        "root": {}
+      }
+    ],
     "objects": {
       "data": [
         {
@@ -61,110 +112,7 @@
       ],
       "general": [
         {
-          "properties": {
-            "filter": {
-              "filter": {
-                "Version": 2,
-                "From": [
-                  {
-                    "Name": "l",
-                    "Entity": "LocalDateTable_a805f813-464e-407c-b1f9-b2f9e577ec46",
-                    "Type": 0
-                  }
-                ],
-                "Where": [
-                  {
-                    "Condition": {
-                      "In": {
-                        "Expressions": [
-                          {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Source": "l"
-                                }
-                              },
-                              "Property": "Mês"
-                            }
-                          }
-                        ],
-                        "Values": [
-                          [
-                            {
-                              "Literal": {
-                                "Value": "'julho'"
-                              }
-                            }
-                          ]
-                        ]
-                      }
-                    },
-                    "Annotations": {
-                      "filterExpressionMetadata": {
-                        "expressions": [
-                          {
-                            "HierarchyLevel": {
-                              "Expression": {
-                                "Hierarchy": {
-                                  "Expression": {
-                                    "PropertyVariationSource": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Entity": "dCalendario"
-                                        }
-                                      },
-                                      "Name": "Variation",
-                                      "Property": "Date"
-                                    }
-                                  },
-                                  "Hierarchy": "Hierarquia de datas"
-                                }
-                              },
-                              "Level": "Mês"
-                            }
-                          }
-                        ],
-                        "decomposedIdentities": {
-                          "values": [
-                            [
-                              {
-                                "0": [
-                                  {
-                                    "Literal": {
-                                      "Value": "'julho'"
-                                    }
-                                  }
-                                ]
-                              }
-                            ]
-                          ],
-                          "columns": [
-                            {
-                              "value": {
-                                "Column": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Entity": "LocalDateTable_a805f813-464e-407c-b1f9-b2f9e577ec46"
-                                    }
-                                  },
-                                  "Property": "Mês"
-                                }
-                              }
-                            }
-                          ]
-                        },
-                        "valueMap": [
-                          {
-                            "0": "julho"
-                          }
-                        ]
-                      }
-                    }
-                  }
-                ]
-              }
-            }
-          }
+          "properties": {}
         }
       ]
     },
@@ -241,6 +189,20 @@
               }
             },
             "Level": "Mês"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "f9ac20c83b3d69b5f108",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dCalendario"
+              }
+            },
+            "Property": "Semana"
           }
         },
         "type": "Categorical"

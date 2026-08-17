@@ -38,21 +38,6 @@
                       "Entity": "Matrículas GD"
                     }
                   },
-                  "Property": "Unidade"
-                }
-              },
-              "queryRef": "Matrículas GD.Unidade",
-              "nativeQueryRef": "Unidade",
-              "active": false
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Matrículas GD"
-                    }
-                  },
                   "Property": "DATA"
                 }
               },
@@ -130,25 +115,6 @@
                     }
                   },
                   "Property": "CONSULTOR (a)"
-                }
-              }
-            ],
-            "isPinned": true
-          },
-          {
-            "queryRefs": [
-              "Matrículas GD.Unidade"
-            ],
-            "isCollapsed": true,
-            "identityKeys": [
-              {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Matrículas GD"
-                    }
-                  },
-                  "Property": "Unidade"
                 }
               }
             ],
@@ -534,60 +500,6 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "b63f5ad878db99044306",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dCalendario"
-              }
-            },
-            "Property": "Mes"
-          }
-        },
-        "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "d",
-              "Entity": "dCalendario",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "d"
-                          }
-                        },
-                        "Property": "Mes"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'julho'"
-                        }
-                      }
-                    ]
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        "howCreated": "User"
-      },
-      {
         "name": "85b7c1653508304a7762",
         "field": {
           "Column": {
@@ -597,34 +509,6 @@
               }
             },
             "Property": "CONSULTOR (a)"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "25fe76230bedc1e194e8",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Matrículas GD"
-              }
-            },
-            "Property": "Unidade"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "39539260196a87d005d3",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Matrículas GD"
-              }
-            },
-            "Property": "DATA"
           }
         },
         "type": "Categorical"
@@ -647,6 +531,20 @@
           }
         },
         "type": "Advanced"
+      },
+      {
+        "name": "86d08c6d32718bf59986",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Matrículas GD"
+              }
+            },
+            "Property": "DATA"
+          }
+        },
+        "type": "Categorical"
       }
     ]
   }

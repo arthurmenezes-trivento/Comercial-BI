@@ -13,6 +13,9 @@ table dAtendentes
 			
 			SWITCH(
 			    dAtendentes[Criado por],
+			    "Maria Fernanda Luiz Monteiro", "Unidade Lorena",
+			    "Maria Eduarda Freire", "Unidade Lorena",
+			    "Ana Carolina Guimarães", "Célula",
 			    "Thiago Oliveira da Cruz", "Unidade Altamira",
 			    "Giovanna Eduarda Do Carmo Braga", "Unidade Itabirito",
 			    "Hailton Alves Júnior", "Célula",
@@ -30,7 +33,7 @@ table dAtendentes
 			    "Camila Guimarães Santos", "Sem Equipe",
 			    "Fernanda Santos", "Sem Equipe",
 			    "Thalyta Costa", "Sem Equipe",
-			    "Breno Assis Ferreira", "Sem Equipe",
+			    "Breno Assis Ferreira",  "Célula",
 			    "Flavio Henrique de Oliveira", "Sem Equipe",
 			    "Sem Equipe"
 			)
@@ -44,6 +47,34 @@ table dAtendentes
 		lineageTag: 85370991-4102-4bff-b26e-c41aee647a19
 		summarizeBy: none
 		sourceColumn: Proprietário lead
+
+		annotation SummarizationSetBy = Automatic
+
+	column Consultor =
+			
+			SWITCH(
+			    dAtendentes[Criado por],
+			    "Gabriel Matos", "Gabriel",
+			    "Maria Eduarda Freire", "Duda",
+			    "Maria Rafaela da Rocha Tavares", "Maria Rafaela",
+			    "Adauri Marques Delfino Junior", "Adauri",
+			    "Karen Flávia", "Flávia",
+			    "Daniel Faria Santos", "Daniel",
+			    "Geovana Souza da Silva", "Geovana",
+			    "Agnata Pamela Silva Souza", "Agnata",
+			    "Giovanna Eduarda Do Carmo Braga", "Giovanna Braga",
+			    "Hailton Alves Júnior", "Hailton",
+			    "Karolaine de Oliveira Alves Souza", "Karolaine",
+			    "Thiago Oliveira da Cruz", "Thiago",
+			    "Maria Fernanda Luiz Monteiro", "Maria Fernanda",
+			    "Ana Carolina Guimarães", "Ana Carolina",
+			    "Lorena Viana Gonçalves Pereira", "Lorena",
+			    "Thalia Gabriela de Araújo Silva", "Thalia",
+			    "Camila Guimarães Santos", "Camila",
+			    "Breno Assis Ferreira", "Breno"
+			)
+		lineageTag: 36810220-415d-4140-9138-a43d74515cf4
+		summarizeBy: none
 
 		annotation SummarizationSetBy = Automatic
 
