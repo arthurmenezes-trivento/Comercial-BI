@@ -89,21 +89,27 @@
         "sort": [
           {
             "field": {
-              "Aggregation": {
+              "HierarchyLevel": {
                 "Expression": {
-                  "Column": {
+                  "Hierarchy": {
                     "Expression": {
-                      "SourceRef": {
-                        "Entity": "Matrículas GD"
+                      "PropertyVariationSource": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "dCalendario"
+                          }
+                        },
+                        "Name": "Variation",
+                        "Property": "Date"
                       }
                     },
-                    "Property": "Número de Inscrição"
+                    "Hierarchy": "Hierarquia de datas"
                   }
                 },
-                "Function": 5
+                "Level": "Mês"
               }
             },
-            "direction": "Descending"
+            "direction": "Ascending"
           }
         ]
       }
