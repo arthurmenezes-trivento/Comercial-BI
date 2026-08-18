@@ -231,5 +231,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "62b8902d7f5eb9ae6d45",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Atendimentos"
+              }
+            },
+            "Property": "Criado por"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

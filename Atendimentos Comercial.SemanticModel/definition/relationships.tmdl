@@ -54,13 +54,13 @@ relationship AutoDetected_bc78ebbb-2f26-46c9-b202-3bfe453c1bd7
 	fromColumn: 2026-2.Canal
 	toColumn: dCanal.Canal
 
-relationship fd75da89-9ff3-db8b-7424-b2d1a12d06df
-	fromColumn: Atendimentos.'Id Lead'
-	toColumn: 2026-2.'ID Lead'
-
 relationship c37b636d-92b2-d80a-5f59-622c6aa92835
 	crossFilteringBehavior: bothDirections
 	toCardinality: many
 	fromColumn: dAtendentes.Consultor
 	toColumn: 'Matrículas GD'.'CONSULTOR (a)'
+
+relationship d7534d4f-ddc6-575c-bc66-a2a0e3094d1f
+	fromColumn: Atendimentos.'Id Lead'
+	toColumn: 2026-2.'ID Lead'
 
