@@ -342,27 +342,3 @@ expression CANAA =
 
 	annotation PBI_ResultType = Table
 
-/// Chave da API Zenvia Sales. Não carregar no modelo.
-expression ZenviaApiKey = "nENGTUJ7sxr7UrCAlMLFpR4blt1PragC" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
-	lineageTag: a497c359-cfce-4b5f-b061-f9e0a9107d45
-
-	annotation PBI_NavigationStepName = Navegação
-
-	annotation PBI_ResultType = Text
-
-/// Início da extração de candidatos da Zenvia (UTC).
-expression ZenviaDataInicio = "2026-01-01T03:00:00.000Z" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
-	lineageTag: fd332dd7-ede8-45a6-bdb1-c5e8b0881f43
-
-	annotation PBI_NavigationStepName = Navegação
-
-	annotation PBI_ResultType = Text
-
-/// Fim da extração de candidatos da Zenvia (UTC).
-expression ZenviaDataFim = "2026-12-31T03:00:00.000Z" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
-	lineageTag: 55c1e29b-be49-44e3-a6c0-d7d73d1f8073
-
-	annotation PBI_NavigationStepName = Navegação
-
-	annotation PBI_ResultType = Text
-
