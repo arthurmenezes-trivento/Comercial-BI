@@ -15,7 +15,7 @@ annotation __PBI_TimeIntelligenceEnabled = 1
 
 annotation PBI_QueryOrder = ["Token de acesso","Inscricoes","dUnidade","DeparaCursos","dCanal","Atendimentos","Medidas","Função Invocada","ALTAMIRA","LORENA","ITABIRITO","Matrículas GD","2026-2","Legado","Leads","dAtendentes","CANAA"]
 
-annotation PBI_ProTooling = ["DevMode"]
+annotation PBI_ProTooling = ["DevMode","MCP-PBIModeling"]
 
 ref table dUnidade
 ref table DateTableTemplate_0222e32a-6655-40a5-81e5-c3330bbcd9fd

@@ -1,0 +1,72 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "c958a9e561ce5b962452",
+  "position": {
+    "x": 348.20668693009122,
+    "y": 39.878419452887542,
+    "z": 2,
+    "height": 62.249240121580549,
+    "width": 210.09118541033436,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "2026-2"
+                    }
+                  },
+                  "Property": "Curso"
+                }
+              },
+              "queryRef": "2026-2.Curso",
+              "nativeQueryRef": "Curso",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Dropdown'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "1220f8b5ea1899f22b28",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "2026-2"
+              }
+            },
+            "Property": "Curso"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

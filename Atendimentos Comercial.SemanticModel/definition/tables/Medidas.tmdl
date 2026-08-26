@@ -3,37 +3,44 @@ table Medidas
 
 	measure UltimoAtendente = ```
 			
-			
-			-- 1. Captura o contexto do cliente/aluno da linha atual do visual
 			VAR ClienteAtual = SELECTEDVALUE('2026-2'[Nome Completo]) 
 			
-			-- 2. Busca o último registro garantindo que pertence ao cliente da linha
-			VAR UltimoRegistro =
-			    TOPN(
-			        1,
+			RETURN
+			IF(
+			    ISBLANK(ClienteAtual),
+			    BLANK(),
+			    VAR AtendimentosFiltrados = 
 			        CALCULATETABLE(
 			            'Atendimentos',
-			            'Atendimentos'[Nome do Lead] = ClienteAtual, -- Altere para a coluna de relacionamento correta (ex: ID ou Nome)
-			            'Atendimentos'[Assunto] <> "Alteração em Massa",
+			            KEEPFILTERS('Atendimentos'[Nome do Lead] = ClienteAtual), 
+			            NOT 'Atendimentos'[Assunto] IN { "Alteração em Massa", "Crm Educacional, # — Alteração", "Trivento Trivento — Alteração" },
 			            NOT ISBLANK('Atendimentos'[Assunto])
-			        ),
-			        'Atendimentos'[Data de Criação], DESC
-			    )
+			        )
 			
-			-- 3. Busca o nome do atendente
-			VAR Resultado = 
-			    CALCULATE(
-			        SELECTEDVALUE('Atendimentos'[Criado por]),
-			        UltimoRegistro
-			    )
+			    -- 1. Cria uma linha do tempo precisa somando Data + Hora para evitar empates
+			    VAR UltimoMomento = 
+			        MAXX(
+			            AtendimentosFiltrados, 
+			            'Atendimentos'[Data de Criação] + 'Atendimentos'[hora de Criação]
+			        )
 			
-			RETURN
-			    -- 4. Se o cliente for válido mas não tiver atendente, retorna o texto sem quebrar os filtros
-			    IF(
-			        NOT ISBLANK(ClienteAtual),
-			        IF(ISBLANK(Resultado), "Sem Atendente", Resultado),
-			        BLANK()
-			    )
+			    -- 2. Busca o atendente correspondente a este exato minuto/segundo
+			    VAR Resultado = 
+			        CALCULATE(
+			            -- Mudamos para FIRSTNONBLANK para garantir o retorno mesmo se houver conflito de nomes
+			            FIRSTNONBLANK('Atendimentos'[Criado por], 1),
+			            AtendimentosFiltrados,
+			            ('Atendimentos'[Data de Criação] + 'Atendimentos'[hora de Criação]) = UltimoMomento
+			        )
+			
+			    RETURN 
+			        -- 3. Valida se o resultado final faz sentido
+			        IF(
+			            ISBLANK(Resultado), 
+			            "Sem Atendente (CRM)", 
+			            Resultado
+			        )
+			)
 			
 			```
 		lineageTag: c2990e0a-0c93-4df1-848b-3acbcbe83565
@@ -398,6 +405,29 @@ table Medidas
 			)
 		formatString: 0
 		lineageTag: 13a06019-f16a-4070-8f9e-a1cb5eabed87
+
+	/// Conta as linhas/clientes cujo UltimoAtendente e Sem Atendente.
+	measure 'Qtd Sem Atendente' =
+			COUNTROWS(
+			    FILTER(
+			        VALUES('2026-2'[Nome Completo]),
+			        CALCULATE([UltimoAtendente]) = "Sem Atendente (CRM)"
+			    )
+			)
+		formatString: #,##0
+		lineageTag: 5bba2409-0659-4a26-ac06-b4619623aff8
+
+	/// Conta as linhas/clientes cujo UltimoAtendente e diferente de Sem Atendente.
+	measure 'Qtd Com Atendente' =
+			COUNTROWS(
+			    FILTER(
+			        VALUES('2026-2'[Nome Completo]),
+			        NOT ISBLANK(CALCULATE([UltimoAtendente]))
+			            && CALCULATE([UltimoAtendente]) <> "Sem Atendente (CRM)"
+			    )
+			)
+		formatString: #,##0
+		lineageTag: 004d5bd3-e67e-4ead-a4d1-3522211dd5cf
 
 	column 'Coluna 1'
 		dataType: string
