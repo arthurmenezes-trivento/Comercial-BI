@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "44b6f0d0088707d5c700",
   "position": {
-    "x": 829.66565349544078,
-    "y": 116.71732522796353,
-    "z": 6000,
+    "x": 994.422310756972,
+    "y": 117.29083665338645,
+    "z": 5000,
     "height": 86.565349544072959,
     "width": 214.95440729483283,
-    "tabOrder": 6000
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -17,22 +17,17 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "2026-2"
-                        }
-                      },
-                      "Property": "ID Lead"
+                    "SourceRef": {
+                      "Entity": "Medidas"
                     }
                   },
-                  "Function": 2
+                  "Property": "qtd pagamentos pendentes"
                 }
               },
-              "queryRef": "Min(2026-2.ID Lead)",
-              "nativeQueryRef": "Contagem de ID Lead"
+              "queryRef": "Medidas.qtd pagamentos pendentes",
+              "nativeQueryRef": "qtd pagamentos pendentes"
             }
           ]
         }
@@ -41,18 +36,13 @@
         "sort": [
           {
             "field": {
-              "Aggregation": {
+              "Measure": {
                 "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "2026-2"
-                      }
-                    },
-                    "Property": "ID Lead"
+                  "SourceRef": {
+                    "Entity": "Medidas"
                   }
                 },
-                "Function": 2
+                "Property": "qtd pagamentos pendentes"
               }
             },
             "direction": "Descending"

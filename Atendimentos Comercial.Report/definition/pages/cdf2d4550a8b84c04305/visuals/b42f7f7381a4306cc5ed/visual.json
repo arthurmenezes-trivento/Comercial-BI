@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "f6d24b08a08f739816b1",
+  "name": "b42f7f7381a4306cc5ed",
   "position": {
-    "x": 52.270916334661351,
-    "y": 117.29083665338645,
-    "z": 6000,
-    "height": 62.249240121580549,
-    "width": 210.09118541033436,
-    "tabOrder": 6000
+    "x": 726.69322709163339,
+    "y": 116.01593625498008,
+    "z": 9000,
+    "height": 62.470119521912345,
+    "width": 244.78087649402389,
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "slicer",
@@ -20,28 +20,54 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "2026-2"
+                      "Entity": "Atendimentos"
                     }
                   },
-                  "Property": "Unidade"
+                  "Property": "Data de Criação"
                 }
               },
-              "queryRef": "2026-2.Unidade",
-              "nativeQueryRef": "Unidade",
-              "active": true
+              "queryRef": "Atendimentos.Data de Criação",
+              "nativeQueryRef": "Data atendimento",
+              "active": true,
+              "displayName": "Data atendimento"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Atendimentos"
+                  }
+                },
+                "Property": "Data de Criação"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": true
       }
     },
     "objects": {
       "data": [
         {
           "properties": {
+            "startDate": {
+              "expr": {
+                "Literal": {
+                  "Value": "datetime'2026-08-01T00:00:00'"
+                }
+              }
+            },
             "mode": {
               "expr": {
                 "Literal": {
-                  "Value": "'Dropdown'"
+                  "Value": "'Between'"
                 }
               }
             }
@@ -50,7 +76,44 @@
       ],
       "general": [
         {
-          "properties": {}
+          "properties": {
+            "filter": {
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "a",
+                    "Entity": "Atendimentos",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "Comparison": {
+                        "ComparisonKind": 2,
+                        "Left": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "a"
+                              }
+                            },
+                            "Property": "Data de Criação"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "datetime'2026-08-01T00:00:00'"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
         }
       ]
     },

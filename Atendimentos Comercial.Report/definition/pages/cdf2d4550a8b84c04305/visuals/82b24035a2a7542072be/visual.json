@@ -4,10 +4,10 @@
   "position": {
     "x": 283.02788844621512,
     "y": 117.29083665338645,
-    "z": 8002,
+    "z": 7000,
     "height": 62.249240121580549,
     "width": 210.09118541033436,
-    "tabOrder": 8002
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "slicer",
@@ -50,7 +50,56 @@
       ],
       "general": [
         {
-          "properties": {}
+          "properties": {
+            "filter": {
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "2",
+                    "Entity": "2026-2",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "In": {
+                        "Expressions": [
+                          {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Source": "2"
+                                }
+                              },
+                              "Property": "Situação Pagamento"
+                            }
+                          }
+                        ],
+                        "Values": [
+                          [
+                            {
+                              "Literal": {
+                                "Value": "'Aguardando'"
+                              }
+                            }
+                          ],
+                          [
+                            {
+                              "Literal": {
+                                "Value": "'Em aberto'"
+                              }
+                            }
+                          ]
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
         }
       ]
     },

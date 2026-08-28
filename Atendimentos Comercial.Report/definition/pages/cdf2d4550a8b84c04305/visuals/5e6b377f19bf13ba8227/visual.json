@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "55a4c55bf33a51362f3b",
+  "name": "5e6b377f19bf13ba8227",
   "position": {
-    "x": 534.18326693227084,
+    "x": 493.38645418326689,
     "y": 117.29083665338645,
-    "z": 8003,
-    "height": 62.249240121580549,
-    "width": 210.09118541033436,
-    "tabOrder": 8003
+    "z": 8000,
+    "height": 62.470119521912345,
+    "width": 244.78087649402389,
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "slicer",
@@ -20,43 +20,60 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dCalendario"
+                      "Entity": "2026-2"
                     }
                   },
-                  "Property": "Mes"
+                  "Property": "Data Criacao"
                 }
               },
-              "queryRef": "dCalendario.Mes",
-              "nativeQueryRef": "Mes",
+              "queryRef": "2026-2.Data Criacao",
+              "nativeQueryRef": "Data Criacao",
               "active": true
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "dCalendario"
-                    }
-                  },
-                  "Property": "Semana"
-                }
-              },
-              "queryRef": "dCalendario.Semana",
-              "nativeQueryRef": "Semana",
-              "active": false
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "2026-2"
+                  }
+                },
+                "Property": "Data Criacao"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": true
       }
     },
     "objects": {
       "data": [
         {
           "properties": {
+            "startDate": {
+              "expr": {
+                "Literal": {
+                  "Value": "datetime'2026-08-26T00:00:00'"
+                }
+              }
+            },
+            "endDate": {
+              "expr": {
+                "Literal": {
+                  "Value": "datetime'2026-08-28T00:00:00'"
+                }
+              }
+            },
             "mode": {
               "expr": {
                 "Literal": {
-                  "Value": "'Dropdown'"
+                  "Value": "'Between'"
                 }
               }
             }
@@ -65,7 +82,68 @@
       ],
       "general": [
         {
-          "properties": {}
+          "properties": {
+            "filter": {
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "2",
+                    "Entity": "2026-2",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "And": {
+                        "Left": {
+                          "Comparison": {
+                            "ComparisonKind": 2,
+                            "Left": {
+                              "Column": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Source": "2"
+                                  }
+                                },
+                                "Property": "Data Criacao"
+                              }
+                            },
+                            "Right": {
+                              "Literal": {
+                                "Value": "datetime'2026-08-26T00:00:00'"
+                              }
+                            }
+                          }
+                        },
+                        "Right": {
+                          "Comparison": {
+                            "ComparisonKind": 3,
+                            "Left": {
+                              "Column": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Source": "2"
+                                  }
+                                },
+                                "Property": "Data Criacao"
+                              }
+                            },
+                            "Right": {
+                              "Literal": {
+                                "Value": "datetime'2026-08-29T00:00:00'"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
         }
       ]
     },

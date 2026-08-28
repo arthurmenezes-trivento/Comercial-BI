@@ -135,6 +135,20 @@ table Atendimentos
 
 		annotation SummarizationSetBy = Automatic
 
+	column '2 dias sem atendimento' =
+			
+			
+			IF(
+			    [Dias_sem_atendimento] > 1,
+			    1,
+			    0
+			)
+		formatString: 0
+		lineageTag: 503bea9f-6f40-4218-b109-ce038506fa79
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Atendimentos = m
 		mode: import
 		queryGroup: 'Consultas - Token'

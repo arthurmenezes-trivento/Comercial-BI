@@ -1644,6 +1644,16 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.591
 			          }
+			        },
+			        {
+			          "Data atendimento": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ],
 			      "SemanticType": "Time"
@@ -4321,7 +4331,7 @@ cultureInfo pt-BR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "2 dias sem atendimento"
+			          "ConceptualProperty": "2 ou mais dias sem atendimento"
 			        }
 			      },
 			      "State": "Generated",
@@ -7442,75 +7452,41 @@ cultureInfo pt-BR
 			          }
 			        }
 			      ]
+			    },
+			    "medida.qtd_sem_atendente": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Qtd Sem Atendente"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "qtd sem atendente": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.qtd_com_atendente": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Qtd Com Atendente"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "qtd com atendente": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "entity_20262_data_criacao_hierarquia_de_data_has_entity_20262_data_criacao_dia": {
-			      "Binding": {
-			        "ConceptualEntity": "2026-2"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "entity_20262.data_criacao.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "entity_20262.data_criacao.hierarquia_de_data"
-			          }
-			        },
-			        "entity_20262.data_criacao.dia": {
-			          "Target": {
-			            "Entity": "entity_20262.data_criacao.dia"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_20262.data_criacao.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "entity_20262.data_criacao.dia"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias"
-			        }
-			      ]
-			    },
-			    "entity_20262_data_criacao_hierarquia_de_data_has_entity_20262_data_criacao_mê": {
-			      "Binding": {
-			        "ConceptualEntity": "2026-2"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "entity_20262.data_criacao.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "entity_20262.data_criacao.hierarquia_de_data"
-			          }
-			        },
-			        "entity_20262.data_criacao.mê": {
-			          "Target": {
-			            "Entity": "entity_20262.data_criacao.mê"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_20262.data_criacao.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "entity_20262.data_criacao.mê"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê"
-			        }
-			      ]
-			    },
 			    "entity_20262_data_criacao_hierarquia_de_data_has_entity_20262_data_criacao_trimestre": {
 			      "Binding": {
 			        "ConceptualEntity": "2026-2"
@@ -7837,7 +7813,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias1"
+			          "ID": "hierarquia_de_data_have_dias"
 			        }
 			      ]
 			    },
@@ -7870,7 +7846,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê1"
+			          "ID": "hierarquia_de_data_have_mê"
 			        }
 			      ]
 			    },
@@ -8200,7 +8176,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias2"
+			          "ID": "hierarquia_de_data_have_dias1"
 			        }
 			      ]
 			    },
@@ -8233,7 +8209,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê2"
+			          "ID": "hierarquia_de_data_have_mê1"
 			        }
 			      ]
 			    },
@@ -8563,7 +8539,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias3"
+			          "ID": "hierarquia_de_data_have_dias2"
 			        }
 			      ]
 			    },
@@ -8596,7 +8572,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê3"
+			          "ID": "hierarquia_de_data_have_mê2"
 			        }
 			      ]
 			    },
@@ -8926,7 +8902,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias4"
+			          "ID": "hierarquia_de_data_have_dias3"
 			        }
 			      ]
 			    },
@@ -8959,7 +8935,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê4"
+			          "ID": "hierarquia_de_data_have_mê3"
 			        }
 			      ]
 			    },
@@ -9329,6 +9305,72 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "d_atendentes_have_atendimentos"
+			        }
+			      ]
+			    },
+			    "entity_20262_has_medida_qtd_com_atendente": {
+			      "Binding": {
+			        "ConceptualEntity": "2026-2"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_20262": {
+			          "Target": {
+			            "Entity": "entity_20262"
+			          }
+			        },
+			        "medida.qtd_com_atendente": {
+			          "Target": {
+			            "Entity": "medida.qtd_com_atendente"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_20262"
+			            },
+			            "Object": {
+			              "Role": "medida.qtd_com_atendente"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing20262_have_qtd_com_atendente"
+			        }
+			      ]
+			    },
+			    "entity_20262_has_medida_qtd_sem_atendente": {
+			      "Binding": {
+			        "ConceptualEntity": "2026-2"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_20262": {
+			          "Target": {
+			            "Entity": "entity_20262"
+			          }
+			        },
+			        "medida.qtd_sem_atendente": {
+			          "Target": {
+			            "Entity": "medida.qtd_sem_atendente"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_20262"
+			            },
+			            "Object": {
+			              "Role": "medida.qtd_sem_atendente"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing20262_have_qtd_sem_atendente"
 			        }
 			      ]
 			    },
@@ -14384,6 +14426,72 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "ID_are_names_IDs_of_d_unidades"
+			        }
+			      ]
+			    },
+			    "entity_20262_data_criacao_hierarquia_de_data_has_entity_20262_data_criacao_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "2026-2"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_20262.data_criacao.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "entity_20262.data_criacao.hierarquia_de_data"
+			          }
+			        },
+			        "entity_20262.data_criacao.mê": {
+			          "Target": {
+			            "Entity": "entity_20262.data_criacao.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_20262.data_criacao.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "entity_20262.data_criacao.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_mê4"
+			        }
+			      ]
+			    },
+			    "entity_20262_data_criacao_hierarquia_de_data_has_entity_20262_data_criacao_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "2026-2"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_20262.data_criacao.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "entity_20262.data_criacao.hierarquia_de_data"
+			          }
+			        },
+			        "entity_20262.data_criacao.dia": {
+			          "Target": {
+			            "Entity": "entity_20262.data_criacao.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_20262.data_criacao.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "entity_20262.data_criacao.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_dias4"
 			        }
 			      ]
 			    },

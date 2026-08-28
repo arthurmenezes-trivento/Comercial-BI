@@ -395,7 +395,7 @@ table Medidas
 		formatString: 0
 		lineageTag: fd740ab8-ca0d-4a67-963f-75ebe4562502
 
-	measure '2 dias sem atendimento' =
+	measure '2 ou mais dias sem atendimento' =
 			
 			
 			IF(
@@ -428,6 +428,15 @@ table Medidas
 			)
 		formatString: 0
 		lineageTag: 004d5bd3-e67e-4ead-a4d1-3522211dd5cf
+
+	measure 'qtd pagamentos pendentes' =
+			
+			CALCULATE(
+			    DISTINCTCOUNT(
+			        '2026-2'[ID Lead]),
+			        CROSSFILTER('2026-2'[ID Lead], Atendimentos[Id Lead], Both))
+		formatString: 0
+		lineageTag: 1d130848-95ab-46d6-a306-8e4b36fe243b
 
 	column 'Coluna 1'
 		dataType: string
