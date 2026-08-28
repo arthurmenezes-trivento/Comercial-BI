@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "9f6e1d75782da09100bc",
   "position": {
     "x": 617.629179331307,
     "y": 107.96352583586626,
-    "z": 11002,
+    "z": 7000,
     "height": 72.948328267477208,
     "width": 172.15805471124619,
-    "tabOrder": 11002
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "slicer",
@@ -179,20 +179,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "e0fb48651506364e7b54",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Atendimentos"
-              }
-            },
-            "Property": "Resultado do Contato"
-          }
-        },
-        "type": "Categorical"
       }
     ]
   }

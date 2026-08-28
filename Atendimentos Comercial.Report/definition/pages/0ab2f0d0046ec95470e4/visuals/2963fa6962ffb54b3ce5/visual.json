@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "2963fa6962ffb54b3ce5",
   "position": {
-    "x": 453,
-    "y": 191,
-    "z": 5004,
+    "x": 441.44256030570818,
+    "y": 206.65870551707667,
+    "z": 5000,
     "height": 443,
     "width": 794,
-    "tabOrder": 5004
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "lineChart",
@@ -485,50 +485,6 @@
   },
   "filterConfig": {
     "filters": [
-      {
-        "name": "856b9a92e3070276e651",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "dCalendario"
-                      }
-                    },
-                    "Name": "Variation",
-                    "Property": "Date"
-                  }
-                },
-                "Hierarchy": "Hierarquia de datas"
-              }
-            },
-            "Level": "Mês"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "fdfbbb61bf4be9515ca9",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Matrículas GD"
-                  }
-                },
-                "Property": "Número de Inscrição"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
-      },
       {
         "name": "45a37458ec4ca6257d7a",
         "field": {

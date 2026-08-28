@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "bae8fc1bec5db088c598",
   "position": {
-    "x": 131.30699088145897,
-    "y": 186.74772036474164,
-    "z": 5001,
+    "x": 75.815619775495577,
+    "y": 206.65870551707667,
+    "z": 4000,
     "height": 442.55319148936172,
     "width": 364.74164133738606,
-    "tabOrder": 5001
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -496,56 +496,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "85b7c1653508304a7762",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Matrículas GD"
-              }
-            },
-            "Property": "CONSULTOR (a)"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "aa1f424ee31ca20e00c6",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Matrículas GD"
-                  }
-                },
-                "Property": "Número de Inscrição"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "86d08c6d32718bf59986",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Matrículas GD"
-              }
-            },
-            "Property": "DATA"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

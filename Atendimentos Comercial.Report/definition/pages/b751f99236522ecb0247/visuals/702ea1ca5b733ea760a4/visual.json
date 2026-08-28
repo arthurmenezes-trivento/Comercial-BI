@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "702ea1ca5b733ea760a4",
   "position": {
-    "x": 470.14925373134326,
-    "y": 198.80597014925374,
-    "z": 8000,
+    "x": 472.01337473131122,
+    "y": 206.65870551707667,
+    "z": 7000,
     "height": 388.65671641791045,
     "width": 749.55223880597009,
-    "tabOrder": 8000
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -527,62 +527,6 @@
         },
         "type": "Categorical",
         "howCreated": "User"
-      },
-      {
-        "name": "cbf4496505da1c5a12b7",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "2026-2"
-              }
-            },
-            "Property": "Legado"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "d763fec0c2ca0e4a0157",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "2026-2"
-              }
-            },
-            "Property": "Aging Faixa"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "d2910d837637b9e0040e",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dCalendario"
-              }
-            },
-            "Property": "Date"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "db1872d736119e0d0141",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Matr 26-2"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

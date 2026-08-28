@@ -414,7 +414,7 @@ table Medidas
 			        CALCULATE([UltimoAtendente]) = "Sem Atendente (CRM)"
 			    )
 			)
-		formatString: #,##0
+		formatString: 0
 		lineageTag: 5bba2409-0659-4a26-ac06-b4619623aff8
 
 	/// Conta as linhas/clientes cujo UltimoAtendente e diferente de Sem Atendente.
@@ -426,7 +426,7 @@ table Medidas
 			            && CALCULATE([UltimoAtendente]) <> "Sem Atendente (CRM)"
 			    )
 			)
-		formatString: #,##0
+		formatString: 0
 		lineageTag: 004d5bd3-e67e-4ead-a4d1-3522211dd5cf
 
 	column 'Coluna 1'
