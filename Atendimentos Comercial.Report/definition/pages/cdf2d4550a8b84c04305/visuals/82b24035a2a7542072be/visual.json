@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "92cbf87faca4a097a002",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "82b24035a2a7542072be",
   "position": {
-    "x": 394.89361702127661,
-    "y": 116.71732522796353,
-    "z": 8000,
-    "height": 58.208955223880594,
-    "width": 145.97014925373134,
-    "tabOrder": 8000
+    "x": 283.02788844621512,
+    "y": 117.29083665338645,
+    "z": 8002,
+    "height": 62.249240121580549,
+    "width": 210.09118541033436,
+    "tabOrder": 8002
   },
   "visual": {
     "visualType": "slicer",
@@ -20,40 +20,20 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dUnidade"
+                      "Entity": "2026-2"
                     }
                   },
-                  "Property": "Unidade"
+                  "Property": "Situação Pagamento"
                 }
               },
-              "queryRef": "dUnidade.Unidade",
-              "nativeQueryRef": "Unidade",
+              "queryRef": "2026-2.Situação Pagamento",
+              "nativeQueryRef": "Situação Pagamento",
               "active": true
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "isDefaultSort": true
       }
     },
-    "expansionStates": [
-      {
-        "roles": [
-          "Values"
-        ],
-        "levels": [
-          {
-            "queryRefs": [
-              "dUnidade.Unidade"
-            ],
-            "isCollapsed": true,
-            "isPinned": true
-          }
-        ],
-        "root": {}
-      }
-    ],
     "objects": {
       "data": [
         {
@@ -72,39 +52,6 @@
         {
           "properties": {}
         }
-      ],
-      "header": [
-        {
-          "properties": {
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Unidade'"
-                }
-              }
-            },
-            "textSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "8D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "items": [
-        {
-          "properties": {
-            "textSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "8D"
-                }
-              }
-            }
-          }
-        }
       ]
     },
     "visualContainerObjects": {
@@ -114,7 +61,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -158,14 +105,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "10D"
-                }
-              }
-            },
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Situação'"
+                  "Value": "14D"
                 }
               }
             }

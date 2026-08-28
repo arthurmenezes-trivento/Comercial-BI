@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
-  "name": "a8bf92359348acd506a0",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "f6d24b08a08f739816b1",
   "position": {
-    "x": 228.57142857142858,
-    "y": 116.71732522796353,
-    "z": 7000,
-    "height": 58.208955223880594,
-    "width": 145.97014925373134,
-    "tabOrder": 7000
+    "x": 52.270916334661351,
+    "y": 117.29083665338645,
+    "z": 8001,
+    "height": 62.249240121580549,
+    "width": 210.09118541033436,
+    "tabOrder": 8001
   },
   "visual": {
     "visualType": "slicer",
@@ -23,52 +23,17 @@
                       "Entity": "2026-2"
                     }
                   },
-                  "Property": "Situação Pagamento"
+                  "Property": "Unidade"
                 }
               },
-              "queryRef": "2026-2.Situação Pagamento",
-              "nativeQueryRef": "Situação Pagamento",
+              "queryRef": "2026-2.Unidade",
+              "nativeQueryRef": "Unidade",
               "active": true
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "2026-2"
-                  }
-                },
-                "Property": "Situação Pagamento"
-              }
-            },
-            "direction": "Ascending"
-          }
-        ],
-        "isDefaultSort": true
       }
     },
-    "expansionStates": [
-      {
-        "roles": [
-          "Values"
-        ],
-        "levels": [
-          {
-            "queryRefs": [
-              "2026-2.Situação Pagamento"
-            ],
-            "isCollapsed": true,
-            "isPinned": true
-          }
-        ],
-        "root": {}
-      }
-    ],
     "objects": {
       "data": [
         {
@@ -85,82 +50,7 @@
       ],
       "general": [
         {
-          "properties": {
-            "filter": {
-              "filter": {
-                "Version": 2,
-                "From": [
-                  {
-                    "Name": "2",
-                    "Entity": "2026-2",
-                    "Type": 0
-                  }
-                ],
-                "Where": [
-                  {
-                    "Condition": {
-                      "In": {
-                        "Expressions": [
-                          {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Source": "2"
-                                }
-                              },
-                              "Property": "Situação Pagamento"
-                            }
-                          }
-                        ],
-                        "Values": [
-                          [
-                            {
-                              "Literal": {
-                                "Value": "'Em aberto'"
-                              }
-                            }
-                          ]
-                        ]
-                      }
-                    }
-                  }
-                ]
-              }
-            }
-          }
-        }
-      ],
-      "header": [
-        {
-          "properties": {
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Situação de pagamento'"
-                }
-              }
-            },
-            "textSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "8D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "items": [
-        {
-          "properties": {
-            "textSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "8D"
-                }
-              }
-            }
-          }
+          "properties": {}
         }
       ]
     },
@@ -171,7 +61,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -215,14 +105,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "10D"
-                }
-              }
-            },
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Situação'"
+                  "Value": "14D"
                 }
               }
             }

@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "050eb8e2b05234722c3a",
+  "name": "55a4c55bf33a51362f3b",
   "position": {
-    "x": 60.8955223880597,
-    "y": 116.41791044776119,
-    "z": 5000,
-    "height": 58.208955223880594,
-    "width": 145.97014925373134,
-    "tabOrder": 5000
+    "x": 534.18326693227084,
+    "y": 117.29083665338645,
+    "z": 8003,
+    "height": 62.249240121580549,
+    "width": 210.09118541033436,
+    "tabOrder": 8003
   },
   "visual": {
     "visualType": "slicer",
@@ -23,11 +23,11 @@
                       "Entity": "dCalendario"
                     }
                   },
-                  "Property": "Semana"
+                  "Property": "Mes"
                 }
               },
-              "queryRef": "dCalendario.Semana",
-              "nativeQueryRef": "Semana",
+              "queryRef": "dCalendario.Mes",
+              "nativeQueryRef": "Mes",
               "active": true
             },
             {
@@ -38,84 +38,17 @@
                       "Entity": "dCalendario"
                     }
                   },
-                  "Property": "Date"
-                }
-              },
-              "queryRef": "dCalendario.Date",
-              "nativeQueryRef": "Date",
-              "active": true
-            }
-          ]
-        }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "dCalendario"
-                  }
-                },
-                "Property": "Semana"
-              }
-            },
-            "direction": "Ascending"
-          }
-        ],
-        "isDefaultSort": true
-      }
-    },
-    "expansionStates": [
-      {
-        "roles": [
-          "Values"
-        ],
-        "levels": [
-          {
-            "queryRefs": [
-              "dCalendario.Semana"
-            ],
-            "isCollapsed": true,
-            "identityKeys": [
-              {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "dCalendario"
-                    }
-                  },
                   "Property": "Semana"
                 }
-              }
-            ],
-            "isPinned": true
-          },
-          {
-            "queryRefs": [
-              "dCalendario.Date"
-            ],
-            "isCollapsed": true,
-            "isPinned": true
-          }
-        ],
-        "root": {
-          "children": [
-            {
-              "identityValues": [
-                {
-                  "Literal": {
-                    "Value": "'s17'"
-                  }
-                }
-              ],
-              "isToggled": true
+              },
+              "queryRef": "dCalendario.Semana",
+              "nativeQueryRef": "Semana",
+              "active": false
             }
           ]
         }
       }
-    ],
+    },
     "objects": {
       "data": [
         {
@@ -133,39 +66,6 @@
       "general": [
         {
           "properties": {}
-        }
-      ],
-      "header": [
-        {
-          "properties": {
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Semana'"
-                }
-              }
-            },
-            "textSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "8D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "items": [
-        {
-          "properties": {
-            "textSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "8D"
-                }
-              }
-            }
-          }
         }
       ]
     },
@@ -220,7 +120,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "10D"
+                  "Value": "14D"
                 }
               }
             }
