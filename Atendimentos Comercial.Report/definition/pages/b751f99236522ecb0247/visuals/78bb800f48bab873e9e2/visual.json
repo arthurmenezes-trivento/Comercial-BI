@@ -3,10 +3,10 @@
   "name": "78bb800f48bab873e9e2",
   "position": {
     "x": 0,
-    "y": 206.65870551707667,
+    "y": 206.53846153846152,
     "z": 6000,
-    "height": 473.73134328358208,
-    "width": 423.58208955223881,
+    "height": 474.23076923076923,
+    "width": 456.92307692307691,
     "tabOrder": 6000
   },
   "visual": {
@@ -192,6 +192,17 @@
             ],
             "metadata": "Medidas.Leads"
           }
+        },
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
+            }
+          }
         }
       ],
       "grid": [
@@ -225,7 +236,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "14D"
                 }
               }
             },
@@ -344,83 +355,13 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "190.79913080738783D"
+                  "Value": "187.6923059686144D"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "2026-2.Situação Inscrição"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "73.50748184461658D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "select"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "154.95522083822897D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "2026-2.Nome Completo"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "121.59701314176883D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "2026-2.forma de pagamento"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "112.01492032046016D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "2026-2.Situação Pagamento"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "144.1063992201706D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Medidas.UltimoAtendente"
+            "metadata": "2026-2.Proprietário Lead"
           }
         }
       ]

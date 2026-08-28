@@ -4,10 +4,10 @@
   "position": {
     "x": 11.671732522796352,
     "y": 469.78723404255322,
-    "z": 14000,
+    "z": 8000,
     "height": 179.1044776119403,
     "width": 266.86567164179104,
-    "tabOrder": 14000
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "barChart",
@@ -81,6 +81,13 @@
                 }
               }
             },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
             "labelColor": {
               "solid": {
                 "color": {
@@ -94,13 +101,6 @@
               }
             },
             "showAxisTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "bold": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -140,6 +140,13 @@
                 }
               }
             },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            },
             "color": {
               "solid": {
                 "color": {
@@ -149,13 +156,6 @@
                       "Percent": 0
                     }
                   }
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "10D"
                 }
               }
             }
@@ -208,6 +208,20 @@
               "expr": {
                 "Literal": {
                   "Value": "'center'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
                 }
               }
             }

@@ -95,85 +95,13 @@
       }
     },
     "objects": {
-      "columnWidth": [
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "190.79913080738783D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "2026-2.Situação Inscrição"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "73.50748184461658D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "select"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "140.5418616660431D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "2026-2.Nome Completo"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "91.49592429259636D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "2026-2.Última Tabulação"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "238.50476465631215D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Atendimentos.Criado por"
-          }
-        }
-      ],
       "columnHeaders": [
         {
           "properties": {
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "14D"
                 }
               }
             },
@@ -229,13 +157,6 @@
               "expr": {
                 "Literal": {
                   "Value": "0D"
-                }
-              }
-            },
-            "textSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "12D"
                 }
               }
             }
@@ -300,6 +221,17 @@
               }
             ],
             "metadata": "Medidas.Leads"
+          }
+        },
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
+            }
           }
         }
       ],

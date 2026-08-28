@@ -127,7 +127,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "14D"
                 }
               }
             },
@@ -222,6 +222,17 @@
               }
             ],
             "metadata": "Medidas.Leads"
+          }
+        },
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
+            }
           }
         }
       ],
@@ -321,92 +332,6 @@
                 }
               }
             }
-          }
-        }
-      ],
-      "columnWidth": [
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "190.79913080738783D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "2026-2.Situação Inscrição"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "73.50748184461658D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "select"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "154.95522083822897D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "2026-2.Nome Completo"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "121.59701314176883D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "2026-2.forma de pagamento"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "112.01492032046016D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "2026-2.Situação Pagamento"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "144.1063992201706D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Medidas.UltimoAtendente"
           }
         }
       ]

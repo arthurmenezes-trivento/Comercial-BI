@@ -138,7 +138,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "14D"
                 }
               }
             },
@@ -234,6 +234,17 @@
             ],
             "metadata": "Medidas.Leads"
           }
+        },
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
+            }
+          }
         }
       ],
       "columnFormatting": [
@@ -263,134 +274,6 @@
           },
           "selector": {
             "metadata": "Medidas.Leads"
-          }
-        }
-      ],
-      "columnWidth": [
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "190.79913080738783D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "2026-2.Situação Inscrição"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "73.50748184461658D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "select"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "283.3940550631956D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "2026-2.Nome Completo"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "121.59701314176883D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "2026-2.forma de pagamento"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "112.01492032046016D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "2026-2.Situação Pagamento"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "221.00109957488837D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Medidas.UltimoAtendente"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "130.21889991088753D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "2026-2.Numero Inscricao"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "111.33699533050955D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "2026-2.Celular"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "286.4731283103838D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "2026-2.email"
           }
         }
       ]

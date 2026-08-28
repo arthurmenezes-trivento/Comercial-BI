@@ -4,10 +4,10 @@
   "position": {
     "x": 579.40298507462683,
     "y": 470.14925373134326,
-    "z": 13000,
+    "z": 7000,
     "height": 179.1044776119403,
     "width": 268.65671641791045,
-    "tabOrder": 13000
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "barChart",
@@ -208,6 +208,20 @@
               "expr": {
                 "Literal": {
                   "Value": "'center'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
                 }
               }
             }

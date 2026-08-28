@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.11.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "49645f9e7113a8960d6a",
   "position": {
     "x": 28.206686930091188,
@@ -185,7 +185,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "14D"
                 }
               }
             },
@@ -222,123 +222,55 @@
           }
         }
       ],
-      "columnWidth": [
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "190.79913080738783D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "2026-2.Situação Inscrição"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "73.50748184461658D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "select"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "154.95522083822897D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "2026-2.Nome Completo"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "112.01492032046016D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "2026-2.Situação Pagamento"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "111.0580144558033D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Medidas.UltimoAtendente"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "129.6261547320287D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "2026-2.Forma de Ingresso"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "113.96960034431994D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "2026-2.email"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "140.44985439994161D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Medidas.Data Último Atendimento (teste)"
-          }
-        }
-      ],
       "values": [
         {
-          "properties": {},
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "FillRule": {
+                      "Input": {
+                        "Measure": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Medidas"
+                            }
+                          },
+                          "Property": "Leads"
+                        }
+                      },
+                      "FillRule": {
+                        "linearGradient2": {
+                          "min": {
+                            "color": {
+                              "Literal": {
+                                "Value": "'#FFFFFF'"
+                              }
+                            }
+                          },
+                          "max": {
+                            "color": {
+                              "Literal": {
+                                "Value": "'#DAE4F2'"
+                              }
+                            }
+                          },
+                          "nullColoringStrategy": {
+                            "strategy": {
+                              "Literal": {
+                                "Value": "'asZero'"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
           "selector": {
             "data": [
               {
@@ -348,6 +280,17 @@
               }
             ],
             "metadata": "Medidas.Leads"
+          }
+        },
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
+            }
           }
         }
       ],
