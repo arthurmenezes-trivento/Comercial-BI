@@ -1,0 +1,184 @@
+table conversas_zenvia
+	lineageTag: 9a63601c-f527-4f9d-b76b-6ed1a331e02e
+
+	column prospect_id
+		dataType: string
+		lineageTag: c04e2ca3-5d85-4cd4-a01a-405a6866a258
+		summarizeBy: none
+		sourceColumn: prospect_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column inicio
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 6e92be47-455b-440c-a5fd-9f24471e015a
+		summarizeBy: none
+		sourceColumn: inicio
+
+		variation Variation
+			isDefault
+			relationship: 77ac210b-dad2-4dd5-ab39-51984be330d6
+			defaultHierarchy: LocalDateTable_ba3d5c51-8cb7-4668-b92c-cf7d99f6bf20.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column fim
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: f0935507-3c73-4be9-a9bd-90bf353558ed
+		summarizeBy: none
+		sourceColumn: fim
+
+		variation Variation
+			isDefault
+			relationship: 8ba03907-090e-4058-95d4-f0be07cafbef
+			defaultHierarchy: LocalDateTable_bdca470b-5a3a-4b2f-b8f5-5efad228806b.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column total_mensagens
+		dataType: int64
+		formatString: 0
+		lineageTag: 578d1da9-1e26-4b50-a9d1-3596d2caddff
+		summarizeBy: sum
+		sourceColumn: total_mensagens
+
+		annotation SummarizationSetBy = Automatic
+
+	column agente
+		dataType: string
+		lineageTag: 21e2754f-a732-4002-95ff-5d69cc6785cb
+		summarizeBy: none
+		sourceColumn: agente
+
+		annotation SummarizationSetBy = Automatic
+
+	column canal
+		dataType: string
+		lineageTag: 3cccdfe4-a04d-4d59-af4a-25fd2d87131a
+		summarizeBy: none
+		sourceColumn: canal
+
+		annotation SummarizationSetBy = Automatic
+
+	column mensagens
+		dataType: string
+		lineageTag: fc3880cc-6cf6-492f-8340-7cdfa1d9b3d0
+		summarizeBy: none
+		sourceColumn: mensagens
+
+		annotation SummarizationSetBy = Automatic
+
+	column assunto
+		dataType: string
+		lineageTag: 13129f23-28c1-44c3-8e76-f27dd6c08a62
+		summarizeBy: none
+		sourceColumn: assunto
+
+		annotation SummarizationSetBy = Automatic
+
+	column motivo_principal
+		dataType: string
+		lineageTag: 9ac1238d-c2ee-48da-a4b1-d8545cb03a2f
+		summarizeBy: none
+		sourceColumn: motivo_principal
+
+		annotation SummarizationSetBy = Automatic
+
+	column intencao_matricula
+		dataType: string
+		lineageTag: 6f298e4e-b844-4503-a58c-9b4426d1a616
+		summarizeBy: none
+		sourceColumn: intencao_matricula
+
+		annotation SummarizationSetBy = Automatic
+
+	column urgencia
+		dataType: string
+		lineageTag: eeb5e1fb-1a5b-492d-b90a-8e38f1bff28f
+		summarizeBy: none
+		sourceColumn: urgencia
+
+		annotation SummarizationSetBy = Automatic
+
+	column sentimento
+		dataType: string
+		lineageTag: 779eea51-0925-4059-b3d2-c12e46fbe91c
+		summarizeBy: none
+		sourceColumn: sentimento
+
+		annotation SummarizationSetBy = Automatic
+
+	column risco_perda
+		dataType: string
+		lineageTag: 8be43226-6aef-42a8-87ef-371f7f2e20b1
+		summarizeBy: none
+		sourceColumn: risco_perda
+
+		annotation SummarizationSetBy = Automatic
+
+	column modelo_enriquecimento
+		dataType: string
+		lineageTag: 92b44ccd-9ec6-4563-a421-005183ccede6
+		summarizeBy: none
+		sourceColumn: modelo_enriquecimento
+
+		annotation SummarizationSetBy = Automatic
+
+	column primeiro_nome
+		dataType: string
+		lineageTag: d8b0068f-916f-4bb3-b9a0-0469d904c503
+		summarizeBy: none
+		sourceColumn: primeiro_nome
+
+		annotation SummarizationSetBy = Automatic
+
+	column sobrenome
+		dataType: string
+		lineageTag: 61ff73d4-927a-4501-8a8a-050d5a044743
+		summarizeBy: none
+		sourceColumn: sobrenome
+
+		annotation SummarizationSetBy = Automatic
+
+	column telefone
+		dataType: int64
+		formatString: 0
+		lineageTag: c2528abf-82cb-4547-b73f-01abb46df671
+		summarizeBy: sum
+		sourceColumn: telefone
+
+		annotation SummarizationSetBy = Automatic
+
+	column email
+		dataType: string
+		lineageTag: f8cbb95b-031e-4afe-b003-cd24881e8a92
+		summarizeBy: none
+		sourceColumn: email
+
+		annotation SummarizationSetBy = Automatic
+
+	partition conversas_zenvia = m
+		mode: import
+		source =
+				let
+				    Fonte = SharePoint.Files("https://grupoeducacionalsantoant.sharepoint.com/sites/TriventoEducaco", [ApiVersion = 15]),
+				    #"Linhas Filtradas" = Table.SelectRows(Fonte, each ([Name] = "conversas_zenvia.xlsx")),
+				    #"Arquivos Ocultos Filtrados1" = Table.SelectRows(#"Linhas Filtradas", each [Attributes]?[Hidden]? <> true),
+				    #"Invocar Função Personalizada1" = Table.AddColumn(#"Arquivos Ocultos Filtrados1", "Transformar Arquivo", each #"Transformar Arquivo"([Content])),
+				    #"Colunas Renomeadas2" = Table.RenameColumns(#"Invocar Função Personalizada1", {"Name", "Nome da Origem"}),
+				    #"Outras Colunas Removidas2" = Table.SelectColumns(#"Colunas Renomeadas2", {"Nome da Origem", "Transformar Arquivo"}),
+				    #"Coluna de Tabela Expandida2" = Table.ExpandTableColumn(#"Outras Colunas Removidas2", "Transformar Arquivo", Table.ColumnNames(#"Transformar Arquivo"(#"Arquivo de Amostra"))),
+				    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Coluna de Tabela Expandida2",{{"Nome da Origem", type text}, {"prospect_id", type text}, {"inicio", type datetime}, {"fim", type datetime}, {"total_mensagens", Int64.Type}, {"agente", type text}, {"canal", type text}, {"mensagens", type text}, {"assunto", type text}, {"motivo_principal", type text}, {"intencao_matricula", type text}, {"urgencia", type text}, {"sentimento", type text}, {"risco_perda", type text}, {"modelo_enriquecimento", type text}, {"primeiro_nome", type text}, {"sobrenome", type text}, {"telefone", Int64.Type}, {"email", type text}}),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Tipo Alterado1",{{"Nome da Origem", type text}, {"prospect_id", type text}, {"inicio", type datetime}, {"fim", type datetime}, {"total_mensagens", Int64.Type}, {"agente", type text}, {"canal", type text}, {"mensagens", type text}, {"assunto", type text}, {"motivo_principal", type text}, {"intencao_matricula", type text}, {"urgencia", type text}, {"sentimento", type text}, {"risco_perda", type text}, {"modelo_enriquecimento", type text}, {"primeiro_nome", type text}, {"sobrenome", type text}, {"telefone", Int64.Type}, {"email", type text}}),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Tipo Alterado",{"Nome da Origem"})
+				in
+				    #"Colunas Removidas"
+
+	changedProperty = Name
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

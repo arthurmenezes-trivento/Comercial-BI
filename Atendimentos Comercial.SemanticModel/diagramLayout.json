@@ -137,6 +137,15 @@
             "width": 234
           },
           "zIndex": 2
+        },
+        {
+          "location": {},
+          "nodeIndex": "conversas_zenvia",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "Todas as tabelas",

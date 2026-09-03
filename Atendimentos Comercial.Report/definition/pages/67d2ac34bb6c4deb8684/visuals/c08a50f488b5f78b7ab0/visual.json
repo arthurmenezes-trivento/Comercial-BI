@@ -1,0 +1,59 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "c08a50f488b5f78b7ab0",
+  "position": {
+    "x": 763.84089194880949,
+    "y": 110.5440574994029,
+    "z": 10000,
+    "height": 62.249240121580549,
+    "width": 210.09118541033436,
+    "tabOrder": 10000
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "conversas_zenvia"
+                    }
+                  },
+                  "Property": "intencao_matricula"
+                }
+              },
+              "queryRef": "conversas_zenvia.intencao_matricula",
+              "nativeQueryRef": "intencao_matricula",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Dropdown'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

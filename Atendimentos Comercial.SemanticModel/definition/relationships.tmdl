@@ -64,3 +64,13 @@ relationship d7534d4f-ddc6-575c-bc66-a2a0e3094d1f
 	fromColumn: Atendimentos.'Id Lead'
 	toColumn: 2026-2.'ID Lead'
 
+relationship 77ac210b-dad2-4dd5-ab39-51984be330d6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: conversas_zenvia.inicio
+	toColumn: LocalDateTable_ba3d5c51-8cb7-4668-b92c-cf7d99f6bf20.Date
+
+relationship 8ba03907-090e-4058-95d4-f0be07cafbef
+	joinOnDateBehavior: datePartOnly
+	fromColumn: conversas_zenvia.fim
+	toColumn: LocalDateTable_bdca470b-5a3a-4b2f-b8f5-5efad228806b.Date
+

@@ -4327,7 +4327,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "medida.entity_2_dias_sem_atendimento": {
+			    "medida.entity_2_ou_mais_dias_sem_atendimento": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
@@ -4337,7 +4337,7 @@ cultureInfo pt-BR
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "2 dias sem atendimento": {
+			          "2 ou mais dias sem atendimento": {
 			            "State": "Generated"
 			          }
 			        }
@@ -7484,801 +7484,1105 @@ cultureInfo pt-BR
 			          }
 			        }
 			      ]
+			    },
+			    "medida.qtd_pagamentos_pendentes": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "qtd pagamentos pendentes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "qtd pagamentos pendentes": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "atendimento.entity_2_dias_sem_atendimento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Atendimentos",
+			          "ConceptualProperty": "2 dias sem atendimento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "2 dias sem atendimento": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "conversas_zenvia": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "conversas_zenvia"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "conversas zenvia": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "conversa zenvia": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "conversas_zenvia": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "conversas_zenvia.prospect_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "conversas_zenvia",
+			          "ConceptualProperty": "prospect_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "prospect id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "prospect_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "prospect": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "prospect identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "prospect identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "prospect identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "prospect credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "scene": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "outlook": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "panorama": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "vista": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "viewpoint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "view": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "conversas_zenvia.inicio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "conversas_zenvia",
+			          "ConceptualProperty": "inicio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "inicio": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "conversas_zenvia.inicio.hierarquia_de_data": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "conversas_zenvia",
+			          "VariationSource": "inicio",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hierarquia de datas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "hierarquia de data": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "hierarquia de information": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de fact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de info": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de statistic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de document": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "hierarquia de figure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "hierarquia de record": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "conversas_zenvia.inicio.ano": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "conversas_zenvia",
+			          "VariationSource": "inicio",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Ano"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ano": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "inicio ano": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "conversas_zenvia.inicio.trimestre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "conversas_zenvia",
+			          "VariationSource": "inicio",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Trimestre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "inicio trimestre": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "conversas_zenvia.inicio.mê": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "conversas_zenvia",
+			          "VariationSource": "inicio",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Mês"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mê": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "inicio mê": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "conversas_zenvia.inicio.dia": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "conversas_zenvia",
+			          "VariationSource": "inicio",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Dia"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dia": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "inicio dia": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "conversas_zenvia.fim": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "conversas_zenvia",
+			          "ConceptualProperty": "fim"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fim": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "conversas_zenvia.fim.hierarquia_de_data": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "conversas_zenvia",
+			          "VariationSource": "fim",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hierarquia de datas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "hierarquia de data": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "hierarquia de information": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de fact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de info": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de statistic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de document": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "hierarquia de figure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "hierarquia de record": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "conversas_zenvia.fim.ano": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "conversas_zenvia",
+			          "VariationSource": "fim",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Ano"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ano": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fim ano": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "conversas_zenvia.fim.trimestre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "conversas_zenvia",
+			          "VariationSource": "fim",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Trimestre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fim trimestre": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "conversas_zenvia.fim.mê": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "conversas_zenvia",
+			          "VariationSource": "fim",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Mês"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mê": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fim mê": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "conversas_zenvia.fim.dia": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "conversas_zenvia",
+			          "VariationSource": "fim",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Dia"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dia": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fim dia": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "conversas_zenvia.total_mensagen": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "conversas_zenvia",
+			          "ConceptualProperty": "total_mensagens"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total mensagen": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "total_mensagens": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "aggregate mensagen": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "overall mensagen": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "conversas_zenvia.agente": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "conversas_zenvia",
+			          "ConceptualProperty": "agente"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "agente": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "conversas_zenvia.canal": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "conversas_zenvia",
+			          "ConceptualProperty": "canal"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "canal": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "waterway": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "seaway": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "channel": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "vessel": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "duct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "tube": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "passage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "conversas_zenvia.mensagen": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "conversas_zenvia",
+			          "ConceptualProperty": "mensagens"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mensagen": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "conversas_zenvia.assunto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "conversas_zenvia",
+			          "ConceptualProperty": "assunto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "assunto": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "conversas_zenvia.motivo_principal": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "conversas_zenvia",
+			          "ConceptualProperty": "motivo_principal"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "motivo principal": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "motivo_principal": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "motivo leader": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "motivo doyenne": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "motivo doyen": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "motivo chief": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "motivo head": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "motivo headmaster": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.451
+			          }
+			        },
+			        {
+			          "motivo headmistress": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.451
+			          }
+			        },
+			        {
+			          "motivo dean": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.451
+			          }
+			        },
+			        {
+			          "motivo provost": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.451
+			          }
+			        }
+			      ]
+			    },
+			    "conversas_zenvia.intencao_matricula": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "conversas_zenvia",
+			          "ConceptualProperty": "intencao_matricula"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "intencao matricula": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "intencao_matricula": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "conversas_zenvia.urgencia": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "conversas_zenvia",
+			          "ConceptualProperty": "urgencia"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "urgencia": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "conversas_zenvia.sentimento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "conversas_zenvia",
+			          "ConceptualProperty": "sentimento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "sentimento": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "conversas_zenvia.risco_perda": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "conversas_zenvia",
+			          "ConceptualProperty": "risco_perda"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "risco perda": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "risco_perda": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "conversas_zenvia.modelo_enriquecimento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "conversas_zenvia",
+			          "ConceptualProperty": "modelo_enriquecimento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "modelo enriquecimento": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "modelo_enriquecimento": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "conversas_zenvia.primeiro_nome": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "conversas_zenvia",
+			          "ConceptualProperty": "primeiro_nome"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "primeiro nome": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "primeiro_nome": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "conversas_zenvia.sobrenome": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "conversas_zenvia",
+			          "ConceptualProperty": "sobrenome"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "sobrenome": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "conversas_zenvia.telefone": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "conversas_zenvia",
+			          "ConceptualProperty": "telefone"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "telefone": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "conversas_zenvia.email": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "conversas_zenvia",
+			          "ConceptualProperty": "email"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "email": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "correspondence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "message": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "communication": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "entity_20262_data_criacao_hierarquia_de_data_has_entity_20262_data_criacao_trimestre": {
-			      "Binding": {
-			        "ConceptualEntity": "2026-2"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "entity_20262.data_criacao.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "entity_20262.data_criacao.hierarquia_de_data"
-			          }
-			        },
-			        "entity_20262.data_criacao.trimestre": {
-			          "Target": {
-			            "Entity": "entity_20262.data_criacao.trimestre"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_20262.data_criacao.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "entity_20262.data_criacao.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_trimestres"
-			        }
-			      ]
-			    },
-			    "entity_20262_data_criacao_hierarquia_de_data_has_entity_20262_data_criacao_ano": {
-			      "Binding": {
-			        "ConceptualEntity": "2026-2"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "entity_20262.data_criacao.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "entity_20262.data_criacao.hierarquia_de_data"
-			          }
-			        },
-			        "entity_20262.data_criacao.ano": {
-			          "Target": {
-			            "Entity": "entity_20262.data_criacao.ano"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_20262.data_criacao.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "entity_20262.data_criacao.ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_anos"
-			        }
-			      ]
-			    },
-			    "entity_20262_data_criacao_has_hierarquia_de_data": {
-			      "Binding": {
-			        "ConceptualEntity": "2026-2"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "entity_20262.data_criacao": {
-			          "Target": {
-			            "Entity": "entity_20262.data_criacao"
-			          }
-			        },
-			        "entity_20262.data_criacao.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "entity_20262.data_criacao.hierarquia_de_data"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_20262.data_criacao"
-			            },
-			            "Object": {
-			              "Role": "entity_20262.data_criacao.hierarquia_de_data"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "data_criacaos_have_hierarquia_de_data"
-			        }
-			      ]
-			    },
-			    "entity_20262_data_alteração_mê_has_entity_20262_data_alteração_dia": {
-			      "Binding": {
-			        "ConceptualEntity": "2026-2"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "entity_20262.data_alteração.mê": {
-			          "Target": {
-			            "Entity": "entity_20262.data_alteração.mê"
-			          }
-			        },
-			        "entity_20262.data_alteração.dia": {
-			          "Target": {
-			            "Entity": "entity_20262.data_alteração.dia"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_20262.data_alteração.mê"
-			            },
-			            "Object": {
-			              "Role": "entity_20262.data_alteração.dia"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mê_have_dias"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_20262.data_alteração.dia"
-			            },
-			            "Object": {
-			              "Role": "entity_20262.data_alteração.mê"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dias_have_mê"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "entity_20262.data_alteração.dia"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "entity_20262.data_alteração.mê"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dias_are_in_mê3"
-			        }
-			      ]
-			    },
-			    "entity_20262_data_alteração_trimestre_has_entity_20262_data_alteração_mê": {
-			      "Binding": {
-			        "ConceptualEntity": "2026-2"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "entity_20262.data_alteração.trimestre": {
-			          "Target": {
-			            "Entity": "entity_20262.data_alteração.trimestre"
-			          }
-			        },
-			        "entity_20262.data_alteração.mê": {
-			          "Target": {
-			            "Entity": "entity_20262.data_alteração.mê"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_20262.data_alteração.trimestre"
-			            },
-			            "Object": {
-			              "Role": "entity_20262.data_alteração.mê"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_20262.data_alteração.mê"
-			            },
-			            "Object": {
-			              "Role": "entity_20262.data_alteração.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "entity_20262.data_alteração.mê"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "entity_20262.data_alteração.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mê_are_in_trimestres3"
-			        }
-			      ]
-			    },
-			    "entity_20262_data_alteração_ano_has_entity_20262_data_alteração_trimestre": {
-			      "Binding": {
-			        "ConceptualEntity": "2026-2"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "entity_20262.data_alteração.ano": {
-			          "Target": {
-			            "Entity": "entity_20262.data_alteração.ano"
-			          }
-			        },
-			        "entity_20262.data_alteração.trimestre": {
-			          "Target": {
-			            "Entity": "entity_20262.data_alteração.trimestre"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_20262.data_alteração.ano"
-			            },
-			            "Object": {
-			              "Role": "entity_20262.data_alteração.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_20262.data_alteração.trimestre"
-			            },
-			            "Object": {
-			              "Role": "entity_20262.data_alteração.ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "entity_20262.data_alteração.trimestre"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "entity_20262.data_alteração.ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_are_in_anos3"
-			        }
-			      ]
-			    },
-			    "entity_20262_data_alteração_hierarquia_de_data_has_entity_20262_data_alteração_dia": {
-			      "Binding": {
-			        "ConceptualEntity": "2026-2"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "entity_20262.data_alteração.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "entity_20262.data_alteração.hierarquia_de_data"
-			          }
-			        },
-			        "entity_20262.data_alteração.dia": {
-			          "Target": {
-			            "Entity": "entity_20262.data_alteração.dia"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_20262.data_alteração.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "entity_20262.data_alteração.dia"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias"
-			        }
-			      ]
-			    },
-			    "entity_20262_data_alteração_hierarquia_de_data_has_entity_20262_data_alteração_mê": {
-			      "Binding": {
-			        "ConceptualEntity": "2026-2"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "entity_20262.data_alteração.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "entity_20262.data_alteração.hierarquia_de_data"
-			          }
-			        },
-			        "entity_20262.data_alteração.mê": {
-			          "Target": {
-			            "Entity": "entity_20262.data_alteração.mê"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_20262.data_alteração.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "entity_20262.data_alteração.mê"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê"
-			        }
-			      ]
-			    },
-			    "entity_20262_data_alteração_hierarquia_de_data_has_entity_20262_data_alteração_trimestre": {
-			      "Binding": {
-			        "ConceptualEntity": "2026-2"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "entity_20262.data_alteração.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "entity_20262.data_alteração.hierarquia_de_data"
-			          }
-			        },
-			        "entity_20262.data_alteração.trimestre": {
-			          "Target": {
-			            "Entity": "entity_20262.data_alteração.trimestre"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_20262.data_alteração.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "entity_20262.data_alteração.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_trimestres1"
-			        }
-			      ]
-			    },
-			    "entity_20262_data_alteração_hierarquia_de_data_has_entity_20262_data_alteração_ano": {
-			      "Binding": {
-			        "ConceptualEntity": "2026-2"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "entity_20262.data_alteração.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "entity_20262.data_alteração.hierarquia_de_data"
-			          }
-			        },
-			        "entity_20262.data_alteração.ano": {
-			          "Target": {
-			            "Entity": "entity_20262.data_alteração.ano"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_20262.data_alteração.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "entity_20262.data_alteração.ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_anos1"
-			        }
-			      ]
-			    },
-			    "entity_20262_data_alteração_has_hierarquia_de_data": {
-			      "Binding": {
-			        "ConceptualEntity": "2026-2"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "entity_20262.data_alteração": {
-			          "Target": {
-			            "Entity": "entity_20262.data_alteração"
-			          }
-			        },
-			        "entity_20262.data_alteração.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "entity_20262.data_alteração.hierarquia_de_data"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_20262.data_alteração"
-			            },
-			            "Object": {
-			              "Role": "entity_20262.data_alteração.hierarquia_de_data"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "data_alteraçãos_have_hierarquia_de_data"
-			        }
-			      ]
-			    },
-			    "entity_20262_data_aceite_mê_has_entity_20262_data_aceite_dia": {
-			      "Binding": {
-			        "ConceptualEntity": "2026-2"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "entity_20262.data_aceite.mê": {
-			          "Target": {
-			            "Entity": "entity_20262.data_aceite.mê"
-			          }
-			        },
-			        "entity_20262.data_aceite.dia": {
-			          "Target": {
-			            "Entity": "entity_20262.data_aceite.dia"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_20262.data_aceite.mê"
-			            },
-			            "Object": {
-			              "Role": "entity_20262.data_aceite.dia"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mê_have_dias1"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_20262.data_aceite.dia"
-			            },
-			            "Object": {
-			              "Role": "entity_20262.data_aceite.mê"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dias_have_mê1"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "entity_20262.data_aceite.dia"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "entity_20262.data_aceite.mê"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dias_are_in_mê2"
-			        }
-			      ]
-			    },
-			    "entity_20262_data_aceite_trimestre_has_entity_20262_data_aceite_mê": {
-			      "Binding": {
-			        "ConceptualEntity": "2026-2"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "entity_20262.data_aceite.trimestre": {
-			          "Target": {
-			            "Entity": "entity_20262.data_aceite.trimestre"
-			          }
-			        },
-			        "entity_20262.data_aceite.mê": {
-			          "Target": {
-			            "Entity": "entity_20262.data_aceite.mê"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_20262.data_aceite.trimestre"
-			            },
-			            "Object": {
-			              "Role": "entity_20262.data_aceite.mê"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê1"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_20262.data_aceite.mê"
-			            },
-			            "Object": {
-			              "Role": "entity_20262.data_aceite.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres1"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "entity_20262.data_aceite.mê"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "entity_20262.data_aceite.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mê_are_in_trimestres2"
-			        }
-			      ]
-			    },
-			    "entity_20262_data_aceite_ano_has_entity_20262_data_aceite_trimestre": {
-			      "Binding": {
-			        "ConceptualEntity": "2026-2"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "entity_20262.data_aceite.ano": {
-			          "Target": {
-			            "Entity": "entity_20262.data_aceite.ano"
-			          }
-			        },
-			        "entity_20262.data_aceite.trimestre": {
-			          "Target": {
-			            "Entity": "entity_20262.data_aceite.trimestre"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_20262.data_aceite.ano"
-			            },
-			            "Object": {
-			              "Role": "entity_20262.data_aceite.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres1"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_20262.data_aceite.trimestre"
-			            },
-			            "Object": {
-			              "Role": "entity_20262.data_aceite.ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos1"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "entity_20262.data_aceite.trimestre"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "entity_20262.data_aceite.ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_are_in_anos2"
-			        }
-			      ]
-			    },
-			    "entity_20262_data_aceite_hierarquia_de_data_has_entity_20262_data_aceite_dia": {
-			      "Binding": {
-			        "ConceptualEntity": "2026-2"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "entity_20262.data_aceite.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "entity_20262.data_aceite.hierarquia_de_data"
-			          }
-			        },
-			        "entity_20262.data_aceite.dia": {
-			          "Target": {
-			            "Entity": "entity_20262.data_aceite.dia"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_20262.data_aceite.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "entity_20262.data_aceite.dia"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias1"
-			        }
-			      ]
-			    },
-			    "entity_20262_data_aceite_hierarquia_de_data_has_entity_20262_data_aceite_mê": {
-			      "Binding": {
-			        "ConceptualEntity": "2026-2"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "entity_20262.data_aceite.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "entity_20262.data_aceite.hierarquia_de_data"
-			          }
-			        },
-			        "entity_20262.data_aceite.mê": {
-			          "Target": {
-			            "Entity": "entity_20262.data_aceite.mê"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_20262.data_aceite.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "entity_20262.data_aceite.mê"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê1"
-			        }
-			      ]
-			    },
-			    "entity_20262_data_aceite_hierarquia_de_data_has_entity_20262_data_aceite_trimestre": {
-			      "Binding": {
-			        "ConceptualEntity": "2026-2"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "entity_20262.data_aceite.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "entity_20262.data_aceite.hierarquia_de_data"
-			          }
-			        },
-			        "entity_20262.data_aceite.trimestre": {
-			          "Target": {
-			            "Entity": "entity_20262.data_aceite.trimestre"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_20262.data_aceite.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "entity_20262.data_aceite.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_trimestres2"
-			        }
-			      ]
-			    },
-			    "entity_20262_data_aceite_hierarquia_de_data_has_entity_20262_data_aceite_ano": {
-			      "Binding": {
-			        "ConceptualEntity": "2026-2"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "entity_20262.data_aceite.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "entity_20262.data_aceite.hierarquia_de_data"
-			          }
-			        },
-			        "entity_20262.data_aceite.ano": {
-			          "Target": {
-			            "Entity": "entity_20262.data_aceite.ano"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_20262.data_aceite.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "entity_20262.data_aceite.ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_anos2"
-			        }
-			      ]
-			    },
 			    "entity_20262_data_aceite_has_hierarquia_de_data": {
 			      "Binding": {
 			        "ConceptualEntity": "2026-2"
@@ -8341,7 +8645,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_dias2"
+			          "ID": "mê_have_dias"
 			        },
 			        {
 			          "Attribute": {
@@ -8354,7 +8658,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dias_have_mê2"
+			          "ID": "dias_have_mê"
 			        },
 			        {
 			          "Preposition": {
@@ -8407,7 +8711,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê2"
+			          "ID": "trimestres_have_mê"
 			        },
 			        {
 			          "Attribute": {
@@ -8420,7 +8724,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres2"
+			          "ID": "mê_have_trimestres"
 			        },
 			        {
 			          "Preposition": {
@@ -8473,7 +8777,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres2"
+			          "ID": "anos_have_trimestres"
 			        },
 			        {
 			          "Attribute": {
@@ -8486,7 +8790,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos2"
+			          "ID": "trimestres_have_anos"
 			        },
 			        {
 			          "Preposition": {
@@ -8539,7 +8843,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias2"
+			          "ID": "hierarquia_de_data_have_dias"
 			        }
 			      ]
 			    },
@@ -8572,7 +8876,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê2"
+			          "ID": "hierarquia_de_data_have_mê"
 			        }
 			      ]
 			    },
@@ -8605,7 +8909,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_trimestres3"
+			          "ID": "hierarquia_de_data_have_trimestres"
 			        }
 			      ]
 			    },
@@ -8638,7 +8942,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_anos3"
+			          "ID": "hierarquia_de_data_have_anos"
 			        }
 			      ]
 			    },
@@ -8704,7 +9008,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_dias3"
+			          "ID": "mê_have_dias1"
 			        },
 			        {
 			          "Attribute": {
@@ -8717,7 +9021,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dias_have_mê3"
+			          "ID": "dias_have_mê1"
 			        },
 			        {
 			          "Preposition": {
@@ -8770,7 +9074,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê3"
+			          "ID": "trimestres_have_mê1"
 			        },
 			        {
 			          "Attribute": {
@@ -8783,7 +9087,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres3"
+			          "ID": "mê_have_trimestres1"
 			        },
 			        {
 			          "Preposition": {
@@ -8836,7 +9140,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres3"
+			          "ID": "anos_have_trimestres1"
 			        },
 			        {
 			          "Attribute": {
@@ -8849,7 +9153,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos3"
+			          "ID": "trimestres_have_anos1"
 			        },
 			        {
 			          "Preposition": {
@@ -8902,7 +9206,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias3"
+			          "ID": "hierarquia_de_data_have_dias1"
 			        }
 			      ]
 			    },
@@ -8935,7 +9239,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê3"
+			          "ID": "hierarquia_de_data_have_mê1"
 			        }
 			      ]
 			    },
@@ -8968,7 +9272,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_trimestres4"
+			          "ID": "hierarquia_de_data_have_trimestres1"
 			        }
 			      ]
 			    },
@@ -9001,7 +9305,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_anos4"
+			          "ID": "hierarquia_de_data_have_anos1"
 			        }
 			      ]
 			    },
@@ -9305,6 +9609,666 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "d_atendentes_have_atendimentos"
+			        }
+			      ]
+			    },
+			    "conversas_zenvia_has_email": {
+			      "Binding": {
+			        "ConceptualEntity": "conversas_zenvia"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "conversas_zenvia": {
+			          "Target": {
+			            "Entity": "conversas_zenvia"
+			          }
+			        },
+			        "conversas_zenvia.email": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.email"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conversas_zenvia"
+			            },
+			            "Object": {
+			              "Role": "conversas_zenvia.email"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "conversas_zenvias_have_emails"
+			        }
+			      ]
+			    },
+			    "conversas_zenvia_has_telefone": {
+			      "Binding": {
+			        "ConceptualEntity": "conversas_zenvia"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "conversas_zenvia": {
+			          "Target": {
+			            "Entity": "conversas_zenvia"
+			          }
+			        },
+			        "conversas_zenvia.telefone": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.telefone"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conversas_zenvia"
+			            },
+			            "Object": {
+			              "Role": "conversas_zenvia.telefone"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "conversas_zenvias_have_telefones"
+			        }
+			      ]
+			    },
+			    "conversas_zenvia_has_sobrenome": {
+			      "Binding": {
+			        "ConceptualEntity": "conversas_zenvia"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "conversas_zenvia": {
+			          "Target": {
+			            "Entity": "conversas_zenvia"
+			          }
+			        },
+			        "conversas_zenvia.sobrenome": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.sobrenome"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conversas_zenvia"
+			            },
+			            "Object": {
+			              "Role": "conversas_zenvia.sobrenome"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "conversas_zenvias_have_sobrenomes"
+			        }
+			      ]
+			    },
+			    "conversas_zenvia_has_primeiro_nome": {
+			      "Binding": {
+			        "ConceptualEntity": "conversas_zenvia"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "conversas_zenvia": {
+			          "Target": {
+			            "Entity": "conversas_zenvia"
+			          }
+			        },
+			        "conversas_zenvia.primeiro_nome": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.primeiro_nome"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conversas_zenvia"
+			            },
+			            "Object": {
+			              "Role": "conversas_zenvia.primeiro_nome"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "conversas_zenvias_have_primeiro_nome"
+			        }
+			      ]
+			    },
+			    "conversas_zenvia_has_modelo_enriquecimento": {
+			      "Binding": {
+			        "ConceptualEntity": "conversas_zenvia"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "conversas_zenvia": {
+			          "Target": {
+			            "Entity": "conversas_zenvia"
+			          }
+			        },
+			        "conversas_zenvia.modelo_enriquecimento": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.modelo_enriquecimento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conversas_zenvia"
+			            },
+			            "Object": {
+			              "Role": "conversas_zenvia.modelo_enriquecimento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "conversas_zenvias_have_modelo_enriquecimentos"
+			        }
+			      ]
+			    },
+			    "conversas_zenvia_has_risco_perda": {
+			      "Binding": {
+			        "ConceptualEntity": "conversas_zenvia"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "conversas_zenvia": {
+			          "Target": {
+			            "Entity": "conversas_zenvia"
+			          }
+			        },
+			        "conversas_zenvia.risco_perda": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.risco_perda"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conversas_zenvia"
+			            },
+			            "Object": {
+			              "Role": "conversas_zenvia.risco_perda"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "conversas_zenvias_have_risco_perdas"
+			        }
+			      ]
+			    },
+			    "conversas_zenvia_has_sentimento": {
+			      "Binding": {
+			        "ConceptualEntity": "conversas_zenvia"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "conversas_zenvia": {
+			          "Target": {
+			            "Entity": "conversas_zenvia"
+			          }
+			        },
+			        "conversas_zenvia.sentimento": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.sentimento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conversas_zenvia"
+			            },
+			            "Object": {
+			              "Role": "conversas_zenvia.sentimento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "conversas_zenvias_have_sentimentos"
+			        }
+			      ]
+			    },
+			    "conversas_zenvia_has_urgencia": {
+			      "Binding": {
+			        "ConceptualEntity": "conversas_zenvia"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "conversas_zenvia": {
+			          "Target": {
+			            "Entity": "conversas_zenvia"
+			          }
+			        },
+			        "conversas_zenvia.urgencia": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.urgencia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conversas_zenvia"
+			            },
+			            "Object": {
+			              "Role": "conversas_zenvia.urgencia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "conversas_zenvias_have_urgencias"
+			        }
+			      ]
+			    },
+			    "conversas_zenvia_has_intencao_matricula": {
+			      "Binding": {
+			        "ConceptualEntity": "conversas_zenvia"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "conversas_zenvia": {
+			          "Target": {
+			            "Entity": "conversas_zenvia"
+			          }
+			        },
+			        "conversas_zenvia.intencao_matricula": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.intencao_matricula"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conversas_zenvia"
+			            },
+			            "Object": {
+			              "Role": "conversas_zenvia.intencao_matricula"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "conversas_zenvias_have_intencao_matriculas"
+			        }
+			      ]
+			    },
+			    "conversas_zenvia_has_motivo_principal": {
+			      "Binding": {
+			        "ConceptualEntity": "conversas_zenvia"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "conversas_zenvia": {
+			          "Target": {
+			            "Entity": "conversas_zenvia"
+			          }
+			        },
+			        "conversas_zenvia.motivo_principal": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.motivo_principal"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conversas_zenvia"
+			            },
+			            "Object": {
+			              "Role": "conversas_zenvia.motivo_principal"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "conversas_zenvias_have_motivo_principals"
+			        }
+			      ]
+			    },
+			    "conversas_zenvia_has_assunto": {
+			      "Binding": {
+			        "ConceptualEntity": "conversas_zenvia"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "conversas_zenvia": {
+			          "Target": {
+			            "Entity": "conversas_zenvia"
+			          }
+			        },
+			        "conversas_zenvia.assunto": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.assunto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conversas_zenvia"
+			            },
+			            "Object": {
+			              "Role": "conversas_zenvia.assunto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "conversas_zenvias_have_assuntos"
+			        }
+			      ]
+			    },
+			    "conversas_zenvia_has_mensagen": {
+			      "Binding": {
+			        "ConceptualEntity": "conversas_zenvia"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "conversas_zenvia": {
+			          "Target": {
+			            "Entity": "conversas_zenvia"
+			          }
+			        },
+			        "conversas_zenvia.mensagen": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.mensagen"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conversas_zenvia"
+			            },
+			            "Object": {
+			              "Role": "conversas_zenvia.mensagen"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "conversas_zenvias_have_mensagens"
+			        }
+			      ]
+			    },
+			    "conversas_zenvia_has_canal": {
+			      "Binding": {
+			        "ConceptualEntity": "conversas_zenvia"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "conversas_zenvia": {
+			          "Target": {
+			            "Entity": "conversas_zenvia"
+			          }
+			        },
+			        "conversas_zenvia.canal": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.canal"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conversas_zenvia"
+			            },
+			            "Object": {
+			              "Role": "conversas_zenvia.canal"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "conversas_zenvias_have_canals"
+			        }
+			      ]
+			    },
+			    "conversas_zenvia_has_agente": {
+			      "Binding": {
+			        "ConceptualEntity": "conversas_zenvia"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "conversas_zenvia": {
+			          "Target": {
+			            "Entity": "conversas_zenvia"
+			          }
+			        },
+			        "conversas_zenvia.agente": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.agente"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conversas_zenvia"
+			            },
+			            "Object": {
+			              "Role": "conversas_zenvia.agente"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "conversas_zenvias_have_agentes"
+			        }
+			      ]
+			    },
+			    "conversas_zenvia_has_total_mensagen": {
+			      "Binding": {
+			        "ConceptualEntity": "conversas_zenvia"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "conversas_zenvia": {
+			          "Target": {
+			            "Entity": "conversas_zenvia"
+			          }
+			        },
+			        "conversas_zenvia.total_mensagen": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.total_mensagen"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conversas_zenvia"
+			            },
+			            "Object": {
+			              "Role": "conversas_zenvia.total_mensagen"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "conversas_zenvias_have_total_mensagens"
+			        }
+			      ]
+			    },
+			    "conversas_zenvia_has_fim": {
+			      "Binding": {
+			        "ConceptualEntity": "conversas_zenvia"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "conversas_zenvia": {
+			          "Target": {
+			            "Entity": "conversas_zenvia"
+			          }
+			        },
+			        "conversas_zenvia.fim": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.fim"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conversas_zenvia"
+			            },
+			            "Object": {
+			              "Role": "conversas_zenvia.fim"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "conversas_zenvias_have_fims"
+			        }
+			      ]
+			    },
+			    "conversas_zenvia_has_inicio": {
+			      "Binding": {
+			        "ConceptualEntity": "conversas_zenvia"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "conversas_zenvia": {
+			          "Target": {
+			            "Entity": "conversas_zenvia"
+			          }
+			        },
+			        "conversas_zenvia.inicio": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.inicio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conversas_zenvia"
+			            },
+			            "Object": {
+			              "Role": "conversas_zenvia.inicio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "conversas_zenvias_have_inicios"
+			        }
+			      ]
+			    },
+			    "conversas_zenvia_has_prospect_id": {
+			      "Binding": {
+			        "ConceptualEntity": "conversas_zenvia"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "conversas_zenvia": {
+			          "Target": {
+			            "Entity": "conversas_zenvia"
+			          }
+			        },
+			        "conversas_zenvia.prospect_id": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.prospect_id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conversas_zenvia"
+			            },
+			            "Object": {
+			              "Role": "conversas_zenvia.prospect_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "conversas_zenvias_have_prospect_ids"
+			        }
+			      ]
+			    },
+			    "atendimento_has_entity_2_dias_sem_atendimento": {
+			      "Binding": {
+			        "ConceptualEntity": "Atendimentos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "atendimento": {
+			          "Target": {
+			            "Entity": "atendimento"
+			          }
+			        },
+			        "atendimento.entity_2_dias_sem_atendimento": {
+			          "Target": {
+			            "Entity": "atendimento.entity_2_dias_sem_atendimento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "atendimento"
+			            },
+			            "Object": {
+			              "Role": "atendimento.entity_2_dias_sem_atendimento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "atendimentos_have_2_dias_sem_atendimentos"
+			        }
+			      ]
+			    },
+			    "entity_20262_has_medida_qtd_pagamentos_pendentes": {
+			      "Binding": {
+			        "ConceptualEntity": "2026-2"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_20262": {
+			          "Target": {
+			            "Entity": "entity_20262"
+			          }
+			        },
+			        "medida.qtd_pagamentos_pendentes": {
+			          "Target": {
+			            "Entity": "medida.qtd_pagamentos_pendentes"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_20262"
+			            },
+			            "Object": {
+			              "Role": "medida.qtd_pagamentos_pendentes"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing20262_have_qtd_pagamentos_pendentes"
 			        }
 			      ]
 			    },
@@ -12014,7 +12978,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "medida_has_entity_2_dias_sem_atendimento": {
+			    "medida_has_entity_2_ou_mais_dias_sem_atendimento": {
 			      "Binding": {
 			        "ConceptualEntity": "Medidas"
 			      },
@@ -12025,9 +12989,9 @@ cultureInfo pt-BR
 			            "Entity": "medida"
 			          }
 			        },
-			        "medida.entity_2_dias_sem_atendimento": {
+			        "medida.entity_2_ou_mais_dias_sem_atendimento": {
 			          "Target": {
-			            "Entity": "medida.entity_2_dias_sem_atendimento"
+			            "Entity": "medida.entity_2_ou_mais_dias_sem_atendimento"
 			          }
 			        }
 			      },
@@ -12038,12 +13002,12 @@ cultureInfo pt-BR
 			              "Role": "medida"
 			            },
 			            "Object": {
-			              "Role": "medida.entity_2_dias_sem_atendimento"
+			              "Role": "medida.entity_2_ou_mais_dias_sem_atendimento"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "medidas_have_2_dias_sem_atendimento"
+			          "ID": "medidas_have_2_ou_mais_dias_sem_atendimento"
 			        }
 			      ]
 			    },
@@ -14429,6 +15393,798 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
+			    "entity_20262_data_aceite_hierarquia_de_data_has_entity_20262_data_aceite_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "2026-2"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_20262.data_aceite.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "entity_20262.data_aceite.hierarquia_de_data"
+			          }
+			        },
+			        "entity_20262.data_aceite.ano": {
+			          "Target": {
+			            "Entity": "entity_20262.data_aceite.ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_20262.data_aceite.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "entity_20262.data_aceite.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_anos2"
+			        }
+			      ]
+			    },
+			    "entity_20262_data_aceite_hierarquia_de_data_has_entity_20262_data_aceite_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "2026-2"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_20262.data_aceite.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "entity_20262.data_aceite.hierarquia_de_data"
+			          }
+			        },
+			        "entity_20262.data_aceite.trimestre": {
+			          "Target": {
+			            "Entity": "entity_20262.data_aceite.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_20262.data_aceite.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "entity_20262.data_aceite.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_trimestres2"
+			        }
+			      ]
+			    },
+			    "entity_20262_data_aceite_hierarquia_de_data_has_entity_20262_data_aceite_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "2026-2"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_20262.data_aceite.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "entity_20262.data_aceite.hierarquia_de_data"
+			          }
+			        },
+			        "entity_20262.data_aceite.mê": {
+			          "Target": {
+			            "Entity": "entity_20262.data_aceite.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_20262.data_aceite.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "entity_20262.data_aceite.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_mê2"
+			        }
+			      ]
+			    },
+			    "entity_20262_data_aceite_hierarquia_de_data_has_entity_20262_data_aceite_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "2026-2"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_20262.data_aceite.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "entity_20262.data_aceite.hierarquia_de_data"
+			          }
+			        },
+			        "entity_20262.data_aceite.dia": {
+			          "Target": {
+			            "Entity": "entity_20262.data_aceite.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_20262.data_aceite.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "entity_20262.data_aceite.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_dias2"
+			        }
+			      ]
+			    },
+			    "entity_20262_data_aceite_ano_has_entity_20262_data_aceite_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "2026-2"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_20262.data_aceite.ano": {
+			          "Target": {
+			            "Entity": "entity_20262.data_aceite.ano"
+			          }
+			        },
+			        "entity_20262.data_aceite.trimestre": {
+			          "Target": {
+			            "Entity": "entity_20262.data_aceite.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_20262.data_aceite.ano"
+			            },
+			            "Object": {
+			              "Role": "entity_20262.data_aceite.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "anos_have_trimestres2"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_20262.data_aceite.trimestre"
+			            },
+			            "Object": {
+			              "Role": "entity_20262.data_aceite.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_anos2"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "entity_20262.data_aceite.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "entity_20262.data_aceite.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_anos2"
+			        }
+			      ]
+			    },
+			    "entity_20262_data_aceite_trimestre_has_entity_20262_data_aceite_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "2026-2"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_20262.data_aceite.trimestre": {
+			          "Target": {
+			            "Entity": "entity_20262.data_aceite.trimestre"
+			          }
+			        },
+			        "entity_20262.data_aceite.mê": {
+			          "Target": {
+			            "Entity": "entity_20262.data_aceite.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_20262.data_aceite.trimestre"
+			            },
+			            "Object": {
+			              "Role": "entity_20262.data_aceite.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_mê2"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_20262.data_aceite.mê"
+			            },
+			            "Object": {
+			              "Role": "entity_20262.data_aceite.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_have_trimestres2"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "entity_20262.data_aceite.mê"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "entity_20262.data_aceite.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_are_in_trimestres2"
+			        }
+			      ]
+			    },
+			    "entity_20262_data_aceite_mê_has_entity_20262_data_aceite_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "2026-2"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_20262.data_aceite.mê": {
+			          "Target": {
+			            "Entity": "entity_20262.data_aceite.mê"
+			          }
+			        },
+			        "entity_20262.data_aceite.dia": {
+			          "Target": {
+			            "Entity": "entity_20262.data_aceite.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_20262.data_aceite.mê"
+			            },
+			            "Object": {
+			              "Role": "entity_20262.data_aceite.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_have_dias2"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_20262.data_aceite.dia"
+			            },
+			            "Object": {
+			              "Role": "entity_20262.data_aceite.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dias_have_mê2"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "entity_20262.data_aceite.dia"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "entity_20262.data_aceite.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dias_are_in_mê2"
+			        }
+			      ]
+			    },
+			    "entity_20262_data_alteração_has_hierarquia_de_data": {
+			      "Binding": {
+			        "ConceptualEntity": "2026-2"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_20262.data_alteração": {
+			          "Target": {
+			            "Entity": "entity_20262.data_alteração"
+			          }
+			        },
+			        "entity_20262.data_alteração.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "entity_20262.data_alteração.hierarquia_de_data"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_20262.data_alteração"
+			            },
+			            "Object": {
+			              "Role": "entity_20262.data_alteração.hierarquia_de_data"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "data_alteraçãos_have_hierarquia_de_data"
+			        }
+			      ]
+			    },
+			    "entity_20262_data_alteração_hierarquia_de_data_has_entity_20262_data_alteração_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "2026-2"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_20262.data_alteração.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "entity_20262.data_alteração.hierarquia_de_data"
+			          }
+			        },
+			        "entity_20262.data_alteração.ano": {
+			          "Target": {
+			            "Entity": "entity_20262.data_alteração.ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_20262.data_alteração.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "entity_20262.data_alteração.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_anos3"
+			        }
+			      ]
+			    },
+			    "entity_20262_data_alteração_hierarquia_de_data_has_entity_20262_data_alteração_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "2026-2"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_20262.data_alteração.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "entity_20262.data_alteração.hierarquia_de_data"
+			          }
+			        },
+			        "entity_20262.data_alteração.trimestre": {
+			          "Target": {
+			            "Entity": "entity_20262.data_alteração.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_20262.data_alteração.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "entity_20262.data_alteração.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_trimestres3"
+			        }
+			      ]
+			    },
+			    "entity_20262_data_alteração_hierarquia_de_data_has_entity_20262_data_alteração_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "2026-2"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_20262.data_alteração.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "entity_20262.data_alteração.hierarquia_de_data"
+			          }
+			        },
+			        "entity_20262.data_alteração.mê": {
+			          "Target": {
+			            "Entity": "entity_20262.data_alteração.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_20262.data_alteração.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "entity_20262.data_alteração.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_mê3"
+			        }
+			      ]
+			    },
+			    "entity_20262_data_alteração_hierarquia_de_data_has_entity_20262_data_alteração_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "2026-2"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_20262.data_alteração.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "entity_20262.data_alteração.hierarquia_de_data"
+			          }
+			        },
+			        "entity_20262.data_alteração.dia": {
+			          "Target": {
+			            "Entity": "entity_20262.data_alteração.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_20262.data_alteração.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "entity_20262.data_alteração.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_dias3"
+			        }
+			      ]
+			    },
+			    "entity_20262_data_alteração_ano_has_entity_20262_data_alteração_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "2026-2"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_20262.data_alteração.ano": {
+			          "Target": {
+			            "Entity": "entity_20262.data_alteração.ano"
+			          }
+			        },
+			        "entity_20262.data_alteração.trimestre": {
+			          "Target": {
+			            "Entity": "entity_20262.data_alteração.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_20262.data_alteração.ano"
+			            },
+			            "Object": {
+			              "Role": "entity_20262.data_alteração.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "anos_have_trimestres3"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_20262.data_alteração.trimestre"
+			            },
+			            "Object": {
+			              "Role": "entity_20262.data_alteração.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_anos3"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "entity_20262.data_alteração.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "entity_20262.data_alteração.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_anos3"
+			        }
+			      ]
+			    },
+			    "entity_20262_data_alteração_trimestre_has_entity_20262_data_alteração_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "2026-2"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_20262.data_alteração.trimestre": {
+			          "Target": {
+			            "Entity": "entity_20262.data_alteração.trimestre"
+			          }
+			        },
+			        "entity_20262.data_alteração.mê": {
+			          "Target": {
+			            "Entity": "entity_20262.data_alteração.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_20262.data_alteração.trimestre"
+			            },
+			            "Object": {
+			              "Role": "entity_20262.data_alteração.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_mê3"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_20262.data_alteração.mê"
+			            },
+			            "Object": {
+			              "Role": "entity_20262.data_alteração.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_have_trimestres3"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "entity_20262.data_alteração.mê"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "entity_20262.data_alteração.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_are_in_trimestres3"
+			        }
+			      ]
+			    },
+			    "entity_20262_data_alteração_mê_has_entity_20262_data_alteração_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "2026-2"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_20262.data_alteração.mê": {
+			          "Target": {
+			            "Entity": "entity_20262.data_alteração.mê"
+			          }
+			        },
+			        "entity_20262.data_alteração.dia": {
+			          "Target": {
+			            "Entity": "entity_20262.data_alteração.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_20262.data_alteração.mê"
+			            },
+			            "Object": {
+			              "Role": "entity_20262.data_alteração.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_have_dias3"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_20262.data_alteração.dia"
+			            },
+			            "Object": {
+			              "Role": "entity_20262.data_alteração.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dias_have_mê3"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "entity_20262.data_alteração.dia"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "entity_20262.data_alteração.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dias_are_in_mê3"
+			        }
+			      ]
+			    },
+			    "entity_20262_data_criacao_has_hierarquia_de_data": {
+			      "Binding": {
+			        "ConceptualEntity": "2026-2"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_20262.data_criacao": {
+			          "Target": {
+			            "Entity": "entity_20262.data_criacao"
+			          }
+			        },
+			        "entity_20262.data_criacao.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "entity_20262.data_criacao.hierarquia_de_data"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_20262.data_criacao"
+			            },
+			            "Object": {
+			              "Role": "entity_20262.data_criacao.hierarquia_de_data"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "data_criacaos_have_hierarquia_de_data"
+			        }
+			      ]
+			    },
+			    "entity_20262_data_criacao_hierarquia_de_data_has_entity_20262_data_criacao_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "2026-2"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_20262.data_criacao.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "entity_20262.data_criacao.hierarquia_de_data"
+			          }
+			        },
+			        "entity_20262.data_criacao.ano": {
+			          "Target": {
+			            "Entity": "entity_20262.data_criacao.ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_20262.data_criacao.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "entity_20262.data_criacao.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_anos4"
+			        }
+			      ]
+			    },
+			    "entity_20262_data_criacao_hierarquia_de_data_has_entity_20262_data_criacao_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "2026-2"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_20262.data_criacao.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "entity_20262.data_criacao.hierarquia_de_data"
+			          }
+			        },
+			        "entity_20262.data_criacao.trimestre": {
+			          "Target": {
+			            "Entity": "entity_20262.data_criacao.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_20262.data_criacao.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "entity_20262.data_criacao.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_trimestres4"
+			        }
+			      ]
+			    },
 			    "entity_20262_data_criacao_hierarquia_de_data_has_entity_20262_data_criacao_mê": {
 			      "Binding": {
 			        "ConceptualEntity": "2026-2"
@@ -14690,6 +16446,732 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dias_are_in_mê4"
+			        }
+			      ]
+			    },
+			    "conversas_zenvia_inicio_has_hierarquia_de_data": {
+			      "Binding": {
+			        "ConceptualEntity": "conversas_zenvia"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "conversas_zenvia.inicio": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.inicio"
+			          }
+			        },
+			        "conversas_zenvia.inicio.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.inicio.hierarquia_de_data"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conversas_zenvia.inicio"
+			            },
+			            "Object": {
+			              "Role": "conversas_zenvia.inicio.hierarquia_de_data"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "inicios_have_hierarquia_de_data"
+			        }
+			      ]
+			    },
+			    "conversas_zenvia_inicio_hierarquia_de_data_has_conversas_zenvia_inicio_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "conversas_zenvia"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "conversas_zenvia.inicio.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.inicio.hierarquia_de_data"
+			          }
+			        },
+			        "conversas_zenvia.inicio.ano": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.inicio.ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conversas_zenvia.inicio.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "conversas_zenvia.inicio.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_anos5"
+			        }
+			      ]
+			    },
+			    "conversas_zenvia_inicio_hierarquia_de_data_has_conversas_zenvia_inicio_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "conversas_zenvia"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "conversas_zenvia.inicio.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.inicio.hierarquia_de_data"
+			          }
+			        },
+			        "conversas_zenvia.inicio.trimestre": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.inicio.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conversas_zenvia.inicio.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "conversas_zenvia.inicio.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_trimestres5"
+			        }
+			      ]
+			    },
+			    "conversas_zenvia_inicio_hierarquia_de_data_has_conversas_zenvia_inicio_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "conversas_zenvia"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "conversas_zenvia.inicio.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.inicio.hierarquia_de_data"
+			          }
+			        },
+			        "conversas_zenvia.inicio.mê": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.inicio.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conversas_zenvia.inicio.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "conversas_zenvia.inicio.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_mê5"
+			        }
+			      ]
+			    },
+			    "conversas_zenvia_inicio_hierarquia_de_data_has_conversas_zenvia_inicio_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "conversas_zenvia"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "conversas_zenvia.inicio.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.inicio.hierarquia_de_data"
+			          }
+			        },
+			        "conversas_zenvia.inicio.dia": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.inicio.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conversas_zenvia.inicio.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "conversas_zenvia.inicio.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_dias5"
+			        }
+			      ]
+			    },
+			    "conversas_zenvia_inicio_ano_has_conversas_zenvia_inicio_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "conversas_zenvia"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "conversas_zenvia.inicio.ano": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.inicio.ano"
+			          }
+			        },
+			        "conversas_zenvia.inicio.trimestre": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.inicio.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conversas_zenvia.inicio.ano"
+			            },
+			            "Object": {
+			              "Role": "conversas_zenvia.inicio.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "anos_have_trimestres5"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conversas_zenvia.inicio.trimestre"
+			            },
+			            "Object": {
+			              "Role": "conversas_zenvia.inicio.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_anos5"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "conversas_zenvia.inicio.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "conversas_zenvia.inicio.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_anos5"
+			        }
+			      ]
+			    },
+			    "conversas_zenvia_inicio_trimestre_has_conversas_zenvia_inicio_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "conversas_zenvia"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "conversas_zenvia.inicio.trimestre": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.inicio.trimestre"
+			          }
+			        },
+			        "conversas_zenvia.inicio.mê": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.inicio.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conversas_zenvia.inicio.trimestre"
+			            },
+			            "Object": {
+			              "Role": "conversas_zenvia.inicio.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_mê5"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conversas_zenvia.inicio.mê"
+			            },
+			            "Object": {
+			              "Role": "conversas_zenvia.inicio.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_have_trimestres5"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "conversas_zenvia.inicio.mê"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "conversas_zenvia.inicio.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_are_in_trimestres5"
+			        }
+			      ]
+			    },
+			    "conversas_zenvia_inicio_mê_has_conversas_zenvia_inicio_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "conversas_zenvia"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "conversas_zenvia.inicio.mê": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.inicio.mê"
+			          }
+			        },
+			        "conversas_zenvia.inicio.dia": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.inicio.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conversas_zenvia.inicio.mê"
+			            },
+			            "Object": {
+			              "Role": "conversas_zenvia.inicio.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_have_dias5"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conversas_zenvia.inicio.dia"
+			            },
+			            "Object": {
+			              "Role": "conversas_zenvia.inicio.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dias_have_mê5"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "conversas_zenvia.inicio.dia"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "conversas_zenvia.inicio.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dias_are_in_mê5"
+			        }
+			      ]
+			    },
+			    "conversas_zenvia_fim_has_hierarquia_de_data": {
+			      "Binding": {
+			        "ConceptualEntity": "conversas_zenvia"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "conversas_zenvia.fim": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.fim"
+			          }
+			        },
+			        "conversas_zenvia.fim.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.fim.hierarquia_de_data"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conversas_zenvia.fim"
+			            },
+			            "Object": {
+			              "Role": "conversas_zenvia.fim.hierarquia_de_data"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fims_have_hierarquia_de_data"
+			        }
+			      ]
+			    },
+			    "conversas_zenvia_fim_hierarquia_de_data_has_conversas_zenvia_fim_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "conversas_zenvia"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "conversas_zenvia.fim.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.fim.hierarquia_de_data"
+			          }
+			        },
+			        "conversas_zenvia.fim.ano": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.fim.ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conversas_zenvia.fim.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "conversas_zenvia.fim.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_anos6"
+			        }
+			      ]
+			    },
+			    "conversas_zenvia_fim_hierarquia_de_data_has_conversas_zenvia_fim_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "conversas_zenvia"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "conversas_zenvia.fim.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.fim.hierarquia_de_data"
+			          }
+			        },
+			        "conversas_zenvia.fim.trimestre": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.fim.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conversas_zenvia.fim.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "conversas_zenvia.fim.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_trimestres6"
+			        }
+			      ]
+			    },
+			    "conversas_zenvia_fim_hierarquia_de_data_has_conversas_zenvia_fim_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "conversas_zenvia"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "conversas_zenvia.fim.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.fim.hierarquia_de_data"
+			          }
+			        },
+			        "conversas_zenvia.fim.mê": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.fim.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conversas_zenvia.fim.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "conversas_zenvia.fim.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_mê6"
+			        }
+			      ]
+			    },
+			    "conversas_zenvia_fim_hierarquia_de_data_has_conversas_zenvia_fim_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "conversas_zenvia"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "conversas_zenvia.fim.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.fim.hierarquia_de_data"
+			          }
+			        },
+			        "conversas_zenvia.fim.dia": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.fim.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conversas_zenvia.fim.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "conversas_zenvia.fim.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_dias6"
+			        }
+			      ]
+			    },
+			    "conversas_zenvia_fim_ano_has_conversas_zenvia_fim_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "conversas_zenvia"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "conversas_zenvia.fim.ano": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.fim.ano"
+			          }
+			        },
+			        "conversas_zenvia.fim.trimestre": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.fim.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conversas_zenvia.fim.ano"
+			            },
+			            "Object": {
+			              "Role": "conversas_zenvia.fim.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "anos_have_trimestres6"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conversas_zenvia.fim.trimestre"
+			            },
+			            "Object": {
+			              "Role": "conversas_zenvia.fim.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_anos6"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "conversas_zenvia.fim.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "conversas_zenvia.fim.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_anos6"
+			        }
+			      ]
+			    },
+			    "conversas_zenvia_fim_trimestre_has_conversas_zenvia_fim_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "conversas_zenvia"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "conversas_zenvia.fim.trimestre": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.fim.trimestre"
+			          }
+			        },
+			        "conversas_zenvia.fim.mê": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.fim.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conversas_zenvia.fim.trimestre"
+			            },
+			            "Object": {
+			              "Role": "conversas_zenvia.fim.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_mê6"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conversas_zenvia.fim.mê"
+			            },
+			            "Object": {
+			              "Role": "conversas_zenvia.fim.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_have_trimestres6"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "conversas_zenvia.fim.mê"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "conversas_zenvia.fim.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_are_in_trimestres6"
+			        }
+			      ]
+			    },
+			    "conversas_zenvia_fim_mê_has_conversas_zenvia_fim_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "conversas_zenvia"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "conversas_zenvia.fim.mê": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.fim.mê"
+			          }
+			        },
+			        "conversas_zenvia.fim.dia": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.fim.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conversas_zenvia.fim.mê"
+			            },
+			            "Object": {
+			              "Role": "conversas_zenvia.fim.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_have_dias6"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conversas_zenvia.fim.dia"
+			            },
+			            "Object": {
+			              "Role": "conversas_zenvia.fim.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dias_have_mê6"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "conversas_zenvia.fim.dia"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "conversas_zenvia.fim.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dias_are_in_mê6"
 			        }
 			      ]
 			    }

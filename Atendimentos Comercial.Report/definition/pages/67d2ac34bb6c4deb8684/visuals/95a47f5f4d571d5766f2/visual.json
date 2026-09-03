@@ -1,0 +1,66 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "95a47f5f4d571d5766f2",
+  "position": {
+    "x": 773.73134328358208,
+    "y": 219.40298507462686,
+    "z": 10003,
+    "height": 293.73134328358208,
+    "width": 505.97014925373134,
+    "tabOrder": 10003
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "conversas_zenvia"
+                        }
+                      },
+                      "Property": "total_mensagens"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(conversas_zenvia.total_mensagens)",
+              "nativeQueryRef": "Soma de total_mensagens"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "conversas_zenvia"
+                      }
+                    },
+                    "Property": "total_mensagens"
+                  }
+                },
+                "Function": 0
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

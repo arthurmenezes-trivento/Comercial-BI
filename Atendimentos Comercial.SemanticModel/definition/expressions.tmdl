@@ -342,3 +342,49 @@ expression CANAA =
 
 	annotation PBI_ResultType = Table
 
+expression Parâmetro1 = #"Arquivo de Amostra" meta [IsParameterQuery=true, BinaryIdentifier=#"Arquivo de Amostra", Type="Binary", IsParameterQueryRequired=true]
+	lineageTag: c09dec82-e0dd-49f1-a379-0811cd00c78b
+	queryGroup: 'Transformar Arquivo de Consulta1\Consultas Auxiliares'
+
+	annotation PBI_ResultType = Binary
+
+expression 'Transformar o Arquivo de Exemplo' =
+		let
+		    Fonte = Excel.Workbook(Parâmetro1, null, true),
+		    Sheet1_Sheet = Fonte{[Item="Sheet1",Kind="Sheet"]}[Data],
+		    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true])
+		in
+		    #"Cabeçalhos Promovidos"
+	lineageTag: d8b89ffc-f45f-4f32-b87c-d81a7688addc
+	queryGroup: 'Transformar Arquivo de Consulta1'
+
+	annotation PBI_ResultType = Table
+
+expression 'Arquivo de Amostra' =
+		let
+		    Fonte = SharePoint.Files("https://grupoeducacionalsantoant.sharepoint.com/sites/TriventoEducaco", [ApiVersion = 15]),
+		    #"Linhas Filtradas" = Table.SelectRows(Fonte, each ([Name] = "conversas_zenvia.xlsx")),
+		    Navegação1 = #"Linhas Filtradas"{0}[Content]
+		in
+		    Navegação1
+	lineageTag: ae616dca-b73c-45af-bedd-97a9c56863b8
+	queryGroup: 'Transformar Arquivo de Consulta1\Consultas Auxiliares'
+
+	annotation PBI_ResultType = Binary
+
+expression 'Transformar Arquivo' =
+		let
+		    Fonte = (Parâmetro1) => let
+		        Fonte = Excel.Workbook(Parâmetro1, null, true),
+		        Sheet1_Sheet = Fonte{[Item="Sheet1",Kind="Sheet"]}[Data],
+		        #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true])
+		    in
+		        #"Cabeçalhos Promovidos"
+		in
+		    Fonte
+	mAttributes: [ FunctionQueryBinding = "{""exemplarFormulaName"":""Transformar o Arquivo de Exemplo""}" ]
+	lineageTag: 6f69b65b-01a5-4c7e-9ef8-1208b249bf83
+	queryGroup: 'Transformar Arquivo de Consulta1\Consultas Auxiliares'
+
+	annotation PBI_ResultType = Function
+

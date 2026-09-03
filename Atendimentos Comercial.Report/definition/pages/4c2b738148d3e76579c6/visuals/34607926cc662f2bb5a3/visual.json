@@ -1,0 +1,59 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "34607926cc662f2bb5a3",
+  "position": {
+    "x": 294.05365790625626,
+    "y": 110.5440574994029,
+    "z": 6000,
+    "height": 62.249240121580549,
+    "width": 210.09118541033436,
+    "tabOrder": 6000
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "conversas_zenvia"
+                    }
+                  },
+                  "Property": "risco_perda"
+                }
+              },
+              "queryRef": "conversas_zenvia.risco_perda",
+              "nativeQueryRef": "risco_perda",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Dropdown'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

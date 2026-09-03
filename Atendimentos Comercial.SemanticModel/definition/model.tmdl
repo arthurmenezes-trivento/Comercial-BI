@@ -11,9 +11,17 @@ queryGroup 'Consultas - Token'
 
 	annotation PBI_QueryGroupOrder = 0
 
+queryGroup 'Transformar Arquivo de Consulta1'
+
+	annotation PBI_QueryGroupOrder = 1
+
+queryGroup 'Transformar Arquivo de Consulta1\Consultas Auxiliares'
+
+	annotation PBI_QueryGroupOrder = 0
+
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["Token de acesso","Inscricoes","dUnidade","DeparaCursos","dCanal","Atendimentos","Medidas","Função Invocada","ALTAMIRA","LORENA","ITABIRITO","Matrículas GD","2026-2","Legado","Leads","dAtendentes","CANAA"]
+annotation PBI_QueryOrder = ["Token de acesso","Inscricoes","dUnidade","DeparaCursos","dCanal","Atendimentos","Medidas","Função Invocada","ALTAMIRA","LORENA","ITABIRITO","Matrículas GD","2026-2","Legado","Leads","dAtendentes","CANAA","conversas_zenvia","Parâmetro1","Transformar o Arquivo de Exemplo","Arquivo de Amostra","Transformar Arquivo"]
 
 annotation PBI_ProTooling = ["DevMode","MCP-PBIModeling"]
 
@@ -33,6 +41,9 @@ ref table 'Matrículas GD'
 ref table LocalDateTable_902ee6ed-8382-4f35-ada4-1a52b6b1f630
 ref table LocalDateTable_42ef74b0-3334-4660-9dc5-a97982b3bbe8
 ref table LocalDateTable_e59bd786-d20d-4986-86bc-7b325c2afab5
+ref table conversas_zenvia
+ref table LocalDateTable_ba3d5c51-8cb7-4668-b92c-cf7d99f6bf20
+ref table LocalDateTable_bdca470b-5a3a-4b2f-b8f5-5efad228806b
 
 ref cultureInfo pt-BR
 
