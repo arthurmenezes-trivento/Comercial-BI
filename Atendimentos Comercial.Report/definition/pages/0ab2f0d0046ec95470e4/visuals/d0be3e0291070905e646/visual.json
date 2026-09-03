@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "2026-2"
+                      "Entity": "dUnidade"
                     }
                   },
                   "Property": "Unidade"
                 }
               },
-              "queryRef": "2026-2.Unidade",
-              "nativeQueryRef": "Unidade",
+              "queryRef": "dUnidade.Unidade",
+              "nativeQueryRef": "Unidade1",
               "active": true
             }
           ]

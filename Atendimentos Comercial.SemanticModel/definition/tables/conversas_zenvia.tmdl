@@ -176,8 +176,6 @@ table conversas_zenvia
 				in
 				    #"Colunas Removidas"
 
-	changedProperty = Name
-
 	annotation PBI_NavigationStepName = Navegação
 
 	annotation PBI_ResultType = Table
