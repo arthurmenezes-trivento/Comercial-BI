@@ -81,7 +81,14 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'positivo'"
+                                "Value": "'muito_negativo'"
+                              }
+                            }
+                          ],
+                          [
+                            {
+                              "Literal": {
+                                "Value": "'negativo'"
                               }
                             }
                           ]

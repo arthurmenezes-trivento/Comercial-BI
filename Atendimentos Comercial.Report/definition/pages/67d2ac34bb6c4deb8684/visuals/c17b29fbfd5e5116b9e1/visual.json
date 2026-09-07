@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "07589deab9024afc3231",
+  "name": "c17b29fbfd5e5116b9e1",
   "position": {
     "x": 38.076923076923073,
-    "y": 474.23076923076923,
-    "z": 10001,
-    "height": 213.46153846153845,
-    "width": 673.84615384615381,
-    "tabOrder": 10001
+    "y": 206.53846153846152,
+    "z": 10003,
+    "height": 250.38461538461539,
+    "width": 1166.5384615384614,
+    "tabOrder": 10003
   },
   "visual": {
     "visualType": "columnChart",
@@ -23,61 +23,30 @@
                       "Entity": "conversas_zenvia"
                     }
                   },
-                  "Property": "sentimento"
+                  "Property": "agente"
                 }
               },
-              "queryRef": "conversas_zenvia.sentimento",
-              "nativeQueryRef": "sentimento",
+              "queryRef": "conversas_zenvia.agente",
+              "nativeQueryRef": "agente",
               "active": true
             }
           ]
         },
-        "Tooltips": {
+        "Series": {
           "projections": [
             {
               "field": {
-                "Arithmetic": {
-                  "Left": {
-                    "Aggregation": {
-                      "Expression": {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "conversas_zenvia"
-                            }
-                          },
-                          "Property": "prospect_id"
-                        }
-                      },
-                      "Function": 2
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "conversas_zenvia"
                     }
                   },
-                  "Right": {
-                    "ScopedEval": {
-                      "Expression": {
-                        "Aggregation": {
-                          "Expression": {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Entity": "conversas_zenvia"
-                                }
-                              },
-                              "Property": "prospect_id"
-                            }
-                          },
-                          "Function": 2
-                        }
-                      },
-                      "Scope": []
-                    }
-                  },
-                  "Operator": 3
+                  "Property": "sentimento"
                 }
               },
-              "queryRef": "Min(conversas_zenvia.prospect_id)",
-              "nativeQueryRef": "% ",
-              "displayName": "% "
+              "queryRef": "conversas_zenvia.sentimento",
+              "nativeQueryRef": "sentimento"
             }
           ]
         },
@@ -225,6 +194,213 @@
                 }
               }
             }
+          }
+        }
+      ],
+      "dataPoint": [
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#6B8E63'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "conversas_zenvia"
+                          }
+                        },
+                        "Property": "sentimento"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'positivo'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#E5A93B'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "conversas_zenvia"
+                          }
+                        },
+                        "Property": "sentimento"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'neutro'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#C25948'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "conversas_zenvia"
+                          }
+                        },
+                        "Property": "sentimento"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'negativo'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#3D5238'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "conversas_zenvia"
+                          }
+                        },
+                        "Property": "sentimento"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'muito_positivo'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#6A3128'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "conversas_zenvia"
+                          }
+                        },
+                        "Property": "sentimento"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'muito_negativo'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
           }
         }
       ]

@@ -172,9 +172,10 @@ table conversas_zenvia
 				    #"Coluna de Tabela Expandida2" = Table.ExpandTableColumn(#"Outras Colunas Removidas2", "Transformar Arquivo", Table.ColumnNames(#"Transformar Arquivo"(#"Arquivo de Amostra"))),
 				    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Coluna de Tabela Expandida2",{{"Nome da Origem", type text}, {"prospect_id", type text}, {"inicio", type datetime}, {"fim", type datetime}, {"total_mensagens", Int64.Type}, {"agente", type text}, {"canal", type text}, {"mensagens", type text}, {"assunto", type text}, {"motivo_principal", type text}, {"intencao_matricula", type text}, {"urgencia", type text}, {"sentimento", type text}, {"risco_perda", type text}, {"modelo_enriquecimento", type text}, {"primeiro_nome", type text}, {"sobrenome", type text}, {"telefone", Int64.Type}, {"email", type text}}),
 				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Tipo Alterado1",{{"Nome da Origem", type text}, {"prospect_id", type text}, {"inicio", type datetime}, {"fim", type datetime}, {"total_mensagens", Int64.Type}, {"agente", type text}, {"canal", type text}, {"mensagens", type text}, {"assunto", type text}, {"motivo_principal", type text}, {"intencao_matricula", type text}, {"urgencia", type text}, {"sentimento", type text}, {"risco_perda", type text}, {"modelo_enriquecimento", type text}, {"primeiro_nome", type text}, {"sobrenome", type text}, {"telefone", Int64.Type}, {"email", type text}}),
-				    #"Colunas Removidas" = Table.RemoveColumns(#"Tipo Alterado",{"Nome da Origem"})
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Tipo Alterado",{"Nome da Origem"}),
+				    #"Linhas Filtradas1" = Table.SelectRows(#"Colunas Removidas", each ([agente] <> null and [agente] <> "Beatriz Oliveira" and [agente] <> "Camila Guimarães Santos" and [agente] <> "Caroline Mahé" and [agente] <> "Dev Trivento" and [agente] <> "Laiane Silva" and [agente] <> "Leonardo Alves" and [agente] <> "MARCO TULIO" and [agente] <> "Natália Franco" and [agente] <> "Rafaela Fernandes" and [agente] <> "Wallace Guilherme"))
 				in
-				    #"Colunas Removidas"
+				    #"Linhas Filtradas1"
 
 	annotation PBI_NavigationStepName = Navegação
 

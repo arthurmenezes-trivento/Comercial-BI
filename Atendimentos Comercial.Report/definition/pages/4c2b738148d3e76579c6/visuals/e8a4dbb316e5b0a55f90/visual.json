@@ -118,6 +118,20 @@
               },
               "queryRef": "conversas_zenvia.assunto",
               "nativeQueryRef": "assunto"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "conversas_zenvia"
+                    }
+                  },
+                  "Property": "mensagens"
+                }
+              },
+              "queryRef": "conversas_zenvia.mensagens",
+              "nativeQueryRef": "mensagens"
             }
           ]
         }
@@ -335,6 +349,20 @@
           },
           "selector": {
             "metadata": "conversas_zenvia.email"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "123.46153846153845D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "conversas_zenvia.assunto"
           }
         }
       ],
