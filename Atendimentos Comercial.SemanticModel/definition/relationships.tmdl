@@ -74,3 +74,9 @@ relationship 8ba03907-090e-4058-95d4-f0be07cafbef
 	fromColumn: conversas_zenvia.fim
 	toColumn: LocalDateTable_bdca470b-5a3a-4b2f-b8f5-5efad228806b.Date
 
+relationship fbe98676-3ba7-1efb-09b6-1218f6db57ee
+	crossFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: 2026-2.'Celular Comparar Legado'
+	toColumn: conversas_zenvia.Telefone_Normalizado
+

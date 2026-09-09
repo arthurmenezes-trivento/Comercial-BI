@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "c311b9021bb0fdea7359",
+  "name": "3b06df6dde529b9ea57b",
   "position": {
-    "x": 334.98189128161738,
+    "x": 167.46268656716418,
     "y": 110.14925373134328,
-    "z": 5000,
-    "height": 62.249240121580549,
-    "width": 210.09118541033436,
-    "tabOrder": 5000
+    "z": 10002,
+    "height": 62.6865671641791,
+    "width": 155.82089552238804,
+    "tabOrder": 10002
   },
   "visual": {
     "visualType": "slicer",
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "conversas_zenvia"
+                      "Entity": "2026-2"
                     }
                   },
-                  "Property": "motivo_principal"
+                  "Property": "Situação Inscrição"
                 }
               },
-              "queryRef": "conversas_zenvia.motivo_principal",
-              "nativeQueryRef": "motivo_principal",
+              "queryRef": "2026-2.Situação Inscrição",
+              "nativeQueryRef": "Situação Inscrição",
               "active": true
             }
           ]

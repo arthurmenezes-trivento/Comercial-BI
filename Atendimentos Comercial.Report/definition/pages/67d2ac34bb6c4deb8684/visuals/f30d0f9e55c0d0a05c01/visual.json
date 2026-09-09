@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "0a5a85301b0f4a7fbe34",
+  "name": "f30d0f9e55c0d0a05c01",
   "position": {
-    "x": 530.40624149288271,
-    "y": 110.5440574994029,
-    "z": 7000,
+    "x": 1042.8170847888202,
+    "y": 110.14925373134328,
+    "z": 10007,
     "height": 62.249240121580549,
     "width": 210.09118541033436,
-    "tabOrder": 7000
+    "tabOrder": 10007
   },
   "visual": {
     "visualType": "slicer",
@@ -23,11 +23,11 @@
                       "Entity": "conversas_zenvia"
                     }
                   },
-                  "Property": "sentimento"
+                  "Property": "intencao_matricula"
                 }
               },
-              "queryRef": "conversas_zenvia.sentimento",
-              "nativeQueryRef": "sentimento",
+              "queryRef": "conversas_zenvia.intencao_matricula",
+              "nativeQueryRef": "intencao_matricula",
               "active": true
             }
           ]

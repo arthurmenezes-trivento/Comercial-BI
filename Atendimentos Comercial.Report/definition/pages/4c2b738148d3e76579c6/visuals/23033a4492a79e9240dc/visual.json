@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "0d604392552581c56e85",
+  "name": "23033a4492a79e9240dc",
   "position": {
-    "x": 56.00569844160497,
-    "y": 110.5440574994029,
-    "z": 5000,
-    "height": 62.249240121580549,
-    "width": 210.09118541033436,
-    "tabOrder": 5000
+    "x": 11.641791044776118,
+    "y": 110.14925373134328,
+    "z": 10001,
+    "height": 62.6865671641791,
+    "width": 155.82089552238804,
+    "tabOrder": 10001
   },
   "visual": {
     "visualType": "slicer",
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "conversas_zenvia"
+                      "Entity": "2026-2"
                     }
                   },
-                  "Property": "motivo_principal"
+                  "Property": "Unidade"
                 }
               },
-              "queryRef": "conversas_zenvia.motivo_principal",
-              "nativeQueryRef": "motivo_principal",
+              "queryRef": "2026-2.Unidade",
+              "nativeQueryRef": "Unidade",
               "active": true
             }
           ]

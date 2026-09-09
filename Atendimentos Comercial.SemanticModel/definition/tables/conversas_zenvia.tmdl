@@ -159,6 +159,27 @@ table conversas_zenvia
 
 		annotation SummarizationSetBy = Automatic
 
+	column Telefone_Normalizado = ```
+			
+			VAR TelefoneTexto = CONVERT('conversas_zenvia'[telefone], STRING)
+			RETURN
+			IF(
+			    ISBLANK(TelefoneTexto) || TelefoneTexto = "",
+			    "",
+			    IF(
+			        LEFT(TelefoneTexto, 2) = "55", 
+			        "+" & TelefoneTexto, 
+			        "+55" & TelefoneTexto
+			    )
+			)
+			
+			
+			```
+		lineageTag: 20056af1-9751-4966-a4c7-f610adc778f2
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
 	partition conversas_zenvia = m
 		mode: import
 		source =

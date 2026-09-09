@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "ac9e02c716e326a5aba1",
   "position": {
-    "x": 530.40624149288271,
-    "y": 110.5440574994029,
+    "x": 809.38243433289574,
+    "y": 110.14925373134328,
     "z": 7000,
     "height": 62.249240121580549,
     "width": 210.09118541033436,
@@ -81,14 +81,14 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'muito_negativo'"
+                                "Value": "'negativo'"
                               }
                             }
                           ],
                           [
                             {
                               "Literal": {
-                                "Value": "'negativo'"
+                                "Value": "'muito_negativo'"
                               }
                             }
                           ]
