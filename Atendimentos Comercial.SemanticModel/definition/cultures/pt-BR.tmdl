@@ -4560,6 +4560,9 @@ cultureInfo pt-BR
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "celular comparar legado": {
@@ -8580,42 +8583,32 @@ cultureInfo pt-BR
 			          }
 			        }
 			      ]
+			    },
+			    "conversas_zenvia.telefone_normalizado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "conversas_zenvia",
+			          "ConceptualProperty": "Telefone_Normalizado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "telefone normalizado": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Telefone_Normalizado": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "conversas_zenvia_fim_hierarquia_de_data_has_conversas_zenvia_fim_dia": {
-			      "Binding": {
-			        "ConceptualEntity": "conversas_zenvia"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "conversas_zenvia.fim.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "conversas_zenvia.fim.hierarquia_de_data"
-			          }
-			        },
-			        "conversas_zenvia.fim.dia": {
-			          "Target": {
-			            "Entity": "conversas_zenvia.fim.dia"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "conversas_zenvia.fim.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "conversas_zenvia.fim.dia"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias"
-			        }
-			      ]
-			    },
 			    "conversas_zenvia_fim_hierarquia_de_data_has_conversas_zenvia_fim_mê": {
 			      "Binding": {
 			        "ConceptualEntity": "conversas_zenvia"
@@ -8975,7 +8968,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias1"
+			          "ID": "hierarquia_de_data_have_dias"
 			        }
 			      ]
 			    },
@@ -9338,7 +9331,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias2"
+			          "ID": "hierarquia_de_data_have_dias1"
 			        }
 			      ]
 			    },
@@ -9701,7 +9694,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias3"
+			          "ID": "hierarquia_de_data_have_dias2"
 			        }
 			      ]
 			    },
@@ -10064,7 +10057,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias4"
+			          "ID": "hierarquia_de_data_have_dias3"
 			        }
 			      ]
 			    },
@@ -10427,7 +10420,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias5"
+			          "ID": "hierarquia_de_data_have_dias4"
 			        }
 			      ]
 			    },
@@ -10790,7 +10783,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias6"
+			          "ID": "hierarquia_de_data_have_dias5"
 			        }
 			      ]
 			    },
@@ -11058,6 +11051,39 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
+			    "entity_20262_has_conversas_zenvia": {
+			      "Binding": {
+			        "ConceptualEntity": "2026-2"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity_20262": {
+			          "Target": {
+			            "Entity": "entity_20262"
+			          }
+			        },
+			        "conversas_zenvia": {
+			          "Target": {
+			            "Entity": "conversas_zenvia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity_20262"
+			            },
+			            "Object": {
+			              "Role": "conversas_zenvia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing20262_have_conversas_zenvias"
+			        }
+			      ]
+			    },
 			    "entity_20262_has_d_canal": {
 			      "Binding": {
 			        "ConceptualEntity": "2026-2"
@@ -11193,6 +11219,39 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "d_atendentes_have_atendimentos"
+			        }
+			      ]
+			    },
+			    "conversas_zenvia_has_telefone_normalizado": {
+			      "Binding": {
+			        "ConceptualEntity": "conversas_zenvia"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "conversas_zenvia": {
+			          "Target": {
+			            "Entity": "conversas_zenvia"
+			          }
+			        },
+			        "conversas_zenvia.telefone_normalizado": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.telefone_normalizado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conversas_zenvia"
+			            },
+			            "Object": {
+			              "Role": "conversas_zenvia.telefone_normalizado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "conversas_zenvias_have_telefone_normalizados"
 			        }
 			      ]
 			    },
@@ -14265,39 +14324,6 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "entity_20262_has_celular_comparar_legado": {
-			      "Binding": {
-			        "ConceptualEntity": "2026-2"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "entity_20262": {
-			          "Target": {
-			            "Entity": "entity_20262"
-			          }
-			        },
-			        "entity_20262.celular_comparar_legado": {
-			          "Target": {
-			            "Entity": "entity_20262.celular_comparar_legado"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity_20262"
-			            },
-			            "Object": {
-			              "Role": "entity_20262.celular_comparar_legado"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "Phrasing20262_have_celular_comparar_legados"
-			        }
-			      ]
-			    },
 			    "entity_20262_has_curso_unidade": {
 			      "Binding": {
 			        "ConceptualEntity": "2026-2"
@@ -16974,6 +17000,39 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "ID_are_names_IDs_of_d_unidades"
+			        }
+			      ]
+			    },
+			    "conversas_zenvia_fim_hierarquia_de_data_has_conversas_zenvia_fim_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "conversas_zenvia"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "conversas_zenvia.fim.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.fim.hierarquia_de_data"
+			          }
+			        },
+			        "conversas_zenvia.fim.dia": {
+			          "Target": {
+			            "Entity": "conversas_zenvia.fim.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "conversas_zenvia.fim.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "conversas_zenvia.fim.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_dias6"
 			        }
 			      ]
 			    },
