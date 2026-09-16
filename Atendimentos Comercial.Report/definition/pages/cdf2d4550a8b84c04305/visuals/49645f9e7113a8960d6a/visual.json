@@ -79,6 +79,20 @@
                       "Entity": "2026-2"
                     }
                   },
+                  "Property": "Curso"
+                }
+              },
+              "queryRef": "2026-2.Curso",
+              "nativeQueryRef": "Curso"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "2026-2"
+                    }
+                  },
                   "Property": "Unidade"
                 }
               },
@@ -359,6 +373,22 @@
                 }
               }
             }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "178.23880356569708D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "2026-2.Curso"
           }
         }
       ]
