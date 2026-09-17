@@ -13,6 +13,10 @@ table dAtendentes
 			
 			SWITCH(
 			    dAtendentes[Criado por],
+			    "Gabriel Matos", "Unidade Canaã",
+			    "Tatiane Laurindo", "Unidade Lorena",
+			    "Fernanda Santos", "Célula",
+			    "Thalyta Costa", "Unidade Canaã",
 			    "Maria Fernanda Luiz Monteiro", "Unidade Lorena",
 			    "Maria Eduarda Freire", "Unidade Lorena",
 			    "Ana Carolina Guimarães", "Célula",

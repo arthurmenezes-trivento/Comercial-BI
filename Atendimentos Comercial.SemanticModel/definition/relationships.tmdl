@@ -80,3 +80,9 @@ relationship fbe98676-3ba7-1efb-09b6-1218f6db57ee
 	fromColumn: 2026-2.'Celular Comparar Legado'
 	toColumn: conversas_zenvia.Telefone_Normalizado
 
+relationship a847819c-f5eb-a955-cc9d-ae58c43a9528
+	crossFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: dAtendentes.'Proprietário lead'
+	toColumn: 2026-2.'Proprietário Lead'
+

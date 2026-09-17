@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
-  "name": "78bb800f48bab873e9e2",
+  "name": "09a0aff4ba9e267ea70d",
   "position": {
-    "x": 0,
-    "y": 206.53846153846152,
-    "z": 6000,
-    "height": 474.23076923076923,
-    "width": 456.92307692307691,
-    "tabOrder": 6000
+    "x": 11.641791044776118,
+    "y": 190.74626865671641,
+    "z": 8001,
+    "height": 473.73134328358208,
+    "width": 478.20895522388059,
+    "tabOrder": 8001
   },
   "visual": {
     "visualType": "pivotTable",
@@ -15,6 +15,21 @@
       "queryState": {
         "Rows": {
           "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dAtendentes"
+                    }
+                  },
+                  "Property": "Equipe"
+                }
+              },
+              "queryRef": "dAtendentes.Equipe",
+              "nativeQueryRef": "Equipe",
+              "active": true
+            },
             {
               "field": {
                 "Column": {
@@ -84,6 +99,105 @@
         ]
       }
     },
+    "expansionStates": [
+      {
+        "roles": [
+          "Rows"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "dAtendentes.Equipe"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dAtendentes"
+                    }
+                  },
+                  "Property": "Equipe"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "2026-2.Proprietário Lead"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          }
+        ],
+        "root": {
+          "children": [
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'Unidade Lorena'"
+                  }
+                }
+              ],
+              "isToggled": true
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'Célula'"
+                  }
+                }
+              ],
+              "isToggled": true
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'Sem Equipe'"
+                  }
+                }
+              ],
+              "isToggled": true
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'Unidade Canaã'"
+                  }
+                }
+              ],
+              "isToggled": true
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'Unidade Altamira'"
+                  }
+                }
+              ],
+              "isToggled": true
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'Unidade Itabirito'"
+                  }
+                }
+              ],
+              "isToggled": true
+            }
+          ]
+        }
+      }
+    ],
     "objects": {
       "subTotals": [
         {
@@ -91,7 +205,7 @@
             "columnSubtotals": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
