@@ -11,31 +11,35 @@ table conversas_zenvia
 
 	column inicio
 		dataType: dateTime
-		formatString: General Date
+		formatString: Long Date
 		lineageTag: 6e92be47-455b-440c-a5fd-9f24471e015a
 		summarizeBy: none
 		sourceColumn: inicio
 
 		variation Variation
 			isDefault
-			relationship: 77ac210b-dad2-4dd5-ab39-51984be330d6
-			defaultHierarchy: LocalDateTable_ba3d5c51-8cb7-4668-b92c-cf7d99f6bf20.'Hierarquia de datas'
+			relationship: 47a0b05f-fd5b-47cd-868f-d141c5f543eb
+			defaultHierarchy: LocalDateTable_30b3a768-a3ec-464d-a1e3-f50bd35b53f1.'Hierarquia de datas'
 
 		annotation SummarizationSetBy = Automatic
 
+		annotation UnderlyingDateTimeDataType = Date
+
 	column fim
 		dataType: dateTime
-		formatString: General Date
+		formatString: Long Date
 		lineageTag: f0935507-3c73-4be9-a9bd-90bf353558ed
 		summarizeBy: none
 		sourceColumn: fim
 
 		variation Variation
 			isDefault
-			relationship: 8ba03907-090e-4058-95d4-f0be07cafbef
-			defaultHierarchy: LocalDateTable_bdca470b-5a3a-4b2f-b8f5-5efad228806b.'Hierarquia de datas'
+			relationship: 6e6db020-193a-41ab-82b3-18b3b3a829b7
+			defaultHierarchy: LocalDateTable_acfeed69-c1e8-436e-9b68-8835cc97e274.'Hierarquia de datas'
 
 		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
 
 	column total_mensagens
 		dataType: int64
@@ -118,14 +122,6 @@ table conversas_zenvia
 
 		annotation SummarizationSetBy = Automatic
 
-	column modelo_enriquecimento
-		dataType: string
-		lineageTag: 92b44ccd-9ec6-4563-a421-005183ccede6
-		summarizeBy: none
-		sourceColumn: modelo_enriquecimento
-
-		annotation SummarizationSetBy = Automatic
-
 	column primeiro_nome
 		dataType: string
 		lineageTag: d8b0068f-916f-4bb3-b9a0-0469d904c503
@@ -159,24 +155,85 @@ table conversas_zenvia
 
 		annotation SummarizationSetBy = Automatic
 
-	column Telefone_Normalizado = ```
-			
-			VAR TelefoneTexto = CONVERT('conversas_zenvia'[telefone], STRING)
-			RETURN
-			IF(
-			    ISBLANK(TelefoneTexto) || TelefoneTexto = "",
-			    "",
-			    IF(
-			        LEFT(TelefoneTexto, 2) = "55", 
-			        "+" & TelefoneTexto, 
-			        "+55" & TelefoneTexto
-			    )
-			)
-			
-			
-			```
-		lineageTag: 20056af1-9751-4966-a4c7-f610adc778f2
+	column Telefone_normalizado
+		dataType: int64
+		formatString: 0
+		lineageTag: 15b658e2-c6ef-48f4-90b3-1cfb4af6b405
+		summarizeBy: sum
+		sourceColumn: Telefone_normalizado
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Celular Comparar Legado'
+		dataType: int64
+		formatString: 0
+		lineageTag: 6c40da34-6e16-4a34-a9a5-5e1c7c6b042b
+		summarizeBy: sum
+		sourceColumn: Celular Comparar Legado
+
+		annotation SummarizationSetBy = Automatic
+
+	column Unidade
+		dataType: string
+		lineageTag: 2080426b-49ac-45a0-b1e9-9ff8b3545768
 		summarizeBy: none
+		sourceColumn: Unidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Data Criacao'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 1b3ab0ec-fc31-4850-a758-bb18bb3f4778
+		summarizeBy: none
+		sourceColumn: Data Criacao
+
+		variation Variation
+			isDefault
+			relationship: 37d43a85-7ab6-4f54-ac9f-91ec92c5332b
+			defaultHierarchy: LocalDateTable_9d4c102e-a278-481e-9f00-f2f48493bca0.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Data de Pagamento'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 51e39a86-1345-41f1-9334-caeb3bc9815c
+		summarizeBy: none
+		sourceColumn: Data de Pagamento
+
+		variation Variation
+			isDefault
+			relationship: 90ce093d-bf2e-4be2-9cbe-a26c904fa292
+			defaultHierarchy: LocalDateTable_86fd4a56-b2f5-47fb-a3fe-fcd23f5925c9.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Situação Inscrição'
+		dataType: string
+		lineageTag: d7772ed2-03f9-4a62-ba81-0cec570289ed
+		summarizeBy: none
+		sourceColumn: Situação Inscrição
+
+		annotation SummarizationSetBy = Automatic
+
+	column Curso
+		dataType: string
+		lineageTag: d2581984-f439-4103-aee5-09bb4be9bb6e
+		summarizeBy: none
+		sourceColumn: Curso
+
+		annotation SummarizationSetBy = Automatic
+
+	column Curso_1
+		dataType: string
+		lineageTag: d7b9a516-8137-48b5-bd3f-a6d89dfb6e91
+		summarizeBy: none
+		sourceColumn: Curso_1
 
 		annotation SummarizationSetBy = Automatic
 
@@ -188,13 +245,12 @@ table conversas_zenvia
 				    #"Linhas Filtradas" = Table.SelectRows(Fonte, each ([Name] = "conversas_zenvia.xlsx")),
 				    #"Arquivos Ocultos Filtrados1" = Table.SelectRows(#"Linhas Filtradas", each [Attributes]?[Hidden]? <> true),
 				    #"Invocar Função Personalizada1" = Table.AddColumn(#"Arquivos Ocultos Filtrados1", "Transformar Arquivo", each #"Transformar Arquivo"([Content])),
-				    #"Colunas Renomeadas2" = Table.RenameColumns(#"Invocar Função Personalizada1", {"Name", "Nome da Origem"}),
-				    #"Outras Colunas Removidas2" = Table.SelectColumns(#"Colunas Renomeadas2", {"Nome da Origem", "Transformar Arquivo"}),
-				    #"Coluna de Tabela Expandida2" = Table.ExpandTableColumn(#"Outras Colunas Removidas2", "Transformar Arquivo", Table.ColumnNames(#"Transformar Arquivo"(#"Arquivo de Amostra"))),
-				    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Coluna de Tabela Expandida2",{{"Nome da Origem", type text}, {"prospect_id", type text}, {"inicio", type datetime}, {"fim", type datetime}, {"total_mensagens", Int64.Type}, {"agente", type text}, {"canal", type text}, {"mensagens", type text}, {"assunto", type text}, {"motivo_principal", type text}, {"intencao_matricula", type text}, {"urgencia", type text}, {"sentimento", type text}, {"risco_perda", type text}, {"modelo_enriquecimento", type text}, {"primeiro_nome", type text}, {"sobrenome", type text}, {"telefone", Int64.Type}, {"email", type text}}),
-				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Tipo Alterado1",{{"Nome da Origem", type text}, {"prospect_id", type text}, {"inicio", type datetime}, {"fim", type datetime}, {"total_mensagens", Int64.Type}, {"agente", type text}, {"canal", type text}, {"mensagens", type text}, {"assunto", type text}, {"motivo_principal", type text}, {"intencao_matricula", type text}, {"urgencia", type text}, {"sentimento", type text}, {"risco_perda", type text}, {"modelo_enriquecimento", type text}, {"primeiro_nome", type text}, {"sobrenome", type text}, {"telefone", Int64.Type}, {"email", type text}}),
-				    #"Colunas Removidas" = Table.RemoveColumns(#"Tipo Alterado",{"Nome da Origem"}),
-				    #"Linhas Filtradas1" = Table.SelectRows(#"Colunas Removidas", each ([agente] <> null and [agente] <> "Beatriz Oliveira" and [agente] <> "Camila Guimarães Santos" and [agente] <> "Caroline Mahé" and [agente] <> "Dev Trivento" and [agente] <> "Laiane Silva" and [agente] <> "Leonardo Alves" and [agente] <> "MARCO TULIO" and [agente] <> "Natália Franco" and [agente] <> "Rafaela Fernandes" and [agente] <> "Wallace Guilherme"))
+				    #"Arquivos Ocultos Filtrados2" = Table.SelectRows(#"Invocar Função Personalizada1", each [Attributes]?[Hidden]? <> true),
+				    #"Invocar Função Personalizada2" = Table.AddColumn(#"Arquivos Ocultos Filtrados2", "Transformar Arquivo (2)", each #"Transformar Arquivo (2)"([Content])),
+				    #"Outras Colunas Removidas1" = Table.SelectColumns(#"Invocar Função Personalizada2", {"Transformar Arquivo (2)"}),
+				    #"Coluna de Tabela Expandida1" = Table.ExpandTableColumn(#"Outras Colunas Removidas1", "Transformar Arquivo (2)", Table.ColumnNames(#"Transformar Arquivo (2)"(#"Arquivo de Amostra (2)"))),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Coluna de Tabela Expandida1",{{"prospect_id", type text}, {"inicio", type date}, {"fim", type date}, {"total_mensagens", Int64.Type}, {"agente", type text}, {"canal", type text}, {"mensagens", type text}, {"assunto", type text}, {"motivo_principal", type text}, {"intencao_matricula", type text}, {"urgencia", type text}, {"sentimento", type text}, {"risco_perda", type text}, {"primeiro_nome", type any}, {"sobrenome", type any}, {"email", type any}, {"telefone", Int64.Type}, {"Telefone_normalizado", Int64.Type}, {"Celular Comparar Legado", Int64.Type}, {"Unidade", type text}, {"Data Criacao", type date}, {"Data de Pagamento", type date}, {"Situação Inscrição", type text}, {"Curso", type text}}),
+				    #"Linhas Filtradas1" = Table.SelectRows(#"Tipo Alterado", each ([agente] <> null and [agente] <> "Beatriz Oliveira" and [agente] <> "Camila Guimarães Santos" and [agente] <> "Caroline Mahé" and [agente] <> "Dev Trivento" and [agente] <> "Laiane Silva" and [agente] <> "Leonardo Alves" and [agente] <> "MARCO TULIO" and [agente] <> "Natália Franco" and [agente] <> "Rafaela Fernandes" and [agente] <> "Wallace Guilherme"))
 				in
 				    #"Linhas Filtradas1"
 

@@ -8460,29 +8460,6 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "conversas_zenvia.modelo_enriquecimento": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "conversas_zenvia",
-			          "ConceptualProperty": "modelo_enriquecimento"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "modelo enriquecimento": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "modelo_enriquecimento": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
 			    "conversas_zenvia.primeiro_nome": {
 			      "Definition": {
 			        "Binding": {
@@ -8580,29 +8557,6 @@ cultureInfo pt-BR
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.452
-			          }
-			        }
-			      ]
-			    },
-			    "conversas_zenvia.telefone_normalizado": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "conversas_zenvia",
-			          "ConceptualProperty": "Telefone_Normalizado"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "telefone normalizado": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "Telefone_Normalizado": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
 			          }
 			        }
 			      ]

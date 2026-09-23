@@ -519,5 +519,56 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "55ac2110025a21529872",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "conversas_zenvia"
+              }
+            },
+            "Property": "agente"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "3d61b12504a65b290dde",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "conversas_zenvia"
+              }
+            },
+            "Property": "sentimento"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "968e5c3ad02b4a90e21c",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "conversas_zenvia"
+                  }
+                },
+                "Property": "prospect_id"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

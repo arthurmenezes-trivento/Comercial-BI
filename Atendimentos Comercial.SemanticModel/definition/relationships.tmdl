@@ -64,25 +64,33 @@ relationship d7534d4f-ddc6-575c-bc66-a2a0e3094d1f
 	fromColumn: Atendimentos.'Id Lead'
 	toColumn: 2026-2.'ID Lead'
 
-relationship 77ac210b-dad2-4dd5-ab39-51984be330d6
-	joinOnDateBehavior: datePartOnly
-	fromColumn: conversas_zenvia.inicio
-	toColumn: LocalDateTable_ba3d5c51-8cb7-4668-b92c-cf7d99f6bf20.Date
-
-relationship 8ba03907-090e-4058-95d4-f0be07cafbef
-	joinOnDateBehavior: datePartOnly
-	fromColumn: conversas_zenvia.fim
-	toColumn: LocalDateTable_bdca470b-5a3a-4b2f-b8f5-5efad228806b.Date
-
-relationship fbe98676-3ba7-1efb-09b6-1218f6db57ee
-	crossFilteringBehavior: bothDirections
-	toCardinality: many
-	fromColumn: 2026-2.'Celular Comparar Legado'
-	toColumn: conversas_zenvia.Telefone_Normalizado
-
 relationship a847819c-f5eb-a955-cc9d-ae58c43a9528
 	crossFilteringBehavior: bothDirections
 	toCardinality: many
 	fromColumn: dAtendentes.'Proprietário lead'
 	toColumn: 2026-2.'Proprietário Lead'
+
+relationship 37d43a85-7ab6-4f54-ac9f-91ec92c5332b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: conversas_zenvia.'Data Criacao'
+	toColumn: LocalDateTable_9d4c102e-a278-481e-9f00-f2f48493bca0.Date
+
+relationship 90ce093d-bf2e-4be2-9cbe-a26c904fa292
+	joinOnDateBehavior: datePartOnly
+	fromColumn: conversas_zenvia.'Data de Pagamento'
+	toColumn: LocalDateTable_86fd4a56-b2f5-47fb-a3fe-fcd23f5925c9.Date
+
+relationship AutoDetected_c74afa44-4727-4139-8dca-2ebe8a11fb3c
+	fromColumn: conversas_zenvia.Unidade
+	toColumn: dUnidade.Unidade
+
+relationship 47a0b05f-fd5b-47cd-868f-d141c5f543eb
+	joinOnDateBehavior: datePartOnly
+	fromColumn: conversas_zenvia.inicio
+	toColumn: LocalDateTable_30b3a768-a3ec-464d-a1e3-f50bd35b53f1.Date
+
+relationship 6e6db020-193a-41ab-82b3-18b3b3a829b7
+	joinOnDateBehavior: datePartOnly
+	fromColumn: conversas_zenvia.fim
+	toColumn: LocalDateTable_acfeed69-c1e8-436e-9b68-8835cc97e274.Date
 

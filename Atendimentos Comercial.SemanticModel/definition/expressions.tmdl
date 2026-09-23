@@ -388,3 +388,51 @@ expression 'Transformar Arquivo' =
 
 	annotation PBI_ResultType = Function
 
+expression Parâmetro2 = #"Arquivo de Amostra (2)" meta [IsParameterQuery=true, BinaryIdentifier=#"Arquivo de Amostra (2)", Type="Binary", IsParameterQueryRequired=true]
+	lineageTag: 0b8cea82-620d-465f-9db1-37990b5ed920
+	queryGroup: 'Transformar Arquivo de conversas_zenvia\Consultas Auxiliares'
+
+	annotation PBI_ResultType = Binary
+
+expression 'Transformar o Arquivo de Exemplo (2)' =
+		let
+		    Fonte = Excel.Workbook(Parâmetro2, null, true),
+		    Sheet1_Sheet = Fonte{[Item="Sheet1",Kind="Sheet"]}[Data],
+		    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true])
+		in
+		    #"Cabeçalhos Promovidos"
+	lineageTag: 84db3193-cb4f-4fe5-a964-0d399ae6371e
+	queryGroup: 'Transformar Arquivo de conversas_zenvia'
+
+expression 'Arquivo de Amostra (2)' =
+		let
+		    Fonte = SharePoint.Files("https://grupoeducacionalsantoant.sharepoint.com/sites/TriventoEducaco", [ApiVersion = 15]),
+		    #"Linhas Filtradas" = Table.SelectRows(Fonte, each ([Name] = "conversas_zenvia.xlsx")),
+		    #"Arquivos Ocultos Filtrados1" = Table.SelectRows(#"Linhas Filtradas", each [Attributes]?[Hidden]? <> true),
+		    #"Invocar Função Personalizada1" = Table.AddColumn(#"Arquivos Ocultos Filtrados1", "Transformar Arquivo", each #"Transformar Arquivo"([Content])),
+		    Navegação1 = #"Invocar Função Personalizada1"{0}[Content]
+		in
+		    Navegação1
+	lineageTag: 72b87088-f16b-4245-8259-6211e1368370
+	queryGroup: 'Transformar Arquivo de conversas_zenvia\Consultas Auxiliares'
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Binary
+
+expression 'Transformar Arquivo (2)' =
+		let
+		    Fonte = (Parâmetro2) => let
+		        Fonte = Excel.Workbook(Parâmetro2, null, true),
+		        Sheet1_Sheet = Fonte{[Item="Sheet1",Kind="Sheet"]}[Data],
+		        #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true])
+		    in
+		        #"Cabeçalhos Promovidos"
+		in
+		    Fonte
+	mAttributes: [ FunctionQueryBinding = "{""exemplarFormulaName"":""Transformar o Arquivo de Exemplo (2)""}" ]
+	lineageTag: 01d56f39-0758-45d6-af98-f5150d2d4146
+	queryGroup: 'Transformar Arquivo de conversas_zenvia\Consultas Auxiliares'
+
+	annotation PBI_ResultType = Function
+
